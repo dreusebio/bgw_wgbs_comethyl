@@ -1,0 +1,297 @@
+---
+title: "Comethyl Linear Modeling Report"
+subtitle: "Parameterized post-Comethyl analysis"
+author: "George Kuodza"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+params:
+  me_file: NULL
+  trait_file: NULL
+  formulas_file: NULL
+  module_name: NULL
+  output_dir: NULL
+  sample_id_col: "Sample_ID"
+  trait_exclude_file: NULL
+  tech_vars_file: NULL
+  derive_early_menarche: TRUE
+---
+
+knitr::opts_chunk$set(message = FALSE, warning = FALSE)
+
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(openxlsx)
+  library(modelsummary)
+  library(kableExtra)
+  library(broom)
+})
+
+# -----------------------------
+# Parameter checks
+# -----------------------------
+required_params <- c("me_file", "trait_file", "formulas_file", "module_name", "output_dir")
+missing_params <- required_params[
+  vapply(required_params, function(x) is.null(params[[x]]) || !nzchar(params[[x]]), logical(1))
+]
+
+if (length(missing_params) > 0) {
+  stop("Missing required params: ", paste(missing_params, collapse = ", "))
+}
+
+dir.create(params$output_dir, recursive = TRUE, showWarnings = FALSE)
+
+# -----------------------------
+# Helpers
+# -----------------------------
+read_lines_safe <- function(path) {
+  if (is.null(path) || is.na(path) || !nzchar(path) || !file.exists(path)) return(character(0))
+  x <- readLines(path, warn = FALSE)
+  x <- trimws(x)
+  x[nzchar(x)]
+}
+
+clean_trait_data <- function(trait_file,
+                             trait_exclude_file = NULL,
+                             derive_early_menarche = TRUE) {
+
+  colData_raw <- openxlsx::read.xlsx(trait_file, rowNames = TRUE)
+
+  # Replace "M" with minimum numeric value in each column
+  colData_raw[] <- lapply(colData_raw, function(x) {
+    x_chr <- as.character(x)
+    suppressWarnings({
+      min_val <- min(as.numeric(x_chr[x_chr != "M"]), na.rm = TRUE)
+      as.numeric(replace(x_chr, x_chr == "M", min_val))
+    })
+  })
+
+  # Replace N and . with NA
+  colData_raw[colData_raw == "N" | colData_raw == "."] <- NA
+
+  # Drop all-NA columns
+  colData_raw <- colData_raw[, colSums(is.na(colData_raw)) < nrow(colData_raw), drop = FALSE]
+
+  # Exclude columns from optional text file
+  cols_to_remove <- read_lines_safe(trait_exclude_file)
+  if (length(cols_to_remove) > 0) {
+    colData_raw <- colData_raw[, !colnames(colData_raw) %in% cols_to_remove, drop = FALSE]
+  }
+
+  # Optional early menarche derivation
+  to_num_missingdot <- function(x) as.numeric(dplyr::na_if(as.character(x), "."))
+
+  if (isTRUE(derive_early_menarche) &&
+      all(c("agemenF0", "agemenF1", "agemenF2") %in% colnames(colData_raw))) {
+    colData_raw <- colData_raw %>%
+      mutate(
+        agemenF0_num = to_num_missingdot(agemenF0),
+        early_menF0  = case_when(
+          !is.na(agemenF0_num) & agemenF0_num <= 11 ~ 1,
+          !is.na(agemenF0_num) & agemenF0_num > 11  ~ 0,
+          TRUE ~ NA_real_
+        ),
+        agemenF1_num = to_num_missingdot(agemenF1),
+        early_menF1  = case_when(
+          !is.na(agemenF1_num) & agemenF1_num <= 11 ~ 1,
+          !is.na(agemenF1_num) & agemenF1_num > 11  ~ 0,
+          TRUE ~ NA_real_
+        ),
+        agemenF2_num = to_num_missingdot(agemenF2),
+        early_menF2  = case_when(
+          !is.na(agemenF2_num) & agemenF2_num <= 11 ~ 1,
+          !is.na(agemenF2_num) & agemenF2_num > 11  ~ 0,
+          TRUE ~ NA_real_
+        )
+      ) %>%
+      select(-agemenF0_num, -agemenF1_num, -agemenF2_num)
+  }
+
+  colData_raw
+}
+
+load_me_data <- function(me_file, sample_id_col = "Sample_ID") {
+  me_data <- readr::read_csv(me_file, show_col_types = FALSE)
+
+  first_col <- colnames(me_data)[1]
+  colnames(me_data)[1] <- sample_id_col
+
+  me_data %>%
+    mutate(across(all_of(sample_id_col), as.character))
+}
+
+merge_me_and_traits <- function(me_data, trait_data, sample_id_col = "Sample_ID") {
+  trait_data[[sample_id_col]] <- rownames(trait_data)
+  trait_data[[sample_id_col]] <- as.character(trait_data[[sample_id_col]])
+
+  dplyr::inner_join(
+    trait_data,
+    me_data,
+    by = sample_id_col
+  )
+}
+
+fit_models_from_spec <- function(model_spec, analysis_df, module_name) {
+  formulas <- setNames(
+    lapply(model_spec$formula, function(f) {
+      as.formula(gsub("\\{MODULE\\}", module_name, f))
+    }),
+    model_spec$label
+  )
+
+  models <- lapply(formulas, function(f) lm(f, data = analysis_df))
+  models
+}
+
+extract_model_table <- function(models) {
+  purrr::imap_dfr(models, function(mod, nm) {
+    broom::tidy(mod) %>%
+      mutate(model = nm, .before = 1)
+  })
+}
+
+extract_model_glance <- function(models) {
+  purrr::imap_dfr(models, function(mod, nm) {
+    broom::glance(mod) %>%
+      mutate(model = nm, .before = 1)
+  })
+}
+
+param_tbl <- tibble::tibble(
+  Parameter = c("me_file", "trait_file", "formulas_file", "module_name", "output_dir", "sample_id_col"),
+  Value = c(params$me_file, params$trait_file, params$formulas_file, params$module_name, params$output_dir, params$sample_id_col)
+)
+
+knitr::kable(param_tbl, format = "latex", booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = c("hold_position"))
+
+trait_data <- clean_trait_data(
+  trait_file = params$trait_file,
+  trait_exclude_file = params$trait_exclude_file,
+  derive_early_menarche = params$derive_early_menarche
+)
+
+me_data <- load_me_data(
+  me_file = params$me_file,
+  sample_id_col = params$sample_id_col
+)
+
+analysis_df <- merge_me_and_traits(
+  me_data = me_data,
+  trait_data = trait_data,
+  sample_id_col = params$sample_id_col
+)
+
+if (!(params$module_name %in% colnames(analysis_df))) {
+  stop("Module column not found in merged data: ", params$module_name)
+}
+
+model_spec <- read.csv(params$formulas_file, stringsAsFactors = FALSE)
+
+if (!all(c("label", "formula") %in% colnames(model_spec))) {
+  stop("formulas_file must contain columns: label, formula")
+}
+
+dim_summary <- tibble::tibble(
+  Object = c("trait_data", "me_data", "analysis_df"),
+  Rows = c(nrow(trait_data), nrow(me_data), nrow(analysis_df)),
+  Columns = c(ncol(trait_data), ncol(me_data), ncol(analysis_df))
+)
+
+knitr::kable(dim_summary, format = "latex", booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = c("hold_position"))
+
+vars_used <- unique(unlist(strsplit(
+  paste(model_spec$formula, collapse = " "),
+  split = "[^A-Za-z0-9_.]+"
+)))
+vars_used <- vars_used[nzchar(vars_used)]
+vars_used <- setdiff(vars_used, c("MODULE"))
+vars_used <- unique(gsub("\\{MODULE\\}", params$module_name, vars_used, fixed = TRUE))
+
+availability <- tibble::tibble(
+  variable = vars_used,
+  present_in_analysis_df = vars_used %in% colnames(analysis_df)
+)
+
+knitr::kable(availability, format = "latex", booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = c("hold_position"))
+
+model_vars <- unique(c(
+  params$module_name,
+  unlist(str_extract_all(paste(model_spec$formula, collapse = " "), "[A-Za-z][A-Za-z0-9_.]*"))
+))
+model_vars <- unique(gsub("\\{MODULE\\}", params$module_name, model_vars, fixed = TRUE))
+model_vars <- intersect(model_vars, colnames(analysis_df))
+
+missing_tbl <- tibble::tibble(
+  variable = model_vars,
+  n_missing = vapply(model_vars, function(v) sum(is.na(analysis_df[[v]])), numeric(1)),
+  pct_missing = round(100 * n_missing / nrow(analysis_df), 2)
+)
+
+knitr::kable(missing_tbl, format = "latex", booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = c("hold_position"))
+
+models <- fit_models_from_spec(
+  model_spec = model_spec,
+  analysis_df = analysis_df,
+  module_name = params$module_name
+)
+
+modelsummary::modelsummary(
+  models,
+  statistic = "({std.error})",
+  stars = TRUE,
+  gof_map = c("nobs", "r.squared", "adj.r.squared", "AIC"),
+  output = "kableExtra"
+)
+
+modelsummary::modelsummary(
+  models,
+  statistic = "({std.error})",
+  stars = TRUE,
+  gof_map = c("nobs", "adj.r.squared"),
+  output = "kableExtra"
+)
+
+tech_vars <- read_lines_safe(params$tech_vars_file)
+tech_vars <- intersect(tech_vars, colnames(analysis_df))
+
+if (length(tech_vars) >= 2) {
+  tech_df <- analysis_df[, tech_vars, drop = FALSE]
+  cor_mat <- cor(tech_df, use = "pairwise.complete.obs")
+
+  knitr::kable(round(cor_mat, 3), format = "latex", booktabs = TRUE) %>%
+    kableExtra::kable_styling(latex_options = c("scale_down", "hold_position"))
+} else {
+  cat("No technical covariate correlation table requested.\n")
+}
+
+coef_tbl <- extract_model_table(models)
+fit_tbl  <- extract_model_glance(models)
+
+readr::write_csv(analysis_df, file.path(params$output_dir, paste0(params$module_name, "_analysis_df.csv")))
+readr::write_csv(coef_tbl,    file.path(params$output_dir, paste0(params$module_name, "_model_coefficients.csv")))
+readr::write_csv(fit_tbl,     file.path(params$output_dir, paste0(params$module_name, "_model_fit_stats.csv")))
+
+wb <- openxlsx::createWorkbook()
+openxlsx::addWorksheet(wb, "model_spec")
+openxlsx::writeData(wb, "model_spec", model_spec)
+
+openxlsx::addWorksheet(wb, "coefficients")
+openxlsx::writeData(wb, "coefficients", coef_tbl)
+
+openxlsx::addWorksheet(wb, "fit_stats")
+openxlsx::writeData(wb, "fit_stats", fit_tbl)
+
+openxlsx::addWorksheet(wb, "missingness")
+openxlsx::writeData(wb, "missingness", missing_tbl)
+
+openxlsx::saveWorkbook(
+  wb,
+  file = file.path(params$output_dir, paste0(params$module_name, "_linear_model_results.xlsx")),
+  overwrite = TRUE
+)
+
+

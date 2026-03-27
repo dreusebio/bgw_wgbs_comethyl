@@ -36,4 +36,22 @@ data/
 #if you have some approved exceptions, list them here
 #################################
 
+
+#################################
+# Figures & results (default ignore)
+#################################
+figures/
+plots/
+results/
+output/
+reports/
+data/
+analysis/
+docs/
+
+#################################
+#if you have some approved exceptions, list them here
+#################################
+*.pdf
+!manuscript_pdfs/*.pdf
 !results/*.pdf

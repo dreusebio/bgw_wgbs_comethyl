@@ -1,0 +1,17 @@
+race_eth_new
+White_vs_nonwhite
+total_number_of_pregnancie_30f336_base
+total_number_abortions_base
+pregtype_conception_base
+pregtype_planned_base
+other_children_base
+moth_marit_stat_base
+mother_s_education_base
+father_s_age_at_enrollment_base
+fathers_country_of_birth_us_base
+father_s_race_base
+father_s_hispanic_base
+father_s_education_base
+father_currently_employed_base
+low_income
+low_access
