@@ -1,0 +1,39 @@
+#################################
+# OS / Editor
+#################################
+.DS_Store
+*.swp
+*.swo
+*.tmp
+
+#################################
+# R / Python / Conda
+#################################
+.Rhistory
+.RData
+.Rproj.user/
+__pycache__/
+*.pyc
+.env
+.venv/
+renv/library/
+renv/python/
+renv/staging/
+
+
+#################################
+# Large & non-code artifacts
+#################################
+*.tar.gz
+*.rds
+*.bam
+*.bai
+*.vcf
+*.RData
+data/
+
+#################################
+#if you have some approved exceptions, list them here
+#################################
+
+!results/*.pdf
