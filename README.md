@@ -67,7 +67,9 @@ Repository structure
 ---
 
 Quick start
+
 Clone
+
 `git clone https://github.com/dreusebio/bgw_wgbs_comethyl.git`
 `cd bgw_wgbs_comethyl`
 
