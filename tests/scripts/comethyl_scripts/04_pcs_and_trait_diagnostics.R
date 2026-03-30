@@ -30,6 +30,7 @@
 #   --primary_cor_method    : primary correlation method for diagnostic plots:
 #                             bicor or pearson [default = bicor]
 #   --selected_trait_mode   : protected, protected_and_technical, none [default = auto]
+#   --max_pcs_plot          : number of PCs to show in variance explained plot [default = 20]
 #   --plot_width            : plot width in inches [default = 12]
 #   --plot_height           : plot height in inches [default = 10]
 #   --plot_dpi              : plot DPI [default = 600]
@@ -40,11 +41,13 @@
 #   project_root/comethyl_output/04_pc_diagnostics/<cpg_label>/<region_label>/
 #       PCs.rds
 #       PC_Metadata.tsv
-#       Variance_Explained_All_PCs.pdf
-#       Cumulative_Variance_Explained_All_PCs.pdf
+#       Variance_Explained_Top20_PCs.pdf
+#           - PCs selected as surrogate variables by num.sv are shown in RED
+#           - remaining PCs shown in grey
 #       PC_Trait_Correlation_Stats_Pearson.tsv
 #       PC_Trait_Correlation_Stats_Bicor.tsv
 #       PC_Trait_Heatmap_SelectedTraits.pdf      (if selected traits are available)
+#           - x-axis labels: "PC_N [SV]" for num.sv-selected PCs, "PC_N" otherwise
 #       PC_Trait_Heatmap_Top250Associations.pdf
 #       PC_Trait_Heatmap_Top50Traits_Overall.pdf
 #       Trait_Dendrogram_From_PC_Associations.pdf
@@ -64,8 +67,13 @@
 #   - No project-specific trait recoding is performed here.
 #   - If protected traits are provided, they are used in the SVA model matrix
 #     for num.sv(). If not provided, an intercept-only model is used.
+#   - TERMINOLOGY: All components from SVD are called PCs. The subset identified
+#     by sva::num.sv() as statistically meaningful are labelled "SV" (surrogate
+#     variable) in plots to distinguish them from the full PC set. The [SV] tag
+#     appears on x-axis labels in heatmaps and SVs are highlighted in red in the
+#     variance explained plot.
 # ================================================================
-message("Starting ✓")
+message("Starting Script 04")
 
 suppressPackageStartupMessages({
   library(optparse)
@@ -129,6 +137,9 @@ option_list <- list(
   make_option("--selected_trait_mode", type = "character", default = NULL,
               help = "Trait mode for selected-trait heatmap: protected, protected_and_technical, or none [default = auto]"),
 
+  make_option("--max_pcs_plot", type = "integer", default = 20,
+              help = "Number of PCs to display in variance explained plot [default = 20]"),
+
   make_option("--plot_width", type = "double", default = 12,
               help = "Plot width in inches [default = 12]"),
 
@@ -151,11 +162,11 @@ opt <- parse_args(OptionParser(option_list = option_list))
 # Validate arguments
 # ------------------------------------------------------------
 if (is.null(opt$project_root)) stop("--project_root is required")
-if (is.null(opt$input_meth)) stop("--input_meth is required")
-if (is.null(opt$sample_info)) stop("--sample_info is required")
+if (is.null(opt$input_meth))   stop("--input_meth is required")
+if (is.null(opt$sample_info))  stop("--sample_info is required")
 
 if (!dir.exists(opt$project_root)) stop("Project root does not exist: ", opt$project_root)
-if (!file.exists(opt$input_meth)) stop("Input methylation file not found: ", opt$input_meth)
+if (!file.exists(opt$input_meth))  stop("Input methylation file not found: ", opt$input_meth)
 if (!file.exists(opt$sample_info)) stop("Sample info file not found: ", opt$sample_info)
 
 if (!is.null(opt$protected_traits_file) && !file.exists(opt$protected_traits_file)) {
@@ -164,9 +175,10 @@ if (!is.null(opt$protected_traits_file) && !file.exists(opt$protected_traits_fil
 if (!is.null(opt$technical_traits_file) && !file.exists(opt$technical_traits_file)) {
   stop("Technical traits file not found: ", opt$technical_traits_file)
 }
-if (opt$threads < 1) stop("--threads must be >= 1")
-if (opt$top_trait_n < 1) stop("--top_trait_n must be >= 1")
-if (opt$top_cell_n < 1) stop("--top_cell_n must be >= 1")
+if (opt$threads      < 1) stop("--threads must be >= 1")
+if (opt$top_trait_n  < 1) stop("--top_trait_n must be >= 1")
+if (opt$top_cell_n   < 1) stop("--top_cell_n must be >= 1")
+if (opt$max_pcs_plot < 1) stop("--max_pcs_plot must be >= 1")
 if (!tolower(opt$primary_cor_method) %in% c("bicor", "pearson")) {
   stop("--primary_cor_method must be 'bicor' or 'pearson'")
 }
@@ -191,13 +203,13 @@ WGCNA::enableWGCNAThreads(nThreads = opt$threads)
 # Expected input:
 #   .../03_region_methylation/<cpg_label>/<region_label>/Region_Methylation.rds
 # ------------------------------------------------------------
-input_dir <- dirname(opt$input_meth)
+input_dir    <- dirname(opt$input_meth)
 region_label <- basename(input_dir)
-cpg_label <- basename(dirname(input_dir))
+cpg_label    <- basename(dirname(input_dir))
 
 pipeline_root <- file.path(opt$project_root, "comethyl_output")
-step_dir <- file.path(pipeline_root, "04_pc_diagnostics")
-out_dir <- file.path(step_dir, cpg_label, region_label)
+step_dir      <- file.path(pipeline_root, "04_pc_diagnostics")
+out_dir       <- file.path(step_dir, cpg_label, region_label)
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
 message("Output directory: ", out_dir)
@@ -205,19 +217,18 @@ message("Output directory: ", out_dir)
 # ------------------------------------------------------------
 # File paths
 # ------------------------------------------------------------
-pcs_rds <- file.path(out_dir, "PCs.rds")
-pc_meta_tsv <- file.path(out_dir, "PC_Metadata.tsv")
-var_plot_pdf <- file.path(out_dir, "Variance_Explained_All_PCs.pdf")
-cumvar_plot_pdf <- file.path(out_dir, "Cumulative_Variance_Explained_All_PCs.pdf")
+pcs_rds              <- file.path(out_dir, "PCs.rds")
+pc_meta_tsv          <- file.path(out_dir, "PC_Metadata.tsv")
+var_plot_pdf         <- file.path(out_dir, paste0("Variance_Explained_Top", opt$max_pcs_plot, "_PCs.pdf"))
 pc_trait_pearson_tsv <- file.path(out_dir, "PC_Trait_Correlation_Stats_Pearson.tsv")
-pc_trait_bicor_tsv <- file.path(out_dir, "PC_Trait_Correlation_Stats_Bicor.tsv")
+pc_trait_bicor_tsv   <- file.path(out_dir, "PC_Trait_Correlation_Stats_Bicor.tsv")
 heatmap_selected_pdf <- file.path(out_dir, "PC_Trait_Heatmap_SelectedTraits.pdf")
 heatmap_topcells_pdf <- file.path(out_dir, paste0("PC_Trait_Heatmap_Top", opt$top_cell_n, "Associations.pdf"))
 heatmap_toptraits_pdf <- file.path(out_dir, paste0("PC_Trait_Heatmap_Top", opt$top_trait_n, "Traits_Overall.pdf"))
-trait_dendro_pdf <- file.path(out_dir, "Trait_Dendrogram_From_PC_Associations.pdf")
+trait_dendro_pdf     <- file.path(out_dir, "Trait_Dendrogram_From_PC_Associations.pdf")
 removed_non_numeric_file <- file.path(out_dir, "sample_info_non_numeric_columns_removed.txt")
-removed_all_na_file <- file.path(out_dir, "sample_info_all_na_numeric_columns_removed.txt")
-removed_zero_var_file <- file.path(out_dir, "sample_info_zero_variance_numeric_columns_removed.txt")
+removed_all_na_file      <- file.path(out_dir, "sample_info_all_na_numeric_columns_removed.txt")
+removed_zero_var_file    <- file.path(out_dir, "sample_info_zero_variance_numeric_columns_removed.txt")
 
 # ------------------------------------------------------------
 # Helper: write vector safely
@@ -248,16 +259,16 @@ getPCs_generic <- function(meth,
   }
 
   n_pc <- sva::num.sv(meth, mod = mod_noNA, method = "be", seed = 5)
-  if (verbose) message("[getPCs_generic] num.sv selected ", n_pc, " PCs")
+  if (verbose) message("[getPCs_generic] num.sv selected ", n_pc, " PCs as surrogate variables")
 
-  meth_t <- t(meth)
+  meth_t         <- t(meth)
   meth_t_centered <- scale(meth_t, center = TRUE, scale = FALSE)
-  ss <- svd(meth_t_centered)
+  ss             <- svd(meth_t_centered)
 
   PCs <- ss$u[, seq_len(n_pc), drop = FALSE]
   dimnames(PCs) <- list(rownames(meth_t), paste0("PC_", seq_len(n_pc)))
 
-  var_explained <- (ss$d^2) / sum(ss$d^2)
+  var_explained     <- (ss$d^2) / sum(ss$d^2)
   cum_var_explained <- cumsum(var_explained)
 
   if (save) {
@@ -265,12 +276,41 @@ getPCs_generic <- function(meth,
   }
 
   list(
-    PCs = PCs,
-    singular_values = ss$d,
-    var_explained = var_explained,
+    PCs               = PCs,
+    singular_values   = ss$d,
+    var_explained     = var_explained,
     cum_var_explained = cum_var_explained,
-    n_pc = n_pc
+    n_pc              = n_pc
   )
+}
+
+# ------------------------------------------------------------
+# Helper: add [SV] suffix to PC labels in a stats data frame
+# ------------------------------------------------------------
+# PCs 1..n_sv are surrogate variables selected by num.sv().
+# This relabels the "module" column so heatmap x-axis reads
+# e.g. "PC_1 [SV]", "PC_2 [SV]", "PC_3", "PC_4", ...
+# ------------------------------------------------------------
+label_sv_in_stats <- function(stats_df, n_sv) {
+  stats_df$module <- as.character(stats_df$module)
+
+  sv_pcs <- paste0("PC_", seq_len(n_sv))
+  stats_df$module <- ifelse(
+    stats_df$module %in% sv_pcs,
+    paste0(stats_df$module, " [SV]"),
+    stats_df$module
+  )
+
+  # Re-order factor levels so PCs stay in numeric order on x-axis
+  all_pcs    <- paste0("PC_", sort(unique(as.integer(
+    gsub("PC_([0-9]+).*", "\\1", unique(stats_df$module))
+  ))))
+  new_levels <- ifelse(all_pcs %in% sv_pcs,
+                       paste0(all_pcs, " [SV]"),
+                       all_pcs)
+  stats_df$module <- factor(stats_df$module, levels = new_levels)
+
+  stats_df
 }
 
 # ------------------------------------------------------------
@@ -283,10 +323,10 @@ if (!(is.matrix(meth) || is.data.frame(meth))) {
 }
 meth <- as.matrix(meth)
 
-if (!is.numeric(meth)) stop("Methylation matrix must be numeric.")
-if (nrow(meth) < 1) stop("Methylation matrix has zero rows.")
-if (ncol(meth) < 2) stop("Methylation matrix must have at least 2 samples (columns).")
-if (is.null(colnames(meth))) stop("Methylation matrix must have sample IDs in colnames.")
+if (!is.numeric(meth))            stop("Methylation matrix must be numeric.")
+if (nrow(meth) < 1)               stop("Methylation matrix has zero rows.")
+if (ncol(meth) < 2)               stop("Methylation matrix must have at least 2 samples (columns).")
+if (is.null(colnames(meth)))      stop("Methylation matrix must have sample IDs in colnames.")
 if (anyDuplicated(colnames(meth))) {
   dup_ids <- unique(colnames(meth)[duplicated(colnames(meth))])
   stop("Duplicate methylation sample IDs found. Example: ", paste(head(dup_ids, 10), collapse = ", "))
@@ -298,12 +338,12 @@ message("Loaded methylation matrix: ", nrow(meth), " regions x ", ncol(meth), " 
 # Load sample info
 # ------------------------------------------------------------
 sample_info <- readSampleInfo(
-  file = opt$sample_info,
+  file          = opt$sample_info,
   sample_id_col = opt$sample_id_col,
-  verbose = TRUE
+  verbose       = TRUE
 )
 
-if (nrow(sample_info) < 2) stop("Sample info must contain at least 2 samples after loading.")
+if (nrow(sample_info) < 2)         stop("Sample info must contain at least 2 samples after loading.")
 if (is.null(rownames(sample_info))) stop("Sample info must have rownames after ID resolution.")
 if (anyDuplicated(rownames(sample_info))) {
   dup_ids <- unique(rownames(sample_info)[duplicated(rownames(sample_info))])
@@ -318,10 +358,10 @@ if (length(common_samples) == 0) {
   stop("No overlapping sample IDs between methylation matrix and sample info.")
 }
 if (length(common_samples) < 5) {
-  warning("Only ", length(common_samples), " overlapping samples found between methylation matrix and sample info.")
+  warning("Only ", length(common_samples), " overlapping samples found.")
 }
 
-meth <- meth[, common_samples, drop = FALSE]
+meth        <- meth[, common_samples, drop = FALSE]
 sample_info <- sample_info[common_samples, , drop = FALSE]
 
 message("After alignment: ", nrow(meth), " regions x ", ncol(meth), " samples")
@@ -329,9 +369,9 @@ message("After alignment: ", nrow(meth), " regions x ", ncol(meth), " samples")
 # ------------------------------------------------------------
 # Keep numeric traits only for PC-trait correlations
 # ------------------------------------------------------------
-is_numeric_atomic <- vapply(sample_info, function(x) is.numeric(x) && is.atomic(x), logical(1))
-removed_non_numeric <- names(sample_info)[!is_numeric_atomic]
-sample_info_num <- sample_info[, is_numeric_atomic, drop = FALSE]
+is_numeric_atomic    <- vapply(sample_info, function(x) is.numeric(x) && is.atomic(x), logical(1))
+removed_non_numeric  <- names(sample_info)[!is_numeric_atomic]
+sample_info_num      <- sample_info[, is_numeric_atomic, drop = FALSE]
 
 write_vector_file(removed_non_numeric, removed_non_numeric_file)
 
@@ -339,19 +379,19 @@ if (ncol(sample_info_num) == 0) {
   stop("No numeric trait columns available in sample_info after filtering.")
 }
 
-all_na <- vapply(sample_info_num, function(x) all(is.na(x)), logical(1))
+all_na   <- vapply(sample_info_num, function(x) all(is.na(x)), logical(1))
 zero_var <- vapply(sample_info_num, function(x) {
   vals <- x[!is.na(x)]
   if (length(vals) <= 1) return(TRUE)
   length(unique(vals)) == 1
 }, logical(1))
 
-removed_all_na <- names(sample_info_num)[all_na]
+removed_all_na   <- names(sample_info_num)[all_na]
 removed_zero_var <- names(sample_info_num)[zero_var]
 
 sample_info_num <- sample_info_num[, !(all_na | zero_var), drop = FALSE]
 
-write_vector_file(removed_all_na, removed_all_na_file)
+write_vector_file(removed_all_na,   removed_all_na_file)
 write_vector_file(removed_zero_var, removed_zero_var_file)
 
 if (ncol(sample_info_num) == 0) {
@@ -369,27 +409,27 @@ technical_traits_requested <- readTraitFile(opt$technical_traits_file, verbose =
 protected_resolved <- resolveTraits(
   requested_traits = protected_traits_requested,
   available_traits = colnames(sample_info_num),
-  label = "protected_traits",
-  verbose = TRUE
+  label            = "protected_traits",
+  verbose          = TRUE
 )
 
 technical_resolved <- resolveTraits(
   requested_traits = technical_traits_requested,
   available_traits = colnames(sample_info_num),
-  label = "technical_traits",
-  verbose = TRUE
+  label            = "technical_traits",
+  verbose          = TRUE
 )
 
 if (!is.null(opt$protected_traits_file)) {
   write_vector_file(protected_resolved$requested, file.path(out_dir, "traits_requested_protected.txt"))
-  write_vector_file(protected_resolved$found, file.path(out_dir, "traits_found_protected.txt"))
-  write_vector_file(protected_resolved$missing, file.path(out_dir, "traits_missing_protected.txt"))
+  write_vector_file(protected_resolved$found,     file.path(out_dir, "traits_found_protected.txt"))
+  write_vector_file(protected_resolved$missing,   file.path(out_dir, "traits_missing_protected.txt"))
 }
 
 if (!is.null(opt$technical_traits_file)) {
   write_vector_file(technical_resolved$requested, file.path(out_dir, "traits_requested_technical.txt"))
-  write_vector_file(technical_resolved$found, file.path(out_dir, "traits_found_technical.txt"))
-  write_vector_file(technical_resolved$missing, file.path(out_dir, "traits_missing_technical.txt"))
+  write_vector_file(technical_resolved$found,     file.path(out_dir, "traits_found_technical.txt"))
+  write_vector_file(technical_resolved$missing,   file.path(out_dir, "traits_missing_technical.txt"))
 }
 
 # ------------------------------------------------------------
@@ -410,8 +450,6 @@ if (selected_trait_mode == "protected") {
 
 # ------------------------------------------------------------
 # Build model matrix for num.sv
-# If protected traits exist, use them in the model; else use intercept only.
-# Use na.pass temporarily so model.matrix does not silently drop samples.
 # ------------------------------------------------------------
 old_na_action <- getOption("na.action")
 options(na.action = "na.pass")
@@ -419,12 +457,13 @@ on.exit(options(na.action = old_na_action), add = TRUE)
 
 if (length(protected_resolved$found) > 0) {
   protected_df <- sample_info_num[, protected_resolved$found, drop = FALSE]
-  mod_formula <- paste("~", paste(colnames(protected_df), collapse = " + "))
-  mod <- model.matrix(as.formula(mod_formula), data = protected_df)
-  message("Using protected traits in SVA model matrix: ", paste(colnames(protected_df), collapse = ", "))
+  mod_formula  <- paste("~", paste(colnames(protected_df), collapse = " + "))
+  mod          <- model.matrix(as.formula(mod_formula), data = protected_df)
+  message("Using protected traits in SVA model matrix: ",
+          paste(colnames(protected_df), collapse = ", "))
 } else {
-  mod_formula <- "~ 1"
-  mod <- matrix(1, nrow = ncol(meth), ncol = 1)
+  mod_formula  <- "~ 1"
+  mod          <- matrix(1, nrow = ncol(meth), ncol = 1)
   rownames(mod) <- colnames(meth)
   colnames(mod) <- "(Intercept)"
   message("No protected traits provided/found; using intercept-only model for num.sv")
@@ -438,82 +477,93 @@ if (nrow(mod) != ncol(meth)) {
 # Derive PCs
 # ------------------------------------------------------------
 pc_out <- getPCs_generic(
-  meth = meth,
-  mod = mod,
-  save = TRUE,
-  file = pcs_rds,
+  meth    = meth,
+  mod     = mod,
+  save    = TRUE,
+  file    = pcs_rds,
   verbose = TRUE
 )
 
-PCs <- pc_out$PCs
-var_explained <- pc_out$var_explained
+PCs               <- pc_out$PCs
+var_explained     <- pc_out$var_explained
 cum_var_explained <- pc_out$cum_var_explained
-singular_values <- pc_out$singular_values
-n_pc <- pc_out$n_pc
+singular_values   <- pc_out$singular_values
+n_pc              <- pc_out$n_pc   # number of surrogate variables selected by num.sv
 
 message("PC matrix dimensions: ", nrow(PCs), " samples x ", ncol(PCs), " PCs")
+message("Surrogate variables (num.sv): PC_1 through PC_", n_pc)
 
 # ------------------------------------------------------------
 # Save PC metadata
+# (is_surrogate_variable column flags which PCs are SVs)
 # ------------------------------------------------------------
 pc_meta <- data.frame(
-  PC = paste0("PC_", seq_along(singular_values)),
-  singular_value = singular_values,
-  variance_explained = var_explained,
+  PC                          = paste0("PC_", seq_along(singular_values)),
+  singular_value              = singular_values,
+  variance_explained          = var_explained,
   cumulative_variance_explained = cum_var_explained,
-  rank = seq_along(singular_values),
-  stringsAsFactors = FALSE
+  rank                        = seq_along(singular_values),
+  is_surrogate_variable       = seq_along(singular_values) <= n_pc,
+  stringsAsFactors            = FALSE
 )
 
 readr::write_tsv(pc_meta, pc_meta_tsv)
 
 # ------------------------------------------------------------
-# Variance explained plots (all PCs)
+# Variance explained plot (top N PCs, SVs highlighted in red)
+#
+# - Points and line for PCs 1..max_pcs_plot
+# - SVs (1..n_pc) shown in red; remaining PCs in grey
+# - Vertical dashed line marks the SV / non-SV boundary
+# - Title states how many SVs were identified
 # ------------------------------------------------------------
-var_df <- data.frame(PC = seq_along(var_explained), variance_explained = var_explained)
-cumvar_df <- data.frame(PC = seq_along(cum_var_explained), cumulative_variance_explained = cum_var_explained)
+var_df_plot <- data.frame(
+  PC                = seq_len(min(opt$max_pcs_plot, length(var_explained))),
+  variance_explained = var_explained[seq_len(min(opt$max_pcs_plot, length(var_explained)))]
+)
+var_df_plot$is_sv <- var_df_plot$PC <= n_pc
 
-p_var <- ggplot(var_df, aes(x = PC, y = variance_explained)) +
-  geom_line() +
-  geom_point(size = 0.7) +
+p_var <- ggplot(var_df_plot, aes(x = PC, y = variance_explained)) +
+  geom_line(color = "grey60", linewidth = 0.7) +
+  geom_point(aes(color = is_sv), size = 2.5) +
+  {if (n_pc > 0 && n_pc < nrow(var_df_plot))
+    geom_vline(xintercept = n_pc + 0.5,
+               linetype   = "dashed",
+               linewidth  = 0.6,
+               color      = "firebrick")
+  } +
+  scale_color_manual(
+    values = c("TRUE"  = "firebrick",
+               "FALSE" = "grey40"),
+    labels = c("TRUE"  = paste0("Surrogate Variable (num.sv, n=", n_pc, ")"),
+               "FALSE" = "PC (not selected as SV)"),
+    name   = NULL
+  ) +
+  scale_x_continuous(breaks = seq(1, nrow(var_df_plot), by = 2)) +
   theme_bw(base_size = opt$base_size) +
-  theme(panel.grid = element_blank()) +
+  theme(
+    panel.grid    = element_blank(),
+    legend.position = "bottom"
+  ) +
   labs(
-    title = "Variance Explained by All PCs",
-    x = "Principal Component",
-    y = "Proportion of Variance Explained"
+    title    = paste0("Variance Explained (Top ", opt$max_pcs_plot,
+                      " PCs | SVs selected by num.sv: ", n_pc, ")"),
+    subtitle = paste0("Red points = surrogate variables used for methylation adjustment"),
+    x        = "Principal Component",
+    y        = "Proportion of Variance Explained"
   )
 
 ggsave(
-  filename = var_plot_pdf,
-  plot = p_var,
-  width = opt$plot_width,
-  height = opt$plot_height,
-  dpi = opt$plot_dpi,
-  units = "in",
+  filename  = var_plot_pdf,
+  plot      = p_var,
+  width     = opt$plot_width,
+  height    = opt$plot_height,
+  dpi       = opt$plot_dpi,
+  units     = "in",
   limitsize = FALSE
 )
 
-p_cumvar <- ggplot(cumvar_df, aes(x = PC, y = cumulative_variance_explained)) +
-  geom_line() +
-  geom_point(size = 0.7) +
-  theme_bw(base_size = opt$base_size) +
-  theme(panel.grid = element_blank()) +
-  labs(
-    title = "Cumulative Variance Explained by All PCs",
-    x = "Principal Component",
-    y = "Cumulative Proportion of Variance Explained"
-  )
-
-ggsave(
-  filename = cumvar_plot_pdf,
-  plot = p_cumvar,
-  width = opt$plot_width,
-  height = opt$plot_height,
-  dpi = opt$plot_dpi,
-  units = "in",
-  limitsize = FALSE
-)
+message("Saved variance explained plot: ", var_plot_pdf)
 
 # ------------------------------------------------------------
 # PC-trait correlations
@@ -522,106 +572,93 @@ PCtraitCor_pearson <- getMEtraitCor(
   PCs,
   colData = sample_info_num,
   corType = "pearson",
-  file = pc_trait_pearson_tsv
+  file    = pc_trait_pearson_tsv
 )
 
 PCtraitCor_bicor <- getMEtraitCor(
   PCs,
   colData = sample_info_num,
   corType = "bicor",
-  file = pc_trait_bicor_tsv
+  file    = pc_trait_bicor_tsv
 )
 
-primary_method <- tolower(opt$primary_cor_method)
-primary_stats <- if (primary_method == "bicor") PCtraitCor_bicor else PCtraitCor_pearson
+primary_method     <- tolower(opt$primary_cor_method)
+primary_stats      <- if (primary_method == "bicor") PCtraitCor_bicor else PCtraitCor_pearson
 primary_cor_column <- if (primary_method == "bicor") "bicor" else "cor"
+
+# ------------------------------------------------------------
+# Add [SV] labels to PC names in stats tables used for heatmaps
+# This annotates the x-axis so viewers can immediately see which
+# PCs are surrogate variables without needing to cross-reference
+# the metadata file.
+# ------------------------------------------------------------
+primary_stats_sv <- label_sv_in_stats(primary_stats, n_sv = n_pc)
 
 # ------------------------------------------------------------
 # Selected traits heatmap
 # ------------------------------------------------------------
 if (length(selected_traits) > 0 && selected_trait_mode != "none") {
-  selected_title <- paste0(
-    "PC-Trait Heatmap: Selected Traits (",
-    selected_trait_mode,
-    ", ",
-    primary_method,
-    ")"
-  )
 
   plotPCTrait(
-    pc_trait_stats = primary_stats,
-    output_file = heatmap_selected_pdf,
-    cor_column = primary_cor_column,
-    p_column = "p",
-    mode = "selected_traits",
-    selected_traits = selected_traits,
-    cluster_traits = TRUE,
-    cluster_pcs = FALSE,
-    title = selected_title,
-    base_size = opt$base_size,
-    axis_text_size = opt$axis_text_size,
-    width = opt$plot_width,
-    height = opt$plot_height,
-    dpi = opt$plot_dpi,
-    verbose = TRUE
+    MEtraitCor    = primary_stats_sv,
+    subsetTraits  = selected_traits,
+    file          = heatmap_selected_pdf,
+    width         = opt$plot_width,
+    height        = opt$plot_height,
+    dpi           = opt$plot_dpi,
+    base_size     = opt$base_size,
+    axis.text.size = opt$axis_text_size,
+    verbose       = TRUE
   )
+
 } else {
-  message("Skipping selected-traits heatmap: no selected traits available under selected_trait_mode = ", selected_trait_mode)
+  message("Skipping selected-traits heatmap: no selected traits available under selected_trait_mode = ",
+          selected_trait_mode)
 }
 
 # ------------------------------------------------------------
 # Top associations heatmap
 # ------------------------------------------------------------
 plotPCTrait(
-  pc_trait_stats = primary_stats,
-  output_file = heatmap_topcells_pdf,
-  cor_column = primary_cor_column,
-  p_column = "p",
-  mode = "top_cells",
-  top_n_cells = opt$top_cell_n,
-  cluster_traits = FALSE,
-  cluster_pcs = FALSE,
-  title = paste0("PC-Trait Heatmap: Top ", opt$top_cell_n, " Associations (", primary_method, ")"),
-  base_size = opt$base_size,
-  axis_text_size = opt$axis_text_size,
-  width = opt$plot_width,
-  height = opt$plot_height,
-  dpi = opt$plot_dpi,
-  verbose = TRUE
+  MEtraitCor     = primary_stats_sv,
+  topCells       = opt$top_cell_n,
+  file           = heatmap_topcells_pdf,
+  width          = opt$plot_width,
+  height         = opt$plot_height,
+  dpi            = opt$plot_dpi,
+  base_size      = opt$base_size,
+  axis.text.size = opt$axis_text_size,
+  verbose        = TRUE
 )
 
 # ------------------------------------------------------------
 # Top traits overall heatmap
 # ------------------------------------------------------------
+top_traits_list <- names(
+  sort(tapply(primary_stats_sv$p, primary_stats_sv$trait, min))
+)[seq_len(min(opt$top_trait_n, length(unique(primary_stats_sv$trait))))]
+
 plotPCTrait(
-  pc_trait_stats = primary_stats,
-  output_file = heatmap_toptraits_pdf,
-  cor_column = primary_cor_column,
-  p_column = "p",
-  mode = "top_traits",
-  top_n_traits = opt$top_trait_n,
-  cluster_traits = TRUE,
-  cluster_pcs = FALSE,
-  title = paste0("PC-Trait Heatmap: Top ", opt$top_trait_n, " Traits Overall (", primary_method, ")"),
-  base_size = opt$base_size,
-  axis_text_size = opt$axis_text_size,
-  width = opt$plot_width,
-  height = opt$plot_height,
-  dpi = opt$plot_dpi,
-  verbose = TRUE
+  MEtraitCor     = primary_stats_sv[primary_stats_sv$trait %in% top_traits_list, ],
+  file           = heatmap_toptraits_pdf,
+  width          = opt$plot_width,
+  height         = opt$plot_height,
+  dpi            = opt$plot_dpi,
+  base_size      = opt$base_size,
+  axis.text.size = opt$axis_text_size,
+  verbose        = TRUE
 )
 
 # ------------------------------------------------------------
 # Trait dendrogram from PC associations
 # ------------------------------------------------------------
 plotTraitDendrogramFromPC(
-  pc_trait_stats = primary_stats,
-  output_file = trait_dendro_pdf,
-  cor_column = primary_cor_column,
-  p_column = "p",
-  width = opt$plot_width,
-  height = opt$plot_height,
-  verbose = TRUE
+  pc_trait_stats = primary_stats_sv,
+  output_file    = trait_dendro_pdf,
+  cor_column     = primary_cor_column,
+  width          = opt$plot_width,
+  height         = opt$plot_height,
+  verbose        = TRUE
 )
 
 # ------------------------------------------------------------
@@ -639,6 +676,7 @@ run_params <- c(
   paste("top_cell_n:", opt$top_cell_n),
   paste("primary_cor_method:", primary_method),
   paste("selected_trait_mode:", selected_trait_mode),
+  paste("max_pcs_plot:", opt$max_pcs_plot),
   paste("plot_width:", opt$plot_width),
   paste("plot_height:", opt$plot_height),
   paste("plot_dpi:", opt$plot_dpi),
@@ -650,7 +688,7 @@ run_params <- c(
   paste("n_samples_after_alignment:", ncol(meth)),
   paste("n_regions:", nrow(meth)),
   paste("n_numeric_traits_used:", ncol(sample_info_num)),
-  paste("n_pcs_selected_by_numsv:", n_pc),
+  paste("n_pcs_selected_as_svs_by_numsv:", n_pc),
   paste("n_protected_traits_found:", length(protected_resolved$found)),
   paste("n_technical_traits_found:", length(technical_resolved$found)),
   paste("date:", as.character(Sys.time()))
@@ -658,4 +696,23 @@ run_params <- c(
 
 writeLines(run_params, con = file.path(out_dir, "run_parameters.txt"))
 
-message("✓ Script 04 complete: PC derivation and diagnostics finished")
+
+message("Surrogate variables identified by num.sv: ", n_pc,
+        " (PC_1 through PC_", n_pc, ")")
+# ------------------------------------------------------------
+# Final summary
+# ------------------------------------------------------------
+message("Consensus Script 04 complete: PC derivation and diagnostics finished")
+message("Output folder: ", out_dir)
+
+message("------------------------------------------------------------")
+message("[LATENT STRUCTURE SUMMARY]")
+message("------------------------------------------------------------")
+message("Samples: ", nrow(PCs))
+message("Selected latent factors for adjustment (num.sv): ", n_pc)
+message("")
+message("Returned adjustment matrix: ", nrow(PCs), " x ", ncol(PCs), " (samples x selected PCs)")
+message("")
+message("Variance captured by selected PCs: ",
+        round(sum(var_explained[seq_len(n_pc)]) * 100, 2), "%")
+message("")

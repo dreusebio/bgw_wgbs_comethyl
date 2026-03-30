@@ -34,7 +34,7 @@
 #     so this script temporarily switches into --cyto_dir only
 #     for that function call.
 # ================================================================
-message("Starting ✓")
+message("Starting Script 00")
 
 suppressPackageStartupMessages({
   library(optparse)
@@ -172,4 +172,4 @@ writeLines(
   con = file.path(step_dir, "run_parameters.txt")
 )
 
-message("✓ Script 00 complete: unfiltered BSseq object created")
+message(" Script 00 complete: unfiltered BSseq object created")

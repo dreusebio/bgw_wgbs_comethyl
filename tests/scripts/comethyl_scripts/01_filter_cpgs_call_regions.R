@@ -39,7 +39,7 @@
 #   - This step is important for later consensus analysis because
 #     region definitions must be handled consistently across datasets.
 # ================================================================
-message("Starting ✓")
+message("Starting Script 01")
 
 suppressPackageStartupMessages({
   library(optparse)
@@ -184,4 +184,4 @@ writeLines(
   con = file.path(variant_dir, "run_parameters.txt")
 )
 
-message("✓ Script 01 complete: CpG filtering and region calling complete")
+message(" Script 01 complete: CpG filtering and region calling complete")

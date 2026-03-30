@@ -1,0 +1,13 @@
+variant_name: v2_exclude_protected_pcs
+input_file: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
+softpower_cor: pearson
+power_vector: 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+block_size: 20000
+gc_interval: 19999
+n_regions: 49
+n_samples: 6611
+plot_sample_dendro: TRUE
+sample_dendrogram_status: completed
+softpower_rds: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/SoftPower_pearson.rds
+softpower_plot: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/SoftPower_pearson_Plots.pdf
+sample_dendrogram_file: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_Dendrogram_pearson.pdf

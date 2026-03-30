@@ -50,7 +50,7 @@
 #     quantile trimming so the filtered and unfiltered distributions
 #     remain comparable.
 # ================================================================
-message("Starting ✓")
+message("Starting Script 02")
 
 suppressPackageStartupMessages({
   library(optparse)
@@ -369,6 +369,6 @@ writeLines(
 # 11. Summary
 # ------------------------------------------------------------
 
-message("✓ Script 02 complete: region filtering and QC plots complete")
+message("Script 02 complete: region filtering and QC plots complete")
 message("Output folder: ", out_dir)
 message("Regions after filtering: ", nrow(regions_filt))

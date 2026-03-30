@@ -36,7 +36,7 @@
 #   - This script assumes region IDs and coordinates in Filtered_Regions.txt
 #     are compatible with the filtered BSseq object.
 # ================================================================
-message("Starting ✓")
+message("Starting Script 03")
 
 suppressPackageStartupMessages({
   library(optparse)
@@ -163,4 +163,4 @@ writeLines(
   con = file.path(out_dir, "run_parameters.txt")
 )
 
-message("✓ Script 03 complete: region methylation calculated")
+message("Script 03 complete: region methylation calculated")

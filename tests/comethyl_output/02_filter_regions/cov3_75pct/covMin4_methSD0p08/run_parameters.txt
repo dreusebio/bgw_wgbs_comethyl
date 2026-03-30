@@ -1,0 +1,12 @@
+project_root: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests
+input_regions: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/01_filter_regions/cov3_75pct/Regions.txt
+input_label: cov3_75pct
+cov_min: 4
+meth_sd: 0.08
+base_size: 22
+bins: 40
+max_q: 0.99
+width: 20
+height: 10
+output_dir: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08
+date: 2026-03-28 23:35:59.352231

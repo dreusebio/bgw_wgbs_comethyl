@@ -58,7 +58,7 @@
 #   - v3 runs only if requested and technical traits are available.
 #   - No project-specific trait cleaning is done here.
 # ================================================================
-message("Starting ✓")
+message("Starting Script 05")
 
 suppressPackageStartupMessages({
   library(optparse)
@@ -71,7 +71,9 @@ suppressPackageStartupMessages({
 # ------------------------------------------------------------
 # Load helper functions
 # ------------------------------------------------------------
-script_dir <- dirname(normalizePath(commandArgs(trailingOnly = FALSE)[grep("^--file=", commandArgs(trailingOnly = FALSE))]))
+script_file_arg <- commandArgs(trailingOnly = FALSE)[grep("^--file=", commandArgs(trailingOnly = FALSE))]
+if (length(script_file_arg) == 0) stop("Could not determine script path from commandArgs().")
+script_dir <- dirname(normalizePath(sub("^--file=", "", script_file_arg[1])))
 helper_file <- file.path(script_dir, "helper.R")
 if (!file.exists(helper_file)) {
   stop("helper.R not found next to this script: ", helper_file)
@@ -589,4 +591,4 @@ run_params <- c(
 
 writeLines(run_params, con = file.path(out_dir, "run_parameters.txt"))
 
-message("✓ Script 05 complete: methylation adjustment finished")
+message("Script 05 complete: methylation adjustment finished")

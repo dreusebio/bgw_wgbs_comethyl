@@ -41,7 +41,7 @@
 #   - v2 and v3 are optional and will only run if input files are provided.
 #   - Variant names are derived from the input file paths.
 # ================================================================
-message("Starting ✓")
+message("Starting Script 06")
 
 suppressPackageStartupMessages({
   library(optparse)
@@ -326,6 +326,5 @@ write_log_lines(
   ),
   file.path(out_dir, "run_parameters.txt")
 )
-
-message("\nALL SOFT-POWER RUNS COMPLETE (", softpower_cor, ") ✓")
+message("Script 06 complete: soft power finished" )
 message("Outputs saved under:\n  ", out_dir)

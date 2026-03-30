@@ -38,7 +38,7 @@
 #       Modules.bed
 #       run_parameters.txt
 # ================================================================
-message("Starting ✓")
+message("Starting Script 07")
 
 suppressPackageStartupMessages({
   library(optparse)
@@ -343,5 +343,5 @@ write_log_lines(
   file.path(out_dir, "run_parameters.txt")
 )
 
-message("\nALL MODULE DETECTION RUNS COMPLETE ✓")
+message("Script 07 complete: module detection finished" )
 message("Outputs saved under:\n  ", out_dir)
