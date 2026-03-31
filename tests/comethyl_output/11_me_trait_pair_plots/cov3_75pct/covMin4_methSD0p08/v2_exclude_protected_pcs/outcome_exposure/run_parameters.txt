@@ -1,0 +1,15 @@
+set_name: outcome_exposure
+set_file: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/config/presentation_sets/outcome_exposure.txt
+modules_rds: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds
+stats_file: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/ME_Trait_Correlation_Stats_Bicor.tsv
+sample_info: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/data/metadata/merged_qc.xlsx
+sample_id_col: NULL
+trait_exclude_file: NULL
+only_significant: TRUE
+p_thresh: 0.05
+top_n_pairs: 50
+cat_plot_style: violin
+n_requested_traits: 18
+n_found_traits: 18
+n_missing_traits: 0
+n_pairs_plotted: 3

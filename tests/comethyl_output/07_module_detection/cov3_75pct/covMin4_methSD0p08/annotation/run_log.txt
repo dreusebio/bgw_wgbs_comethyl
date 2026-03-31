@@ -1,0 +1,56 @@
+[2026-03-30 23:40:48] Starting annotation for variant: v1 
+[2026-03-30 23:40:48] modules_path: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds 
+[2026-03-30 23:40:48] variant_root: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08 
+[2026-03-30 23:40:48] genome: hg38 
+[2026-03-30 23:40:48] annotation_mode: auto 
+[2026-03-30 23:40:48] sample_info rows: 48; cols: 68 
+[2026-03-30 23:40:48] sample_id_col: (not provided) 
+[2026-03-30 23:40:48] Loaded regions: 6611 
+[2026-03-30 23:40:48] Unique modules: 3 
+[2026-03-30 23:41:02] Annotated regions rows: 6611 
+[2026-03-30 23:41:03] Module gene list rows: 504 
+[2026-03-30 23:41:03] Module summary rows: 3 
+[2026-03-30 23:41:03] Background genes: 497 
+[2026-03-30 23:41:03] Finished annotation for variant: v1 
+[2026-03-30 23:41:03] Starting annotation for variant: v2 
+[2026-03-30 23:41:03] modules_path: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds 
+[2026-03-30 23:41:03] variant_root: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08 
+[2026-03-30 23:41:03] genome: hg38 
+[2026-03-30 23:41:03] annotation_mode: auto 
+[2026-03-30 23:41:03] sample_info rows: 48; cols: 68 
+[2026-03-30 23:41:03] sample_id_col: (not provided) 
+[2026-03-30 23:41:03] Loaded regions: 6611 
+[2026-03-30 23:41:03] Unique modules: 3 
+[2026-03-30 23:41:15] Annotated regions rows: 6611 
+[2026-03-30 23:41:16] Module gene list rows: 1110 
+[2026-03-30 23:41:16] Module summary rows: 3 
+[2026-03-30 23:41:16] Background genes: 497 
+[2026-03-30 23:41:16] Finished annotation for variant: v2 
+[2026-03-30 23:42:10] Starting annotation for variant: v1 
+[2026-03-30 23:42:10] modules_path: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds 
+[2026-03-30 23:42:10] variant_root: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08 
+[2026-03-30 23:42:10] genome: hg38 
+[2026-03-30 23:42:10] annotation_mode: auto 
+[2026-03-30 23:42:10] sample_info rows: 48; cols: 68 
+[2026-03-30 23:42:10] sample_id_col: (not provided) 
+[2026-03-30 23:42:10] Loaded regions: 6611 
+[2026-03-30 23:42:10] Unique modules: 3 
+[2026-03-30 23:42:22] Annotated regions rows: 6611 
+[2026-03-30 23:42:23] Module gene list rows: 504 
+[2026-03-30 23:42:23] Module summary rows: 3 
+[2026-03-30 23:42:23] Background genes: 497 
+[2026-03-30 23:42:23] Finished annotation for variant: v1 
+[2026-03-30 23:42:23] Starting annotation for variant: v2 
+[2026-03-30 23:42:23] modules_path: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds 
+[2026-03-30 23:42:23] variant_root: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08 
+[2026-03-30 23:42:23] genome: hg38 
+[2026-03-30 23:42:23] annotation_mode: auto 
+[2026-03-30 23:42:23] sample_info rows: 48; cols: 68 
+[2026-03-30 23:42:24] sample_id_col: (not provided) 
+[2026-03-30 23:42:24] Loaded regions: 6611 
+[2026-03-30 23:42:24] Unique modules: 3 
+[2026-03-30 23:42:35] Annotated regions rows: 6611 
+[2026-03-30 23:42:36] Module gene list rows: 1110 
+[2026-03-30 23:42:36] Module summary rows: 3 
+[2026-03-30 23:42:36] Background genes: 497 
+[2026-03-30 23:42:36] Finished annotation for variant: v2 

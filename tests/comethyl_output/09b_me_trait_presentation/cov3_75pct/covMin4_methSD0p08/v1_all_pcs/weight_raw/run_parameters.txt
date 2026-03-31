@@ -1,0 +1,16 @@
+set_name: weight_raw
+variant_name: v1_all_pcs
+set_file: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/config/presentation_sets/weight_raw.txt
+stats_file: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/ME_Trait_Correlation_Stats_Bicor.tsv
+modules_rds: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+module_dendro_distance: bicor
+p_thresh: 0.05
+top_n: 25
+n_requested_traits: 6
+n_found_traits: 6
+n_missing_traits: 0
+n_rows_subset: 18
+n_rows_significant: 0
+full_heatmap: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/weight_raw/ME_Trait_Heatmap_FULL.pdf
+top_heatmap: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/weight_raw/ME_Trait_Heatmap_TOP.pdf
+date: 2026-03-30 22:44:59.030559

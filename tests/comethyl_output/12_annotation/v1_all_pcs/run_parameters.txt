@@ -1,0 +1,13 @@
+timestamp	2026-03-31 00:10:40
+project_root	/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests
+variant_label	v1_all_pcs
+modules_path	/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+annotation_root	/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/12_annotation
+genome	hg38
+annotation_mode	auto
+sample_info_provided	TRUE
+sample_id_col	
+n_regions	6611
+n_modules	3
+n_annotated_regions	6611
+n_background_genes	497

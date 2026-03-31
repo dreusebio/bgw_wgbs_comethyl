@@ -2,3 +2,432 @@
 SLURM_NODELIST: hive-dc-7-6-26
 ############### Job 11485009 prolog ###############
 hive-dc-7-6-26
+R_LIBS_USER= /home/gekuodza/R/x86_64-conda-linux-gnu-library/4.3 
+[1] "/quobyte/lasallegrp/George/envs/Comethyl_v1.3.0_BACKUP/lib/R/library"
+OK
+
+############### Job 11485009 summary from hive-dc-7-6-26 ###############
+Name                : Cometh_BGW
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-6-26
+Cores               : 59
+GPUs                : 0
+State               : CANCELLED,CANCELLED by 2224567
+ExitCode            : 0:0
+Submit              : 2026-03-30T16:00:53
+Start               : 2026-03-30T16:00:54
+End                 : 2026-03-30T17:09:48
+Reserved walltime   : 23:00:00
+Used walltime       : 01:08:54
+Used CPU time       : 00:00:46
+% User (Computation): 94.54%
+% System (I/O)      :  5.46%
+Mem reserved        : 700G
+Max Mem used        : 1.12G (hive-dc-7-6-26)
+Max Disk Write      : 30.72K (hive-dc-7-6-26)
+Max Disk Read       : 197.55M (hive-dc-7-6-26)
+
+############### Job 11485009 info ###############
+JobId=11485009 JobName=Cometh_BGW
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8089 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:15
+   RunTime=01:08:46 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-03-30T16:00:53 EligibleTime=2026-03-30T16:00:53
+   AccrueTime=2026-03-30T16:00:53
+   StartTime=2026-03-30T16:00:54 EndTime=2026-03-30T17:09:40 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-30T16:00:54 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-7-81:1665463
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-6-26
+   BatchHost=hive-dc-7-6-26
+   NumNodes=1 NumCPUs=59 NumTasks=1 CPUs/Task=59 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=59,mem=700G,node=1,billing=59
+   AllocTRES=cpu=59,mem=700G,node=1,billing=59
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=59 MinMemoryNode=700G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/run_slurm.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/run_slurm.slurm
+   WorkDir=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests
+   StdErr=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=59
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11486086 prolog ###############
+SLURM_NODELIST: hive-dc-7-6-22
+############### Job 11486086 prolog ###############
+hive-dc-7-6-22
+Allowing parallel execution with up to 4 working processes.
+ Calculating module eigengenes block-wise from all genes
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+ Calculating module eigengenes block-wise from all genes
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 2570 genes from module 1 because their KME is too low.
+     ..removing 274 genes from module 2 because their KME is too low.
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+Allowing parallel execution with up to 127 working processes.
+
+############### Job 11486086 summary from hive-dc-7-6-22 ###############
+Name                : Cometh_BGW
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-6-22
+Cores               : 59
+GPUs                : 0
+State               : COMPLETED
+ExitCode            : 0:0
+Submit              : 2026-03-30T17:11:14
+Start               : 2026-03-30T17:11:16
+End                 : 2026-03-30T17:37:02
+Reserved walltime   : 23:00:00
+Used walltime       : 00:25:46
+Used CPU time       : 00:03:17
+% User (Computation): 89.64%
+% System (I/O)      : 10.36%
+Mem reserved        : 700G
+Max Mem used        : 1.56G (hive-dc-7-6-22)
+Max Disk Write      : 3.19M (hive-dc-7-6-22)
+Max Disk Read       : 236.92M (hive-dc-7-6-22)
+
+############### Job 11486086 info ###############
+JobId=11486086 JobName=Cometh_BGW
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8090 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:25:46 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-03-30T17:11:14 EligibleTime=2026-03-30T17:11:14
+   AccrueTime=2026-03-30T17:11:14
+   StartTime=2026-03-30T17:11:16 EndTime=2026-03-30T17:37:02 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-30T17:11:16 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-7-81:1660733
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-6-22
+   BatchHost=hive-dc-7-6-22
+   NumNodes=1 NumCPUs=59 NumTasks=1 CPUs/Task=59 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=59,mem=700G,node=1,billing=59
+   AllocTRES=cpu=59,mem=700G,node=1,billing=59
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=59 MinMemoryNode=700G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/run_slurm.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/run_slurm.slurm
+   WorkDir=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests
+   StdErr=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=59
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11486682 prolog ###############
+SLURM_NODELIST: hive-dc-7-8-54
+############### Job 11486682 prolog ###############
+hive-dc-7-8-54
+Allowing parallel execution with up to 4 working processes.
+ Calculating module eigengenes block-wise from all genes
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+ Calculating module eigengenes block-wise from all genes
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 2570 genes from module 1 because their KME is too low.
+     ..removing 274 genes from module 2 because their KME is too low.
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+Allowing parallel execution with up to 127 working processes.
+
+############### Job 11486682 summary from hive-dc-7-8-54 ###############
+Name                : Cometh_BGW
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-8-54
+Cores               : 59
+GPUs                : 0
+State               : COMPLETED
+ExitCode            : 0:0
+Submit              : 2026-03-30T17:41:30
+Start               : 2026-03-30T17:41:30
+End                 : 2026-03-30T17:48:52
+Reserved walltime   : 23:00:00
+Used walltime       : 00:07:22
+Used CPU time       : 00:03:35
+% User (Computation): 86.80%
+% System (I/O)      : 13.20%
+Mem reserved        : 700G
+Max Mem used        : 1.55G (hive-dc-7-8-54)
+Max Disk Write      : 2.77M (hive-dc-7-8-54)
+Max Disk Read       : 236.02M (hive-dc-7-8-54)
+
+############### Job 11486682 info ###############
+JobId=11486682 JobName=Cometh_BGW
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8090 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:07:21 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-03-30T17:41:30 EligibleTime=2026-03-30T17:41:30
+   AccrueTime=2026-03-30T17:41:30
+   StartTime=2026-03-30T17:41:30 EndTime=2026-03-30T17:48:51 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-30T17:41:30 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-7-81:1660733
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-8-54
+   BatchHost=hive-dc-7-8-54
+   NumNodes=1 NumCPUs=59 NumTasks=1 CPUs/Task=59 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=59,mem=700G,node=1,billing=59
+   AllocTRES=cpu=59,mem=700G,node=1,billing=59
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=59 MinMemoryNode=700G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/run_slurm.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/run_slurm.slurm
+   WorkDir=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests
+   StdErr=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=59
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11486695 prolog ###############
+SLURM_NODELIST: hive-dc-7-8-54
+############### Job 11486695 prolog ###############
+hive-dc-7-8-54
+Allowing parallel execution with up to 4 working processes.
+ Calculating module eigengenes block-wise from all genes
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+ Calculating module eigengenes block-wise from all genes
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 2570 genes from module 1 because their KME is too low.
+     ..removing 274 genes from module 2 because their KME is too low.
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+Allowing parallel execution with up to 127 working processes.
+
+############### Job 11486695 summary from hive-dc-7-8-54 ###############
+Name                : Cometh_BGW
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-8-54
+Cores               : 59
+GPUs                : 0
+State               : COMPLETED
+ExitCode            : 0:0
+Submit              : 2026-03-30T17:52:19
+Start               : 2026-03-30T17:52:20
+End                 : 2026-03-30T18:05:24
+Reserved walltime   : 23:00:00
+Used walltime       : 00:13:04
+Used CPU time       : 00:03:15
+% User (Computation): 87.05%
+% System (I/O)      : 12.95%
+Mem reserved        : 700G
+Max Mem used        : 1.77G (hive-dc-7-8-54)
+Max Disk Write      : 3.07M (hive-dc-7-8-54)
+Max Disk Read       : 236.81M (hive-dc-7-8-54)
+
+############### Job 11486695 info ###############
+JobId=11486695 JobName=Cometh_BGW
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8090 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:13:04 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-03-30T17:52:19 EligibleTime=2026-03-30T17:52:19
+   AccrueTime=2026-03-30T17:52:19
+   StartTime=2026-03-30T17:52:20 EndTime=2026-03-30T18:05:24 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-30T17:52:20 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-7-81:1660733
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-8-54
+   BatchHost=hive-dc-7-8-54
+   NumNodes=1 NumCPUs=59 NumTasks=1 CPUs/Task=59 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=59,mem=700G,node=1,billing=59
+   AllocTRES=cpu=59,mem=700G,node=1,billing=59
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=59 MinMemoryNode=700G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/run_slurm.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/run_slurm.slurm
+   WorkDir=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests
+   StdErr=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=59
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11488479 prolog ###############
+SLURM_NODELIST: hive-dc-7-8-54
+############### Job 11488479 prolog ###############
+hive-dc-7-8-54
+Allowing parallel execution with up to 4 working processes.
+ Calculating module eigengenes block-wise from all genes
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+ Calculating module eigengenes block-wise from all genes
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 2570 genes from module 1 because their KME is too low.
+     ..removing 274 genes from module 2 because their KME is too low.
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+Allowing parallel execution with up to 127 working processes.
+
+############### Job 11488479 summary from hive-dc-7-8-54 ###############
+Name                : Cometh_BGW
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-8-54
+Cores               : 59
+GPUs                : 0
+State               : COMPLETED
+ExitCode            : 0:0
+Submit              : 2026-03-30T21:04:49
+Start               : 2026-03-30T21:04:50
+End                 : 2026-03-30T21:13:06
+Reserved walltime   : 23:00:00
+Used walltime       : 00:08:16
+Used CPU time       : 00:03:18
+% User (Computation): 86.33%
+% System (I/O)      : 13.67%
+Mem reserved        : 700G
+Max Mem used        : 1.16G (hive-dc-7-8-54)
+Max Disk Write      : 2.63M (hive-dc-7-8-54)
+Max Disk Read       : 215.24M (hive-dc-7-8-54)
+
+############### Job 11488479 info ###############
+JobId=11488479 JobName=Cometh_BGW
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8094 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:08:16 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-03-30T21:04:49 EligibleTime=2026-03-30T21:04:49
+   AccrueTime=2026-03-30T21:04:49
+   StartTime=2026-03-30T21:04:50 EndTime=2026-03-30T21:13:06 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-30T21:04:50 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-7-81:1660733
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-8-54
+   BatchHost=hive-dc-7-8-54
+   NumNodes=1 NumCPUs=59 NumTasks=1 CPUs/Task=59 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=59,mem=700G,node=1,billing=59
+   AllocTRES=cpu=59,mem=700G,node=1,billing=59
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=59 MinMemoryNode=700G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/run_slurm.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/run_slurm.slurm
+   WorkDir=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests
+   StdErr=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=59
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT

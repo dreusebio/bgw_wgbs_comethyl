@@ -1,0 +1,15 @@
+variant_name: v1_all_pcs
+modules_file: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+sample_info: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/data/metadata/merged_qc.xlsx
+sample_id_col: NULL
+run_pearson: FALSE
+run_bicor: TRUE
+p_thresh: 0.05
+top_n: 250
+module_dendro_distance: bicor
+trait_exclude_file: NULL
+outcome_traits_file: NULL
+n_samples_overlap: 49
+n_modules: 3
+n_traits_tested: 66
+n_outcome_traits_found: 0

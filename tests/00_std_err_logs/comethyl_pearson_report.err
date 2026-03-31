@@ -1,0 +1,631 @@
+Loading required package: Matrix
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, sort,
+    table, tapply, union, unique, unsplit, which.max, which.min
+
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: S4Vectors
+Loading required package: stats4
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:Matrix’:
+
+    expand, unname
+
+The following object is masked from ‘package:utils’:
+
+    findMatches
+
+The following objects are masked from ‘package:base’:
+
+    expand.grid, I, unname
+
+Loading required package: S4Arrays
+Loading required package: abind
+Loading required package: IRanges
+
+Attaching package: ‘S4Arrays’
+
+The following object is masked from ‘package:abind’:
+
+    abind
+
+The following object is masked from ‘package:base’:
+
+    rowsum
+
+Warning messages:
+1: package ‘Matrix’ was built under R version 4.3.3 
+2: package ‘matrixStats’ was built under R version 4.3.3 
+
+
+Starting Script 08
+[2026-03-30T17:09:40.338] error: *** JOB 11485009 ON hive-dc-7-6-26 CANCELLED AT 2026-03-30T17:09:40 DUE to SIGNAL Terminated ***
+Starting Script 07
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08
+Loaded regions: 6611 rows
+
+==============================
+Running module detection for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] methylation dimensions: 49 regions x 6611 samples
+[v1_all_pcs] using powerEstimate = 15
+[v1_all_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.bed
+✓ Finished variant: v1_all_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.bed
+
+==============================
+Running module detection for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] methylation dimensions: 49 regions x 6611 samples
+[v2_exclude_protected_pcs] using powerEstimate = 7
+[v2_exclude_protected_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.bed
+✓ Finished variant: v2_exclude_protected_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.bed
+Script 07 complete: module detection finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08
+Starting Script 08
+Warning message:
+package ‘dplyr’ was built under R version 4.3.3 
+Loaded sample_info: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/data/metadata/merged_qc.xlsx
+colData dimensions: 49 samples x 67 traits
+colData_num dimensions: 49 samples x 67 numeric traits
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08
+
+==============================
+Running module/sample diagnostics for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] No MEgrey column found (3 real MEs remaining)
+[v1_all_pcs] Sample alignment to metadata: 49 overlapping samples retained from 49 ME samples and 49 metadata samples
+[v1_all_pcs] MEs used: 49 samples x 3 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_ME_Dendrogram.pdf
+[v1_all_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Correlation_Stats.tsv
+[v1_all_pcs] Saved module correlation stats
+[getDendro] Transposing data
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_ME_Dendrogram.pdf
+[v1_all_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_ME_Heatmap.pdf
+[v1_all_pcs] Saved sample x module eigengene heatmap
+Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+
+==============================
+Running module/sample diagnostics for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] No MEgrey column found (3 real MEs remaining)
+[v2_exclude_protected_pcs] Sample alignment to metadata: 49 overlapping samples retained from 49 ME samples and 49 metadata samples
+[v2_exclude_protected_pcs] MEs used: 49 samples x 3 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Correlation_Stats.tsv
+[v2_exclude_protected_pcs] Saved module correlation stats
+[getDendro] Transposing data
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample x module eigengene heatmap
+Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+Warning messages:
+1: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+2: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+Script 08 complete: module and sample diagnostics finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08
+Starting Script 07
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08
+Loaded regions: 6611 rows
+
+==============================
+Running module detection for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] methylation dimensions: 49 regions x 6611 samples
+[v1_all_pcs] using powerEstimate = 15
+[v1_all_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.bed
+✓ Finished variant: v1_all_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.bed
+
+==============================
+Running module detection for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] methylation dimensions: 49 regions x 6611 samples
+[v2_exclude_protected_pcs] using powerEstimate = 7
+[v2_exclude_protected_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.bed
+✓ Finished variant: v2_exclude_protected_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.bed
+Script 07 complete: module detection finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08
+Starting Script 08
+Warning message:
+package ‘dplyr’ was built under R version 4.3.3 
+Loaded sample_info: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/data/metadata/merged_qc.xlsx
+colData dimensions: 49 samples x 67 traits
+colData_num dimensions: 49 samples x 67 numeric traits
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08
+
+==============================
+Running module/sample diagnostics for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] No MEgrey column found (3 real MEs remaining)
+[v1_all_pcs] Sample alignment to metadata: 49 overlapping samples retained from 49 ME samples and 49 metadata samples
+[v1_all_pcs] MEs used: 49 samples x 3 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_ME_Dendrogram.pdf
+[v1_all_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Correlation_Stats.tsv
+[v1_all_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_ME_Dendrogram.pdf
+[v1_all_pcs] Saved sample ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_Correlation_Heatmap.pdf
+[v1_all_pcs] Failed sample correlation heatmap: invalid color specification "142B"
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_ME_Heatmap.pdf
+[v1_all_pcs] Saved sample x module eigengene heatmap
+Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+
+==============================
+Running module/sample diagnostics for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] No MEgrey column found (3 real MEs remaining)
+[v2_exclude_protected_pcs] Sample alignment to metadata: 49 overlapping samples retained from 49 ME samples and 49 metadata samples
+[v2_exclude_protected_pcs] MEs used: 49 samples x 3 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Correlation_Stats.tsv
+[v2_exclude_protected_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved sample ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Failed sample correlation heatmap: invalid color specification "139B"
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample x module eigengene heatmap
+Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+Warning messages:
+1: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+2: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+Script 08 complete: module and sample diagnostics finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08
+Starting Script 07
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08
+Loaded regions: 6611 rows
+
+==============================
+Running module detection for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] methylation dimensions: 49 regions x 6611 samples
+[v1_all_pcs] using powerEstimate = 15
+[v1_all_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.bed
+✓ Finished variant: v1_all_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.bed
+
+==============================
+Running module detection for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] methylation dimensions: 49 regions x 6611 samples
+[v2_exclude_protected_pcs] using powerEstimate = 7
+[v2_exclude_protected_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.bed
+✓ Finished variant: v2_exclude_protected_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.bed
+Script 07 complete: module detection finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08
+Starting Script 08
+Warning message:
+package ‘dplyr’ was built under R version 4.3.3 
+Loaded sample_info: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/data/metadata/merged_qc.xlsx
+colData dimensions: 49 samples x 67 traits
+colData_num dimensions: 49 samples x 67 numeric traits
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08
+
+==============================
+Running module/sample diagnostics for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] No MEgrey column found (3 real MEs remaining)
+[v1_all_pcs] Sample alignment to metadata: 49 overlapping samples retained from 49 ME samples and 49 metadata samples
+[v1_all_pcs] MEs used: 49 samples x 3 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_ME_Dendrogram.pdf
+[v1_all_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Correlation_Stats.tsv
+[v1_all_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_ME_Dendrogram.pdf
+[v1_all_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_ME_Heatmap.pdf
+[v1_all_pcs] Saved sample x module eigengene heatmap
+Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+
+==============================
+Running module/sample diagnostics for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] No MEgrey column found (3 real MEs remaining)
+[v2_exclude_protected_pcs] Sample alignment to metadata: 49 overlapping samples retained from 49 ME samples and 49 metadata samples
+[v2_exclude_protected_pcs] MEs used: 49 samples x 3 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Correlation_Stats.tsv
+[v2_exclude_protected_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample x module eigengene heatmap
+Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+Warning messages:
+1: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+2: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+Script 08 complete: module and sample diagnostics finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08
+Starting Script 07
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08
+Loaded regions: 6611 rows
+
+==============================
+Running module detection for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] methylation dimensions: 49 regions x 6611 samples
+[v1_all_pcs] using powerEstimate = 15
+[v1_all_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.bed
+✓ Finished variant: v1_all_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.bed
+
+==============================
+Running module detection for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] methylation dimensions: 49 regions x 6611 samples
+[v2_exclude_protected_pcs] using powerEstimate = 7
+[v2_exclude_protected_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.bed
+✓ Finished variant: v2_exclude_protected_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.bed
+Script 07 complete: module detection finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08
+Starting Script 08
+Warning message:
+package ‘dplyr’ was built under R version 4.3.3 
+Loaded sample_info: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/data/metadata/merged_qc.xlsx
+colData dimensions: 49 samples x 67 traits
+colData_num dimensions: 49 samples x 67 numeric traits
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08
+
+==============================
+Running module/sample diagnostics for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] No MEgrey column found (3 real MEs remaining)
+[v1_all_pcs] Sample alignment to metadata: 49 overlapping samples retained from 49 ME samples and 49 metadata samples
+[v1_all_pcs] MEs used: 49 samples x 3 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_ME_Dendrogram.pdf
+[v1_all_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Correlation_Stats.tsv
+[v1_all_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_ME_Dendrogram.pdf
+[v1_all_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_ME_Heatmap.pdf
+[v1_all_pcs] Saved sample x module eigengene heatmap
+Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+
+==============================
+Running module/sample diagnostics for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] No MEgrey column found (3 real MEs remaining)
+[v2_exclude_protected_pcs] Sample alignment to metadata: 49 overlapping samples retained from 49 ME samples and 49 metadata samples
+[v2_exclude_protected_pcs] MEs used: 49 samples x 3 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Correlation_Stats.tsv
+[v2_exclude_protected_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample x module eigengene heatmap
+Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+Warning messages:
+1: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+2: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+Script 08 complete: module and sample diagnostics finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08

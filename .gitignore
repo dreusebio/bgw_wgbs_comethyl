@@ -48,6 +48,7 @@ reports/
 data/
 analysis/
 docs/
+reproducibility/
 
 #################################
 #if you have some approved exceptions, list them here
