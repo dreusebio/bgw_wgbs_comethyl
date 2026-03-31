@@ -167,19 +167,37 @@ Expected:
 
 ## Running analysis
 
+
 All scripts should be executed through Pixi:
 
 ```bash
 pixi run Rscript scripts/<your_script>.R
 ```
 
-Example:
+---
+
+## Run test data (recommended)
+
+You can validate that the pipeline is working by running the included test dataset.
+
+The test data and example workflows are located in:
 
 ```bash
-pixi run Rscript scripts/comethyl_scripts/00_get_multiqc_merge.R
+tests/
+```
+#### Example:
+
+```bash
+pixi run Rscript tests/scripts/comethyl_scripts/00_import_cpg_reports.R
+```
+If no error, the expected results will be located in 
+
+```bash
+test/comethyl_output/
 ```
 
 ---
+
 
 ## Reproducibility
 
@@ -244,6 +262,23 @@ pixi run install-comethyl
 ## License
 
 MIT License (see `LICENSE`)
+
+---
+
+## Environment details
+R version: 4.3.3
+comethyl: 1.3.0
+Installed from: GitHub (cemordaunt/comethyl)
+Locked via: pixi.lock
+
+---
+
+## Citation
+
+If using this workflow, please cite:
+
+comethyl [Mordaunt et al.](https://academic.oup.com/bib/article/23/2/bbab554/6509051)
+Relevant WGBS and Bioconductor tools
 
 ---
 
