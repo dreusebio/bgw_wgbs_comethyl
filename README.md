@@ -7,8 +7,11 @@ Bioinformatics analysis of prenatal family and community exposures and their ass
 ## Project summary
 
 **Data type:** Whole Genome Bisulfite Sequencing (WGBS)
+
 **Study / cohort:** Babies GROWELL
+
 **Genome build:** hg38
+
 **Primary outputs:** Co-methylation modules, ME–trait associations, figures
 
 ---
