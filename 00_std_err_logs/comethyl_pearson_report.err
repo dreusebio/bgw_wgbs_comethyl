@@ -1,0 +1,288 @@
+Starting Script 00
+Warning message:
+package ‘BiocParallel’ was built under R version 4.3.3 
+Error: Cytosine report directory not found: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/data/processed/cytosine_reports
+Execution halted
+Starting Script 01
+Error: Input BSseq file not found: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/00_cpg_extraction/Unfiltered_BSseq.rds
+Execution halted
+Starting Script 02
+Error: Input Regions.txt not found: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/01_filter_regions/cov3_75pct/Regions.txt
+Execution halted
+Starting Script 03
+Error: Filtered BSseq file not found: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/01_filter_regions/cov3_75pct/Filtered_BSseq.rds
+Execution halted
+Starting Script 04
+Warning messages:
+1: package ‘mgcv’ was built under R version 4.3.3 
+2: package ‘BiocParallel’ was built under R version 4.3.3 
+3: package ‘dplyr’ was built under R version 4.3.3 
+Error: Input methylation file not found: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/03_region_methylation/cov3_75pct/covMin4_methSD0p08/Region_Methylation.rds
+Execution halted
+Starting Script 05
+Warning message:
+package ‘dplyr’ was built under R version 4.3.3 
+Error: input_meth not found: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/03_region_methylation/cov3_75pct/covMin4_methSD0p08/Region_Methylation.rds
+Execution halted
+Starting Script 06
+Error: input_v1 not found: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Adjusted_Region_Methylation_allPCs.rds
+Execution halted
+Starting Script 07
+Error: regions_file not found: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08/Filtered_Regions.txt
+Execution halted
+Starting Script 08
+Warning message:
+package ‘dplyr’ was built under R version 4.3.3 
+Error: modules_v1 not found: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+Execution halted
+Starting Script 09a
+Warning messages:
+1: package ‘dplyr’ was built under R version 4.3.3 
+2: package ‘gridExtra’ was built under R version 4.3.3 
+3: package ‘cowplot’ was built under R version 4.3.3 
+Error: modules_v1 not found: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+Execution halted
+Starting Script 09b
+Warning messages:
+1: package ‘dplyr’ was built under R version 4.3.3 
+2: package ‘gridExtra’ was built under R version 4.3.3 
+3: package ‘cowplot’ was built under R version 4.3.3 
+Error: stats_file not found: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/ME_Trait_Correlation_Stats_Bicor.tsv
+Execution halted
+Starting Script 10
+Warning messages:
+1: package ‘dplyr’ was built under R version 4.3.3 
+2: package ‘cowplot’ was built under R version 4.3.3 
+Error: modules_v1 not found: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+Execution halted
+Starting Script 11
+Warning message:
+package ‘dplyr’ was built under R version 4.3.3 
+Error: modules_rds not found: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+Execution halted
+Starting Script 11
+Warning message:
+package ‘dplyr’ was built under R version 4.3.3 
+Error: modules_rds not found: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds
+Execution halted
+Starting Script 12a
+Warning messages:
+1: package ‘dplyr’ was built under R version 4.3.3 
+2: package ‘GenomicRanges’ was built under R version 4.3.3 
+3: package ‘AnnotationDbi’ was built under R version 4.3.2 
+4: package ‘Biobase’ was built under R version 4.3.3 
+Error: modules_v1 not found: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+Execution halted
+/var/spool/slurmd/job11491744/slurm_script: line 207: unexpected EOF while looking for matching ``'
+/var/spool/slurmd/job11491744/slurm_script: line 211: syntax error: unexpected end of file
+Starting Script 00
+Warning message:
+package ‘BiocParallel’ was built under R version 4.3.3 
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/00_cpg_extraction
+[getCpGs] Loading CpG-level data
+[read.bismark] Using 'loci' as candidate loci.
+[read.bismark] Collapsing strand of 'loci' ...
+Done in 17.6 secs
+[read.bismark] Parsing files and constructing 'M' and 'Cov' matrices ...
+Done in 476.2 secs
+[read.bismark] Constructing BSseq object ... 
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/00_cpg_extraction/Unfiltered_BSseq.rds
+[getCpGtotals] Calculating CpG totals at specified cov and perSample cutoffs
+[getCpGtotals] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/00_cpg_extraction/CpG_Totals.txt
+[plotCpGtotals] Plotting CpG totals
+[plotCpGtotals] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/00_cpg_extraction/CpG_Totals.pdf
+Warning messages:
+1: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+2: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+ Script 00 complete: unfiltered BSseq object created
+Starting Script 01
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/01_filter_regions/cov3_75pct
+[getCpGs] Filtering CpG-level data for loci with at least 3 reads in at least 75% of samples
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/01_filter_regions/cov3_75pct/Filtered_BSseq.rds
+[getRegions] Calling regions when at least 3 CpGs are no more than 150 bases apart
+[getRegions] Calculating region statistics
+[getRegions] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/01_filter_regions/cov3_75pct/Regions.txt
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/01_filter_regions/cov3_75pct/Region_Plots.pdf
+Warning messages:
+1: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+2: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+[plotSDstats] Plotting methylation SD vs region statistics
+[plotSDstats] Limiting x-axis to values in bottom 99% for n, covMin, and covMean
+[plotSDstats] Saving plots as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/01_filter_regions/cov3_75pct/SD_Plots.pdf
+Warning message:
+The dot-dot notation (`..count..`) was deprecated in ggplot2 3.4.0.
+ℹ Please use `after_stat(count)` instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+[getRegionTotals] Calculating region totals at specified covMin and methSD cutoffs
+[getRegionTotals] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/01_filter_regions/cov3_75pct/Region_Totals.txt
+[plotRegionTotals] Plotting region totals
+[plotRegionTotals] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/01_filter_regions/cov3_75pct/Region_Totals.pdf
+ Script 01 complete: CpG filtering and region calling complete
+Starting Script 02
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08
+Loaded unfiltered regions: 2418245
+[getRegions] Filtering regions for at least 4 reads in all samples and methylation SD of at least 8%
+[getRegions] Creating new Region IDs
+[getRegions] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08/Filtered_Regions.txt
+Filtered regions: 461153
+Saved filtered regions: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08/Filtered_Regions.txt
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08/RegionStats_UNFILTERED.pdf
+Warning messages:
+1: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+2: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08/RegionStats_FILTERED.pdf
+Saved separate plots:
+ - /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08/RegionStats_UNFILTERED.pdf
+ - /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08/RegionStats_FILTERED.pdf
+[plotRegionStatsCompare2] Building combined QC plot
+[plotRegionStatsCompare2] Saving: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08/RegionStats_FilterEffect_COMBINED.pdf
+Saved combined plot: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08/RegionStats_FilterEffect_COMBINED.pdf
+Script 02 complete: region filtering and QC plots complete
+Output folder: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08
+Regions after filtering: 461153
+Starting Script 03
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/03_region_methylation/cov3_75pct/covMin4_methSD0p08
+Loaded filtered regions: 461153
+Loaded BSseq object successfully
+[getRegionMeth] Calculating region methylation from BSseq object
+[getRegionMeth] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/03_region_methylation/cov3_75pct/covMin4_methSD0p08/Region_Methylation.rds
+Saved region methylation RDS: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/03_region_methylation/cov3_75pct/covMin4_methSD0p08/Region_Methylation.rds
+Script 03 complete: region methylation calculated
+Starting Script 04
+Warning messages:
+1: package ‘mgcv’ was built under R version 4.3.3 
+2: package ‘BiocParallel’ was built under R version 4.3.3 
+3: package ‘dplyr’ was built under R version 4.3.3 
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin4_methSD0p08
+Loaded methylation matrix: 461153 regions x 48 samples
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/data/metadata/merged_qc.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+After alignment: 461153 regions x 48 samples
+Numeric trait columns retained for diagnostics: 66
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 7, missing = 0
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+Using protected traits in SVA model matrix: soc_env_tot, env_tot, soc_tot, wflzd_0to6mo, wflzd_6to12mo, rwg, BMI_Calc_24m
+[getPCs_generic] Determining number of PCs using sva::num.sv
+[getPCs_generic] NAs detected in model matrix; centering and replacing with 0
+[getPCs_generic] num.sv selected 4 PCs as surrogate variables
+PC matrix dimensions: 48 samples x 4 PCs
+Surrogate variables (num.sv): PC_1 through PC_4
+Saved variance explained plot: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin4_methSD0p08/Variance_Explained_Top20_PCs.pdf
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin4_methSD0p08/PC_Trait_Correlation_Stats_Pearson.tsv
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin4_methSD0p08/PC_Trait_Correlation_Stats_Bicor.tsv
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=6.00, height=5.00 (nX=4,nY=7)
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=6.00, height=11.00 (nX=4,nY=66)
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=6.00, height=10.50 (nX=4,nY=50)
+[plotTraitDendrogramFromPC] Saved: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin4_methSD0p08/Trait_Dendrogram_From_PC_Associations.pdf
+Surrogate variables identified by num.sv: 4 (PC_1 through PC_4)
+Consensus Script 04 complete: PC derivation and diagnostics finished
+Output folder: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin4_methSD0p08
+------------------------------------------------------------
+[LATENT STRUCTURE SUMMARY]
+------------------------------------------------------------
+Samples: 48
+Selected latent factors for adjustment (num.sv): 4
+
+Returned adjustment matrix: 48 x 4 (samples x selected PCs)
+
+Variance captured by selected PCs: 32.58%
+
+Starting Script 05
+Warning message:
+package ‘dplyr’ was built under R version 4.3.3 
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08
+After alignment: meth = 461153 regions x 48 samples; PCs = 48 samples x 4 PCs
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 7, missing = 0
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Adjusted_Region_Methylation_allPCs.rds
+✓ v1 complete: adjusted using all PCs (n = 4)
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
+✓ v2 complete: removed 1 protected-associated PCs; used 3 PCs
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Adjusted_Region_Methylation_technicalPCs_only.rds
+✓ v3 complete: used 1 technical-associated PCs
+Script 05 complete: methylation adjustment finished
+Starting Script 06
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08
+
+==============================
+Running soft power for variant: v1_all_pcs
+Correlation method: pearson
+==============================
+
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 16, fit = 0.825 and mean connectivity = 62
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/SoftPower_pearson.rds
+[plotSoftPower] Plotting scale-free topology fit and mean connectivity by soft power threshold
+[plotSoftPower] Saving plots as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/SoftPower_pearson_Plots.pdf
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_Dendrogram_pearson.pdf
+✓ Sample dendrogram saved: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_Dendrogram_pearson.pdf
+✓ Finished soft-power run for: v1_all_pcs
+  RDS: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/SoftPower_pearson.rds
+  PDF: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/SoftPower_pearson_Plots.pdf
+
+==============================
+Running soft power for variant: v2_exclude_protected_pcs
+Correlation method: pearson
+==============================
+
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0.755 and mean connectivity = 295.9
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/SoftPower_pearson.rds
+[plotSoftPower] Plotting scale-free topology fit and mean connectivity by soft power threshold
+[plotSoftPower] Saving plots as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/SoftPower_pearson_Plots.pdf
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_Dendrogram_pearson.pdf
+✓ Sample dendrogram saved: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_Dendrogram_pearson.pdf
+✓ Finished soft-power run for: v2_exclude_protected_pcs
+  RDS: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/SoftPower_pearson.rds
+  PDF: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/SoftPower_pearson_Plots.pdf
+
+==============================
+Running soft power for variant: v3_technical_pcs_only
+Correlation method: pearson
+==============================
+
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power

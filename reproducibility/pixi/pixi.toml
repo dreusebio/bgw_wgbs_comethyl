@@ -1,0 +1,46 @@
+[workspace]
+name = "bgw-wgbs-comethyl"
+version = "0.1.0"
+authors = ["George Eusebio Kuodza <gekuodza@health.ucdavis.edu>"]
+channels = ["conda-forge", "bioconda"]
+platforms = ["linux-64", "osx-64"]
+
+[tasks]
+install-comethyl = "Rscript ../env/install_comethyl.R"
+test-r = "Rscript -e 'sessionInfo()'"
+
+[dependencies]
+python = "*"
+pip = "*"
+pandoc = "*"
+longshot = "*"
+
+r-base = "4.3.*"
+r-tidyverse = "*"
+r-essentials = "*"
+r-openxlsx = "*"
+r-cowplot = "*"
+r-patchwork = "*"
+r-magrittr = "*"
+r-stringr = "*"
+r-ggplot2 = "*"
+r-remotes = "*"
+r-wgcna = "*"
+
+bioconductor-genomeinfodb = "*"
+bioconductor-genomeinfodbdata = "*"
+bioconductor-annotatr = "*"
+bioconductor-bsseq = "*"
+bioconductor-delayedmatrixstats = "*"
+bioconductor-dmrseq = "*"
+bioconductor-sva = "*"
+bioconductor-preprocesscore = "*"
+bioconductor-impute = "*"
+
+bioconductor-biomart = "*"
+bioconductor-clusterprofiler = "*"
+bioconductor-dose = "*"
+bioconductor-enrichplot = "*"
+bioconductor-fgsea = "*"
+bioconductor-genomicranges = "*"
+bioconductor-rgreat = "*"

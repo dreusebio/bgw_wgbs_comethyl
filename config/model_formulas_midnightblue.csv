@@ -1,0 +1,10 @@
+label,formula
+M1: Breast Cancer,{MODULE} ~ BrCAF1
+M2: Early Men F1,{MODULE} ~ early_menF1
+M3: BC + Early F1,{MODULE} ~ BrCAF1 + early_menF1
+M4: BC + Early F1 + F2,{MODULE} ~ BrCAF1 + early_menF1 + early_menF2
+M5: BC + Age F1 + F2,{MODULE} ~ BrCAF1 + agemenF1 + agemenF2
+M6: + op_DDT,{MODULE} ~ BrCAF1 + early_menF1 + early_menF2 + op_DDT
+M7: + Total Reads + Mapping,{MODULE} ~ BrCAF1 + early_menF1 + early_menF2 + op_DDT + Total_Reads + Mapping_Efficiency
+M8: + Mapping Only,{MODULE} ~ BrCAF1 + early_menF1 + early_menF2 + op_DDT + Mapping_Efficiency
+M9: Interaction,{MODULE} ~ BrCAF1 * early_menF1

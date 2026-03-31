@@ -48,7 +48,7 @@ reports/
 data/
 analysis/
 docs/
-reproducibility/
+comethyl_output/
 
 #################################
 #if you have some approved exceptions, list them here

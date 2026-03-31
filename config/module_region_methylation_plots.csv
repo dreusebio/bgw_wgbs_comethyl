@@ -1,0 +1,4 @@
+module,trait,plot_type,trait_legend_title,trait_code,trait_colors,expandY,trait_legend_position,file_stub
+midnightblue,BrCAF1,binary,Diagnosis,"No=0;Yes=1","No=#3366CC;Yes=#FF3366",,,"midnightblue_BrCAF1"
+midnightblue,early_menF2,binary,Early menarche F2,"No=0;Yes=1","No=#3366CC;Yes=#FF3366",,,"midnightblue_early_menF2"
+midnightblue,Mapping_Efficiency,continuous,Mapping Efficiency,,,0.04,"1.034,3.35","midnightblue_Mapping_Efficiency"
