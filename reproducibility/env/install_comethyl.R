@@ -28,6 +28,7 @@ bioc_pkgs <- c(
   "dmrseq",
   "sva",
   "preprocessCore",
+  "HDO.db",
   "impute"
 )
 

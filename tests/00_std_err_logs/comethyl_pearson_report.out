@@ -430,4 +430,412 @@ JobId=11488479 JobName=Cometh_BGW
    StdIn=/dev/null
    StdOut=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.out
    TresPerTask=cpu=59
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11500685 prolog ###############
+SLURM_NODELIST: hive-dc-7-6-42
+############### Job 11500685 prolog ###############
+hive-dc-7-6-42
+Tue Mar 31 12:23:12 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+An object of type 'BSseq' with
+  634646 methylation loci
+  48 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  525450 methylation loci
+  48 samples
+has not been smoothed
+All assays are in-memory
+Allowing parallel execution with up to 4 working processes.
+[1] "016B" "019B" "026B" "032B" "038B" "043B"
+Allowing parallel execution with up to 4 working processes.
+ pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq  slope truncated.R.sq  mean.k. median.k.   max.k.  Density
+1      1   0.0402 -39.10          0.994 3320.000  3320.000 3380.000 5.00e-01
+2      2   0.0830 -29.30          0.988 1700.000  1700.000 1770.000 2.56e-01
+3      3   0.1160 -23.70          0.986  889.000   889.000  941.000 1.34e-01
+4      4   0.1430 -20.30          0.986  474.000   474.000  512.000 7.14e-02
+5      5   0.1940 -19.10          0.987  258.000   257.000  285.000 3.88e-02
+6      6   0.2810 -19.60          0.981  142.000   142.000  161.000 2.14e-02
+7      7   0.2870 -15.30          0.977   80.100    80.000   92.700 1.21e-02
+8      8   0.3620 -14.60          0.960   45.700    45.700   54.400 6.89e-03
+9      9   0.4750 -15.70          0.936   26.500    26.400   33.000 3.99e-03
+10    10   0.5520 -15.10          0.918   15.600    15.500   20.300 2.35e-03
+11    11   0.6140 -14.10          0.891    9.290     9.250   12.800 1.40e-03
+12    12   0.6700 -12.90          0.889    5.610     5.580    8.160 8.44e-04
+13    13   0.6980 -11.40          0.843    3.430     3.400    5.300 5.16e-04
+14    14   0.7440 -10.90          0.762    2.120     2.100    3.620 3.19e-04
+15    15   0.8520  -9.90          0.835    1.330     1.310    2.640 2.00e-04
+16    16   0.9240  -8.49          0.904    0.840     0.827    2.010 1.26e-04
+17    17   0.9200  -7.60          0.906    0.538     0.527    1.590 8.10e-05
+18    18   0.5330  -8.63          0.405    0.348     0.339    1.300 5.24e-05
+19    19   0.5290  -7.40          0.401    0.228     0.220    1.100 3.43e-05
+20    20   0.4600  -7.54          0.324    0.151     0.144    0.947 2.27e-05
+   Centralization Heterogeneity
+1        0.009170       0.00492
+2        0.009670       0.00968
+3        0.007830       0.01440
+4        0.005760       0.01930
+5        0.004050       0.02430
+6        0.002790       0.02950
+7        0.001900       0.03510
+8        0.001310       0.04100
+9        0.000971       0.04730
+10       0.000716       0.05400
+11       0.000525       0.06140
+12       0.000385       0.06950
+13       0.000282       0.07870
+14       0.000226       0.08940
+15       0.000199       0.10300
+16       0.000177       0.11900
+17       0.000159       0.14100
+18       0.000144       0.17100
+19       0.000131       0.21100
+20       0.000120       0.26600
+ pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq  slope truncated.R.sq mean.k. median.k. max.k.  Density
+1      1   0.6750  4.790          0.783 3500.00  3520.000 4050.0 0.528000
+2      2   0.0486 -0.466          0.451 1950.00  1910.000 2720.0 0.294000
+3      3   0.6590 -1.830          0.720 1140.00  1060.000 1940.0 0.171000
+4      4   0.7740 -2.010          0.770  692.00   597.000 1450.0 0.104000
+5      5   0.7940 -1.950          0.788  436.00   343.000 1110.0 0.065700
+6      6   0.8060 -1.850          0.816  285.00   200.000  876.0 0.042900
+7      7   0.8160 -1.790          0.843  191.00   121.000  703.0 0.028800
+8      8   0.8320 -1.720          0.874  132.00    75.100  573.0 0.019900
+9      9   0.8300 -1.690          0.892   93.70    47.500  472.0 0.014100
+10    10   0.8340 -1.650          0.912   67.80    30.300  394.0 0.010200
+11    11   0.8390 -1.620          0.929   49.90    19.800  331.0 0.007520
+12    12   0.8490 -1.590          0.948   37.40    13.100  280.0 0.005630
+13    13   0.8550 -1.570          0.960   28.40     8.530  238.0 0.004280
+14    14   0.8580 -1.560          0.968   21.90     5.690  204.0 0.003290
+15    15   0.8660 -1.550          0.976   17.00     3.830  175.0 0.002560
+16    16   0.8700 -1.540          0.982   13.40     2.570  151.0 0.002010
+17    17   0.8640 -1.550          0.983   10.60     1.740  131.0 0.001600
+18    18   0.8500 -1.560          0.980    8.47     1.200  114.0 0.001280
+19    19   0.8560 -1.560          0.985    6.82     0.821   99.3 0.001030
+20    20   0.8640 -1.570          0.989    5.52     0.567   86.8 0.000831
+   Centralization Heterogeneity
+1          0.0823        0.0915
+2          0.1160        0.1860
+3          0.1210        0.2900
+4          0.1140        0.4030
+5          0.1020        0.5210
+6          0.0891        0.6420
+7          0.0771        0.7630
+8          0.0664        0.8810
+9          0.0571        0.9960
+10         0.0491        1.1100
+11         0.0423        1.2100
+12         0.0365        1.3100
+13         0.0316        1.4000
+14         0.0274        1.5000
+15         0.0238        1.5800
+16         0.0207        1.6700
+17         0.0181        1.7500
+18         0.0159        1.8200
+19         0.0139        1.9000
+20         0.0122        1.9700
+ pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq  slope truncated.R.sq mean.k. median.k. max.k.  Density
+1      1   0.6750  4.790          0.783 3500.00  3520.000 4050.0 0.528000
+2      2   0.0486 -0.466          0.451 1950.00  1910.000 2720.0 0.294000
+3      3   0.6590 -1.830          0.720 1140.00  1060.000 1940.0 0.171000
+4      4   0.7740 -2.010          0.770  692.00   597.000 1450.0 0.104000
+5      5   0.7940 -1.950          0.788  436.00   343.000 1110.0 0.065700
+6      6   0.8060 -1.850          0.816  285.00   200.000  876.0 0.042900
+7      7   0.8160 -1.790          0.843  191.00   121.000  703.0 0.028800
+8      8   0.8320 -1.720          0.874  132.00    75.100  573.0 0.019900
+9      9   0.8300 -1.690          0.892   93.70    47.500  472.0 0.014100
+10    10   0.8340 -1.650          0.912   67.80    30.300  394.0 0.010200
+11    11   0.8390 -1.620          0.929   49.90    19.800  331.0 0.007520
+12    12   0.8490 -1.590          0.948   37.40    13.100  280.0 0.005630
+13    13   0.8550 -1.570          0.960   28.40     8.530  238.0 0.004280
+14    14   0.8580 -1.560          0.968   21.90     5.690  204.0 0.003290
+15    15   0.8660 -1.550          0.976   17.00     3.830  175.0 0.002560
+16    16   0.8700 -1.540          0.982   13.40     2.570  151.0 0.002010
+17    17   0.8640 -1.550          0.983   10.60     1.740  131.0 0.001600
+18    18   0.8500 -1.560          0.980    8.47     1.200  114.0 0.001280
+19    19   0.8560 -1.560          0.985    6.82     0.821   99.3 0.001030
+20    20   0.8640 -1.570          0.989    5.52     0.567   86.8 0.000831
+   Centralization Heterogeneity
+1          0.0823        0.0915
+2          0.1160        0.1860
+3          0.1210        0.2900
+4          0.1140        0.4030
+5          0.1020        0.5210
+6          0.0891        0.6420
+7          0.0771        0.7630
+8          0.0664        0.8810
+9          0.0571        0.9960
+10         0.0491        1.1100
+11         0.0423        1.2100
+12         0.0365        1.3100
+13         0.0316        1.4000
+14         0.0274        1.5000
+15         0.0238        1.5800
+16         0.0207        1.6700
+17         0.0181        1.7500
+18         0.0159        1.8200
+19         0.0139        1.9000
+20         0.0122        1.9700
+Allowing parallel execution with up to 4 working processes.
+ Calculating module eigengenes block-wise from all genes
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+     mergeCloseModules: less than two proper modules.
+      ..color levels are grey, turquoise
+      ..there is nothing to merge.
+       Calculating new MEs...
+ Calculating module eigengenes block-wise from all genes
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 2658 genes from module 1 because their KME is too low.
+     ..removing 224 genes from module 2 because their KME is too low.
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+Allowing parallel execution with up to 127 working processes.
+Run completed in 1103 seconds
+Tue Mar 31 12:41:35 PM PDT 2026
+
+############### Job 11500685 summary from hive-dc-7-6-42 ###############
+Name                : Cometh_BGW
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-6-42
+Cores               : 4
+GPUs                : 0
+State               : COMPLETED
+ExitCode            : 0:0
+Submit              : 2026-03-31T12:23:09
+Start               : 2026-03-31T12:23:12
+End                 : 2026-03-31T12:41:36
+Reserved walltime   : 23:00:00
+Used walltime       : 00:18:24
+Used CPU time       : 00:07:06
+% User (Computation): 88.79%
+% System (I/O)      : 11.21%
+Mem reserved        : 200G
+Max Mem used        : 2.08G (hive-dc-7-6-42)
+Max Disk Write      : 1.95G (hive-dc-7-6-42)
+Max Disk Read       : 1.57G (hive-dc-7-6-42)
+
+############### Job 11500685 info ###############
+JobId=11500685 JobName=Cometh_BGW
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8100 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:18:23 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-03-31T12:23:09 EligibleTime=2026-03-31T12:23:09
+   AccrueTime=2026-03-31T12:23:09
+   StartTime=2026-03-31T12:23:12 EndTime=2026-03-31T12:41:35 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-31T12:23:12 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-7-81:1665463
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-6-42
+   BatchHost=hive-dc-7-6-42
+   NumNodes=1 NumCPUs=4 NumTasks=1 CPUs/Task=4 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=4,mem=200G,node=1,billing=4
+   AllocTRES=cpu=4,mem=200G,node=1,billing=4
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=4 MinMemoryNode=200G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests
+   StdErr=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=4
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11501216 prolog ###############
+SLURM_NODELIST: hive-dc-7-9-44
+############### Job 11501216 prolog ###############
+hive-dc-7-9-44
+Tue Mar 31 01:41:37 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+Allowing parallel execution with up to 127 working processes.
+[1] "016B" "019B" "026B" "032B" "038B" "043B"
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+
+############### Job 11501216 summary from hive-dc-7-9-44 ###############
+Name                : Cometh_BGW
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-9-44
+Cores               : 4
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-03-31T13:41:36
+Start               : 2026-03-31T13:41:36
+End                 : 2026-03-31T13:46:45
+Reserved walltime   : 23:00:00
+Used walltime       : 00:05:09
+Used CPU time       : 00:01:17
+% User (Computation): 93.17%
+% System (I/O)      :  6.83%
+Mem reserved        : 200G
+Max Mem used        : 1.36G (hive-dc-7-9-44)
+Max Disk Write      : 1.15M (hive-dc-7-9-44)
+Max Disk Read       : 412.44M (hive-dc-7-9-44)
+
+############### Job 11501216 info ###############
+JobId=11501216 JobName=Cometh_BGW
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8100 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=00:05:09 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-03-31T13:41:36 EligibleTime=2026-03-31T13:41:36
+   AccrueTime=2026-03-31T13:41:36
+   StartTime=2026-03-31T13:41:36 EndTime=2026-03-31T13:46:45 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-31T13:41:36 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-7-81:1665463
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-9-44
+   BatchHost=hive-dc-7-9-44
+   NumNodes=1 NumCPUs=4 NumTasks=1 CPUs/Task=4 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=4,mem=200G,node=1,billing=4
+   AllocTRES=cpu=4,mem=200G,node=1,billing=4
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=4 MinMemoryNode=200G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests
+   StdErr=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=4
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11504870 prolog ###############
+SLURM_NODELIST: hive-dc-7-6-30
+############### Job 11504870 prolog ###############
+hive-dc-7-6-30
+Tue Mar 31 08:01:42 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+Loaded sample_info: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/data/metadata/merged_qc.xlsx
+sample_info dimensions: 48 x 68
+No sample_id_col provided.
+[2026-03-31 20:32:21] Starting annotation for variant: v1_all_pcs 
+[2026-03-31 20:32:21] modules_path: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds 
+[2026-03-31 20:32:21] pipeline_root: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output 
+[2026-03-31 20:32:21] step_dir: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/12_annotation 
+[2026-03-31 20:32:21] cpg_label: cov3_75pct 
+[2026-03-31 20:32:21] region_label: covMin4_methSD0p08 
+[2026-03-31 20:32:21] variant_name: v1_all_pcs 
+[2026-03-31 20:32:21] out_dir: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs 
+[2026-03-31 20:32:21] genome: hg38 
+[2026-03-31 20:32:21] annotation_mode: auto 
+[2026-03-31 20:32:21] sample_info rows: 48; cols: 68 
+[2026-03-31 20:32:21] sample_id_col: (not provided) 
+[2026-03-31 20:32:21] Loaded regions: 6642 
+[2026-03-31 20:32:21] Unique modules: 2 
+[2026-03-31 20:33:37] Annotated regions rows: 6642 
+[2026-03-31 20:33:39] Module gene list rows: 500 
+[2026-03-31 20:33:39] Module summary rows: 2 
+[2026-03-31 20:33:39] Background genes: 497 
+[2026-03-31 20:33:39] Finished annotation for variant: v1_all_pcs 
+[2026-03-31 20:33:39] Starting annotation for variant: v2_exclude_protected_pcs 
+[2026-03-31 20:33:39] modules_path: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds 
+[2026-03-31 20:33:39] pipeline_root: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output 
+[2026-03-31 20:33:39] step_dir: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/12_annotation 
+[2026-03-31 20:33:40] cpg_label: cov3_75pct 
+[2026-03-31 20:33:40] region_label: covMin4_methSD0p08 
+[2026-03-31 20:33:40] variant_name: v2_exclude_protected_pcs 
+[2026-03-31 20:33:40] out_dir: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs 
+[2026-03-31 20:33:40] genome: hg38 
+[2026-03-31 20:33:40] annotation_mode: auto 
+[2026-03-31 20:33:40] sample_info rows: 48; cols: 68 
+[2026-03-31 20:33:40] sample_id_col: (not provided) 
+[2026-03-31 20:33:40] Loaded regions: 6642 
+[2026-03-31 20:33:40] Unique modules: 3 
+[2026-03-31 20:33:51] Annotated regions rows: 6642 
+[2026-03-31 20:34:35] Module gene list rows: 1110 
+[2026-03-31 20:34:36] Module summary rows: 3 
+[2026-03-31 20:34:36] Background genes: 497 
+[2026-03-31 20:34:36] Finished annotation for variant: v2_exclude_protected_pcs 
+
+############### Job 11504870 summary from hive-dc-7-6-30 ###############
+Name                : Cometh_BGW
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-6-30
+Cores               : 4
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-03-31T20:01:40
+Start               : 2026-03-31T20:01:40
+End                 : 2026-03-31T20:40:54
+Reserved walltime   : 23:00:00
+Used walltime       : 00:39:14
+Used CPU time       : 00:00:57
+% User (Computation): 91.91%
+% System (I/O)      :  8.09%
+Mem reserved        : 200G
+Max Mem used        : 1.39G (hive-dc-7-6-30)
+Max Disk Write      : 14.43M (hive-dc-7-6-30)
+Max Disk Read       : 295.04M (hive-dc-7-6-30)
+
+############### Job 11504870 info ###############
+JobId=11504870 JobName=Cometh_BGW
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8100 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=00:39:14 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-03-31T20:01:40 EligibleTime=2026-03-31T20:01:40
+   AccrueTime=2026-03-31T20:01:40
+   StartTime=2026-03-31T20:01:40 EndTime=2026-03-31T20:40:54 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-31T20:01:40 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-7-81:1660733
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-6-30
+   BatchHost=hive-dc-7-6-30
+   NumNodes=1 NumCPUs=4 NumTasks=1 CPUs/Task=4 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=4,mem=200G,node=1,billing=4
+   AllocTRES=cpu=4,mem=200G,node=1,billing=4
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=4 MinMemoryNode=200G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests
+   StdErr=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=4
    MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT

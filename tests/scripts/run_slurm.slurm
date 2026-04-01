@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=Cometh_BGW
+#SBATCH --job-name=Cometh_BGW_test
 #SBATCH --mail-user=gekuodza@ucdavis.edu
 #SBATCH --time=23:00:00
 #SBATCH --partition=high
@@ -132,6 +132,7 @@ Rscript /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/comethyl_sc
   --module_cor pearson \
   --sample_dendro_distance euclidean \
   --sample_info /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/data/metadata/merged_qc.xlsx
+  
 #script 09a
 Rscript /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/comethyl_scripts/09a_me_trait_analysis.R \
   --project_root /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests \

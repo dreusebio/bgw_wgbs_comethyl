@@ -2,9 +2,9 @@
 # ============================================================
 # 13A_core_regulatory_state_overlap.R
 #
-# Core purpose
-#   For each run_root and requested module:
-#     1) load Annotated_all_regions
+# Purpose
+#   For each annotation directory from Script 12A and requested module:
+#     1) load Annotated_Regions.tsv from 12_annotation
 #     2) build BED of module regions
 #     3) resolve regulatory annotation source(s):
 #          - roadmap   : ChromHMM 15-state
@@ -16,14 +16,27 @@
 #     7) collapse overlaps to dominant annotation per region x tissue/source
 #     8) save long and wide tables
 #
-# Design goals
-#   - no project-specific paths
-#   - reproducible
-#   - default runs all supported sources
-#   - if one source fails, script does not crash
-#   - only fails if no requested source is usable
+# Output structure
+#   <project_root>/comethyl_output/13a_regulatory_state_overlap/<cpg_label>/<region_label>/<variant_name>/
+#     run_log.txt
+#     run_parameters.txt
+#     resolved_reference_tracks.csv
+#     module_<module>/
+#       region_metadata.csv
+#       regions_<module>.bed
+#       dominant_state_long_all_sources.csv
+#       dominant_state_matrix_all_sources.csv
+#       roadmap/
+#         dominant_state_long.csv
+#         dominant_state_matrix.csv
+#         raw_intersections/
+#       encode/
+#         ...
+#       roadmap18/
+#         ...
 # ============================================================
-message("Starting ✓")
+
+message("Starting Script 13a")
 
 suppressPackageStartupMessages({
   library(dplyr)
@@ -43,6 +56,13 @@ get_arg <- function(flag, default = NULL) {
   default
 }
 
+trim_or_null <- function(x) {
+  if (is.null(x) || is.na(x)) return(NULL)
+  x <- trimws(x)
+  if (!nzchar(x)) return(NULL)
+  x
+}
+
 split_csv <- function(x) {
   if (is.null(x) || is.na(x) || !nzchar(x)) return(character(0))
   trimws(strsplit(x, ",")[[1]])
@@ -50,7 +70,7 @@ split_csv <- function(x) {
 
 as_bool <- function(x, default = FALSE) {
   if (is.null(x) || is.na(x) || !nzchar(x)) return(default)
-  tolower(x) %in% c("true", "t", "1", "yes", "y")
+  tolower(trimws(x)) %in% c("true", "t", "1", "yes", "y")
 }
 
 msg <- function(...) cat(sprintf(...), "\n")
@@ -59,63 +79,88 @@ safe_dir_create <- function(path) {
   if (!dir.exists(path)) dir.create(path, recursive = TRUE, showWarnings = FALSE)
 }
 
-pick_file <- function(files, pick = c("newest", "oldest")) {
-  pick <- match.arg(pick)
-  if (length(files) == 0) return(NA_character_)
-  info <- file.info(files)
-  ord <- order(info$mtime, decreasing = (pick == "newest"))
-  files[ord][1]
+timestamp_now <- function() {
+  format(Sys.time(), "%Y-%m-%d %H:%M:%S")
 }
 
-find_newest_file <- function(root, pattern, pick = "newest") {
-  files <- list.files(root, pattern = pattern, recursive = TRUE, full.names = TRUE)
-  pick_file(files, pick = pick)
+append_log <- function(logfile, ...) {
+  txt <- paste0("[", timestamp_now(), "] ", paste0(..., collapse = ""))
+  cat(txt, "\n")
+  cat(txt, "\n", file = logfile, append = TRUE)
+}
+
+write_lines_safe <- function(x, file) {
+  writeLines(as.character(x), con = file, useBytes = TRUE)
+}
+
+validate_dir_exists <- function(path, label) {
+  if (is.null(path) || !nzchar(path) || !dir.exists(path)) {
+    stop(label, " not found: ", path, call. = FALSE)
+  }
+}
+
+validate_file_exists <- function(path, label) {
+  if (is.null(path) || !nzchar(path) || !file.exists(path)) {
+    stop(label, " not found: ", path, call. = FALSE)
+  }
 }
 
 # ============================================================
-# 2) bedtools
+# 2) Output directory helper
+# ============================================================
+derive_pipeline_dirs_from_annotation_dir <- function(annotation_dir, project_root, step_name) {
+  variant_name <- basename(annotation_dir)
+  region_label <- basename(dirname(annotation_dir))
+  cpg_label    <- basename(dirname(dirname(annotation_dir)))
+
+  pipeline_root <- file.path(project_root, "comethyl_output")
+  step_dir <- file.path(pipeline_root, step_name)
+  out_dir <- file.path(step_dir, cpg_label, region_label, variant_name)
+
+  safe_dir_create(out_dir)
+
+  list(
+    pipeline_root = pipeline_root,
+    step_dir = step_dir,
+    out_dir = out_dir,
+    variant_name = variant_name,
+    region_label = region_label,
+    cpg_label = cpg_label
+  )
+}
+
+# ============================================================
+# 3) bedtools
 # ============================================================
 resolve_bedtools <- function(bedtools_path = "") {
   if (!is.na(bedtools_path) && nzchar(bedtools_path)) {
-    if (!file.exists(bedtools_path)) stop("Provided --bedtools does not exist: ", bedtools_path)
+    if (!file.exists(bedtools_path)) stop("Provided --bedtools does not exist: ", bedtools_path, call. = FALSE)
     return(normalizePath(bedtools_path))
   }
   bt <- Sys.which("bedtools")
-  if (bt == "") stop("bedtools not found on PATH. Provide --bedtools /full/path/to/bedtools")
+  if (bt == "") stop("bedtools not found on PATH. Install it in Pixi or provide --bedtools /full/path/to/bedtools", call. = FALSE)
   bt
 }
 
 # ============================================================
-# 3) read annotated regions
+# 4) read annotated regions directly from 12_annotation
 # ============================================================
-read_annotated_regions <- function(run_root) {
-  candidates <- c(
-    file.path(run_root, "enrichment",  "Annotated_all_regions.csv"),
-    file.path(run_root, "enrichment",  "Annotated_all_regions.txt"),
-    file.path(run_root, "annotations", "Annotated_all_regions.csv"),
-    file.path(run_root, "annotations", "Annotated_all_regions.txt")
-  )
-
-  file_path <- candidates[file.exists(candidates)][1]
-  if (is.na(file_path) || !file.exists(file_path)) {
-    file_path <- find_newest_file(run_root, "Annotated_.*regions\\.(csv|txt)$", pick = "newest")
-  }
-  if (is.na(file_path) || !file.exists(file_path)) {
-    stop("Could not find Annotated_all_regions under: ", run_root)
-  }
+read_annotated_regions_from_annotation_dir <- function(annotation_dir) {
+  file_path <- file.path(annotation_dir, "Annotated_Regions.tsv")
+  validate_file_exists(file_path, "Annotated_Regions.tsv")
 
   msg("[ANNOT] Using annotated regions file: %s", file_path)
 
-  if (grepl("\\.csv$", file_path, ignore.case = TRUE)) {
-    df <- read.csv(file_path, stringsAsFactors = FALSE)
-  } else {
-    df <- read.delim(file_path, stringsAsFactors = FALSE)
-  }
+  df <- read.delim(
+    file_path,
+    stringsAsFactors = FALSE,
+    check.names = FALSE
+  )
 
   need <- c("RegionID", "module", "chr", "start", "end")
   missing <- setdiff(need, names(df))
-  if (length(missing)) {
-    stop("Annotated regions missing required columns: ", paste(missing, collapse = ", "))
+  if (length(missing) > 0) {
+    stop("Annotated_Regions.tsv missing required columns: ", paste(missing, collapse = ", "), call. = FALSE)
   }
 
   if (!("gene_symbol" %in% names(df))) df$gene_symbol <- NA_character_
@@ -158,7 +203,7 @@ build_region_meta_map <- function(mod_df, membership_col = "membership") {
 }
 
 # ============================================================
-# 4) source registry
+# 5) source registry
 # ============================================================
 SUPPORTED_SOURCES <- c("roadmap", "encode", "roadmap18")
 
@@ -169,21 +214,18 @@ get_requested_sources <- function(source_arg = "") {
   src <- split_csv(source_arg)
   bad <- setdiff(src, SUPPORTED_SOURCES)
   if (length(bad) > 0) {
-    stop("Unsupported --source value(s): ", paste(bad, collapse = ", "),
-         ". Supported: ", paste(SUPPORTED_SOURCES, collapse = ", "))
+    stop(
+      "Unsupported --source value(s): ", paste(bad, collapse = ", "),
+      ". Supported: ", paste(SUPPORTED_SOURCES, collapse = ", "),
+      call. = FALSE
+    )
   }
   unique(src)
 }
 
 # ============================================================
-# 5) reference metadata
+# 6) reference metadata
 # ============================================================
-# NOTE:
-# - roadmap 15-state URLs are real pattern from Roadmap bundle
-# - roadmap18 and encode are left as configurable placeholders
-#   so users can plug in local mirrors / preferred releases without
-#   baking project-specific assumptions into the script.
-
 ROADMAP15_EIDS <- c("E081","E082","E071","E073","E091","E062","E029","E003","E020")
 ROADMAP15_LABELS <- c(
   E081 = "FetalBrain_M",
@@ -206,8 +248,6 @@ roadmap15_url <- function(eid) {
   )
 }
 
-# For roadmap18 and encode, use manifest files or explicit local directory content.
-# This keeps the script reproducible without hard-coding unstable URLs.
 discover_local_bed_files <- function(dir_path, pattern = "\\.(bed|bed.gz)$") {
   if (!dir.exists(dir_path)) return(character(0))
   list.files(dir_path, pattern = pattern, full.names = TRUE)
@@ -237,7 +277,7 @@ download_file_safe <- function(url, destfile) {
 }
 
 # ============================================================
-# 6) resolve source files
+# 7) resolve source files
 # ============================================================
 resolve_roadmap15_files <- function(reference_root, download_missing = TRUE) {
   src_dir <- file.path(reference_root, "roadmap", "chromhmm_15state")
@@ -371,7 +411,7 @@ resolve_requested_reference_files <- function(
 }
 
 # ============================================================
-# 7) state normalization
+# 8) state normalization
 # ============================================================
 ROADMAP15_DESC <- c(
   "1_TssA"      = "Active TSS",
@@ -391,7 +431,6 @@ ROADMAP15_DESC <- c(
   "15_Quies"    = "Quiescent/Low"
 )
 
-# For encode cCRE, keep label as-is unless user later adds a mapping table.
 normalize_annotation_label <- function(source, raw_state) {
   if (is.na(raw_state) || !nzchar(raw_state)) return(NA_character_)
 
@@ -404,11 +443,7 @@ normalize_annotation_label <- function(source, raw_state) {
     return(s2)
   }
 
-  if (source == "roadmap18") {
-    return(raw_state)
-  }
-
-  if (source == "encode") {
+  if (source %in% c("roadmap18", "encode")) {
     return(raw_state)
   }
 
@@ -416,7 +451,7 @@ normalize_annotation_label <- function(source, raw_state) {
 }
 
 # ============================================================
-# 8) bedtools intersection
+# 9) bedtools intersection
 # ============================================================
 run_intersections_one_source <- function(bed_file, ref_tbl, out_dir, bedtools_bin) {
   safe_dir_create(out_dir)
@@ -454,10 +489,10 @@ run_intersections_one_source <- function(bed_file, ref_tbl, out_dir, bedtools_bi
 }
 
 # ============================================================
-# 9) read + collapse overlaps
+# 10) read + collapse overlaps
 # ============================================================
 guess_overlap_columns <- function(nc) {
-  if (nc < 8) stop("Intersect output has too few columns: ", nc)
+  if (nc < 8) stop("Intersect output has too few columns: ", nc, call. = FALSE)
 
   a_cols <- c("chrA", "startA", "endA", "region_id")
   remaining <- nc - 4
@@ -465,11 +500,8 @@ guess_overlap_columns <- function(nc) {
   if (remaining == 4) {
     b_cols <- c("chrB", "startB", "endB", "state")
   } else {
-    # keep last field as annotation label, preserve extras
     extra_n <- remaining - 4
-    b_cols <- c("chrB", "startB", "endB",
-                paste0("b_extra", seq_len(extra_n)),
-                "state")
+    b_cols <- c("chrB", "startB", "endB", paste0("b_extra", seq_len(extra_n)), "state")
   }
   c(a_cols, b_cols)
 }
@@ -523,43 +555,61 @@ read_and_collapse_overlaps <- function(overlap_files, source_name, ref_tbl) {
 }
 
 # ============================================================
-# 10) main args
+# 11) arguments
 # ============================================================
-project_root <- get_arg("--project_root", "")
-region_version <- get_arg("--region_version", "")
-if (!nzchar(project_root)) stop("--project_root is required")
-if (!nzchar(region_version)) stop("--region_version is required")
+project_root <- trim_or_null(get_arg("--project_root"))
+
+annotation_dir_v1 <- trim_or_null(get_arg("--annotation_dir_v1"))
+annotation_dir_v2 <- trim_or_null(get_arg("--annotation_dir_v2"))
+annotation_dir_v3 <- trim_or_null(get_arg("--annotation_dir_v3"))
+
+modules_in <- unique(split_csv(get_arg("--modules", "")))
+requested_sources <- get_requested_sources(get_arg("--source", ""))
+
+reference_root <- trim_or_null(get_arg(
+  "--reference_root",
+  file.path(project_root, "reference_data", "regulatory_annotations")
+))
+roadmap18_dir <- trim_or_null(get_arg("--roadmap18_dir", ""))
+encode_dir <- trim_or_null(get_arg("--encode_dir", ""))
+download_missing <- as_bool(get_arg("--download_missing", "true"), TRUE)
+
+out_parent <- trim_or_null(get_arg(
+  "--out_parent",
+  file.path(project_root, "comethyl_output", "13a_regulatory_state_overlap")
+))
+
+membership_col <- trim_or_null(get_arg("--membership_col", "membership"))
+
+bedtools_bin <- resolve_bedtools(get_arg("--bedtools", ""))
+
+if (is.null(project_root)) stop("--project_root is required", call. = FALSE)
+if (length(modules_in) == 0) stop("You must provide --modules", call. = FALSE)
+
+validate_dir_exists(project_root, "project_root")
+
+annotation_dirs <- c(
+  v1_all_pcs = annotation_dir_v1,
+  v2_exclude_protected_pcs = annotation_dir_v2,
+  v3_technical_pcs_only = annotation_dir_v3
+)
+annotation_dirs <- annotation_dirs[!is.na(annotation_dirs) & nzchar(annotation_dirs)]
+
+if (length(annotation_dirs) == 0) {
+  stop("Provide at least one of --annotation_dir_v1, --annotation_dir_v2, --annotation_dir_v3", call. = FALSE)
+}
+
+for (nm in names(annotation_dirs)) {
+  validate_dir_exists(annotation_dirs[[nm]], nm)
+  validate_file_exists(file.path(annotation_dirs[[nm]], "Annotated_Regions.tsv"), paste0(nm, "/Annotated_Regions.tsv"))
+}
 
 setwd(project_root)
 
-base_adj <- file.path(project_root, "comethyl_output", "filter_regions", region_version, "methylation_adjustment")
-
-default_run_roots <- paste(
-  file.path(base_adj, "v1_all_pcs"),
-  file.path(base_adj, "v2_exclude_outcome_exposure_pcs"),
-  file.path(base_adj, "v3_technical_pcs_only"),
-  sep = ","
-)
-
-run_roots <- split_csv(get_arg("--run_roots", default_run_roots))
-modules_in <- unique(split_csv(get_arg("--modules", "")))
-if (length(modules_in) == 0) stop("You must provide --modules")
-
-requested_sources <- get_requested_sources(get_arg("--source", ""))
-
-reference_root <- get_arg("--reference_root", file.path(project_root, "reference_data", "regulatory_annotations"))
-roadmap18_dir  <- get_arg("--roadmap18_dir", "")
-encode_dir     <- get_arg("--encode_dir", "")
-download_missing <- as_bool(get_arg("--download_missing", "true"), TRUE)
-
-out_parent <- get_arg("--out_parent", file.path(base_adj, "regulatory_state_overlap"))
-membership_col <- get_arg("--membership_col", "membership")
-
-default_bedtools <- "/quobyte/lasallegrp/programs/.conda/NGS_Tools/bin/bedtools"
-bedtools_bin <- resolve_bedtools(get_arg("--bedtools", default_bedtools))
-
 msg("project_root: %s", project_root)
-msg("region_version: %s", region_version)
+msg("annotation_dirs:")
+for (nm in names(annotation_dirs)) msg("  - %s : %s", nm, annotation_dirs[[nm]])
+msg("modules: %s", paste(modules_in, collapse = ", "))
 msg("requested_sources: %s", paste(requested_sources, collapse = ", "))
 msg("download_missing: %s", download_missing)
 msg("reference_root: %s", reference_root)
@@ -570,7 +620,7 @@ safe_dir_create(reference_root)
 safe_dir_create(out_parent)
 
 # ============================================================
-# 11) resolve sources once
+# 12) resolve sources once
 # ============================================================
 ref_tbl_all <- resolve_requested_reference_files(
   requested_sources = requested_sources,
@@ -581,7 +631,7 @@ ref_tbl_all <- resolve_requested_reference_files(
 )
 
 if (nrow(ref_tbl_all) == 0) {
-  stop("No reference tracks resolved for requested source(s).")
+  stop("No reference tracks resolved for requested source(s).", call. = FALSE)
 }
 
 write_csv(ref_tbl_all, file.path(out_parent, "resolved_reference_tracks.csv"))
@@ -591,7 +641,7 @@ usable_sources <- ref_tbl_all %>%
   count(source, name = "n_tracks")
 
 if (nrow(usable_sources) == 0) {
-  stop("None of the requested sources are usable. Check local files and/or internet access.")
+  stop("None of the requested sources are usable. Check local files and/or internet access.", call. = FALSE)
 }
 
 msg("Usable sources:")
@@ -600,30 +650,53 @@ for (i in seq_len(nrow(usable_sources))) {
 }
 
 # ============================================================
-# 12) process run_roots
+# 13) process annotation directories
 # ============================================================
-for (rr in run_roots) {
-  rr <- trimws(rr)
-  tag <- basename(rr)
+for (variant_label in names(annotation_dirs)) {
+  annotation_dir <- annotation_dirs[[variant_label]]
 
-  if (!dir.exists(rr)) {
-    msg("[SKIP] run_root not found: %s", rr)
-    next
-  }
+  dir_info <- derive_pipeline_dirs_from_annotation_dir(
+    annotation_dir = annotation_dir,
+    project_root = project_root,
+    step_name = "13a_regulatory_state_overlap"
+  )
 
-  anno <- read_annotated_regions(rr)
+  variant_out_dir <- dir_info$out_dir
+  safe_dir_create(variant_out_dir)
+
+  variant_log <- file.path(variant_out_dir, "run_log.txt")
+  variant_params <- file.path(variant_out_dir, "run_parameters.txt")
+
+  append_log(variant_log, "Starting variant: ", variant_label)
+  append_log(variant_log, "annotation_dir: ", annotation_dir)
+  append_log(variant_log, "pipeline_root: ", dir_info$pipeline_root)
+  append_log(variant_log, "step_dir: ", dir_info$step_dir)
+  append_log(variant_log, "cpg_label: ", dir_info$cpg_label)
+  append_log(variant_log, "region_label: ", dir_info$region_label)
+  append_log(variant_log, "variant_name: ", dir_info$variant_name)
+  append_log(variant_log, "variant_out_dir: ", variant_out_dir)
+  append_log(variant_log, "modules: ", paste(modules_in, collapse = ", "))
+  append_log(variant_log, "sources: ", paste(requested_sources, collapse = ", "))
+  append_log(variant_log, "bedtools: ", bedtools_bin)
+
+  anno <- read_annotated_regions_from_annotation_dir(annotation_dir)
+
+  append_log(variant_log, "Annotated rows loaded: ", nrow(anno))
+  append_log(variant_log, "Unique modules found: ", length(unique(anno$module)))
 
   for (mod in modules_in) {
     msg("\n==================================================")
-    msg("[RUN] run_root=%s | module=%s", tag, mod)
+    msg("[RUN] variant=%s | module=%s", variant_label, mod)
+    append_log(variant_log, "Processing module: ", mod)
 
     mod_df <- anno %>% filter(module == mod)
     if (nrow(mod_df) == 0) {
-      msg("[INFO] No regions found for module '%s' in %s", mod, rr)
+      msg("[INFO] No regions found for module '%s' in %s", mod, variant_label)
+      append_log(variant_log, "No regions found for module: ", mod)
       next
     }
 
-    out_dir <- file.path(out_parent, tag, paste0("module_", mod))
+    out_dir <- file.path(variant_out_dir, paste0("module_", mod))
     safe_dir_create(out_dir)
 
     region_meta_map <- build_region_meta_map(mod_df, membership_col = membership_col)
@@ -638,6 +711,7 @@ for (rr in run_roots) {
 
     if (nrow(bed) == 0) {
       msg("[WARN] No valid BED rows for module %s", mod)
+      append_log(variant_log, "No valid BED rows for module: ", mod)
       next
     }
 
@@ -650,6 +724,7 @@ for (rr in run_roots) {
       ref_tbl <- ref_tbl_all %>% filter(source == src, ok)
       if (nrow(ref_tbl) == 0) {
         msg("[WARN] No usable tracks for source=%s; skipping", src)
+        append_log(variant_log, "No usable tracks for source: ", src)
         next
       }
 
@@ -666,6 +741,7 @@ for (rr in run_roots) {
 
       if (length(overlap_files) == 0) {
         msg("[WARN] No overlap files created for source=%s", src)
+        append_log(variant_log, "No overlap files created for source: ", src, " module: ", mod)
         next
       }
 
@@ -677,6 +753,7 @@ for (rr in run_roots) {
 
       if (nrow(dom) == 0) {
         msg("[WARN] No collapsed overlaps for source=%s", src)
+        append_log(variant_log, "No collapsed overlaps for source: ", src, " module: ", mod)
         next
       }
 
@@ -706,10 +783,12 @@ for (rr in run_roots) {
 
       source_results[[src]] <- dom2
       msg("[OK] Completed source=%s for module=%s", src, mod)
+      append_log(variant_log, "Completed source: ", src, " for module: ", mod)
     }
 
     if (length(source_results) == 0) {
-      msg("[WARN] No usable source results for run_root=%s module=%s", tag, mod)
+      msg("[WARN] No usable source results for variant=%s module=%s", variant_label, mod)
+      append_log(variant_log, "No usable source results for module: ", mod)
       next
     }
 
@@ -728,7 +807,30 @@ for (rr in run_roots) {
       pivot_wider(names_from = column_label, values_from = annotation_desc)
 
     write_csv(combined_mat, file.path(out_dir, "dominant_state_matrix_all_sources.csv"))
+
+    append_log(variant_log, "Finished module: ", mod, " with ", nrow(combined), " overlap rows")
   }
+
+  params <- c(
+    paste0("timestamp\t", timestamp_now()),
+    paste0("project_root\t", project_root),
+    paste0("annotation_dir\t", annotation_dir),
+    paste0("pipeline_root\t", dir_info$pipeline_root),
+    paste0("step_dir\t", dir_info$step_dir),
+    paste0("cpg_label\t", dir_info$cpg_label),
+    paste0("region_label\t", dir_info$region_label),
+    paste0("variant_name\t", dir_info$variant_name),
+    paste0("variant_out_dir\t", variant_out_dir),
+    paste0("modules\t", paste(modules_in, collapse = ",")),
+    paste0("requested_sources\t", paste(requested_sources, collapse = ",")),
+    paste0("reference_root\t", reference_root),
+    paste0("download_missing\t", download_missing),
+    paste0("bedtools\t", bedtools_bin),
+    paste0("membership_col\t", membership_col)
+  )
+  write_lines_safe(params, variant_params)
+
+  append_log(variant_log, "Finished variant: ", variant_label)
 }
 
-msg("\n[✓] 13A complete.")
+cat("\nScript 13a complete: Core Chromatin State finished\n")

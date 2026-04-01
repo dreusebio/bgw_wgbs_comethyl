@@ -4,8 +4,8 @@ sample_info: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/data/metadata/
 module_cor: pearson
 sample_dendro_distance: euclidean
 max_p_outliers: 0.1
-n_samples_before_metadata_alignment: 49
-n_samples_after_metadata_alignment: 49
+n_samples_before_metadata_alignment: 48
+n_samples_after_metadata_alignment: 48
 n_traits_numeric: 67
 n_modules: 3
 module_me_dendrogram: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_ME_Dendrogram.pdf
@@ -14,4 +14,4 @@ module_correlation_stats: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/c
 sample_me_dendrogram: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Dendrogram.pdf
 sample_correlation_heatmap: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_Correlation_Heatmap.pdf
 sample_me_heatmap: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Heatmap.pdf
-date: 2026-03-30 21:13:05.98231
+date: 2026-03-31 12:41:35.629046

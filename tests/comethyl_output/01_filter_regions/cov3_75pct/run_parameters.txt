@@ -3,4 +3,4 @@ input_rds: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/
 cov: 3
 per_sample: 0.75
 output_dir: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/01_filter_regions/cov3_75pct
-date: 2026-03-28 23:31:33.152658
+date: 2026-03-31 12:29:30.794245

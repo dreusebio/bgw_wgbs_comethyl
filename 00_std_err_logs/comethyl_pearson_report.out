@@ -159,3 +159,993 @@ Allowing parallel execution with up to 4 working processes.
 19         0.0144        1.9600
 20         0.0128        2.0400
  pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq slope truncated.R.sq mean.k. median.k. max.k.  Density
+1      1    0.511  5.42          0.814  241000  242000.0 277000 0.523000
+2      2    0.110 -1.23          0.700  132000  130000.0 182000 0.286000
+3      3    0.531 -2.81          0.758   75400   71600.0 128000 0.164000
+4      4    0.649 -3.02          0.775   44700   40200.0  93600 0.097000
+5      5    0.686 -2.89          0.793   27500   23000.0  71000 0.059600
+6      6    0.695 -2.77          0.809   17500   13400.0  55400 0.037800
+7      7    0.707 -2.64          0.831   11400    8030.0  44100 0.024800
+8      8    0.711 -2.55          0.850    7700    4970.0  35800 0.016700
+9      9    0.716 -2.46          0.871    5320    3130.0  29400 0.011500
+10    10    0.714 -2.40          0.885    3770    2000.0  24500 0.008170
+11    11    0.717 -2.35          0.901    2720    1300.0  20600 0.005900
+12    12    0.719 -2.31          0.915    2000     850.0  17400 0.004350
+13    13    0.723 -2.28          0.927    1500     561.0  14900 0.003250
+14    14    0.727 -2.26          0.938    1140     373.0  12700 0.002470
+15    15    0.733 -2.24          0.948     875     251.0  11000 0.001900
+16    16    0.740 -2.22          0.957     680     169.0   9510 0.001480
+17    17    0.740 -2.22          0.961     534     115.0   8270 0.001160
+18    18    0.748 -2.21          0.968     423      78.8   7210 0.000918
+19    19    0.756 -2.20          0.975     338      54.2   6310 0.000733
+20    20    0.764 -2.19          0.980     272      37.5   5530 0.000590
+   Centralization Heterogeneity
+1          0.0774        0.0772
+2          0.1090        0.1580
+3          0.1130        0.2480
+4          0.1060        0.3470
+5          0.0943        0.4540
+6          0.0822        0.5670
+7          0.0709        0.6840
+8          0.0609        0.8010
+9          0.0523        0.9170
+10         0.0450        1.0300
+11         0.0387        1.1400
+12         0.0335        1.2400
+13         0.0290        1.3400
+14         0.0252        1.4400
+15         0.0219        1.5200
+16         0.0191        1.6100
+17         0.0168        1.6900
+18         0.0147        1.7700
+19         0.0129        1.8400
+20         0.0114        1.9200
+Allowing parallel execution with up to 4 working processes.
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12    13 
+39886 39442 39415 39267 38242 38139 37737 35938 32123 30370 23838 23159 22298 
+   14 
+21299 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 13 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 14 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+  ..reassigning 1 genes from module 148 to modules with higher KME.
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12 
+39967 39962 39921 39815 39813 39755 39755 39466 38638 37249 33706 33106 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 1 genes from module 2 because their KME is too low.
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 1 genes from module 1 because their KME is too low.
+     ..removing 2 genes from module 2 because their KME is too low.
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 10 genes from module 1 because their KME is too low.
+     ..removing 1 genes from module 2 because their KME is too low.
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+  ..reassigning 109 genes from module 12 to modules with higher KME.
+  ..reassigning 23 genes from module 13 to modules with higher KME.
+  ..reassigning 87 genes from module 14 to modules with higher KME.
+  ..reassigning 16 genes from module 15 to modules with higher KME.
+  ..reassigning 1 genes from module 16 to modules with higher KME.
+  ..reassigning 2 genes from module 17 to modules with higher KME.
+  ..reassigning 3 genes from module 18 to modules with higher KME.
+  ..reassigning 1 genes from module 21 to modules with higher KME.
+  ..reassigning 1 genes from module 22 to modules with higher KME.
+  ..reassigning 5 genes from module 25 to modules with higher KME.
+  ..reassigning 1 genes from module 28 to modules with higher KME.
+  ..reassigning 1 genes from module 31 to modules with higher KME.
+  ..reassigning 167 genes from module 306 to modules with higher KME.
+  ..reassigning 13 genes from module 307 to modules with higher KME.
+  ..reassigning 3 genes from module 308 to modules with higher KME.
+  ..reassigning 1 genes from module 309 to modules with higher KME.
+  ..reassigning 1 genes from module 311 to modules with higher KME.
+  ..reassigning 2 genes from module 314 to modules with higher KME.
+  ..reassigning 2 genes from module 316 to modules with higher KME.
+  ..reassigning 1 genes from module 393 to modules with higher KME.
+  ..reassigning 15 genes from module 455 to modules with higher KME.
+  ..reassigning 1 genes from module 456 to modules with higher KME.
+  ..reassigning 3 genes from module 457 to modules with higher KME.
+  ..reassigning 1 genes from module 460 to modules with higher KME.
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+[1] "016B" "019B" "026B" "032B" "038B" "043B"
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+
+############### Job 11492154 summary from hive-dc-7-6-26 ###############
+Name                : Cometh_BGW
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-6-26
+Cores               : 59
+GPUs                : 0
+State               : CANCELLED by 2224567,CANCELLED
+ExitCode            : 0:0
+Submit              : 2026-03-31T01:17:34
+Start               : 2026-03-31T01:17:37
+End                 : 2026-03-31T16:42:13
+Reserved walltime   :   23:00:00
+Used walltime       :   15:24:36
+Used CPU time       : 4-22:43:42
+% User (Computation): 83.36%
+% System (I/O)      : 16.64%
+Mem reserved        : 700G
+Max Mem used        : 368.70G (hive-dc-7-6-26)
+Max Disk Write      : 96.71G (hive-dc-7-6-26)
+Max Disk Read       : 31.43G (hive-dc-7-6-26)
+
+############### Job 11492154 info ###############
+JobId=11492154 JobName=Cometh_BGW
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8094 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:15
+   RunTime=15:24:35 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-03-31T01:17:34 EligibleTime=2026-03-31T01:17:34
+   AccrueTime=2026-03-31T01:17:34
+   StartTime=2026-03-31T01:17:37 EndTime=2026-03-31T16:42:12 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-31T01:17:37 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-7-81:1665463
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-6-26
+   BatchHost=hive-dc-7-6-26
+   NumNodes=1 NumCPUs=59 NumTasks=1 CPUs/Task=59 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=59,mem=700G,node=1,billing=59
+   AllocTRES=cpu=59,mem=700G,node=1,billing=59
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=59 MinMemoryNode=700G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/scripts/run_slurm.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/scripts/run_slurm.slurm
+   WorkDir=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl
+   StdErr=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=59
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11502396 prolog ###############
+SLURM_NODELIST: hive-dc-7-6-26
+############### Job 11502396 prolog ###############
+hive-dc-7-6-26
+An object of type 'BSseq' with
+  29401795 methylation loci
+  48 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  25859399 methylation loci
+  48 samples
+has not been smoothed
+All assays are in-memory
+
+############### Job 11502396 summary from hive-dc-7-6-26 ###############
+Name                : Cometh_BGW
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-6-26
+Cores               : 59
+GPUs                : 0
+State               : CANCELLED,CANCELLED by 2224567
+ExitCode            : 0:0
+Submit              : 2026-03-31T16:43:54
+Start               : 2026-03-31T16:43:55
+End                 : 2026-03-31T17:24:18
+Reserved walltime   : 23:00:00
+Used walltime       : 00:40:23
+Used CPU time       : 01:00:40
+% User (Computation): 85.72%
+% System (I/O)      : 14.30%
+Mem reserved        : 700G
+Max Mem used        : 70.29G (hive-dc-7-6-26)
+Max Disk Write      : 95.41G (hive-dc-7-6-26)
+Max Disk Read       : 26.87G (hive-dc-7-6-26)
+
+############### Job 11502396 info ###############
+JobId=11502396 JobName=Cometh_BGW
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8100 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:15
+   RunTime=00:40:15 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-03-31T16:43:54 EligibleTime=2026-03-31T16:43:54
+   AccrueTime=2026-03-31T16:43:54
+   StartTime=2026-03-31T16:43:55 EndTime=2026-03-31T17:24:10 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-31T16:43:55 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-7-81:1665463
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-6-26
+   BatchHost=hive-dc-7-6-26
+   NumNodes=1 NumCPUs=59 NumTasks=1 CPUs/Task=59 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=59,mem=700G,node=1,billing=59
+   AllocTRES=cpu=59,mem=700G,node=1,billing=59
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=59 MinMemoryNode=700G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/scripts/run_slurm.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/scripts/run_slurm.slurm
+   WorkDir=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl
+   StdErr=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=59
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11502900 prolog ###############
+SLURM_NODELIST: hive-dc-7-6-26
+############### Job 11502900 prolog ###############
+hive-dc-7-6-26
+Allowing parallel execution with up to 59 working processes.
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12    13 
+39886 39442 39415 39267 38242 38139 37737 35938 32123 30370 23838 23159 22298 
+   14 
+21299 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 13 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 14 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.2
+       Calculating new MEs...
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12 
+39967 39962 39921 39815 39813 39755 39755 39466 38638 37249 33706 33106 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 1 genes from module 2 because their KME is too low.
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 2 genes from module 1 because their KME is too low.
+     ..removing 2 genes from module 2 because their KME is too low.
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 14 genes from module 1 because their KME is too low.
+     ..removing 2 genes from module 2 because their KME is too low.
+     ..removing 1 genes from module 3 because their KME is too low.
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 59 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+  ..reassigning 9 genes from module 2 to modules with higher KME.
+  ..reassigning 5 genes from module 3 to modules with higher KME.
+  ..reassigning 2 genes from module 4 to modules with higher KME.
+  ..reassigning 5 genes from module 5 to modules with higher KME.
+  ..reassigning 1 genes from module 9 to modules with higher KME.
+  ..reassigning 26 genes from module 11 to modules with higher KME.
+  ..reassigning 1 genes from module 12 to modules with higher KME.
+  ..reassigning 1 genes from module 13 to modules with higher KME.
+  ..reassigning 5 genes from module 19 to modules with higher KME.
+  ..reassigning 1 genes from module 22 to modules with higher KME.
+  ..reassigning 1 genes from module 26 to modules with higher KME.
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.2
+       Calculating new MEs...
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+[1] "016B" "019B" "026B" "032B" "038B" "043B"
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+[1] "016B" "019B" "026B" "032B" "038B" "043B"
+Allowing parallel execution with up to 127 working processes.
+[1] "016B" "019B" "026B" "032B" "038B" "043B"
+Loaded sample_info: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/data/metadata/merged_qc.xlsx
+sample_info dimensions: 48 x 68
+No sample_id_col provided.
+[2026-03-31 21:09:44] Starting annotation for variant: v1_all_pcs 
+[2026-03-31 21:09:44] modules_path: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds 
+[2026-03-31 21:09:44] annotation_root: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/12_annotation 
+[2026-03-31 21:09:44] genome: hg38 
+[2026-03-31 21:09:44] annotation_mode: auto 
+[2026-03-31 21:09:44] sample_info rows: 48; cols: 68 
+[2026-03-31 21:09:44] sample_id_col: (not provided) 
+[2026-03-31 21:09:50] Loaded regions: 461153 
+[2026-03-31 21:09:50] Unique modules: 36 
+[2026-03-31 21:10:21] Annotated regions rows: 461153 
+[2026-03-31 21:11:05] Module gene list rows: 26643 
+[2026-03-31 21:11:05] Module summary rows: 36 
+[2026-03-31 21:11:05] Background genes: 22117 
+[2026-03-31 21:11:05] Finished annotation for variant: v1_all_pcs 
+[2026-03-31 21:11:05] Starting annotation for variant: v2_exclude_protected_pcs 
+[2026-03-31 21:11:05] modules_path: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds 
+[2026-03-31 21:11:05] annotation_root: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/12_annotation 
+[2026-03-31 21:11:05] genome: hg38 
+[2026-03-31 21:11:05] annotation_mode: auto 
+[2026-03-31 21:11:05] sample_info rows: 48; cols: 68 
+[2026-03-31 21:11:05] sample_id_col: (not provided) 
+[2026-03-31 21:11:08] Loaded regions: 461153 
+[2026-03-31 21:11:08] Unique modules: 22 
+[2026-03-31 21:11:58] Annotated regions rows: 461153 
+[2026-03-31 21:12:37] Module gene list rows: 49859 
+[2026-03-31 21:12:37] Module summary rows: 22 
+[2026-03-31 21:12:37] Background genes: 22117 
+[2026-03-31 21:12:37] Finished annotation for variant: v2_exclude_protected_pcs 
+
+############### Job 11502900 summary from hive-dc-7-6-26 ###############
+Name                : Cometh_BGW
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-6-26
+Cores               : 59
+GPUs                : 0
+State               : FAILED
+ExitCode            : 2:0
+Submit              : 2026-03-31T17:24:22
+Start               : 2026-03-31T17:24:22
+End                 : 2026-03-31T21:12:37
+Reserved walltime   :   23:00:00
+Used walltime       :   03:48:15
+Used CPU time       : 2-10:51:55
+% User (Computation): 82.87%
+% System (I/O)      : 17.13%
+Mem reserved        : 700G
+Max Mem used        : 49.14G (hive-dc-7-6-26)
+Max Disk Write      : 1.18G (hive-dc-7-6-26)
+Max Disk Read       : 2.15G (hive-dc-7-6-26)
+
+############### Job 11502900 info ###############
+JobId=11502900 JobName=Cometh_BGW
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8100 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=2:0
+   RunTime=03:48:15 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-03-31T17:24:22 EligibleTime=2026-03-31T17:24:22
+   AccrueTime=2026-03-31T17:24:22
+   StartTime=2026-03-31T17:24:22 EndTime=2026-03-31T21:12:37 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-31T17:24:22 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-7-81:1665463
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-6-26
+   BatchHost=hive-dc-7-6-26
+   NumNodes=1 NumCPUs=59 NumTasks=1 CPUs/Task=59 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=59,mem=700G,node=1,billing=59
+   AllocTRES=cpu=59,mem=700G,node=1,billing=59
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=59 MinMemoryNode=700G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/scripts/run_slurm.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/scripts/run_slurm.slurm
+   WorkDir=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl
+   StdErr=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=59
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT

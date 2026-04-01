@@ -1,8 +1,8 @@
 mode: v3_technical_pcs_only
 status: completed
 v3_p_thresh: 0.05
-n_samples: 49
-n_regions: 6611
+n_samples: 48
+n_regions: 6642
 n_technical_traits_found: 3
 technical_traits_found: Percent_Duplicated_Reads, Percent_Aligned_Total, Total_Reads
 n_pcs_total: 2

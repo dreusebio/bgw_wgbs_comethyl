@@ -12,4 +12,4 @@ cat_plot_style: violin
 n_requested_traits: 18
 n_found_traits: 18
 n_missing_traits: 0
-n_pairs_plotted: 3
+n_pairs_plotted: 2

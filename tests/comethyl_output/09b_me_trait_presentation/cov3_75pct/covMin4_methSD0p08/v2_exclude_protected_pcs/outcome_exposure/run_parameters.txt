@@ -10,7 +10,7 @@ n_requested_traits: 18
 n_found_traits: 18
 n_missing_traits: 0
 n_rows_subset: 54
-n_rows_significant: 3
+n_rows_significant: 2
 full_heatmap: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/outcome_exposure/ME_Trait_Heatmap_FULL.pdf
 top_heatmap: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/outcome_exposure/ME_Trait_Heatmap_TOP.pdf
-date: 2026-03-30 22:45:11.808502
+date: 2026-03-31 13:45:51.732767

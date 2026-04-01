@@ -3,14 +3,14 @@ meth_file: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/
 softpower_file: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/SoftPower_pearson.rds
 regions_file: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08/Filtered_Regions.txt
 module_cor: pearson
-power_estimate: 7
+power_estimate: 6
 deep_split: 4
 min_module_size: 10
 merge_cut_height: 0.1
 max_block_size: 40000
 threads: 4
-n_regions_input: 49
-n_samples: 6611
+n_regions_input: 48
+n_samples: 6642
 modules_rds: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds
 dendrogram_pdf: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Region_Dendrograms.pdf
 bed_file: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.bed

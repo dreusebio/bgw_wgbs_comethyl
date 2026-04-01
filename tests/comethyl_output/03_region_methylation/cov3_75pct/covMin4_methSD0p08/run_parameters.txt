@@ -4,4 +4,4 @@ input_regions: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_out
 cpg_label: cov3_75pct
 region_label: covMin4_methSD0p08
 output_dir: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/03_region_methylation/cov3_75pct/covMin4_methSD0p08
-date: 2026-03-29 23:02:56.931041
+date: 2026-03-31 12:32:38.857467

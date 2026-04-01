@@ -2,52 +2,8 @@
 
 # ============================================================
 # 12A_annotate_modules.R
-#
-# Purpose:
-#   Reproducible annotation step for comethyl module objects.
-#
-# What this script does:
-#   - loads one or more module objects
-#   - extracts module regions
-#   - annotates all regions (all modules, including grey)
-#   - writes annotated region tables
-#   - writes per-module gene lists
-#   - writes module-level summary tables
-#   - writes background/testable gene universe
-#   - writes run logs
-#
-# What this script does NOT do:
-#   - module significance filtering
-#   - KEGG enrichment
-#   - Enrichr enrichment
-#
-# Expected module object:
-#   A comethyl module RDS with at least:
-#     $regions
-#   where regions contains columns:
-#     RegionID, chr, start, end, module
-#
-# Recommended usage:
-#   Rscript 12A_annotate_modules.R \
-#     --project_root /path/to/project \
-#     --modules_v1 /path/to/v1/modules/Modules_ALL_pearson_modules_pearson.rds \
-#     --modules_v2 /path/to/v2/modules/Modules_EXCL_pearson_modules_pearson.rds \
-#     --modules_v3 /path/to/v3/modules/Modules_TECH_pearson_modules_pearson.rds \
-#     --sample_info /path/to/sample_info.xlsx \
-#     --genome hg38 \
-#     --annotation_mode auto
-#
-# Output structure per variant:
-#   <variant_parent>/annotation/
-#     Annotated_Regions.tsv
-#     Annotated_Regions.xlsx
-#     Module_Gene_List.tsv
-#     Module_Gene_Summary.tsv
-#     Background_Genes.txt
-#     Background_Genes.tsv
-#     run_parameters.txt
-#     run_log.txt
 # ============================================================
+
 message("Starting Script 12a")
 
 suppressPackageStartupMessages({
@@ -70,11 +26,6 @@ get_arg <- function(flag, default = NULL) {
   idx <- match(flag, args)
   if (!is.na(idx) && idx < length(args)) return(args[idx + 1])
   default
-}
-
-is_flag_present <- function(flag) {
-  args <- commandArgs(trailingOnly = TRUE)
-  flag %in% args
 }
 
 trim_or_null <- function(x) {
@@ -127,7 +78,6 @@ validate_regions_df <- function(regions, source_label = "regions") {
 
 # ============================================================
 # 3) Sample info loader
-#    Here mainly for logging and future-proofing.
 # ============================================================
 load_sample_info <- function(sample_info, sample_id_col = NULL) {
   ext <- tolower(tools::file_ext(sample_info))
@@ -152,7 +102,33 @@ load_sample_info <- function(sample_info, sample_id_col = NULL) {
 }
 
 # ============================================================
-# 4) Annotation helpers
+# 4) Path derivation helper
+# ============================================================
+derive_pipeline_dirs_from_modules <- function(modules_rds, project_root, step_name = "12_annotation") {
+  variant_dir  <- dirname(modules_rds)
+  region_dir   <- dirname(variant_dir)
+  variant_name <- basename(variant_dir)
+  region_label <- basename(region_dir)
+  cpg_label    <- basename(dirname(region_dir))
+
+  pipeline_root <- file.path(project_root, "comethyl_output")
+  step_dir <- file.path(pipeline_root, step_name)
+  out_dir <- file.path(step_dir, cpg_label, region_label, variant_name)
+
+  safe_dir_create(out_dir)
+
+  list(
+    pipeline_root = pipeline_root,
+    step_dir = step_dir,
+    out_dir = out_dir,
+    variant_name = variant_name,
+    region_label = region_label,
+    cpg_label = cpg_label
+  )
+}
+
+# ============================================================
+# 5) Annotation helpers
 # ============================================================
 offline_nearest_gene <- function(gr, verbose = TRUE) {
   have_ensdb <- requireNamespace("EnsDb.Hsapiens.v86", quietly = TRUE)
@@ -209,9 +185,9 @@ offline_nearest_gene <- function(gr, verbose = TRUE) {
   ng  <- ggr[S4Vectors::subjectHits(hit)]
 
   data.frame(
-    chr         = as.character(GenomeInfoDb::seqnames(gr))[S4Vectors::queryHits(hit)],
-    start       = as.integer(S4Vectors::start(gr))[S4Vectors::queryHits(hit)],
-    end         = as.integer(S4Vectors::end(gr))[S4Vectors::queryHits(hit)],
+    chr = as.character(GenomeInfoDb::seqnames(gr))[S4Vectors::queryHits(hit)],
+    start = as.integer(S4Vectors::start(gr))[S4Vectors::queryHits(hit)],
+    end = as.integer(S4Vectors::end(gr))[S4Vectors::queryHits(hit)],
     gene_symbol = as.character(ng$SYMBOL),
     gene_entrezID = as.character(ng$ENTREZID),
     stringsAsFactors = FALSE
@@ -236,8 +212,68 @@ annotate_offline_only <- function(regions_df, genome = "hg38", file_txt = NULL, 
     ) %>%
     mutate(
       gene_description = NA_character_,
-      gene_ensemblID   = NA_character_
+      gene_ensemblID   = NA_character_,
+      gene_context     = NA_character_,
+      CpG_context      = NA_character_
     )
+
+  # Optional annotatr-based context annotation
+  if (requireNamespace("annotatr", quietly = TRUE)) {
+    if (verbose) message("[offline] Adding annotatr gene/CpG context")
+
+    # gene context
+    annotations_gene <- paste(genome, c("basicgenes", "genes_intergenic", "enhancers_fantom"), sep = "_")
+    ann_gene <- annotatr::build_annotations(genome = genome, annotations = annotations_gene) %>%
+      GenomeInfoDb::keepStandardChromosomes(pruning.mode = "coarse")
+
+    gene_ctx <- annotatr::annotate_regions(gr, ann_gene, ignore.strand = TRUE, quiet = TRUE) %>%
+      as.data.frame()
+
+    if (nrow(gene_ctx) > 0) {
+      names(gene_ctx)[names(gene_ctx) == "annot.type"] <- "gene_context"
+      gene_ctx$gene_context <- stringr::str_replace_all(gene_ctx$gene_context, paste0("^", genome, "_"), "")
+
+      gene_ctx_agg <- gene_ctx %>%
+        dplyr::group_by(RegionID) %>%
+        dplyr::summarise(
+          gene_context = paste(unique(gene_context), collapse = ", "),
+          .groups = "drop"
+        )
+
+      out <- out %>% dplyr::left_join(gene_ctx_agg, by = "RegionID", suffix = c("", ".new"))
+      if ("gene_context.new" %in% colnames(out)) {
+        out$gene_context <- ifelse(!is.na(out$gene_context.new) & out$gene_context.new != "", out$gene_context.new, out$gene_context)
+        out$gene_context.new <- NULL
+      }
+    }
+
+    # CpG context
+    ann_cpg <- annotatr::build_annotations(genome = genome, annotations = paste0(genome, "_cpgs")) %>%
+      GenomeInfoDb::keepStandardChromosomes(pruning.mode = "coarse")
+
+    cpg_ctx <- annotatr::annotate_regions(gr, ann_cpg, ignore.strand = TRUE, quiet = TRUE) %>%
+      as.data.frame()
+
+    if (nrow(cpg_ctx) > 0) {
+      names(cpg_ctx)[names(cpg_ctx) == "annot.type"] <- "CpG_context"
+      cpg_ctx$CpG_context <- stringr::str_replace_all(cpg_ctx$CpG_context, paste0("^", genome, "_"), "")
+
+      cpg_ctx_agg <- cpg_ctx %>%
+        dplyr::group_by(RegionID) %>%
+        dplyr::summarise(
+          CpG_context = paste(unique(CpG_context), collapse = ", "),
+          .groups = "drop"
+        )
+
+      out <- out %>% dplyr::left_join(cpg_ctx_agg, by = "RegionID", suffix = c("", ".new"))
+      if ("CpG_context.new" %in% colnames(out)) {
+        out$CpG_context <- ifelse(!is.na(out$CpG_context.new) & out$CpG_context.new != "", out$CpG_context.new, out$CpG_context)
+        out$CpG_context.new <- NULL
+      }
+    }
+  } else {
+    if (verbose) message("[offline] annotatr not installed; skipping gene_context and CpG_context")
+  }
 
   if (!is.null(file_txt) && nzchar(file_txt)) {
     write.table(out, file = file_txt, sep = "\t", quote = FALSE, row.names = FALSE)
@@ -269,14 +305,14 @@ annotate_regions_safe <- function(regions_df,
     },
     error = function(e) {
       message("[annotate] GREAT-based annotation failed: ", conditionMessage(e))
-      message("[annotate] Falling back to offline nearest-gene annotation.")
+      message("[annotate] Falling back to offline nearest-gene + annotatr context annotation.")
       annotate_offline_only(regions_df, genome = genome, file_txt = file_txt, verbose = verbose)
     }
   )
 }
 
 # ============================================================
-# 5) Module/gene summary helpers
+# 6) Module/gene summary helpers
 # ============================================================
 extract_regions_from_module_object <- function(obj, label = "module object") {
   if (is.list(obj) && "regions" %in% names(obj)) {
@@ -336,7 +372,7 @@ make_background_gene_table <- function(annotated_regions) {
 }
 
 # ============================================================
-# 6) Per-variant runner
+# 7) Per-variant runner
 # ============================================================
 run_annotation_for_variant <- function(modules_path,
                                        variant_label,
@@ -348,20 +384,25 @@ run_annotation_for_variant <- function(modules_path,
 
   validate_file_exists(modules_path, paste0("modules_", variant_label))
 
-  # Define centralized annotation directory
-  annotation_root <- file.path(project_root, "comethyl_output", "12_annotation")
+  dir_info <- derive_pipeline_dirs_from_modules(
+    modules_rds = modules_path,
+    project_root = project_root,
+    step_name = "12_annotation"
+  )
 
-  # Optional: keep variant separation (recommended)
-  out_dir <- file.path(annotation_root, paste0(variant_label))
-
-  safe_dir_create(out_dir)
+  out_dir <- dir_info$out_dir
 
   log_file <- file.path(out_dir, "run_log.txt")
   params_file <- file.path(out_dir, "run_parameters.txt")
 
   append_log(log_file, "Starting annotation for variant: ", variant_label)
   append_log(log_file, "modules_path: ", modules_path)
-  append_log(log_file, "annotation_root: ", annotation_root)
+  append_log(log_file, "pipeline_root: ", dir_info$pipeline_root)
+  append_log(log_file, "step_dir: ", dir_info$step_dir)
+  append_log(log_file, "cpg_label: ", dir_info$cpg_label)
+  append_log(log_file, "region_label: ", dir_info$region_label)
+  append_log(log_file, "variant_name: ", dir_info$variant_name)
+  append_log(log_file, "out_dir: ", out_dir)
   append_log(log_file, "genome: ", genome)
   append_log(log_file, "annotation_mode: ", annotation_mode)
 
@@ -388,15 +429,18 @@ run_annotation_for_variant <- function(modules_path,
   bg_txt         <- file.path(out_dir, "Background_Genes.txt")
   bg_tsv         <- file.path(out_dir, "Background_Genes.tsv")
 
-  annotated_regions <- annotate_regions_safe(
-    regions_df = regions,
-    genome = genome,
-    annotation_mode = annotation_mode,
-    file_txt = annotated_tsv,
-    verbose = TRUE
+  annotated_regions <- suppressWarnings(
+    annotate_regions_safe(
+      regions_df = regions,
+      genome = genome,
+      annotation_mode = annotation_mode,
+      file_txt = annotated_tsv,
+      verbose = TRUE
+    )
   )
 
   append_log(log_file, "Annotated regions rows: ", nrow(annotated_regions))
+  append_log(log_file, "Annotated columns: ", paste(colnames(annotated_regions), collapse = ", "))
 
   openxlsx::write.xlsx(annotated_regions, annotated_xlsx, rowNames = FALSE)
 
@@ -418,13 +462,17 @@ run_annotation_for_variant <- function(modules_path,
   params <- c(
     paste0("timestamp\t", timestamp_now()),
     paste0("project_root\t", project_root),
-    paste0("variant_label\t", variant_label),
     paste0("modules_path\t", modules_path),
-    paste0("annotation_root\t", annotation_root),
     paste0("genome\t", genome),
     paste0("annotation_mode\t", annotation_mode),
     paste0("sample_info_provided\t", !is.null(sample_info_df)),
     paste0("sample_id_col\t", ifelse(is.null(sample_id_col), "", sample_id_col)),
+    paste0("pipeline_root\t", dir_info$pipeline_root),
+    paste0("step_dir\t", dir_info$step_dir),
+    paste0("cpg_label\t", dir_info$cpg_label),
+    paste0("region_label\t", dir_info$region_label),
+    paste0("variant_name\t", dir_info$variant_name),
+    paste0("out_dir\t", out_dir),
     paste0("n_regions\t", nrow(regions)),
     paste0("n_modules\t", length(unique(as.character(regions$module)))),
     paste0("n_annotated_regions\t", nrow(annotated_regions)),
@@ -444,21 +492,21 @@ run_annotation_for_variant <- function(modules_path,
 }
 
 # ============================================================
-# 7) Read arguments
+# 8) Read arguments
 # ============================================================
-project_root   <- trim_or_null(get_arg("--project_root"))
-sample_info    <- trim_or_null(get_arg("--sample_info"))
-sample_id_col  <- trim_or_null(get_arg("--sample_id_col"))
+project_root    <- trim_or_null(get_arg("--project_root"))
+sample_info     <- trim_or_null(get_arg("--sample_info"))
+sample_id_col   <- trim_or_null(get_arg("--sample_id_col"))
 
-modules_v1     <- trim_or_null(get_arg("--modules_v1"))
-modules_v2     <- trim_or_null(get_arg("--modules_v2"))
-modules_v3     <- trim_or_null(get_arg("--modules_v3"))
+modules_v1      <- trim_or_null(get_arg("--modules_v1"))
+modules_v2      <- trim_or_null(get_arg("--modules_v2"))
+modules_v3      <- trim_or_null(get_arg("--modules_v3"))
 
-genome         <- trim_or_null(get_arg("--genome", "hg38"))
+genome          <- trim_or_null(get_arg("--genome", "hg38"))
 annotation_mode <- trim_or_null(get_arg("--annotation_mode", "auto"))
 
 # ============================================================
-# 8) Validate required inputs
+# 9) Validate required inputs
 # ============================================================
 stop_if_missing(project_root, "--project_root")
 stop_if_missing(sample_info, "--sample_info")
@@ -477,14 +525,13 @@ annotation_mode <- match.arg(annotation_mode, choices = c("auto", "great", "offl
 
 setwd(project_root)
 
-# Optional cache setup
 AnnotationHub::setAnnotationHubOption(
   "CACHE",
   value = file.path(project_root, ".cache")
 )
 
 # ============================================================
-# 9) Load sample info once
+# 10) Load sample info once
 # ============================================================
 sample_info_df <- load_sample_info(sample_info, sample_id_col = sample_id_col)
 
@@ -498,7 +545,7 @@ if (!is.null(sample_id_col)) {
 }
 
 # ============================================================
-# 10) Run variants
+# 11) Run variants
 # ============================================================
 run_annotation_for_variant(
   modules_path = modules_v1,
@@ -534,4 +581,4 @@ if (!is.null(modules_v3)) {
   )
 }
 
-message("Script 12a complete: Annotate Modules  finished")
+message("Script 12a complete: Annotate Modules finished")

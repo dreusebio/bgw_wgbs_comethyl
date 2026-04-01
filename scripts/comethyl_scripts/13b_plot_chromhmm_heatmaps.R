@@ -62,6 +62,36 @@ safe_dir_create <- function(path) {
   if (!dir.exists(path)) dir.create(path, recursive = TRUE, showWarnings = FALSE)
 }
 
+
+# ============================================================
+# 4) Output directory helpers
+# ============================================================
+
+derive_pipeline_dirs_from_modules <- function(modules_rds, project_root, step_name) {
+  variant_dir  <- dirname(modules_rds)
+  region_dir   <- dirname(variant_dir)
+  variant_name <- basename(variant_dir)
+  region_label <- basename(region_dir)
+  cpg_label    <- basename(dirname(region_dir))
+
+  pipeline_root <- file.path(project_root, "comethyl_output")
+  step_dir <- file.path(pipeline_root, step_name)
+  out_dir <- file.path(step_dir, cpg_label, region_label, variant_name)
+
+  if (!dir.exists(out_dir)) {
+    dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+  }
+
+  list(
+    pipeline_root = pipeline_root,
+    step_dir = step_dir,
+    out_dir = out_dir,
+    variant_name = variant_name,
+    region_label = region_label,
+    cpg_label = cpg_label
+  )
+}
+
 # ============================================================
 # 2) source / annotation colors
 # ============================================================

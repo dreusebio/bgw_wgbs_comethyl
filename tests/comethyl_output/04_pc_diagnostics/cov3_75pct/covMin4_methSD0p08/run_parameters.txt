@@ -18,10 +18,10 @@ axis_text_size: 8
 cpg_label: cov3_75pct
 region_label: covMin4_methSD0p08
 model_formula: ~ soc_env_tot + env_tot + soc_tot + wflzd_0to6mo + wflzd_6to12mo + rwg + BMI_Calc_24m
-n_samples_after_alignment: 49
-n_regions: 6611
+n_samples_after_alignment: 48
+n_regions: 6642
 n_numeric_traits_used: 66
 n_pcs_selected_as_svs_by_numsv: 2
 n_protected_traits_found: 7
 n_technical_traits_found: 3
-date: 2026-03-30 07:57:14.633312
+date: 2026-03-31 12:34:13.416031

@@ -286,3 +286,941 @@ Correlation method: pearson
 ==============================
 
 [getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0.764 and mean connectivity = 271.9
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/SoftPower_pearson.rds
+[plotSoftPower] Plotting scale-free topology fit and mean connectivity by soft power threshold
+[plotSoftPower] Saving plots as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/SoftPower_pearson_Plots.pdf
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Sample_Dendrogram_pearson.pdf
+✓ Sample dendrogram saved: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Sample_Dendrogram_pearson.pdf
+✓ Finished soft-power run for: v3_technical_pcs_only
+  RDS: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/SoftPower_pearson.rds
+  PDF: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/SoftPower_pearson_Plots.pdf
+Warning messages:
+1: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+2: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+Script 06 complete: soft power finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08
+Starting Script 07
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08
+Loaded regions: 461153 rows
+
+==============================
+Running module detection for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] methylation dimensions: 48 regions x 461153 samples
+[v1_all_pcs] using powerEstimate = 16
+[v1_all_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.bed
+✓ Finished variant: v1_all_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.bed
+
+==============================
+Running module detection for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] methylation dimensions: 48 regions x 461153 samples
+[v2_exclude_protected_pcs] using powerEstimate = 20
+[v2_exclude_protected_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+Error in rect(trafo1$x, trafo1$y, trafo2$x, trafo2$y, col = as.character(C[,  : 
+  invalid color name 'rosybrown3.1'
+Calls: plotRegionDendro ... plotOrderedColors -> .plotOrderedColorSubplot -> rect
+In addition: Warning messages:
+1: In labels2colors(allLabels) :
+  labels2colors: Number of labels exceeds number of avilable colors. Some colors will be repeated 3 times.
+2: In labels2colors(c(1:nNewColors)) :
+  labels2colors: Number of labels exceeds number of avilable colors. Some colors will be repeated 2 times.
+Execution halted
+Starting Script 08
+Warning message:
+package ‘dplyr’ was built under R version 4.3.3 
+Loaded sample_info: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/data/metadata/merged_qc.xlsx
+colData dimensions: 48 samples x 67 traits
+colData_num dimensions: 48 samples x 67 numeric traits
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08
+
+==============================
+Running module/sample diagnostics for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] No MEgrey column found (194 real MEs remaining)
+[v1_all_pcs] Sample alignment to metadata: 48 overlapping samples retained from 48 ME samples and 48 metadata samples
+[v1_all_pcs] MEs used: 48 samples x 194 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_ME_Dendrogram.pdf
+[v1_all_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Correlation_Stats.tsv
+[v1_all_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_ME_Dendrogram.pdf
+[v1_all_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_ME_Heatmap.pdf
+[v1_all_pcs] Saved sample x module eigengene heatmap
+Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+
+==============================
+Running module/sample diagnostics for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] No MEgrey column found (804 real MEs remaining)
+[v2_exclude_protected_pcs] Sample alignment to metadata: 48 overlapping samples retained from 48 ME samples and 48 metadata samples
+[v2_exclude_protected_pcs] MEs used: 48 samples x 804 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Correlation_Stats.tsv
+[v2_exclude_protected_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample x module eigengene heatmap
+Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+Warning messages:
+1: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+2: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+Script 08 complete: module and sample diagnostics finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08
+Starting Script 09a
+Warning messages:
+1: package ‘dplyr’ was built under R version 4.3.3 
+2: package ‘gridExtra’ was built under R version 4.3.3 
+3: package ‘cowplot’ was built under R version 4.3.3 
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/data/metadata/merged_qc.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+
+==============================
+Running ME-trait analysis for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] MEs dimensions: 48 samples x 194 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v1_all_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/Rtmp0icXSZ/file1745f63c94d77.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+
+==============================
+Running ME-trait analysis for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] MEs dimensions: 48 samples x 804 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v2_exclude_protected_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/Rtmp0icXSZ/file1745f658422d7.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+Script 09a complete: core ME-trait finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08
+Starting Script 09b
+Warning messages:
+1: package ‘dplyr’ was built under R version 4.3.3 
+2: package ‘gridExtra’ was built under R version 4.3.3 
+3: package ‘cowplot’ was built under R version 4.3.3 
+Variants to process: 2
+
+==============================
+Running 09b for variant: v1_all_pcs
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_velocity/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_velocity/ME_Trait_Heatmap_TOP.pdf
+Done set 'growth_velocity' for variant 'v1_all_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_velocity
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/heatmap_expo/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/heatmap_expo/ME_Trait_Heatmap_TOP.pdf
+Done set 'heatmap_expo' for variant 'v1_all_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/heatmap_expo
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/heatmap_primary_traits/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/heatmap_primary_traits/ME_Trait_Heatmap_TOP.pdf
+Done set 'heatmap_primary_traits' for variant 'v1_all_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/heatmap_primary_traits
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/outcome_exposure/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/outcome_exposure/ME_Trait_Heatmap_TOP.pdf
+Done set 'outcome_exposure' for variant 'v1_all_pcs'
+  Traits found: 18 / 18
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/outcome_exposure
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/sociodemo/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/sociodemo/ME_Trait_Heatmap_TOP.pdf
+Done set 'sociodemo' for variant 'v1_all_pcs'
+  Traits found: 7 / 7
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/sociodemo
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/technical_traits/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/technical_traits/ME_Trait_Heatmap_TOP.pdf
+Done set 'technical_traits' for variant 'v1_all_pcs'
+  Traits found: 3 / 3
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/technical_traits
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/weight_raw/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/weight_raw/ME_Trait_Heatmap_TOP.pdf
+Done set 'weight_raw' for variant 'v1_all_pcs'
+  Traits found: 6 / 6
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/weight_raw
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores/ME_Trait_Heatmap_TOP.pdf
+Done set 'zscores' for variant 'v1_all_pcs'
+  Traits found: 14 / 14
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores
+Finished variant: v1_all_pcs
+
+==============================
+Running 09b for variant: v2_exclude_protected_pcs
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_velocity/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_velocity/ME_Trait_Heatmap_TOP.pdf
+Done set 'growth_velocity' for variant 'v2_exclude_protected_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_velocity
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/heatmap_expo/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/heatmap_expo/ME_Trait_Heatmap_TOP.pdf
+Done set 'heatmap_expo' for variant 'v2_exclude_protected_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/heatmap_expo
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/heatmap_primary_traits/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/heatmap_primary_traits/ME_Trait_Heatmap_TOP.pdf
+Done set 'heatmap_primary_traits' for variant 'v2_exclude_protected_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/heatmap_primary_traits
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/outcome_exposure/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/outcome_exposure/ME_Trait_Heatmap_TOP.pdf
+Done set 'outcome_exposure' for variant 'v2_exclude_protected_pcs'
+  Traits found: 18 / 18
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/outcome_exposure
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/sociodemo/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/sociodemo/ME_Trait_Heatmap_TOP.pdf
+Done set 'sociodemo' for variant 'v2_exclude_protected_pcs'
+  Traits found: 7 / 7
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/sociodemo
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/technical_traits/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/technical_traits/ME_Trait_Heatmap_TOP.pdf
+Done set 'technical_traits' for variant 'v2_exclude_protected_pcs'
+  Traits found: 3 / 3
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/technical_traits
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/weight_raw/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/weight_raw/ME_Trait_Heatmap_TOP.pdf
+Done set 'weight_raw' for variant 'v2_exclude_protected_pcs'
+  Traits found: 6 / 6
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/weight_raw
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores/ME_Trait_Heatmap_TOP.pdf
+Done set 'zscores' for variant 'v2_exclude_protected_pcs'
+  Traits found: 14 / 14
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores
+Finished variant: v2_exclude_protected_pcs
+Script 09a complete: Presentation ME-trait finished
+Outputs saved under: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation
+Starting Script 10
+Warning messages:
+1: package ‘dplyr’ was built under R version 4.3.3 
+2: package ‘cowplot’ was built under R version 4.3.3 
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin4_methSD0p08
+
+==============================
+Running circos/module summaries for variant: v1_all_pcs
+==============================
+
+✓ Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+
+==============================
+Running circos/module summaries for variant: v2_exclude_protected_pcs
+==============================
+
+[2026-03-31T16:42:12.186] error: *** JOB 11492154 ON hive-dc-7-6-26 CANCELLED AT 2026-03-31T16:42:12 DUE to SIGNAL Terminated ***
+Starting Script 00
+Warning message:
+package ‘BiocParallel’ was built under R version 4.3.3 
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/00_cpg_extraction
+[getCpGs] Loading CpG-level data
+[read.bismark] Using 'loci' as candidate loci.
+[read.bismark] Collapsing strand of 'loci' ...
+Done in 17.4 secs
+[read.bismark] Parsing files and constructing 'M' and 'Cov' matrices ...
+Done in 470.8 secs
+[read.bismark] Constructing BSseq object ... 
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/00_cpg_extraction/Unfiltered_BSseq.rds
+[getCpGtotals] Calculating CpG totals at specified cov and perSample cutoffs
+[getCpGtotals] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/00_cpg_extraction/CpG_Totals.txt
+[plotCpGtotals] Plotting CpG totals
+[plotCpGtotals] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/00_cpg_extraction/CpG_Totals.pdf
+Warning messages:
+1: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+2: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+ Script 00 complete: unfiltered BSseq object created
+Starting Script 01
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/01_filter_regions/cov3_75pct
+[getCpGs] Filtering CpG-level data for loci with at least 3 reads in at least 75% of samples
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/01_filter_regions/cov3_75pct/Filtered_BSseq.rds
+[getRegions] Calling regions when at least 3 CpGs are no more than 150 bases apart
+[getRegions] Calculating region statistics
+[getRegions] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/01_filter_regions/cov3_75pct/Regions.txt
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/01_filter_regions/cov3_75pct/Region_Plots.pdf
+Warning messages:
+1: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+2: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+[plotSDstats] Plotting methylation SD vs region statistics
+[plotSDstats] Limiting x-axis to values in bottom 99% for n, covMin, and covMean
+[plotSDstats] Saving plots as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/01_filter_regions/cov3_75pct/SD_Plots.pdf
+Warning message:
+The dot-dot notation (`..count..`) was deprecated in ggplot2 3.4.0.
+ℹ Please use `after_stat(count)` instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+[getRegionTotals] Calculating region totals at specified covMin and methSD cutoffs
+[2026-03-31T17:24:10.598] error: *** JOB 11502396 ON hive-dc-7-6-26 CANCELLED AT 2026-03-31T17:24:10 DUE to SIGNAL Terminated ***
+Starting Script 07
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08
+Loaded regions: 461153 rows
+
+==============================
+Running module detection for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] methylation dimensions: 48 regions x 461153 samples
+[v1_all_pcs] using powerEstimate = 16
+[v1_all_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.bed
+✓ Finished variant: v1_all_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.bed
+
+==============================
+Running module detection for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] methylation dimensions: 48 regions x 461153 samples
+[v2_exclude_protected_pcs] using powerEstimate = 20
+[v2_exclude_protected_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.bed
+✓ Finished variant: v2_exclude_protected_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.bed
+Script 07 complete: module detection finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08
+Starting Script 08
+Warning message:
+package ‘dplyr’ was built under R version 4.3.3 
+Loaded sample_info: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/data/metadata/merged_qc.xlsx
+colData dimensions: 48 samples x 67 traits
+colData_num dimensions: 48 samples x 67 numeric traits
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08
+
+==============================
+Running module/sample diagnostics for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] No MEgrey column found (36 real MEs remaining)
+[v1_all_pcs] Sample alignment to metadata: 48 overlapping samples retained from 48 ME samples and 48 metadata samples
+[v1_all_pcs] MEs used: 48 samples x 36 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_ME_Dendrogram.pdf
+[v1_all_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Correlation_Stats.tsv
+[v1_all_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_ME_Dendrogram.pdf
+[v1_all_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_ME_Heatmap.pdf
+[v1_all_pcs] Saved sample x module eigengene heatmap
+Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+
+==============================
+Running module/sample diagnostics for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] No MEgrey column found (22 real MEs remaining)
+[v2_exclude_protected_pcs] Sample alignment to metadata: 48 overlapping samples retained from 48 ME samples and 48 metadata samples
+[v2_exclude_protected_pcs] MEs used: 48 samples x 22 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Correlation_Stats.tsv
+[v2_exclude_protected_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample x module eigengene heatmap
+Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+Warning messages:
+1: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+2: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+Script 08 complete: module and sample diagnostics finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08
+Starting Script 09a
+Warning messages:
+1: package ‘dplyr’ was built under R version 4.3.3 
+2: package ‘gridExtra’ was built under R version 4.3.3 
+3: package ‘cowplot’ was built under R version 4.3.3 
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/data/metadata/merged_qc.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+
+==============================
+Running ME-trait analysis for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] MEs dimensions: 48 samples x 36 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v1_all_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/Rtmpwce7by/file179a3f168ed053.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+
+==============================
+Running ME-trait analysis for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] MEs dimensions: 48 samples x 22 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v2_exclude_protected_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/Rtmpwce7by/file179a3f1c1f377b.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+Script 09a complete: core ME-trait finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08
+Starting Script 09b
+Warning messages:
+1: package ‘dplyr’ was built under R version 4.3.3 
+2: package ‘gridExtra’ was built under R version 4.3.3 
+3: package ‘cowplot’ was built under R version 4.3.3 
+Variants to process: 2
+
+==============================
+Running 09b for variant: v1_all_pcs
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_velocity/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_velocity/ME_Trait_Heatmap_TOP.pdf
+Done set 'growth_velocity' for variant 'v1_all_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_velocity
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/heatmap_expo/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/heatmap_expo/ME_Trait_Heatmap_TOP.pdf
+Done set 'heatmap_expo' for variant 'v1_all_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/heatmap_expo
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/heatmap_primary_traits/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/heatmap_primary_traits/ME_Trait_Heatmap_TOP.pdf
+Done set 'heatmap_primary_traits' for variant 'v1_all_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/heatmap_primary_traits
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/outcome_exposure/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/outcome_exposure/ME_Trait_Heatmap_TOP.pdf
+Done set 'outcome_exposure' for variant 'v1_all_pcs'
+  Traits found: 18 / 18
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/outcome_exposure
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/sociodemo/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/sociodemo/ME_Trait_Heatmap_TOP.pdf
+Done set 'sociodemo' for variant 'v1_all_pcs'
+  Traits found: 7 / 7
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/sociodemo
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/technical_traits/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/technical_traits/ME_Trait_Heatmap_TOP.pdf
+Done set 'technical_traits' for variant 'v1_all_pcs'
+  Traits found: 3 / 3
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/technical_traits
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/weight_raw/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/weight_raw/ME_Trait_Heatmap_TOP.pdf
+Done set 'weight_raw' for variant 'v1_all_pcs'
+  Traits found: 6 / 6
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/weight_raw
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores/ME_Trait_Heatmap_TOP.pdf
+Done set 'zscores' for variant 'v1_all_pcs'
+  Traits found: 14 / 14
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores
+Finished variant: v1_all_pcs
+
+==============================
+Running 09b for variant: v2_exclude_protected_pcs
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_velocity/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_velocity/ME_Trait_Heatmap_TOP.pdf
+Done set 'growth_velocity' for variant 'v2_exclude_protected_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_velocity
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/heatmap_expo/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/heatmap_expo/ME_Trait_Heatmap_TOP.pdf
+Done set 'heatmap_expo' for variant 'v2_exclude_protected_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/heatmap_expo
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/heatmap_primary_traits/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/heatmap_primary_traits/ME_Trait_Heatmap_TOP.pdf
+Done set 'heatmap_primary_traits' for variant 'v2_exclude_protected_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/heatmap_primary_traits
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/outcome_exposure/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/outcome_exposure/ME_Trait_Heatmap_TOP.pdf
+Done set 'outcome_exposure' for variant 'v2_exclude_protected_pcs'
+  Traits found: 18 / 18
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/outcome_exposure
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/sociodemo/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/sociodemo/ME_Trait_Heatmap_TOP.pdf
+Done set 'sociodemo' for variant 'v2_exclude_protected_pcs'
+  Traits found: 7 / 7
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/sociodemo
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/technical_traits/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/technical_traits/ME_Trait_Heatmap_TOP.pdf
+Done set 'technical_traits' for variant 'v2_exclude_protected_pcs'
+  Traits found: 3 / 3
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/technical_traits
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/weight_raw/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/weight_raw/ME_Trait_Heatmap_TOP.pdf
+Done set 'weight_raw' for variant 'v2_exclude_protected_pcs'
+  Traits found: 6 / 6
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/weight_raw
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores/ME_Trait_Heatmap_TOP.pdf
+Done set 'zscores' for variant 'v2_exclude_protected_pcs'
+  Traits found: 14 / 14
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores
+Finished variant: v2_exclude_protected_pcs
+Script 09a complete: Presentation ME-trait finished
+Outputs saved under: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/09b_me_trait_presentation
+Starting Script 10
+Warning messages:
+1: package ‘dplyr’ was built under R version 4.3.3 
+2: package ‘cowplot’ was built under R version 4.3.3 
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin4_methSD0p08
+
+==============================
+Running circos/module summaries for variant: v1_all_pcs
+==============================
+
+✓ Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+
+==============================
+Running circos/module summaries for variant: v2_exclude_protected_pcs
+==============================
+
+✓ Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+Warning messages:
+1: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"chr"` instead of `.data$chr` 
+2: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"start"` instead of `.data$start` 
+3: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"end"` instead of `.data$end` 
+4: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"module"` instead of `.data$module` 
+Script 10 complete: Circos plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin4_methSD0p08
+Starting Script 11
+Warning message:
+package ‘dplyr’ was built under R version 4.3.3 
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/data/metadata/merged_qc.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 48
+Modules available: 36
+Traits available: 67
+[growth_velocity] Pairs to plot: 10
+✓ Done set: growth_velocity
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_velocity
+[heatmap_expo] Pairs to plot: 14
+✓ Done set: heatmap_expo
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/heatmap_expo
+[heatmap_primary_traits] Pairs to plot: 14
+✓ Done set: heatmap_primary_traits
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/heatmap_primary_traits
+[outcome_exposure] Pairs to plot: 24
+✓ Done set: outcome_exposure
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/outcome_exposure
+[sociodemo] Pairs to plot: 40
+✓ Done set: sociodemo
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/sociodemo
+[technical_traits] Pairs to plot: 12
+✓ Done set: technical_traits
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/technical_traits
+[weight_raw] Pairs to plot: 23
+✓ Done set: weight_raw
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/weight_raw
+[zscores] Pairs to plot: 33
+✓ Done set: zscores
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores
+There were 50 or more warnings (use warnings() to see the first 50)
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+Starting Script 11
+Warning message:
+package ‘dplyr’ was built under R version 4.3.3 
+Output directory: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/data/metadata/merged_qc.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 48
+Modules available: 22
+Traits available: 67
+[growth_velocity] Pairs to plot: 5
+✓ Done set: growth_velocity
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_velocity
+[heatmap_expo] Pairs to plot: 4
+✓ Done set: heatmap_expo
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/heatmap_expo
+[heatmap_primary_traits] Pairs to plot: 12
+✓ Done set: heatmap_primary_traits
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/heatmap_primary_traits
+[outcome_exposure] Pairs to plot: 14
+✓ Done set: outcome_exposure
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/outcome_exposure
+[sociodemo] Pairs to plot: 24
+✓ Done set: sociodemo
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/sociodemo
+[technical_traits] Pairs to plot: 7
+✓ Done set: technical_traits
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/technical_traits
+[weight_raw] Pairs to plot: 10
+✓ Done set: weight_raw
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/weight_raw
+[zscores] Pairs to plot: 18
+✓ Done set: zscores
+  Output: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores
+There were 50 or more warnings (use warnings() to see the first 50)
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+Starting Script 12a
+Warning messages:
+1: package ‘dplyr’ was built under R version 4.3.3 
+2: package ‘GenomicRanges’ was built under R version 4.3.3 
+3: package ‘AnnotationDbi’ was built under R version 4.3.2 
+4: package ‘Biobase’ was built under R version 4.3.3 
+[annotate] Trying comethyl::annotateModule()
+[annotateModule] Excluding regions in grey (unassigned) module
+[annotateModule] Using the hg38 genome assembly for annotations
+[annotateModule] Adding genes to regions using GREAT v4.0.4 with the basalPlusExt rule
+[annotate] GREAT-based annotation failed: error in evaluating the argument 'y' in selecting a method for function 'merge': error in evaluating the argument 'x' in selecting a method for function 'as.data.frame': unused argument (type = 1)
+[annotate] Falling back to offline nearest-gene annotation.
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+Warning message:
+In file.remove(pathname) :
+  cannot remove file '/dev/null', reason 'Permission denied'
+[annotate] Trying comethyl::annotateModule()
+[annotateModule] Excluding regions in grey (unassigned) module
+[annotateModule] Using the hg38 genome assembly for annotations
+[annotateModule] Adding genes to regions using GREAT v4.0.4 with the basalPlusExt rule
+[annotate] GREAT-based annotation failed: error in evaluating the argument 'y' in selecting a method for function 'merge': error in evaluating the argument 'x' in selecting a method for function 'as.data.frame': unused argument (type = 1)
+[annotate] Falling back to offline nearest-gene annotation.
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+Warning messages:
+1: In submitGreatJob(GR_regions, species = genome, includeCuratedRegDoms = includeCuratedRegDoms,  :
+  GREAT gives a warning:
+Your set hits a large fraction of the genes in the genome, which often
+does not work well with the GREAT Significant by Both view due to a
+saturation of the gene-based hypergeometric test.
+
+See our tips for handling large datasets or try the Significant By
+Region-based Binomial view.
+2: In file.remove(pathname) :
+  cannot remove file '/dev/null', reason 'Permission denied'
+Script 12a complete: Annotate Modules  finished
+/var/spool/slurmd/job11502900/slurm_script: line 207: unexpected EOF while looking for matching ``'
+/var/spool/slurmd/job11502900/slurm_script: line 211: syntax error: unexpected end of file

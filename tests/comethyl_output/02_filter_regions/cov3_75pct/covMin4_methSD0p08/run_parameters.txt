@@ -9,4 +9,4 @@ max_q: 0.99
 width: 20
 height: 10
 output_dir: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08
-date: 2026-03-28 23:35:59.352231
+date: 2026-03-31 12:31:04.921824

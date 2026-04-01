@@ -1,7 +1,0 @@
-mom_gw_age
-gender_c
-gest_age
-age_c_mos
-brthwt
-zwei_0wk
-zwfl_0wk

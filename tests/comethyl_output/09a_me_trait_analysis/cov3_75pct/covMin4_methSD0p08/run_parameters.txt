@@ -7,11 +7,11 @@ modules_v3: NULL
 run_pearson: FALSE
 run_bicor: TRUE
 p_thresh: 0.05
-top_n: 250
+top_n: 25
 module_dendro_distance: bicor
 trait_exclude_file: NULL
 outcome_traits_file: NULL
 cpg_label: cov3_75pct
 region_label: covMin4_methSD0p08
 variants_run: v1_all_pcs, v2_exclude_protected_pcs
-date: 2026-03-30 22:04:42.667181
+date: 2026-03-31 13:44:28.616411

@@ -5,11 +5,11 @@ sample_id_col: NULL
 run_pearson: FALSE
 run_bicor: TRUE
 p_thresh: 0.05
-top_n: 250
+top_n: 25
 module_dendro_distance: bicor
 trait_exclude_file: NULL
 outcome_traits_file: NULL
-n_samples_overlap: 49
+n_samples_overlap: 48
 n_modules: 3
 n_traits_tested: 66
 n_outcome_traits_found: 0
