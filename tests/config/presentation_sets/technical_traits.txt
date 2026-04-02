@@ -1,3 +1,0 @@
-Percent_Duplicated_Reads
-Percent_Aligned_Total
-Total_Reads
