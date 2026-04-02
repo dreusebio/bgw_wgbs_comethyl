@@ -304,6 +304,5 @@ Postdoctoral Scholar, UC Davis
 
 * Docker container for full portability
 * Snakemake / Nextflow integration
-* Demo dataset for quick validation
 
 ---
