@@ -289,6 +289,10 @@ See:
 ```text
 docs/lab_reproducibility_standard.md
 ```
+---
+## Video Examples
+
+[Youtube Link](https://www.youtube.com/playlist?list=PLUmypCef-jpJN03mOmOL-I6EO5Ykkoob2)
 
 ---
 
