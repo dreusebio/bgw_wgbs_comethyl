@@ -7,6 +7,24 @@ if (!requireNamespace("remotes", quietly = TRUE)) {
   install.packages("remotes")
 }
 
+# CRAN packages required by comethyl but not auto-installed
+cran_pkgs <- c(
+  "ggdendro",
+  "R.devices",
+  "rlist"
+)
+
+missing_cran <- cran_pkgs[!vapply(
+  cran_pkgs,
+  requireNamespace,
+  quietly = TRUE,
+  FUN.VALUE = logical(1)
+)]
+
+if (length(missing_cran) > 0) {
+  install.packages(missing_cran)
+}
+
 bioc_pkgs <- c(
   "GenomeInfoDb",
   "GenomeInfoDbData",

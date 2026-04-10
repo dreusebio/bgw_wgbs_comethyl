@@ -1,7 +1,13 @@
+aces_tot
 soc_env_tot
+airpollut
+toxic
+emissions
 env_tot
+poverty
 soc_tot
 wflzd_0to6mo
 wflzd_6to12mo
-rwg
 BMI_Calc_24m
+rwg_wfl_0to6mo
+rwg_wfl_6to12mo

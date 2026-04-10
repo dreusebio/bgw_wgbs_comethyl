@@ -1,9 +1,9 @@
-project_root: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests
-input_meth: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/03_region_methylation/cov3_75pct/covMin4_methSD0p08/Region_Methylation.rds
-sample_info: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/data/metadata/merged_qc.xlsx
+project_root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests
+input_meth: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/03_region_methylation/cov3_75pct/covMin4_methSD0p08/Region_Methylation.rds
+sample_info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/metadata/merged_qc.xlsx
 sample_id_col: NULL
-protected_traits_file: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/config/protected_traits.txt
-technical_traits_file: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/config/technical_traits.txt
+protected_traits_file: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config/protected_traits.txt
+technical_traits_file: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config/technical_traits.txt
 threads: 4
 top_trait_n: 50
 top_cell_n: 250
@@ -17,11 +17,11 @@ base_size: 11
 axis_text_size: 8
 cpg_label: cov3_75pct
 region_label: covMin4_methSD0p08
-model_formula: ~ soc_env_tot + env_tot + soc_tot + wflzd_0to6mo + wflzd_6to12mo + rwg + BMI_Calc_24m
+model_formula: ~ aces_tot + soc_env_tot + airpollut + toxic + emissions + env_tot + poverty + soc_tot + wflzd_0to6mo + wflzd_6to12mo + rwg_wfl_0to6mo + rwg_wfl_6to12mo
 n_samples_after_alignment: 48
 n_regions: 6642
-n_numeric_traits_used: 66
-n_pcs_selected_as_svs_by_numsv: 2
-n_protected_traits_found: 7
+n_numeric_traits_used: 52
+n_pcs_selected_as_svs_by_numsv: 3
+n_protected_traits_found: 12
 n_technical_traits_found: 3
-date: 2026-03-31 12:34:13.416031
+date: 2026-04-09 16:56:35.395484

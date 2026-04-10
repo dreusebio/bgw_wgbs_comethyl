@@ -1,0 +1,12 @@
+aces_tot
+soc_env_tot
+env_tot
+soc_tot
+airpollut
+toxic
+emissions
+poverty
+gwg
+egwg
+ppwr
+ppwr_e

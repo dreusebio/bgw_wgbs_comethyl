@@ -1,6 +1,0 @@
-mode: v1_all_pcs
-n_samples: 48
-n_regions: 6642
-n_pcs_used: 2
-pcs_used: PC_1, PC_2
-output_file: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Adjusted_Region_Methylation_allPCs.rds

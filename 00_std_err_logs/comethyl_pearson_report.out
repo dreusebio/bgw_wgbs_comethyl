@@ -1148,4 +1148,10 @@ JobId=11502900 JobName=Cometh_BGW
    StdIn=/dev/null
    StdOut=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/00_std_err_logs/comethyl_pearson_report.out
    TresPerTask=cpu=59
-   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11825348 prolog ###############
+SLURM_NODELIST: hive-dc-7-6-42
+############### Job 11825348 prolog ###############
+hive-dc-7-6-42
+Thu Apr  9 05:41:36 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK

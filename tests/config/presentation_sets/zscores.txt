@@ -12,3 +12,4 @@ zwfl_9mo
 zwfl_12mo
 zwfl_18mo
 zwfl_24mo
+zbmi_24mo

@@ -1224,3 +1224,7 @@ Region-based Binomial view.
 Script 12a complete: Annotate Modules  finished
 /var/spool/slurmd/job11502900/slurm_script: line 207: unexpected EOF while looking for matching ``'
 /var/spool/slurmd/job11502900/slurm_script: line 211: syntax error: unexpected end of file
+
+
+Starting Script 05
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08
