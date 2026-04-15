@@ -1228,3 +1228,3252 @@ Script 12a complete: Annotate Modules  finished
 
 Starting Script 05
 Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08
+After alignment: meth = 461153 regions x 48 samples; PCs = 48 samples x 4 PCs
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 7, missing = 0
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Adjusted_Region_Methylation_allPCs.rds
+✓ v1 complete: adjusted using all PCs (n = 4)
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
+✓ v2 complete: removed 1 protected-associated PCs; used 3 PCs
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Adjusted_Region_Methylation_technicalPCs_only.rds
+✓ v3 complete: used 1 technical-associated PCs
+Script 05 complete: methylation adjustment finished
+Starting Script 06
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08
+
+==============================
+Running soft power for variant: v1_all_pcs
+Correlation method: pearson
+==============================
+
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 16, fit = 0.825 and mean connectivity = 62
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/SoftPower_pearson.rds
+[plotSoftPower] Plotting scale-free topology fit and mean connectivity by soft power threshold
+[plotSoftPower] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/SoftPower_pearson_Plots.pdf
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_Dendrogram_pearson.pdf
+✓ Sample dendrogram saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_Dendrogram_pearson.pdf
+✓ Finished soft-power run for: v1_all_pcs
+  RDS: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/SoftPower_pearson.rds
+  PDF: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/SoftPower_pearson_Plots.pdf
+
+==============================
+Running soft power for variant: v2_exclude_protected_pcs
+Correlation method: pearson
+==============================
+
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0.755 and mean connectivity = 295.9
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/SoftPower_pearson.rds
+[plotSoftPower] Plotting scale-free topology fit and mean connectivity by soft power threshold
+[plotSoftPower] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/SoftPower_pearson_Plots.pdf
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_Dendrogram_pearson.pdf
+✓ Sample dendrogram saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_Dendrogram_pearson.pdf
+✓ Finished soft-power run for: v2_exclude_protected_pcs
+  RDS: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/SoftPower_pearson.rds
+  PDF: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/SoftPower_pearson_Plots.pdf
+
+==============================
+Running soft power for variant: v3_technical_pcs_only
+Correlation method: pearson
+==============================
+
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0.764 and mean connectivity = 271.9
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/SoftPower_pearson.rds
+[plotSoftPower] Plotting scale-free topology fit and mean connectivity by soft power threshold
+[plotSoftPower] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/SoftPower_pearson_Plots.pdf
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Sample_Dendrogram_pearson.pdf
+✓ Sample dendrogram saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Sample_Dendrogram_pearson.pdf
+✓ Finished soft-power run for: v3_technical_pcs_only
+  RDS: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/SoftPower_pearson.rds
+  PDF: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/SoftPower_pearson_Plots.pdf
+Script 06 complete: soft power finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08
+Starting Script 07
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08
+Loaded regions: 461153 rows
+
+==============================
+Running module detection for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] methylation dimensions: 48 regions x 461153 samples
+[v1_all_pcs] using powerEstimate = 16
+[v1_all_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.bed
+✓ Finished variant: v1_all_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.bed
+
+==============================
+Running module detection for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] methylation dimensions: 48 regions x 461153 samples
+[v2_exclude_protected_pcs] using powerEstimate = 20
+[v2_exclude_protected_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+Error in rect(trafo1$x, trafo1$y, trafo2$x, trafo2$y, col = as.character(C[,  : 
+  invalid color name 'rosybrown3.1'
+Calls: plotRegionDendro ... plotOrderedColors -> .plotOrderedColorSubplot -> rect
+In addition: Warning messages:
+1: In labels2colors(allLabels) :
+  labels2colors: Number of labels exceeds number of avilable colors. Some colors will be repeated 3 times.
+2: In labels2colors(c(1:nNewColors)) :
+  labels2colors: Number of labels exceeds number of avilable colors. Some colors will be repeated 2 times.
+Execution halted
+
+
+Starting Script 07
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08
+Loaded regions: 461153 rows
+
+==============================
+Running module detection for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] methylation dimensions: 48 regions x 461153 samples
+[v1_all_pcs] using powerEstimate = 16
+[v1_all_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.bed
+✓ Finished variant: v1_all_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.bed
+
+==============================
+Running module detection for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] methylation dimensions: 48 regions x 461153 samples
+[v2_exclude_protected_pcs] using powerEstimate = 20
+[v2_exclude_protected_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.bed
+✓ Finished variant: v2_exclude_protected_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.bed
+
+==============================
+Running module detection for variant: v3_technical_pcs_only
+==============================
+
+[v3_technical_pcs_only] methylation dimensions: 48 regions x 461153 samples
+[v3_technical_pcs_only] using powerEstimate = 20
+[v3_technical_pcs_only] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Modules.bed
+✓ Finished variant: v3_technical_pcs_only
+  Modules RDS: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Modules.bed
+Script 07 complete: module detection finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08
+Starting Script 08
+Loaded sample_info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx
+colData dimensions: 48 samples x 53 traits
+colData_num dimensions: 48 samples x 53 numeric traits
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08
+
+==============================
+Running module/sample diagnostics for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] No MEgrey column found (36 real MEs remaining)
+[v1_all_pcs] Sample alignment to metadata: 48 overlapping samples retained from 48 ME samples and 48 metadata samples
+[v1_all_pcs] MEs used: 48 samples x 36 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_ME_Dendrogram.pdf
+[v1_all_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Correlation_Stats.tsv
+[v1_all_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_ME_Dendrogram.pdf
+[v1_all_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_ME_Heatmap.pdf
+[v1_all_pcs] Saved sample x module eigengene heatmap
+Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+
+==============================
+Running module/sample diagnostics for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] No MEgrey column found (22 real MEs remaining)
+[v2_exclude_protected_pcs] Sample alignment to metadata: 48 overlapping samples retained from 48 ME samples and 48 metadata samples
+[v2_exclude_protected_pcs] MEs used: 48 samples x 22 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Correlation_Stats.tsv
+[v2_exclude_protected_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample x module eigengene heatmap
+Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+
+==============================
+Running module/sample diagnostics for variant: v3_technical_pcs_only
+==============================
+
+[v3_technical_pcs_only] No MEgrey column found (22 real MEs remaining)
+[v3_technical_pcs_only] Sample alignment to metadata: 48 overlapping samples retained from 48 ME samples and 48 metadata samples
+[v3_technical_pcs_only] MEs used: 48 samples x 22 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Module_ME_Dendrogram.pdf
+[v3_technical_pcs_only] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Module_Correlation_Heatmap.pdf
+[v3_technical_pcs_only] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Module_Correlation_Stats.tsv
+[v3_technical_pcs_only] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Sample_ME_Dendrogram.pdf
+[v3_technical_pcs_only] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Sample_Correlation_Heatmap.pdf
+[v3_technical_pcs_only] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Sample_ME_Heatmap.pdf
+[v3_technical_pcs_only] Saved sample x module eigengene heatmap
+Finished variant: v3_technical_pcs_only
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only
+Script 08 complete: module and sample diagnostics finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08
+Starting Script 09a
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+
+==============================
+Running ME-trait analysis for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] MEs dimensions: 48 samples x 36 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v1_all_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/Rtmp2JUmS2/file2da346264c6572.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+
+==============================
+Running ME-trait analysis for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] MEs dimensions: 48 samples x 22 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v2_exclude_protected_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/Rtmp2JUmS2/file2da3465d872b5.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+
+==============================
+Running ME-trait analysis for variant: v3_technical_pcs_only
+==============================
+
+[v3_technical_pcs_only] MEs dimensions: 48 samples x 22 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v3_technical_pcs_only] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/Rtmp2JUmS2/file2da346297f069.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v3_technical_pcs_only
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only
+Script 09a complete: core ME-trait finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08
+Starting Script 09b
+Variants to process: 3
+
+==============================
+Running 09b for variant: v1_all_pcs
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/anthropometry_raw/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/anthropometry_raw/ME_Trait_Heatmap_TOP.pdf
+Done set 'anthropometry_raw' for variant 'v1_all_pcs'
+  Traits found: 7 / 7
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/anthropometry_raw
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/covariates/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/covariates/ME_Trait_Heatmap_TOP.pdf
+Done set 'covariates' for variant 'v1_all_pcs'
+  Traits found: 5 / 5
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/covariates
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/exposures_n_mat_fac/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/exposures_n_mat_fac/ME_Trait_Heatmap_TOP.pdf
+Done set 'exposures_n_mat_fac' for variant 'v1_all_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/exposures_n_mat_fac
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_dynamics/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_dynamics/ME_Trait_Heatmap_TOP.pdf
+Done set 'growth_dynamics' for variant 'v1_all_pcs'
+  Traits found: 8 / 8
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_dynamics
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores/ME_Trait_Heatmap_TOP.pdf
+Done set 'zscores' for variant 'v1_all_pcs'
+  Traits found: 15 / 15
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores
+Finished variant: v1_all_pcs
+
+==============================
+Running 09b for variant: v2_exclude_protected_pcs
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/anthropometry_raw/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/anthropometry_raw/ME_Trait_Heatmap_TOP.pdf
+Done set 'anthropometry_raw' for variant 'v2_exclude_protected_pcs'
+  Traits found: 7 / 7
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/anthropometry_raw
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/covariates/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/covariates/ME_Trait_Heatmap_TOP.pdf
+Done set 'covariates' for variant 'v2_exclude_protected_pcs'
+  Traits found: 5 / 5
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/covariates
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/exposures_n_mat_fac/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/exposures_n_mat_fac/ME_Trait_Heatmap_TOP.pdf
+Done set 'exposures_n_mat_fac' for variant 'v2_exclude_protected_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/exposures_n_mat_fac
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_dynamics/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_dynamics/ME_Trait_Heatmap_TOP.pdf
+Done set 'growth_dynamics' for variant 'v2_exclude_protected_pcs'
+  Traits found: 8 / 8
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_dynamics
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores/ME_Trait_Heatmap_TOP.pdf
+Done set 'zscores' for variant 'v2_exclude_protected_pcs'
+  Traits found: 15 / 15
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores
+Finished variant: v2_exclude_protected_pcs
+
+==============================
+Running 09b for variant: v3_technical_pcs_only
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/anthropometry_raw/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/anthropometry_raw/ME_Trait_Heatmap_TOP.pdf
+Done set 'anthropometry_raw' for variant 'v3_technical_pcs_only'
+  Traits found: 7 / 7
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/anthropometry_raw
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/covariates/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/covariates/ME_Trait_Heatmap_TOP.pdf
+Done set 'covariates' for variant 'v3_technical_pcs_only'
+  Traits found: 5 / 5
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/covariates
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/exposures_n_mat_fac/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/exposures_n_mat_fac/ME_Trait_Heatmap_TOP.pdf
+Done set 'exposures_n_mat_fac' for variant 'v3_technical_pcs_only'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/exposures_n_mat_fac
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/growth_dynamics/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/growth_dynamics/ME_Trait_Heatmap_TOP.pdf
+Done set 'growth_dynamics' for variant 'v3_technical_pcs_only'
+  Traits found: 8 / 8
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/growth_dynamics
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/zscores/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/zscores/ME_Trait_Heatmap_TOP.pdf
+Done set 'zscores' for variant 'v3_technical_pcs_only'
+  Traits found: 15 / 15
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/zscores
+Finished variant: v3_technical_pcs_only
+Script 09a complete: Presentation ME-trait finished
+Outputs saved under: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation
+Starting Script 10
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin4_methSD0p08
+
+==============================
+Running circos/module summaries for variant: v1_all_pcs
+==============================
+
+✓ Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+
+==============================
+Running circos/module summaries for variant: v2_exclude_protected_pcs
+==============================
+
+✓ Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+
+==============================
+Running circos/module summaries for variant: v3_technical_pcs_only
+==============================
+
+✓ Finished variant: v3_technical_pcs_only
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only
+Warning messages:
+1: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"chr"` instead of `.data$chr` 
+2: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"start"` instead of `.data$start` 
+3: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"end"` instead of `.data$end` 
+4: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"module"` instead of `.data$module` 
+Script 10 complete: Circos plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin4_methSD0p08
+Starting Script 11
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 48
+Modules available: 36
+Traits available: 53
+[anthropometry_raw] Pairs to plot: 27
+✓ Done set: anthropometry_raw
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/anthropometry_raw
+[covariates] Pairs to plot: 34
+✓ Done set: covariates
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/covariates
+[exposures_n_mat_fac] Pairs to plot: 12
+✓ Done set: exposures_n_mat_fac
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/exposures_n_mat_fac
+[growth_dynamics] Pairs to plot: 29
+✓ Done set: growth_dynamics
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_dynamics
+[zscores] Pairs to plot: 35
+✓ Done set: zscores
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores
+There were 50 or more warnings (use warnings() to see the first 50)
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+Starting Script 11
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 48
+Modules available: 22
+Traits available: 53
+[anthropometry_raw] Pairs to plot: 15
+✓ Done set: anthropometry_raw
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/anthropometry_raw
+[covariates] Pairs to plot: 18
+✓ Done set: covariates
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/covariates
+[exposures_n_mat_fac] Pairs to plot: 3
+✓ Done set: exposures_n_mat_fac
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/exposures_n_mat_fac
+[growth_dynamics] Pairs to plot: 23
+✓ Done set: growth_dynamics
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_dynamics
+[zscores] Pairs to plot: 18
+✓ Done set: zscores
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores
+There were 50 or more warnings (use warnings() to see the first 50)
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+Starting Script 12a
+[annotate] Trying comethyl::annotateModule()
+[annotateModule] Excluding regions in grey (unassigned) module
+[annotateModule] Using the hg38 genome assembly for annotations
+[annotateModule] Adding genes to regions using GREAT v4.0.4 with the basalPlusExt rule
+[annotate] GREAT-based annotation failed: error in evaluating the argument 'y' in selecting a method for function 'merge': error in evaluating the argument 'x' in selecting a method for function 'as.data.frame': unused argument (type = 1)
+[annotate] Falling back to offline nearest-gene annotation.
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[annotate] Trying comethyl::annotateModule()
+[annotateModule] Excluding regions in grey (unassigned) module
+[annotateModule] Using the hg38 genome assembly for annotations
+[annotateModule] Adding genes to regions using GREAT v4.0.4 with the basalPlusExt rule
+[annotate] GREAT-based annotation failed: error in evaluating the argument 'y' in selecting a method for function 'merge': error in evaluating the argument 'x' in selecting a method for function 'as.data.frame': unused argument (type = 1)
+[annotate] Falling back to offline nearest-gene annotation.
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+Script 12a complete: Annotate Modules finished
+Starting Script 12b
+
+======================================================
+Running config [list: 03_dde]
+======================================================
+
+--- Enriching module: green (1594 genes) ---
+[green] Enrichr...
+[foreground] input n=1594 -> cleaned unique n=1594
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: green
+[Enrichr] Saved: green_enrichr.xlsx
+
+--- Enriching module: blue (9294 genes) ---
+[blue] Enrichr...
+[foreground] input n=9294 -> cleaned unique n=9294
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+
+--- Enriching module: grey60 (21 genes) ---
+[grey60] Enrichr...
+[foreground] input n=21 -> cleaned unique n=21
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: grey60
+[Enrichr] Saved: grey60_enrichr.xlsx
+
+--- Enriching module: darkgreen (25 genes) ---
+[darkgreen] Enrichr...
+[foreground] input n=25 -> cleaned unique n=25
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkgreen
+[Enrichr] Saved: darkgreen_enrichr.xlsx
+
+--- Enriching module: paleturquoise (20 genes) ---
+[paleturquoise] Enrichr...
+[foreground] input n=20 -> cleaned unique n=20
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: paleturquoise
+[Enrichr] Saved: paleturquoise_enrichr.xlsx
+
+--- Enriching module: black (365 genes) ---
+[black] Enrichr...
+[foreground] input n=365 -> cleaned unique n=365
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: black
+[Enrichr] Saved: black_enrichr.xlsx
+
+--- Enriching module: turquoise (13151 genes) ---
+[turquoise] Enrichr...
+[foreground] input n=13151 -> cleaned unique n=13151
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Saved: turquoise_enrichr.xlsx
+
+--- Enriching module: saddlebrown (19 genes) ---
+[saddlebrown] Enrichr...
+[foreground] input n=19 -> cleaned unique n=19
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: saddlebrown
+[Enrichr] Saved: saddlebrown_enrichr.xlsx
+
+--- Enriching module: white (24 genes) ---
+[white] Enrichr...
+[foreground] input n=24 -> cleaned unique n=24
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: white
+[Enrichr] Saved: white_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+======================================================
+Running config [list: 04_obesity_overweight]
+======================================================
+
+--- Enriching module: darkolivegreen (2 genes) ---
+[darkolivegreen] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkolivegreen
+[Enrichr] Saved: darkolivegreen_enrichr.xlsx
+
+--- Enriching module: yellow (6360 genes) ---
+[yellow] Enrichr...
+[foreground] input n=6360 -> cleaned unique n=6360
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow
+[Enrichr] Saved: yellow_enrichr.xlsx
+
+--- Enriching module: magenta (42 genes) ---
+[magenta] Enrichr...
+[foreground] input n=42 -> cleaned unique n=42
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+
+--- Enriching module: brown (8241 genes) ---
+[brown] Enrichr...
+[foreground] input n=8241 -> cleaned unique n=8241
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Saved: brown_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+======================================================
+Running config [list: 09_incxrac]
+======================================================
+
+--- Enriching module: turquoise (9 genes) ---
+[turquoise] Enrichr...
+[foreground] input n=9 -> cleaned unique n=9
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+
+--- Summary plots (pvalue) ---
+[plot_enrichr] No data for DB: GO_Biological_Process_2025
+[plot_enrichr] No data for DB: GO_Molecular_Function_2025
+[plot_enrichr] No data for DB: GO_Cellular_Component_2025
+[plot_enrichr] No data for DB: KEGG_2021_Human
+[plot_enrichr] No data for DB: GWAS_Catalog_2025
+[plot_enrichr] No data for DB: ClinVar_2025
+
+--- Enriching module: darkred (26 genes) ---
+[darkred] Enrichr...
+[foreground] input n=26 -> cleaned unique n=26
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkred
+[Enrichr] Saved: darkred_enrichr.xlsx
+
+--- Enriching module: darkturquoise (23 genes) ---
+[darkturquoise] Enrichr...
+[foreground] input n=23 -> cleaned unique n=23
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkturquoise
+[Enrichr] Saved: darkturquoise_enrichr.xlsx
+
+--- Enriching module: tan (38 genes) ---
+[tan] Enrichr...
+[foreground] input n=38 -> cleaned unique n=38
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: tan
+[Enrichr] Saved: tan_enrichr.xlsx
+
+--- Enriching module: darkolivegreen (2 genes) ---
+[darkolivegreen] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkolivegreen
+[Enrichr] Saved: darkolivegreen_enrichr.xlsx
+
+--- Enriching module: pink (49 genes) ---
+[pink] Enrichr...
+[foreground] input n=49 -> cleaned unique n=49
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: pink
+[Enrichr] Saved: pink_enrichr.xlsx
+
+--- Enriching module: yellow (6360 genes) ---
+[yellow] Enrichr...
+[foreground] input n=6360 -> cleaned unique n=6360
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow
+[Enrichr] Saved: yellow_enrichr.xlsx
+
+--- Enriching module: darkgreen (25 genes) ---
+[darkgreen] Enrichr...
+[foreground] input n=25 -> cleaned unique n=25
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkgreen
+[Enrichr] Saved: darkgreen_enrichr.xlsx
+
+--- Enriching module: magenta (42 genes) ---
+[magenta] Enrichr...
+[foreground] input n=42 -> cleaned unique n=42
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+
+--- Enriching module: skyblue (18 genes) ---
+[skyblue] Enrichr...
+[foreground] input n=18 -> cleaned unique n=18
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: skyblue
+[Enrichr] Saved: skyblue_enrichr.xlsx
+
+--- Enriching module: orange (30 genes) ---
+[orange] Enrichr...
+[foreground] input n=30 -> cleaned unique n=30
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: orange
+[Enrichr] Saved: orange_enrichr.xlsx
+
+--- Enriching module: cyan (49 genes) ---
+[cyan] Enrichr...
+[foreground] input n=49 -> cleaned unique n=49
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: cyan
+[Enrichr] Saved: cyan_enrichr.xlsx
+
+--- Enriching module: brown (8241 genes) ---
+[brown] Enrichr...
+[foreground] input n=8241 -> cleaned unique n=8241
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Saved: brown_enrichr.xlsx
+
+--- Enriching module: violet (5 genes) ---
+[violet] Enrichr...
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: violet
+[Enrichr] Saved: violet_enrichr.xlsx
+
+--- Enriching module: white (24 genes) ---
+[white] Enrichr...
+[foreground] input n=24 -> cleaned unique n=24
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: white
+[Enrichr] Saved: white_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+======================================================
+Running config [list: 10_puberty_and_menarche_variables]
+======================================================
+
+--- Enriching module: blue (2 genes) ---
+[blue] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+--- Enriching module: red (337 genes) ---
+[red] Enrichr...
+[foreground] input n=337 -> cleaned unique n=337
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: red
+[Enrichr] Saved: red_enrichr.xlsx
+
+--- Enriching module: darkolivegreen (2 genes) ---
+[darkolivegreen] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkolivegreen
+[Enrichr] Saved: darkolivegreen_enrichr.xlsx
+
+--- Enriching module: pink (49 genes) ---
+[pink] Enrichr...
+[foreground] input n=49 -> cleaned unique n=49
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: pink
+[Enrichr] Saved: pink_enrichr.xlsx
+
+--- Enriching module: yellow (6360 genes) ---
+[yellow] Enrichr...
+[foreground] input n=6360 -> cleaned unique n=6360
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow
+[Enrichr] Saved: yellow_enrichr.xlsx
+
+--- Enriching module: magenta (42 genes) ---
+[magenta] Enrichr...
+[foreground] input n=42 -> cleaned unique n=42
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+
+--- Enriching module: midnightblue (36 genes) ---
+[midnightblue] Enrichr...
+[foreground] input n=36 -> cleaned unique n=36
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: midnightblue
+[Enrichr] Saved: midnightblue_enrichr.xlsx
+
+--- Enriching module: darkmagenta (1 genes) ---
+[darkmagenta] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkmagenta
+
+--- Enriching module: orange (30 genes) ---
+[orange] Enrichr...
+[foreground] input n=30 -> cleaned unique n=30
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: orange
+[Enrichr] Saved: orange_enrichr.xlsx
+
+--- Enriching module: brown (8241 genes) ---
+[brown] Enrichr...
+[foreground] input n=8241 -> cleaned unique n=8241
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Saved: brown_enrichr.xlsx
+
+--- Enriching module: violet (5 genes) ---
+[violet] Enrichr...
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: violet
+[Enrichr] Saved: violet_enrichr.xlsx
+
+--- Enriching module: royalblue (10 genes) ---
+[royalblue] Enrichr...
+[foreground] input n=10 -> cleaned unique n=10
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: royalblue
+[Enrichr] Saved: royalblue_enrichr.xlsx
+
+--- Enriching module: saddlebrown (19 genes) ---
+[saddlebrown] Enrichr...
+[foreground] input n=19 -> cleaned unique n=19
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: saddlebrown
+[Enrichr] Saved: saddlebrown_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+======================================================
+Running config [list: 11_breast_cancer_outcomes]
+======================================================
+
+--- Enriching module: pink (49 genes) ---
+[pink] Enrichr...
+[foreground] input n=49 -> cleaned unique n=49
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: pink
+[Enrichr] Saved: pink_enrichr.xlsx
+
+--- Enriching module: paleturquoise (20 genes) ---
+[paleturquoise] Enrichr...
+[foreground] input n=20 -> cleaned unique n=20
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: paleturquoise
+[Enrichr] Saved: paleturquoise_enrichr.xlsx
+
+--- Enriching module: midnightblue (36 genes) ---
+[midnightblue] Enrichr...
+[foreground] input n=36 -> cleaned unique n=36
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: midnightblue
+[Enrichr] Saved: midnightblue_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+There were 50 or more warnings (use warnings() to see the first 50)
+
+
+Starting Script 08
+Loaded sample_info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx
+colData dimensions: 48 samples x 53 traits
+colData_num dimensions: 48 samples x 53 numeric traits
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08
+
+==============================
+Running module/sample diagnostics for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] No MEgrey column found (36 real MEs remaining)
+[v1_all_pcs] Sample alignment to metadata: 48 overlapping samples retained from 48 ME samples and 48 metadata samples
+[v1_all_pcs] MEs used: 48 samples x 36 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_ME_Dendrogram.pdf
+[v1_all_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Correlation_Stats.tsv
+[v1_all_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_ME_Dendrogram.pdf
+[v1_all_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_ME_Heatmap.pdf
+[v1_all_pcs] Saved sample x module eigengene heatmap
+Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+
+==============================
+Running module/sample diagnostics for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] No MEgrey column found (22 real MEs remaining)
+[v2_exclude_protected_pcs] Sample alignment to metadata: 48 overlapping samples retained from 48 ME samples and 48 metadata samples
+[v2_exclude_protected_pcs] MEs used: 48 samples x 22 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Correlation_Stats.tsv
+[v2_exclude_protected_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Sample_ME_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample x module eigengene heatmap
+Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+
+==============================
+Running module/sample diagnostics for variant: v3_technical_pcs_only
+==============================
+
+[v3_technical_pcs_only] No MEgrey column found (22 real MEs remaining)
+[v3_technical_pcs_only] Sample alignment to metadata: 48 overlapping samples retained from 48 ME samples and 48 metadata samples
+[v3_technical_pcs_only] MEs used: 48 samples x 22 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Module_ME_Dendrogram.pdf
+[v3_technical_pcs_only] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Module_Correlation_Heatmap.pdf
+[v3_technical_pcs_only] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Module_Correlation_Stats.tsv
+[v3_technical_pcs_only] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Sample_ME_Dendrogram.pdf
+[v3_technical_pcs_only] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Sample_Correlation_Heatmap.pdf
+[v3_technical_pcs_only] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Sample_ME_Heatmap.pdf
+[v3_technical_pcs_only] Saved sample x module eigengene heatmap
+Finished variant: v3_technical_pcs_only
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only
+Script 08 complete: module and sample diagnostics finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin4_methSD0p08
+Starting Script 09a
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+
+==============================
+Running ME-trait analysis for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] MEs dimensions: 48 samples x 36 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v1_all_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/RtmpEPRs2k/file11b22f66bb457a.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+
+==============================
+Running ME-trait analysis for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] MEs dimensions: 48 samples x 22 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v2_exclude_protected_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/RtmpEPRs2k/file11b22f4b22fc34.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+
+==============================
+Running ME-trait analysis for variant: v3_technical_pcs_only
+==============================
+
+[v3_technical_pcs_only] MEs dimensions: 48 samples x 22 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v3_technical_pcs_only] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/RtmpEPRs2k/file11b22f315c414c.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v3_technical_pcs_only
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only
+Script 09a complete: core ME-trait finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08
+Starting Script 09b
+Variants to process: 3
+
+==============================
+Running 09b for variant: v1_all_pcs
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/anthropometry_raw/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/anthropometry_raw/ME_Trait_Heatmap_TOP.pdf
+Done set 'anthropometry_raw' for variant 'v1_all_pcs'
+  Traits found: 7 / 7
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/anthropometry_raw
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/covariates/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/covariates/ME_Trait_Heatmap_TOP.pdf
+Done set 'covariates' for variant 'v1_all_pcs'
+  Traits found: 5 / 5
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/covariates
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/exposures_n_mat_fac/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/exposures_n_mat_fac/ME_Trait_Heatmap_TOP.pdf
+Done set 'exposures_n_mat_fac' for variant 'v1_all_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/exposures_n_mat_fac
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_dynamics/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_dynamics/ME_Trait_Heatmap_TOP.pdf
+Done set 'growth_dynamics' for variant 'v1_all_pcs'
+  Traits found: 8 / 8
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_dynamics
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores/ME_Trait_Heatmap_TOP.pdf
+Done set 'zscores' for variant 'v1_all_pcs'
+  Traits found: 15 / 15
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores
+Finished variant: v1_all_pcs
+
+==============================
+Running 09b for variant: v2_exclude_protected_pcs
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/anthropometry_raw/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/anthropometry_raw/ME_Trait_Heatmap_TOP.pdf
+Done set 'anthropometry_raw' for variant 'v2_exclude_protected_pcs'
+  Traits found: 7 / 7
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/anthropometry_raw
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/covariates/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/covariates/ME_Trait_Heatmap_TOP.pdf
+Done set 'covariates' for variant 'v2_exclude_protected_pcs'
+  Traits found: 5 / 5
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/covariates
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/exposures_n_mat_fac/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/exposures_n_mat_fac/ME_Trait_Heatmap_TOP.pdf
+Done set 'exposures_n_mat_fac' for variant 'v2_exclude_protected_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/exposures_n_mat_fac
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_dynamics/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_dynamics/ME_Trait_Heatmap_TOP.pdf
+Done set 'growth_dynamics' for variant 'v2_exclude_protected_pcs'
+  Traits found: 8 / 8
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_dynamics
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores/ME_Trait_Heatmap_TOP.pdf
+Done set 'zscores' for variant 'v2_exclude_protected_pcs'
+  Traits found: 15 / 15
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores
+Finished variant: v2_exclude_protected_pcs
+
+==============================
+Running 09b for variant: v3_technical_pcs_only
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/anthropometry_raw/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/anthropometry_raw/ME_Trait_Heatmap_TOP.pdf
+Done set 'anthropometry_raw' for variant 'v3_technical_pcs_only'
+  Traits found: 7 / 7
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/anthropometry_raw
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/covariates/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/covariates/ME_Trait_Heatmap_TOP.pdf
+Done set 'covariates' for variant 'v3_technical_pcs_only'
+  Traits found: 5 / 5
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/covariates
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/exposures_n_mat_fac/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/exposures_n_mat_fac/ME_Trait_Heatmap_TOP.pdf
+Done set 'exposures_n_mat_fac' for variant 'v3_technical_pcs_only'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/exposures_n_mat_fac
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/growth_dynamics/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/growth_dynamics/ME_Trait_Heatmap_TOP.pdf
+Done set 'growth_dynamics' for variant 'v3_technical_pcs_only'
+  Traits found: 8 / 8
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/growth_dynamics
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/zscores/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/zscores/ME_Trait_Heatmap_TOP.pdf
+Done set 'zscores' for variant 'v3_technical_pcs_only'
+  Traits found: 15 / 15
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/zscores
+Finished variant: v3_technical_pcs_only
+Script 09a complete: Presentation ME-trait finished
+Outputs saved under: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation
+Starting Script 10
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin4_methSD0p08
+
+==============================
+Running circos/module summaries for variant: v1_all_pcs
+==============================
+
+✓ Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+
+==============================
+Running circos/module summaries for variant: v2_exclude_protected_pcs
+==============================
+
+✓ Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+
+==============================
+Running circos/module summaries for variant: v3_technical_pcs_only
+==============================
+
+✓ Finished variant: v3_technical_pcs_only
+  Outputs in: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only
+Warning messages:
+1: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"chr"` instead of `.data$chr` 
+2: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"start"` instead of `.data$start` 
+3: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"end"` instead of `.data$end` 
+4: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"module"` instead of `.data$module` 
+Script 10 complete: Circos plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin4_methSD0p08
+Starting Script 11
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 48
+Modules available: 36
+Traits available: 53
+[anthropometry_raw] Pairs to plot: 27
+✓ Done set: anthropometry_raw
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/anthropometry_raw
+[covariates] Pairs to plot: 34
+✓ Done set: covariates
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/covariates
+[exposures_n_mat_fac] Pairs to plot: 12
+✓ Done set: exposures_n_mat_fac
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/exposures_n_mat_fac
+[growth_dynamics] Pairs to plot: 29
+✓ Done set: growth_dynamics
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_dynamics
+[zscores] Pairs to plot: 35
+✓ Done set: zscores
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores
+There were 50 or more warnings (use warnings() to see the first 50)
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+Starting Script 11
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 48
+Modules available: 22
+Traits available: 53
+[anthropometry_raw] Pairs to plot: 15
+✓ Done set: anthropometry_raw
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/anthropometry_raw
+[covariates] Pairs to plot: 18
+✓ Done set: covariates
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/covariates
+[exposures_n_mat_fac] Pairs to plot: 3
+✓ Done set: exposures_n_mat_fac
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/exposures_n_mat_fac
+[growth_dynamics] Pairs to plot: 23
+✓ Done set: growth_dynamics
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_dynamics
+[zscores] Pairs to plot: 18
+✓ Done set: zscores
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores
+There were 50 or more warnings (use warnings() to see the first 50)
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+Starting Script 11
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 48
+Modules available: 22
+Traits available: 53
+[anthropometry_raw] Pairs to plot: 5
+✓ Done set: anthropometry_raw
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/anthropometry_raw
+[covariates] Pairs to plot: 13
+✓ Done set: covariates
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/covariates
+[exposures_n_mat_fac] Pairs to plot: 10
+✓ Done set: exposures_n_mat_fac
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/exposures_n_mat_fac
+[growth_dynamics] Pairs to plot: 33
+✓ Done set: growth_dynamics
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/growth_dynamics
+[zscores] Pairs to plot: 14
+✓ Done set: zscores
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/zscores
+There were 50 or more warnings (use warnings() to see the first 50)
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only
+Starting Script 12a
+[annotate] Trying comethyl::annotateModule()
+[annotateModule] Excluding regions in grey (unassigned) module
+[annotateModule] Using the hg38 genome assembly for annotations
+[annotateModule] Adding genes to regions using GREAT v4.0.4 with the basalPlusExt rule
+[annotate] GREAT-based annotation failed: error in evaluating the argument 'y' in selecting a method for function 'merge': error in evaluating the argument 'x' in selecting a method for function 'as.data.frame': unused argument (type = 1)
+[annotate] Falling back to offline nearest-gene annotation.
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[annotate] Trying comethyl::annotateModule()
+[annotateModule] Excluding regions in grey (unassigned) module
+[annotateModule] Using the hg38 genome assembly for annotations
+[annotateModule] Adding genes to regions using GREAT v4.0.4 with the basalPlusExt rule
+[annotate] GREAT-based annotation failed: error in evaluating the argument 'y' in selecting a method for function 'merge': error in evaluating the argument 'x' in selecting a method for function 'as.data.frame': unused argument (type = 1)
+[annotate] Falling back to offline nearest-gene annotation.
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+Script 12a complete: Annotate Modules finished
+Starting Script 12b
+Error: annotation_dir_v1 not found: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+Execution halted
+
+
+Starting Script 09b
+Variants to process: 3
+
+==============================
+Running 09b for variant: v1_all_pcs
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/anthropometry_raw/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/anthropometry_raw/ME_Trait_Heatmap_TOP.pdf
+Done set 'anthropometry_raw' for variant 'v1_all_pcs'
+  Traits found: 7 / 7
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/anthropometry_raw
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/covariates/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/covariates/ME_Trait_Heatmap_TOP.pdf
+Done set 'covariates' for variant 'v1_all_pcs'
+  Traits found: 5 / 5
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/covariates
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/exposures_n_mat_fac/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/exposures_n_mat_fac/ME_Trait_Heatmap_TOP.pdf
+Done set 'exposures_n_mat_fac' for variant 'v1_all_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/exposures_n_mat_fac
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_0to6/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_0to6/ME_Trait_Heatmap_TOP.pdf
+Done set 'growth_0to6' for variant 'v1_all_pcs'
+  Traits found: 4 / 4
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_0to6
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_dynamics6to12/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_dynamics6to12/ME_Trait_Heatmap_TOP.pdf
+Done set 'growth_dynamics6to12' for variant 'v1_all_pcs'
+  Traits found: 4 / 4
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_dynamics6to12
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores/ME_Trait_Heatmap_TOP.pdf
+Done set 'zscores' for variant 'v1_all_pcs'
+  Traits found: 15 / 15
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores
+Finished variant: v1_all_pcs
+
+==============================
+Running 09b for variant: v2_exclude_protected_pcs
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/anthropometry_raw/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/anthropometry_raw/ME_Trait_Heatmap_TOP.pdf
+Done set 'anthropometry_raw' for variant 'v2_exclude_protected_pcs'
+  Traits found: 7 / 7
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/anthropometry_raw
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/covariates/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/covariates/ME_Trait_Heatmap_TOP.pdf
+Done set 'covariates' for variant 'v2_exclude_protected_pcs'
+  Traits found: 5 / 5
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/covariates
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/exposures_n_mat_fac/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/exposures_n_mat_fac/ME_Trait_Heatmap_TOP.pdf
+Done set 'exposures_n_mat_fac' for variant 'v2_exclude_protected_pcs'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/exposures_n_mat_fac
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_0to6/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_0to6/ME_Trait_Heatmap_TOP.pdf
+Done set 'growth_0to6' for variant 'v2_exclude_protected_pcs'
+  Traits found: 4 / 4
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_0to6
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_dynamics6to12/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_dynamics6to12/ME_Trait_Heatmap_TOP.pdf
+Done set 'growth_dynamics6to12' for variant 'v2_exclude_protected_pcs'
+  Traits found: 4 / 4
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_dynamics6to12
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores/ME_Trait_Heatmap_TOP.pdf
+Done set 'zscores' for variant 'v2_exclude_protected_pcs'
+  Traits found: 15 / 15
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores
+Finished variant: v2_exclude_protected_pcs
+
+==============================
+Running 09b for variant: v3_technical_pcs_only
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/anthropometry_raw/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/anthropometry_raw/ME_Trait_Heatmap_TOP.pdf
+Done set 'anthropometry_raw' for variant 'v3_technical_pcs_only'
+  Traits found: 7 / 7
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/anthropometry_raw
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/covariates/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/covariates/ME_Trait_Heatmap_TOP.pdf
+Done set 'covariates' for variant 'v3_technical_pcs_only'
+  Traits found: 5 / 5
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/covariates
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/exposures_n_mat_fac/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/exposures_n_mat_fac/ME_Trait_Heatmap_TOP.pdf
+Done set 'exposures_n_mat_fac' for variant 'v3_technical_pcs_only'
+  Traits found: 12 / 12
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/exposures_n_mat_fac
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/growth_0to6/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/growth_0to6/ME_Trait_Heatmap_TOP.pdf
+Done set 'growth_0to6' for variant 'v3_technical_pcs_only'
+  Traits found: 4 / 4
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/growth_0to6
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/growth_dynamics6to12/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/growth_dynamics6to12/ME_Trait_Heatmap_TOP.pdf
+Done set 'growth_dynamics6to12' for variant 'v3_technical_pcs_only'
+  Traits found: 4 / 4
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/growth_dynamics6to12
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/zscores/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/zscores/ME_Trait_Heatmap_TOP.pdf
+Done set 'zscores' for variant 'v3_technical_pcs_only'
+  Traits found: 15 / 15
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/zscores
+Finished variant: v3_technical_pcs_only
+Script 09a complete: Presentation ME-trait finished
+Outputs saved under: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09b_me_trait_presentation
+Starting Script 11
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 48
+Modules available: 36
+Traits available: 53
+[anthropometry_raw] Pairs to plot: 27
+✓ Done set: anthropometry_raw
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/anthropometry_raw
+[covariates] Pairs to plot: 34
+✓ Done set: covariates
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/covariates
+[exposures_n_mat_fac] Pairs to plot: 12
+✓ Done set: exposures_n_mat_fac
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/exposures_n_mat_fac
+[growth_0to6] Pairs to plot: 11
+✓ Done set: growth_0to6
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_0to6
+[growth_dynamics6to12] Pairs to plot: 18
+✓ Done set: growth_dynamics6to12
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/growth_dynamics6to12
+[zscores] Pairs to plot: 35
+✓ Done set: zscores
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/zscores
+There were 50 or more warnings (use warnings() to see the first 50)
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+Starting Script 11
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 48
+Modules available: 22
+Traits available: 53
+[anthropometry_raw] Pairs to plot: 15
+✓ Done set: anthropometry_raw
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/anthropometry_raw
+[covariates] Pairs to plot: 18
+✓ Done set: covariates
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/covariates
+[exposures_n_mat_fac] Pairs to plot: 3
+✓ Done set: exposures_n_mat_fac
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/exposures_n_mat_fac
+[growth_0to6] Pairs to plot: 8
+✓ Done set: growth_0to6
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_0to6
+[growth_dynamics6to12] Pairs to plot: 15
+✓ Done set: growth_dynamics6to12
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/growth_dynamics6to12
+[zscores] Pairs to plot: 18
+✓ Done set: zscores
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/zscores
+There were 50 or more warnings (use warnings() to see the first 50)
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs
+Starting Script 11
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 48
+Modules available: 22
+Traits available: 53
+[anthropometry_raw] Pairs to plot: 5
+✓ Done set: anthropometry_raw
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/anthropometry_raw
+[covariates] Pairs to plot: 13
+✓ Done set: covariates
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/covariates
+[exposures_n_mat_fac] Pairs to plot: 10
+✓ Done set: exposures_n_mat_fac
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/exposures_n_mat_fac
+[growth_0to6] Pairs to plot: 11
+✓ Done set: growth_0to6
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/growth_0to6
+[growth_dynamics6to12] Pairs to plot: 22
+✓ Done set: growth_dynamics6to12
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/growth_dynamics6to12
+[zscores] Pairs to plot: 14
+✓ Done set: zscores
+  Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/zscores
+There were 50 or more warnings (use warnings() to see the first 50)
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only
+Starting Script 12b
+Warning message:
+In value[[3L]](cond) :
+  Could not validate Enrichr DBs; using requested list as-is. Reason: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud
+
+======================================================
+Running config [list: anthropometry_raw]
+======================================================
+
+--- Enriching module: white (16 genes) ---
+[white] Enrichr...
+[foreground] input n=16 -> cleaned unique n=16
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: white
+[Enrichr] Failed attempt 1: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: white
+[Enrichr] Failed attempt 2: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: white
+[Enrichr] Failed attempt 3: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: white
+[Enrichr] Failed attempt 4: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: white
+
+--- Enriching module: darkturquoise (65 genes) ---
+[darkturquoise] Enrichr...
+[foreground] input n=65 -> cleaned unique n=65
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkturquoise
+[Enrichr] Failed attempt 1: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: darkturquoise
+[Enrichr] Failed attempt 2: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: darkturquoise
+[Enrichr] Failed attempt 3: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: darkturquoise
+[Enrichr] Failed attempt 4: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: darkturquoise
+
+--- Enriching module: lightcyan (85 genes) ---
+[lightcyan] Enrichr...
+[foreground] input n=85 -> cleaned unique n=85
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightcyan
+[Enrichr] Failed attempt 1: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: lightcyan
+[Enrichr] Failed attempt 2: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: lightcyan
+[Enrichr] Saved: lightcyan_enrichr.xlsx
+
+--- Enriching module: salmon (110 genes) ---
+[salmon] Enrichr...
+[foreground] input n=110 -> cleaned unique n=110
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: salmon
+[Enrichr] Saved: salmon_enrichr.xlsx
+
+--- Enriching module: magenta (190 genes) ---
+[magenta] Enrichr...
+[foreground] input n=190 -> cleaned unique n=190
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+
+--- Enriching module: tan (119 genes) ---
+[tan] Enrichr...
+[foreground] input n=119 -> cleaned unique n=119
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: tan
+[Enrichr] Saved: tan_enrichr.xlsx
+
+--- Enriching module: yellow (358 genes) ---
+[yellow] Enrichr...
+[foreground] input n=358 -> cleaned unique n=358
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow
+[Enrichr] Saved: yellow_enrichr.xlsx
+
+--- Enriching module: darkolivegreen (51 genes) ---
+[darkolivegreen] Enrichr...
+[foreground] input n=51 -> cleaned unique n=51
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkolivegreen
+[Enrichr] Saved: darkolivegreen_enrichr.xlsx
+
+--- Enriching module: lightgreen (77 genes) ---
+[lightgreen] Enrichr...
+[foreground] input n=77 -> cleaned unique n=77
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightgreen
+[Enrichr] Saved: lightgreen_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+--- Enriching module: blue (9879 genes) ---
+[blue] Enrichr...
+[foreground] input n=9879 -> cleaned unique n=9879
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+
+--- Enriching module: lightgreen (52 genes) ---
+[lightgreen] Enrichr...
+[foreground] input n=52 -> cleaned unique n=52
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightgreen
+[Enrichr] Saved: lightgreen_enrichr.xlsx
+
+--- Enriching module: lightyellow (50 genes) ---
+[lightyellow] Enrichr...
+[foreground] input n=50 -> cleaned unique n=50
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightyellow
+[Enrichr] Saved: lightyellow_enrichr.xlsx
+
+--- Enriching module: tan (68 genes) ---
+[tan] Enrichr...
+[foreground] input n=68 -> cleaned unique n=68
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: tan
+[Enrichr] Saved: tan_enrichr.xlsx
+
+--- Enriching module: darkred (5 genes) ---
+[darkred] Enrichr...
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkred
+[Enrichr] Saved: darkred_enrichr.xlsx
+
+--- Enriching module: turquoise (17190 genes) ---
+[turquoise] Enrichr...
+[foreground] input n=17190 -> cleaned unique n=17190
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Saved: turquoise_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+--- Enriching module: turquoise (16839 genes) ---
+[turquoise] Enrichr...
+[foreground] input n=16839 -> cleaned unique n=16839
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Saved: turquoise_enrichr.xlsx
+
+--- Enriching module: brown (9440 genes) ---
+[brown] Enrichr...
+[foreground] input n=9440 -> cleaned unique n=9440
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Saved: brown_enrichr.xlsx
+
+--- Enriching module: royalblue (53 genes) ---
+[royalblue] Enrichr...
+[foreground] input n=53 -> cleaned unique n=53
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: royalblue
+[Enrichr] Saved: royalblue_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+======================================================
+Running config [list: covariates]
+======================================================
+
+--- Enriching module: purple (130 genes) ---
+[purple] Enrichr...
+[foreground] input n=130 -> cleaned unique n=130
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: purple
+[Enrichr] Saved: purple_enrichr.xlsx
+
+--- Enriching module: cyan (115 genes) ---
+[cyan] Enrichr...
+[foreground] input n=115 -> cleaned unique n=115
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: cyan
+[Enrichr] Saved: cyan_enrichr.xlsx
+
+--- Enriching module: brown (340 genes) ---
+[brown] Enrichr...
+[foreground] input n=340 -> cleaned unique n=340
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Saved: brown_enrichr.xlsx
+
+--- Enriching module: darkturquoise (65 genes) ---
+[darkturquoise] Enrichr...
+[foreground] input n=65 -> cleaned unique n=65
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkturquoise
+[Enrichr] Saved: darkturquoise_enrichr.xlsx
+
+--- Enriching module: darkorange (59 genes) ---
+[darkorange] Enrichr...
+[foreground] input n=59 -> cleaned unique n=59
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkorange
+[Enrichr] Saved: darkorange_enrichr.xlsx
+
+--- Enriching module: darkred (37 genes) ---
+[darkred] Enrichr...
+[foreground] input n=37 -> cleaned unique n=37
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkred
+[Enrichr] Saved: darkred_enrichr.xlsx
+
+--- Enriching module: paleturquoise (57 genes) ---
+[paleturquoise] Enrichr...
+[foreground] input n=57 -> cleaned unique n=57
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: paleturquoise
+[Enrichr] Saved: paleturquoise_enrichr.xlsx
+
+--- Enriching module: midnightblue (98 genes) ---
+[midnightblue] Enrichr...
+[foreground] input n=98 -> cleaned unique n=98
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: midnightblue
+[Enrichr] Saved: midnightblue_enrichr.xlsx
+
+--- Enriching module: skyblue (24 genes) ---
+[skyblue] Enrichr...
+[foreground] input n=24 -> cleaned unique n=24
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: skyblue
+[Enrichr] Saved: skyblue_enrichr.xlsx
+
+--- Enriching module: blue (360 genes) ---
+[blue] Enrichr...
+[foreground] input n=360 -> cleaned unique n=360
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+
+--- Enriching module: darkgreen (68 genes) ---
+[darkgreen] Enrichr...
+[foreground] input n=68 -> cleaned unique n=68
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkgreen
+[Enrichr] Saved: darkgreen_enrichr.xlsx
+
+--- Enriching module: grey60 (15 genes) ---
+[grey60] Enrichr...
+[foreground] input n=15 -> cleaned unique n=15
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: grey60
+[Enrichr] Saved: grey60_enrichr.xlsx
+
+--- Enriching module: lightcyan (85 genes) ---
+[lightcyan] Enrichr...
+[foreground] input n=85 -> cleaned unique n=85
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightcyan
+[Enrichr] Saved: lightcyan_enrichr.xlsx
+
+--- Enriching module: green (335 genes) ---
+[green] Enrichr...
+[foreground] input n=335 -> cleaned unique n=335
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: green
+[Enrichr] Saved: green_enrichr.xlsx
+
+--- Enriching module: darkmagenta (47 genes) ---
+[darkmagenta] Enrichr...
+[foreground] input n=47 -> cleaned unique n=47
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkmagenta
+[Enrichr] Saved: darkmagenta_enrichr.xlsx
+
+--- Enriching module: orange (55 genes) ---
+[orange] Enrichr...
+[foreground] input n=55 -> cleaned unique n=55
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: orange
+[Enrichr] Saved: orange_enrichr.xlsx
+
+--- Enriching module: greenyellow (125 genes) ---
+[greenyellow] Enrichr...
+[foreground] input n=125 -> cleaned unique n=125
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: greenyellow
+[Enrichr] Saved: greenyellow_enrichr.xlsx
+
+--- Enriching module: steelblue (56 genes) ---
+[steelblue] Enrichr...
+[foreground] input n=56 -> cleaned unique n=56
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: steelblue
+[Enrichr] Saved: steelblue_enrichr.xlsx
+
+--- Enriching module: salmon (110 genes) ---
+[salmon] Enrichr...
+[foreground] input n=110 -> cleaned unique n=110
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: salmon
+[Enrichr] Saved: salmon_enrichr.xlsx
+
+--- Enriching module: magenta (190 genes) ---
+[magenta] Enrichr...
+[foreground] input n=190 -> cleaned unique n=190
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+
+--- Enriching module: tan (119 genes) ---
+[tan] Enrichr...
+[foreground] input n=119 -> cleaned unique n=119
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: tan
+[Enrichr] Saved: tan_enrichr.xlsx
+
+--- Enriching module: yellow (358 genes) ---
+[yellow] Enrichr...
+[foreground] input n=358 -> cleaned unique n=358
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow
+[Enrichr] Saved: yellow_enrichr.xlsx
+
+--- Enriching module: darkgrey (65 genes) ---
+[darkgrey] Enrichr...
+[foreground] input n=65 -> cleaned unique n=65
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkgrey
+[Enrichr] Saved: darkgrey_enrichr.xlsx
+
+--- Enriching module: turquoise (613 genes) ---
+[turquoise] Enrichr...
+[foreground] input n=613 -> cleaned unique n=613
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Saved: turquoise_enrichr.xlsx
+
+--- Enriching module: black (201 genes) ---
+[black] Enrichr...
+[foreground] input n=201 -> cleaned unique n=201
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: black
+[Enrichr] Saved: black_enrichr.xlsx
+
+--- Enriching module: saddlebrown (58 genes) ---
+[saddlebrown] Enrichr...
+[foreground] input n=58 -> cleaned unique n=58
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: saddlebrown
+[Enrichr] Saved: saddlebrown_enrichr.xlsx
+
+--- Enriching module: pink (194 genes) ---
+[pink] Enrichr...
+[foreground] input n=194 -> cleaned unique n=194
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: pink
+[Enrichr] Saved: pink_enrichr.xlsx
+
+--- Enriching module: darkolivegreen (51 genes) ---
+[darkolivegreen] Enrichr...
+[foreground] input n=51 -> cleaned unique n=51
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkolivegreen
+[Enrichr] Saved: darkolivegreen_enrichr.xlsx
+
+--- Enriching module: lightgreen (77 genes) ---
+[lightgreen] Enrichr...
+[foreground] input n=77 -> cleaned unique n=77
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightgreen
+[Enrichr] Saved: lightgreen_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+--- Enriching module: green (148 genes) ---
+[green] Enrichr...
+[foreground] input n=148 -> cleaned unique n=148
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: green
+[Enrichr] Saved: green_enrichr.xlsx
+
+--- Enriching module: lightgreen (52 genes) ---
+[lightgreen] Enrichr...
+[foreground] input n=52 -> cleaned unique n=52
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightgreen
+[Enrichr] Saved: lightgreen_enrichr.xlsx
+
+--- Enriching module: black (145 genes) ---
+[black] Enrichr...
+[foreground] input n=145 -> cleaned unique n=145
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: black
+[Enrichr] Saved: black_enrichr.xlsx
+
+--- Enriching module: salmon (9 genes) ---
+[salmon] Enrichr...
+[foreground] input n=9 -> cleaned unique n=9
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: salmon
+[Enrichr] Saved: salmon_enrichr.xlsx
+
+--- Enriching module: lightyellow (50 genes) ---
+[lightyellow] Enrichr...
+[foreground] input n=50 -> cleaned unique n=50
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightyellow
+[Enrichr] Saved: lightyellow_enrichr.xlsx
+
+--- Enriching module: pink (111 genes) ---
+[pink] Enrichr...
+[foreground] input n=111 -> cleaned unique n=111
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: pink
+[Enrichr] Saved: pink_enrichr.xlsx
+
+--- Enriching module: grey60 (52 genes) ---
+[grey60] Enrichr...
+[foreground] input n=52 -> cleaned unique n=52
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: grey60
+[Enrichr] Saved: grey60_enrichr.xlsx
+
+--- Enriching module: royalblue (14 genes) ---
+[royalblue] Enrichr...
+[foreground] input n=14 -> cleaned unique n=14
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: royalblue
+[Enrichr] Saved: royalblue_enrichr.xlsx
+
+--- Enriching module: red (150 genes) ---
+[red] Enrichr...
+[foreground] input n=150 -> cleaned unique n=150
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: red
+[Enrichr] Saved: red_enrichr.xlsx
+
+--- Enriching module: brown (265 genes) ---
+[brown] Enrichr...
+[foreground] input n=265 -> cleaned unique n=265
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Saved: brown_enrichr.xlsx
+
+--- Enriching module: magenta (89 genes) ---
+[magenta] Enrichr...
+[foreground] input n=89 -> cleaned unique n=89
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+
+--- Enriching module: greenyellow (74 genes) ---
+[greenyellow] Enrichr...
+[foreground] input n=74 -> cleaned unique n=74
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: greenyellow
+[Enrichr] Saved: greenyellow_enrichr.xlsx
+
+--- Enriching module: cyan (58 genes) ---
+[cyan] Enrichr...
+[foreground] input n=58 -> cleaned unique n=58
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: cyan
+[Enrichr] Saved: cyan_enrichr.xlsx
+
+--- Enriching module: purple (74 genes) ---
+[purple] Enrichr...
+[foreground] input n=74 -> cleaned unique n=74
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: purple
+[Enrichr] Saved: purple_enrichr.xlsx
+
+--- Enriching module: midnightblue (58 genes) ---
+[midnightblue] Enrichr...
+[foreground] input n=58 -> cleaned unique n=58
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: midnightblue
+[Enrichr] Saved: midnightblue_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+--- Enriching module: cyan (63 genes) ---
+[cyan] Enrichr...
+[foreground] input n=63 -> cleaned unique n=63
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: cyan
+[Enrichr] Saved: cyan_enrichr.xlsx
+
+--- Enriching module: black (182 genes) ---
+[black] Enrichr...
+[foreground] input n=182 -> cleaned unique n=182
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: black
+[Enrichr] Saved: black_enrichr.xlsx
+
+--- Enriching module: blue (2017 genes) ---
+[blue] Enrichr...
+[foreground] input n=2017 -> cleaned unique n=2017
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+
+--- Enriching module: greenyellow (145 genes) ---
+[greenyellow] Enrichr...
+[foreground] input n=145 -> cleaned unique n=145
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: greenyellow
+[Enrichr] Saved: greenyellow_enrichr.xlsx
+
+--- Enriching module: red (387 genes) ---
+[red] Enrichr...
+[foreground] input n=387 -> cleaned unique n=387
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: red
+[Enrichr] Saved: red_enrichr.xlsx
+
+--- Enriching module: salmon (113 genes) ---
+[salmon] Enrichr...
+[foreground] input n=113 -> cleaned unique n=113
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: salmon
+[Enrichr] Saved: salmon_enrichr.xlsx
+
+--- Enriching module: tan (120 genes) ---
+[tan] Enrichr...
+[foreground] input n=120 -> cleaned unique n=120
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: tan
+[Enrichr] Saved: tan_enrichr.xlsx
+
+--- Enriching module: pink (203 genes) ---
+[pink] Enrichr...
+[foreground] input n=203 -> cleaned unique n=203
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: pink
+[Enrichr] Saved: pink_enrichr.xlsx
+
+--- Enriching module: grey60 (62 genes) ---
+[grey60] Enrichr...
+[foreground] input n=62 -> cleaned unique n=62
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: grey60
+[Enrichr] Saved: grey60_enrichr.xlsx
+
+--- Enriching module: midnightblue (61 genes) ---
+[midnightblue] Enrichr...
+[foreground] input n=61 -> cleaned unique n=61
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: midnightblue
+[Enrichr] Saved: midnightblue_enrichr.xlsx
+
+--- Enriching module: green (715 genes) ---
+[green] Enrichr...
+[foreground] input n=715 -> cleaned unique n=715
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: green
+[Enrichr] Saved: green_enrichr.xlsx
+
+--- Enriching module: yellow (1312 genes) ---
+[yellow] Enrichr...
+[foreground] input n=1312 -> cleaned unique n=1312
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow
+[Enrichr] Saved: yellow_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+======================================================
+Running config [list: exposures_n_mat_fac]
+======================================================
+
+--- Enriching module: darkturquoise (65 genes) ---
+[darkturquoise] Enrichr...
+[foreground] input n=65 -> cleaned unique n=65
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkturquoise
+[Enrichr] Saved: darkturquoise_enrichr.xlsx
+
+--- Enriching module: midnightblue (98 genes) ---
+[midnightblue] Enrichr...
+[foreground] input n=98 -> cleaned unique n=98
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: midnightblue
+[Enrichr] Saved: midnightblue_enrichr.xlsx
+
+--- Enriching module: lightcyan (85 genes) ---
+[lightcyan] Enrichr...
+[foreground] input n=85 -> cleaned unique n=85
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightcyan
+[Enrichr] Saved: lightcyan_enrichr.xlsx
+
+--- Enriching module: darkmagenta (47 genes) ---
+[darkmagenta] Enrichr...
+[foreground] input n=47 -> cleaned unique n=47
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkmagenta
+[Enrichr] Saved: darkmagenta_enrichr.xlsx
+
+--- Enriching module: tan (119 genes) ---
+[tan] Enrichr...
+[foreground] input n=119 -> cleaned unique n=119
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: tan
+[Enrichr] Saved: tan_enrichr.xlsx
+
+--- Enriching module: saddlebrown (58 genes) ---
+[saddlebrown] Enrichr...
+[foreground] input n=58 -> cleaned unique n=58
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: saddlebrown
+[Enrichr] Saved: saddlebrown_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+--- Enriching module: green (148 genes) ---
+[green] Enrichr...
+[foreground] input n=148 -> cleaned unique n=148
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: green
+[Enrichr] Saved: green_enrichr.xlsx
+
+--- Enriching module: cyan (58 genes) ---
+[cyan] Enrichr...
+[foreground] input n=58 -> cleaned unique n=58
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: cyan
+[Enrichr] Saved: cyan_enrichr.xlsx
+
+--- Enriching module: lightcyan (4 genes) ---
+[lightcyan] Enrichr...
+[foreground] input n=4 -> cleaned unique n=4
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightcyan
+[Enrichr] Saved: lightcyan_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+--- Enriching module: cyan (63 genes) ---
+[cyan] Enrichr...
+[foreground] input n=63 -> cleaned unique n=63
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: cyan
+[Enrichr] Saved: cyan_enrichr.xlsx
+
+--- Enriching module: magenta (160 genes) ---
+[magenta] Enrichr...
+[foreground] input n=160 -> cleaned unique n=160
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+
+--- Enriching module: lightyellow (4 genes) ---
+[lightyellow] Enrichr...
+[foreground] input n=4 -> cleaned unique n=4
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightyellow
+[Enrichr] Saved: lightyellow_enrichr.xlsx
+
+--- Enriching module: darkred (55 genes) ---
+[darkred] Enrichr...
+[foreground] input n=55 -> cleaned unique n=55
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkred
+[Enrichr] Saved: darkred_enrichr.xlsx
+
+--- Enriching module: red (387 genes) ---
+[red] Enrichr...
+[foreground] input n=387 -> cleaned unique n=387
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: red
+[Enrichr] Saved: red_enrichr.xlsx
+
+--- Enriching module: purple (151 genes) ---
+[purple] Enrichr...
+[foreground] input n=151 -> cleaned unique n=151
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: purple
+[Enrichr] Saved: purple_enrichr.xlsx
+
+--- Enriching module: salmon (113 genes) ---
+[salmon] Enrichr...
+[foreground] input n=113 -> cleaned unique n=113
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: salmon
+[Enrichr] Saved: salmon_enrichr.xlsx
+
+--- Enriching module: tan (120 genes) ---
+[tan] Enrichr...
+[foreground] input n=120 -> cleaned unique n=120
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: tan
+[Enrichr] Saved: tan_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+======================================================
+Running config [list: growth_0to6]
+======================================================
+
+--- Enriching module: paleturquoise (57 genes) ---
+[paleturquoise] Enrichr...
+[foreground] input n=57 -> cleaned unique n=57
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: paleturquoise
+[Enrichr] Saved: paleturquoise_enrichr.xlsx
+
+--- Enriching module: blue (360 genes) ---
+[blue] Enrichr...
+[foreground] input n=360 -> cleaned unique n=360
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+
+--- Enriching module: sienna3 (50 genes) ---
+[sienna3] Enrichr...
+[foreground] input n=50 -> cleaned unique n=50
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: sienna3
+[Enrichr] Saved: sienna3_enrichr.xlsx
+
+--- Enriching module: magenta (190 genes) ---
+[magenta] Enrichr...
+[foreground] input n=190 -> cleaned unique n=190
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+
+--- Enriching module: tan (119 genes) ---
+[tan] Enrichr...
+[foreground] input n=119 -> cleaned unique n=119
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: tan
+[Enrichr] Saved: tan_enrichr.xlsx
+
+--- Enriching module: yellow (358 genes) ---
+[yellow] Enrichr...
+[foreground] input n=358 -> cleaned unique n=358
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow
+[Enrichr] Saved: yellow_enrichr.xlsx
+
+--- Enriching module: turquoise (613 genes) ---
+[turquoise] Enrichr...
+[foreground] input n=613 -> cleaned unique n=613
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Saved: turquoise_enrichr.xlsx
+
+--- Enriching module: black (201 genes) ---
+[black] Enrichr...
+[foreground] input n=201 -> cleaned unique n=201
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: black
+[Enrichr] Saved: black_enrichr.xlsx
+
+--- Enriching module: lightyellow (18 genes) ---
+[lightyellow] Enrichr...
+[foreground] input n=18 -> cleaned unique n=18
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightyellow
+[Enrichr] Saved: lightyellow_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+--- Enriching module: blue (9879 genes) ---
+[blue] Enrichr...
+[foreground] input n=9879 -> cleaned unique n=9879
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+
+--- Enriching module: lightgreen (52 genes) ---
+[lightgreen] Enrichr...
+[foreground] input n=52 -> cleaned unique n=52
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightgreen
+[Enrichr] Saved: lightgreen_enrichr.xlsx
+
+--- Enriching module: tan (68 genes) ---
+[tan] Enrichr...
+[foreground] input n=68 -> cleaned unique n=68
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: tan
+[Enrichr] Saved: tan_enrichr.xlsx
+
+--- Enriching module: lightcyan (4 genes) ---
+[lightcyan] Enrichr...
+[foreground] input n=4 -> cleaned unique n=4
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightcyan
+[Enrichr] Saved: lightcyan_enrichr.xlsx
+
+--- Enriching module: turquoise (17190 genes) ---
+[turquoise] Enrichr...
+[foreground] input n=17190 -> cleaned unique n=17190
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Saved: turquoise_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+--- Enriching module: cyan (63 genes) ---
+[cyan] Enrichr...
+[foreground] input n=63 -> cleaned unique n=63
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: cyan
+[Enrichr] Saved: cyan_enrichr.xlsx
+
+--- Enriching module: magenta (160 genes) ---
+[magenta] Enrichr...
+[foreground] input n=160 -> cleaned unique n=160
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+
+--- Enriching module: turquoise (16839 genes) ---
+[turquoise] Enrichr...
+[foreground] input n=16839 -> cleaned unique n=16839
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Saved: turquoise_enrichr.xlsx
+
+--- Enriching module: lightyellow (4 genes) ---
+[lightyellow] Enrichr...
+[foreground] input n=4 -> cleaned unique n=4
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightyellow
+[Enrichr] Saved: lightyellow_enrichr.xlsx
+
+--- Enriching module: brown (9440 genes) ---
+[brown] Enrichr...
+[foreground] input n=9440 -> cleaned unique n=9440
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Saved: brown_enrichr.xlsx
+
+--- Enriching module: greenyellow (145 genes) ---
+[greenyellow] Enrichr...
+[foreground] input n=145 -> cleaned unique n=145
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: greenyellow
+[Enrichr] Saved: greenyellow_enrichr.xlsx
+
+--- Enriching module: tan (120 genes) ---
+[tan] Enrichr...
+[foreground] input n=120 -> cleaned unique n=120
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: tan
+[Enrichr] Saved: tan_enrichr.xlsx
+
+--- Enriching module: royalblue (53 genes) ---
+[royalblue] Enrichr...
+[foreground] input n=53 -> cleaned unique n=53
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: royalblue
+[Enrichr] Saved: royalblue_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+======================================================
+Running config [list: growth_dynamics6to12]
+======================================================
+
+--- Enriching module: midnightblue (98 genes) ---
+[midnightblue] Enrichr...
+[foreground] input n=98 -> cleaned unique n=98
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: midnightblue
+[Enrichr] Saved: midnightblue_enrichr.xlsx
+
+--- Enriching module: skyblue (24 genes) ---
+[skyblue] Enrichr...
+[foreground] input n=24 -> cleaned unique n=24
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: skyblue
+[Enrichr] Saved: skyblue_enrichr.xlsx
+
+--- Enriching module: blue (360 genes) ---
+[blue] Enrichr...
+[foreground] input n=360 -> cleaned unique n=360
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+
+--- Enriching module: grey60 (15 genes) ---
+[grey60] Enrichr...
+[foreground] input n=15 -> cleaned unique n=15
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: grey60
+[Enrichr] Saved: grey60_enrichr.xlsx
+
+--- Enriching module: green (335 genes) ---
+[green] Enrichr...
+[foreground] input n=335 -> cleaned unique n=335
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: green
+[Enrichr] Saved: green_enrichr.xlsx
+
+--- Enriching module: greenyellow (125 genes) ---
+[greenyellow] Enrichr...
+[foreground] input n=125 -> cleaned unique n=125
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: greenyellow
+[Enrichr] Saved: greenyellow_enrichr.xlsx
+
+--- Enriching module: magenta (190 genes) ---
+[magenta] Enrichr...
+[foreground] input n=190 -> cleaned unique n=190
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+
+--- Enriching module: turquoise (613 genes) ---
+[turquoise] Enrichr...
+[foreground] input n=613 -> cleaned unique n=613
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Saved: turquoise_enrichr.xlsx
+
+--- Enriching module: black (201 genes) ---
+[black] Enrichr...
+[foreground] input n=201 -> cleaned unique n=201
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: black
+[Enrichr] Saved: black_enrichr.xlsx
+
+--- Enriching module: lightyellow (18 genes) ---
+[lightyellow] Enrichr...
+[foreground] input n=18 -> cleaned unique n=18
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightyellow
+[Enrichr] Saved: lightyellow_enrichr.xlsx
+
+--- Enriching module: saddlebrown (58 genes) ---
+[saddlebrown] Enrichr...
+[foreground] input n=58 -> cleaned unique n=58
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: saddlebrown
+[Enrichr] Saved: saddlebrown_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+--- Enriching module: yellow (173 genes) ---
+[yellow] Enrichr...
+[foreground] input n=173 -> cleaned unique n=173
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow
+[Enrichr] Saved: yellow_enrichr.xlsx
+
+--- Enriching module: black (145 genes) ---
+[black] Enrichr...
+[foreground] input n=145 -> cleaned unique n=145
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: black
+[Enrichr] Saved: black_enrichr.xlsx
+
+--- Enriching module: salmon (9 genes) ---
+[salmon] Enrichr...
+[foreground] input n=9 -> cleaned unique n=9
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: salmon
+[Enrichr] Saved: salmon_enrichr.xlsx
+
+--- Enriching module: pink (111 genes) ---
+[pink] Enrichr...
+[foreground] input n=111 -> cleaned unique n=111
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: pink
+[Enrichr] Saved: pink_enrichr.xlsx
+
+--- Enriching module: grey60 (52 genes) ---
+[grey60] Enrichr...
+[foreground] input n=52 -> cleaned unique n=52
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: grey60
+[Enrichr] Saved: grey60_enrichr.xlsx
+
+--- Enriching module: royalblue (14 genes) ---
+[royalblue] Enrichr...
+[foreground] input n=14 -> cleaned unique n=14
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: royalblue
+[Enrichr] Saved: royalblue_enrichr.xlsx
+
+--- Enriching module: brown (265 genes) ---
+[brown] Enrichr...
+[foreground] input n=265 -> cleaned unique n=265
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Saved: brown_enrichr.xlsx
+
+--- Enriching module: greenyellow (74 genes) ---
+[greenyellow] Enrichr...
+[foreground] input n=74 -> cleaned unique n=74
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: greenyellow
+[Enrichr] Saved: greenyellow_enrichr.xlsx
+
+--- Enriching module: lightcyan (4 genes) ---
+[lightcyan] Enrichr...
+[foreground] input n=4 -> cleaned unique n=4
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightcyan
+[Enrichr] Saved: lightcyan_enrichr.xlsx
+
+--- Enriching module: purple (74 genes) ---
+[purple] Enrichr...
+[foreground] input n=74 -> cleaned unique n=74
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: purple
+[Enrichr] Saved: purple_enrichr.xlsx
+
+--- Enriching module: midnightblue (58 genes) ---
+[midnightblue] Enrichr...
+[foreground] input n=58 -> cleaned unique n=58
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: midnightblue
+[Enrichr] Saved: midnightblue_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+--- Enriching module: cyan (63 genes) ---
+[cyan] Enrichr...
+[foreground] input n=63 -> cleaned unique n=63
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: cyan
+[Enrichr] Saved: cyan_enrichr.xlsx
+
+--- Enriching module: magenta (160 genes) ---
+[magenta] Enrichr...
+[foreground] input n=160 -> cleaned unique n=160
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+
+--- Enriching module: lightcyan (62 genes) ---
+[lightcyan] Enrichr...
+[foreground] input n=62 -> cleaned unique n=62
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightcyan
+[Enrichr] Saved: lightcyan_enrichr.xlsx
+
+--- Enriching module: lightyellow (4 genes) ---
+[lightyellow] Enrichr...
+[foreground] input n=4 -> cleaned unique n=4
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightyellow
+[Enrichr] Saved: lightyellow_enrichr.xlsx
+
+--- Enriching module: black (182 genes) ---
+[black] Enrichr...
+[foreground] input n=182 -> cleaned unique n=182
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: black
+[Enrichr] Saved: black_enrichr.xlsx
+
+--- Enriching module: blue (2017 genes) ---
+[blue] Enrichr...
+[foreground] input n=2017 -> cleaned unique n=2017
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+
+--- Enriching module: greenyellow (145 genes) ---
+[greenyellow] Enrichr...
+[foreground] input n=145 -> cleaned unique n=145
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: greenyellow
+[Enrichr] Saved: greenyellow_enrichr.xlsx
+
+--- Enriching module: red (387 genes) ---
+[red] Enrichr...
+[foreground] input n=387 -> cleaned unique n=387
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: red
+[Enrichr] Saved: red_enrichr.xlsx
+
+--- Enriching module: salmon (113 genes) ---
+[salmon] Enrichr...
+[foreground] input n=113 -> cleaned unique n=113
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: salmon
+[Enrichr] Saved: salmon_enrichr.xlsx
+
+--- Enriching module: tan (120 genes) ---
+[tan] Enrichr...
+[foreground] input n=120 -> cleaned unique n=120
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: tan
+[Enrichr] Saved: tan_enrichr.xlsx
+
+--- Enriching module: pink (203 genes) ---
+[pink] Enrichr...
+[foreground] input n=203 -> cleaned unique n=203
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: pink
+[Enrichr] Saved: pink_enrichr.xlsx
+
+--- Enriching module: midnightblue (61 genes) ---
+[midnightblue] Enrichr...
+[foreground] input n=61 -> cleaned unique n=61
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: midnightblue
+[Enrichr] Saved: midnightblue_enrichr.xlsx
+
+--- Enriching module: royalblue (53 genes) ---
+[royalblue] Enrichr...
+[foreground] input n=53 -> cleaned unique n=53
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: royalblue
+[Enrichr] Saved: royalblue_enrichr.xlsx
+
+--- Enriching module: green (715 genes) ---
+[green] Enrichr...
+[foreground] input n=715 -> cleaned unique n=715
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: green
+[Enrichr] Saved: green_enrichr.xlsx
+
+--- Enriching module: yellow (1312 genes) ---
+[yellow] Enrichr...
+[foreground] input n=1312 -> cleaned unique n=1312
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow
+[Enrichr] Saved: yellow_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+======================================================
+Running config [list: zscores]
+======================================================
+
+--- Enriching module: white (16 genes) ---
+[white] Enrichr...
+[foreground] input n=16 -> cleaned unique n=16
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: white
+[Enrichr] Saved: white_enrichr.xlsx
+
+--- Enriching module: darkturquoise (65 genes) ---
+[darkturquoise] Enrichr...
+[foreground] input n=65 -> cleaned unique n=65
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkturquoise
+[Enrichr] Saved: darkturquoise_enrichr.xlsx
+
+--- Enriching module: paleturquoise (57 genes) ---
+[paleturquoise] Enrichr...
+[foreground] input n=57 -> cleaned unique n=57
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: paleturquoise
+[Enrichr] Saved: paleturquoise_enrichr.xlsx
+
+--- Enriching module: blue (360 genes) ---
+[blue] Enrichr...
+[foreground] input n=360 -> cleaned unique n=360
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+
+--- Enriching module: lightcyan (85 genes) ---
+[lightcyan] Enrichr...
+[foreground] input n=85 -> cleaned unique n=85
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightcyan
+[Enrichr] Saved: lightcyan_enrichr.xlsx
+
+--- Enriching module: green (335 genes) ---
+[green] Enrichr...
+[foreground] input n=335 -> cleaned unique n=335
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: green
+[Enrichr] Saved: green_enrichr.xlsx
+
+--- Enriching module: violet (22 genes) ---
+[violet] Enrichr...
+[foreground] input n=22 -> cleaned unique n=22
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: violet
+[Enrichr] Saved: violet_enrichr.xlsx
+
+--- Enriching module: salmon (110 genes) ---
+[salmon] Enrichr...
+[foreground] input n=110 -> cleaned unique n=110
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: salmon
+[Enrichr] Saved: salmon_enrichr.xlsx
+
+--- Enriching module: magenta (190 genes) ---
+[magenta] Enrichr...
+[foreground] input n=190 -> cleaned unique n=190
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+
+--- Enriching module: yellow (358 genes) ---
+[yellow] Enrichr...
+[foreground] input n=358 -> cleaned unique n=358
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow
+[Enrichr] Saved: yellow_enrichr.xlsx
+
+--- Enriching module: turquoise (613 genes) ---
+[turquoise] Enrichr...
+[foreground] input n=613 -> cleaned unique n=613
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Saved: turquoise_enrichr.xlsx
+
+--- Enriching module: lightyellow (18 genes) ---
+[lightyellow] Enrichr...
+[foreground] input n=18 -> cleaned unique n=18
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightyellow
+[Enrichr] Saved: lightyellow_enrichr.xlsx
+
+--- Enriching module: darkolivegreen (51 genes) ---
+[darkolivegreen] Enrichr...
+[foreground] input n=51 -> cleaned unique n=51
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkolivegreen
+[Enrichr] Saved: darkolivegreen_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+--- Enriching module: lightgreen (52 genes) ---
+[lightgreen] Enrichr...
+[foreground] input n=52 -> cleaned unique n=52
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightgreen
+[Enrichr] Saved: lightgreen_enrichr.xlsx
+
+--- Enriching module: pink (111 genes) ---
+[pink] Enrichr...
+[foreground] input n=111 -> cleaned unique n=111
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: pink
+[Enrichr] Saved: pink_enrichr.xlsx
+
+--- Enriching module: darkred (5 genes) ---
+[darkred] Enrichr...
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkred
+[Enrichr] Saved: darkred_enrichr.xlsx
+
+--- Enriching module: lightcyan (4 genes) ---
+[lightcyan] Enrichr...
+[foreground] input n=4 -> cleaned unique n=4
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightcyan
+[Enrichr] Saved: lightcyan_enrichr.xlsx
+
+--- Enriching module: purple (74 genes) ---
+[purple] Enrichr...
+[foreground] input n=74 -> cleaned unique n=74
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: purple
+[Enrichr] Saved: purple_enrichr.xlsx
+
+--- Enriching module: turquoise (17190 genes) ---
+[turquoise] Enrichr...
+[foreground] input n=17190 -> cleaned unique n=17190
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Saved: turquoise_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+--- Enriching module: cyan (63 genes) ---
+[cyan] Enrichr...
+[foreground] input n=63 -> cleaned unique n=63
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: cyan
+[Enrichr] Saved: cyan_enrichr.xlsx
+
+--- Enriching module: magenta (160 genes) ---
+[magenta] Enrichr...
+[foreground] input n=160 -> cleaned unique n=160
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+
+--- Enriching module: turquoise (16839 genes) ---
+[turquoise] Enrichr...
+[foreground] input n=16839 -> cleaned unique n=16839
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Saved: turquoise_enrichr.xlsx
+
+--- Enriching module: lightyellow (4 genes) ---
+[lightyellow] Enrichr...
+[foreground] input n=4 -> cleaned unique n=4
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightyellow
+[Enrichr] Saved: lightyellow_enrichr.xlsx
+
+--- Enriching module: red (387 genes) ---
+[red] Enrichr...
+[foreground] input n=387 -> cleaned unique n=387
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: red
+[Enrichr] Saved: red_enrichr.xlsx
+
+--- Enriching module: salmon (113 genes) ---
+[salmon] Enrichr...
+[foreground] input n=113 -> cleaned unique n=113
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: salmon
+[Enrichr] Saved: salmon_enrichr.xlsx
+
+--- Enriching module: tan (120 genes) ---
+[tan] Enrichr...
+[foreground] input n=120 -> cleaned unique n=120
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: tan
+[Enrichr] Saved: tan_enrichr.xlsx
+
+--- Enriching module: midnightblue (61 genes) ---
+[midnightblue] Enrichr...
+[foreground] input n=61 -> cleaned unique n=61
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: midnightblue
+[Enrichr] Saved: midnightblue_enrichr.xlsx
+
+--- Enriching module: royalblue (53 genes) ---
+[royalblue] Enrichr...
+[foreground] input n=53 -> cleaned unique n=53
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: royalblue
+[Enrichr] Saved: royalblue_enrichr.xlsx
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+There were 50 or more warnings (use warnings() to see the first 50)

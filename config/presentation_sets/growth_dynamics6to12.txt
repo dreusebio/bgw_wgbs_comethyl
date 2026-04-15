@@ -1,8 +1,4 @@
-wzd_0to6mo
 wzd_6to12mo
-wflzd_0to6mo
 wflzd_6to12mo
-rwg_wei_0to6mo
 rwg_wei_6to12mo
-rwg_wfl_0to6mo
 rwg_wfl_6to12mo
