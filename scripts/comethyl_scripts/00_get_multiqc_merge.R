@@ -13,15 +13,19 @@
 # Join key:
 #   - Sample_name (derived from sample id / leading digits)
 #
-#Change directory to folder with your outputs from multiqc and then run the scripts 
-# e.g cd /quobyte/lasallegrp/projects/wgbs_growell_comethylation_analysis/tests/demo/data/09_multiqc/multiqc_data
-#
 # Usage:
-#   Rscript /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/comethyl_scripts/00_get_multiqc_merge.R
-#   Rscript /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/comethyl_scripts/00_get_multiqc_merge.R --trait_path /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/data/metadata/BGW_DNAm_Data_03072026.xlsx
-# Rscript /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/scripts/comethyl_scripts/00_get_multiqc_merge.R --trait_path /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/data/metadata/BGW_DNAm_Data_03072026.xlsx --out /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/data/metadata/merged_qc.xlsx
-# ============================================================
-#!/usr/bin/env Rscript
+#   Rscript 00_get_multiqc_merge.R --multiqc_data /path/to/multiqc_data
+#   Rscript 00_get_multiqc_merge.R \
+#     --multiqc_data /path/to/multiqc_data \
+#     --trait_path /path/to/FINAL_DNAm_Data.xlsx \
+#     --out /path/to/merged_qc.xlsx
+# pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/scripts/comethyl_scripts/00_get_multiqc_merge.R \
+#   --multiqc_data /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/processed/09_multiqc/merged_multiqc_data \
+#   --trait_path /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/metadata/FINAL_DNAm_Data_04082026.xlsx \
+#   --out /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/metadata/merged_qc.xlsx
+# # ============================================================
+
+message("Starting Script 00")
 
 suppressPackageStartupMessages({
   library(dplyr)
@@ -44,14 +48,31 @@ get_arg <- function(flag, default = NULL) {
   args[idx + 1]
 }
 
-trait_path <- get_arg("--trait_path", default = NA_character_)
-out_path   <- get_arg("--out", default = "merged_multiqc_selected.xlsx")
+multiqc_data <- get_arg("--multiqc_data", default = NA_character_)
+trait_path   <- get_arg("--trait_path",   default = NA_character_)
+out_path     <- get_arg("--out",          default = "merged_multiqc_selected.xlsx")
+
+# ----------------------------
+# Resolve multiqc data directory
+# ----------------------------
+if (!is.na(multiqc_data) && nzchar(multiqc_data)) {
+  if (!dir.exists(multiqc_data))
+    stop("--multiqc_data directory not found: ", multiqc_data)
+  data_dir <- normalizePath(multiqc_data)
+  message("multiqc_data: ", data_dir)
+} else {
+  # Fall back to current working directory (original behaviour)
+  data_dir <- getwd()
+  message("--multiqc_data not provided; using current directory: ", data_dir)
+}
+
+# Helper to build full path into data_dir
+data_path <- function(filename) file.path(data_dir, filename)
 
 # ----------------------------
 # Helpers
 # ----------------------------
 read_multiqc_txt <- function(path) {
-  # MultiQC text tables are tab-delimited with header
   readr::read_tsv(path, show_col_types = FALSE, progress = FALSE) %>%
     as.data.frame()
 }
@@ -60,28 +81,26 @@ read_multiqc_txt <- function(path) {
 get_core <- function(x) str_extract(x, "^[0-9]+[A-Za-z]*")
 
 # ----------------------------
-# Required files (based on your heads)
+# Required files
 # ----------------------------
 req_files <- c(
   "mqc_bismark_alignment_1.txt",
   "multiqc_bismark_dedup.txt",
   "multiqc_bismark_methextract.txt"
-)   # adjust if your file name differs
+)
 
-missing_files <- req_files[!file.exists(req_files)]
+missing_files <- req_files[!file.exists(data_path(req_files))]
 if (length(missing_files) > 0) {
   stop(
-    "Missing required file(s) in current directory:\n  - ",
+    "Missing required file(s) in ", data_dir, ":\n  - ",
     paste(missing_files, collapse = "\n  - ")
   )
 }
 
 # ============================================================
 # 1) Alignment (lane-level) -> collapse to Sample_name
-# Header (from you):
-# Sample, Aligned Uniquely, Aligned Ambiguously, Did Not Align, No Genomic Sequence
 # ============================================================
-align_raw <- read_multiqc_txt("mqc_bismark_alignment_1.txt")   # adjust if your file name differs
+align_raw <- read_multiqc_txt(data_path("mqc_bismark_alignment_1.txt"))
 
 needed_align <- c("Sample", "Aligned Uniquely", "Aligned Ambiguously", "Did Not Align", "No Genomic Sequence")
 miss_align <- setdiff(needed_align, names(align_raw))
@@ -100,29 +119,17 @@ align_collapsed <- align_raw %>%
   group_by(Sample_name) %>%
   summarise(
     SequencingNumber = first(SequencingNumber),
-
-    # Sum across lanes
     Aligned_Uniquely    = sum(`Aligned Uniquely`, na.rm = TRUE),
     Aligned_Ambiguously = sum(`Aligned Ambiguously`, na.rm = TRUE),
     Did_Not_Align       = sum(`Did Not Align`, na.rm = TRUE),
     No_Genomic_Sequence = sum(`No Genomic Sequence`, na.rm = TRUE),
-
     .groups = "drop"
   ) %>%
   mutate(
-    # Bismark-style totals
-    Total_Reads = Aligned_Uniquely + Aligned_Ambiguously + Did_Not_Align + No_Genomic_Sequence,
-
-    # Keep both metrics (do not conflate them)
+    Total_Reads         = Aligned_Uniquely + Aligned_Ambiguously + Did_Not_Align + No_Genomic_Sequence,
     Aligned_Reads_Total = Aligned_Uniquely + Aligned_Ambiguously,
-
-    # Bismark "Mapping efficiency" = uniquely aligned / total
-    Mapping_Efficiency = if_else(Total_Reads > 0, 100 * Aligned_Uniquely / Total_Reads, NA_real_),
-
-    # (Optional) informative but not Bismark mapping efficiency
+    Mapping_Efficiency  = if_else(Total_Reads > 0, 100 * Aligned_Uniquely / Total_Reads, NA_real_),
     Percent_Aligned_Total = if_else(Total_Reads > 0, 100 * Aligned_Reads_Total / Total_Reads, NA_real_),
-
-    # keep your sample_id convention if you still want it
     sample_id = paste0(Sample_name, "_merged_name_sorted")
   ) %>%
   relocate(Sample_name, sample_id)
@@ -132,12 +139,10 @@ align_collapsed$Sample_name
 
 # ============================================================
 # 2) Deduplication
-# Header (from you):
-# Sample, dedup_reads_percent, dup_reads_percent
 # ============================================================
-dedup_raw <- read_multiqc_txt("multiqc_bismark_dedup.txt")   # adjust if your file name differs
+dedup_raw <- read_multiqc_txt(data_path("multiqc_bismark_dedup.txt"))
 
-needed_dedup <- c("Sample", "dedup_reads_percent", "dup_reads_percent") 
+needed_dedup <- c("Sample", "dedup_reads_percent", "dup_reads_percent")
 miss_dedup <- setdiff(needed_dedup, names(dedup_raw))
 if (length(miss_dedup) > 0) {
   stop("multiqc_bismark_dedup.txt missing columns: ", paste(miss_dedup, collapse = ", "),
@@ -149,8 +154,8 @@ dedup_clean <- dedup_raw %>%
   transmute(
     Sample_name,
     Percent_Deduplicated_reads = dedup_reads_percent,
-    Percent_Duplicate_Reads = dup_reads_percent,
-    Percent_Duplicated_Reads = if_else(
+    Percent_Duplicate_Reads    = dup_reads_percent,
+    Percent_Duplicated_Reads   = if_else(
       (Percent_Deduplicated_reads + Percent_Duplicate_Reads) > 0,
       100 * Percent_Duplicate_Reads / (Percent_Deduplicated_reads + Percent_Duplicate_Reads),
       NA_real_
@@ -158,12 +163,11 @@ dedup_clean <- dedup_raw %>%
   )
 
 head(dedup_clean)
+
 # ============================================================
 # 3) Methylation percent CpG
-# Header (from you):
-# Sample, Methylated CpG
 # ============================================================
-meth_raw <- read_multiqc_txt("multiqc_bismark_methextract.txt")
+meth_raw <- read_multiqc_txt(data_path("multiqc_bismark_methextract.txt"))
 
 needed_meth <- c("Sample", "percent_cpg_meth")
 miss_meth <- setdiff(needed_meth, names(meth_raw))
@@ -182,7 +186,7 @@ meth_clean <- meth_raw %>%
 head(meth_clean)
 
 # ============================================================
-# Merge all tables by Sample_name (skip NULL tables safely)
+# Merge all tables by Sample_name
 # ============================================================
 tables_to_merge <- list(
   align_collapsed,
@@ -210,16 +214,12 @@ final_cols <- c(
   "Total_Reads"
 )
 
-
 merged_multiqc_selected <- merged_multiqc %>%
   select(any_of(final_cols))
 
 # ============================================================
-# merge with trait data (exact load as requested)
-# trait_data <- openxlsx::read.xlsx(path, rowNames=T)
-# and then rownames -> Sample_name
+# Merge with trait data
 # ============================================================
-
 merged_final <- merged_multiqc_selected
 
 if (!is.na(trait_path) && nzchar(trait_path)) {
@@ -229,9 +229,6 @@ if (!is.na(trait_path) && nzchar(trait_path)) {
 
   trait_df <- as.data.frame(trait_data) %>%
     rownames_to_column(var = "Sample_name")
-
-  # If trait Sample_name has prefixes/suffixes and you want numeric core only, uncomment:
-  # trait_df$Sample_name <- str_extract(trait_df$Sample_name, "^[0-9]+")
 
   merged_final <- merged_multiqc_selected %>%
     inner_join(trait_df, by = "Sample_name")
@@ -248,7 +245,7 @@ openxlsx::write.xlsx(
   merged_final,
   out_path,
   overwrite = TRUE,
-  rowNames = TRUE
+  rowNames  = TRUE
 )
 
 out_multiqc_only <- sub("\\.xlsx$", "_multiqc_only.xlsx", out_path)
@@ -257,10 +254,10 @@ openxlsx::write.xlsx(
   merged_multiqc_selected,
   out_multiqc_only,
   overwrite = TRUE,
-  rowNames = TRUE
+  rowNames  = TRUE
 )
 
 message("Done.")
-message("Wrote: ", out_path, "  (rows=", nrow(merged_final), ", cols=", ncol(merged_final), ")")
-message("Wrote: ", out_multiqc_only, "  (rows=", nrow(merged_multiqc_selected), ", cols=", ncol(merged_multiqc_selected), ")")
+message("Wrote: ", out_path,          "  (rows=", nrow(merged_final),            ", cols=", ncol(merged_final),            ")")
+message("Wrote: ", out_multiqc_only,  "  (rows=", nrow(merged_multiqc_selected), ", cols=", ncol(merged_multiqc_selected), ")")
 message("Final columns present: ", paste(names(merged_multiqc_selected), collapse = ", "))

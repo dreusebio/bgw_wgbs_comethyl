@@ -48,7 +48,7 @@ export VECLIB_MAXIMUM_THREADS=$SLURM_CPUS_PER_TASK
 export NUMEXPR_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 # Move into Pixi workspace
-cd /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/reproducibility/pixi
+cd /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria
 
 # Sanity check
 pixi run Rscript --vanilla -e 'cat("R version:", R.version.string, "\n"); library(comethyl); cat("comethyl OK\n")'

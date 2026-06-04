@@ -2,12 +2,12 @@
 #SBATCH --job-name=Cometh_BGW
 #SBATCH --mail-user=gekuodza@ucdavis.edu
 #SBATCH --mail-type=ALL
-#SBATCH --time=3-23:00:00
-#SBATCH --partition=high
+#SBATCH --time=3-00:00:00
+#SBATCH --partition=low
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=59
 #SBATCH --mem=700G
-#SBATCH --account=lasallegrp
+#SBATCH --account=publicgrp
 #SBATCH --output=00_std_err_logs/comethyl_pearson_report.out
 #SBATCH --error=00_std_err_logs/comethyl_pearson_report.err
 #SBATCH --chdir=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria
@@ -61,10 +61,16 @@ pixi run Rscript --vanilla -e 'cat("R version:", R.version.string, "\n"); librar
 # Comethyl Scripts#
 ##############
 
+# #Script 00
+# pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/00_get_multiqc_merge.R \
+#   --multiqc_data /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/processed/09_multiqc/merged_multiqc_data \
+#   --trait_path /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/FINAL_DNAm_Data_06012026.xlsx \
+#   --out /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx
+
 # # Script 00
 # pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/00_import_cpg_reports.R \
 #   --project_root /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria \
-#   --meta_file /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx \
+#   --meta_file /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/old/merged_qc.xlsx \
 #   --cyto_dir /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/processed/cytosine_reports \
 #   --workers 4
 
@@ -94,12 +100,10 @@ pixi run Rscript --vanilla -e 'cat("R version:", R.version.string, "\n"); librar
 # pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/04_pcs_and_trait_diagnostics.R \
 #   --project_root /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria \
 #   --input_meth /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/03_region_methylation/cov3_75pct/covMin4_methSD0p08/Region_Methylation.rds \
-#   --sample_info /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx \
+#   --sample_info /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/old/merged_qc.xlsx \
 #   --protected_traits_file /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt \
 #   --technical_traits_file /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt \
 #   --threads 4
-
-
 
 # # Script 05
 # pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/05_adjust_region_methylation.R \
@@ -111,62 +115,63 @@ pixi run Rscript --vanilla -e 'cat("R version:", R.version.string, "\n"); librar
 #   --technical_traits_file /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt \
 #   --run_v1 TRUE \
 #   --run_v2 TRUE \
-#   --run_v3 TRUE \
+#   --run_v3 FALSE \
 #   --v2_cor_method bicor \
-#   --v2_p_thresh 0.05 \
-#   --v3_p_thresh 0.05
+#   --v2_p_thresh 0.05 
 
+# Script 06
+pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/06_soft_power.R \
+  --project_root /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria \
+  --input_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Adjusted_Region_Methylation_allPCs.rds \
+  --input_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds \
+  --softpower_cor pearson \
+  --power_min 1 \
+  --power_max 20 \
+  --threads 50
 
-# # Script 06
-# pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/06_soft_power.R \
-#   --project_root /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria \
-#   --input_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Adjusted_Region_Methylation_allPCs.rds \
-#   --input_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds \
-#   --input_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Adjusted_Region_Methylation_technicalPCs_only.rds \
-#   --softpower_cor pearson \
-#   --power_min 1 \
-#   --power_max 20 \
-#   --threads 50
+# #  --input_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Adjusted_Region_Methylation_technicalPCs_only.rds \
 
-# # Script 07
-# pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/07_module_detection.R \
-#   --project_root /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria \
-#   --regions_file /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08/Filtered_Regions.txt \
-#   --input_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Adjusted_Region_Methylation_allPCs.rds \
-#   --softpower_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/SoftPower_pearson.rds \
-#   --input_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds \
-#   --softpower_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/SoftPower_pearson.rds \
-#   --input_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Adjusted_Region_Methylation_technicalPCs_only.rds \
-#   --softpower_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/SoftPower_pearson.rds \
-#   --module_cor pearson \
-#   --deep_split 2 \
-#   --min_module_size 50 \
-#   --merge_cut_height 0.2 \
-#   --max_block_size 40000 \
-#   --threads 50
+# Script 07
+pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/07_module_detection.R \
+  --project_root /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria \
+  --regions_file /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08/Filtered_Regions.txt \
+  --input_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Adjusted_Region_Methylation_allPCs.rds \
+  --softpower_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/SoftPower_pearson.rds \
+  --input_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds \
+  --softpower_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/SoftPower_pearson.rds \
+  --module_cor pearson \
+  --deep_split 2 \
+  --min_module_size 25 \
+  --merge_cut_height 0.2 \
+  --max_block_size 40000 \
+  --threads 50
 
-# # Script 08
-# pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/08_module__sample_diagnostics.R \
-#   --project_root /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria \
-#   --modules_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds \
-#   --modules_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds \
-#   --modules_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Modules.rds \
-#   --module_cor pearson \
-#   --sample_dendro_distance euclidean \
-#   --sample_info /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx
+  # --input_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Adjusted_Region_Methylation_technicalPCs_only.rds \
+  # --softpower_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/SoftPower_pearson.rds \
 
+# Script 08
+pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/08_module__sample_diagnostics.R \
+  --project_root /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria \
+  --modules_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds \
+  --modules_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds \
+  --module_cor pearson \
+  --sample_dendro_distance euclidean \
+  --sample_info /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx
+
+#  --modules_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Modules.rds \
  
-# #script 09a
-# pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/09a_me_trait_analysis.R \
-#   --project_root /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria \
-#   --sample_info /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx \
-#   --modules_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds \
-#   --modules_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds \
-#   --modules_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Modules.rds \
-#   --run_bicor TRUE \
-#   --p_thresh 0.05 \
-#   --top_n 25 \
-#   --module_dendro_distance bicor \
+#script 09a
+pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/09a_me_trait_analysis.R \
+  --project_root /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria \
+  --sample_info /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx \
+  --modules_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds \
+  --modules_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds \
+  --run_bicor TRUE \
+  --p_thresh 0.05 \
+  --top_n 25 \
+  --module_dendro_distance bicor \
+
+#  --modules_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Modules.rds \
 
 #script 09b
 pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/09b_me_trait_presentation_heatmaps.R \
@@ -175,28 +180,29 @@ pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Vic
   --modules_rds /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds \
   --stats_file_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/ME_Trait_Correlation_Stats_Bicor.tsv \
   --modules_rds_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds \
-  --stats_file_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/ME_Trait_Correlation_Stats_Bicor.tsv \
-  --modules_rds_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Modules.rds \
   --set_dir /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/presentation_sets \
   --p_thresh 0.05 \
+  --focused_width 15 \
+  --focused_height 11 \
   --top_n 25
 
+  # --modules_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Modules.rds \
 
-# # #Script 10
-# pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/10_circos_and_module_summaries.R \
-#   --project_root /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria \
-#   --modules_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds \
-#   --modules_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds \
+# #Script 10
+pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/10_circos_and_module_summaries.R \
+  --project_root /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria \
+  --modules_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds \
+  --modules_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds \
+  --genome hg38 \
+  --single_module_color red \
+  --all_modules_width 4.0 \
+  --all_modules_height 4.0 \
+  --single_module_width 5.5 \
+  --single_module_height 5.5 \
+  --counts_width 7 \
+  --counts_height 6
+
 #   --modules_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Modules.rds \
-#   --genome hg38 \
-#   --single_module_color red \
-#   --all_modules_width 4.0 \
-#   --all_modules_height 4.0 \
-#   --single_module_width 5.5 \
-#   --single_module_height 5.5 \
-#   --counts_width 7 \
-#   --counts_height 6
-
 
 # #Script 11
 #v1
@@ -223,38 +229,37 @@ pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Vic
   --cat_plot_style violin \
   --top_n_pairs 50
 
-#v3
-pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/11_me_trait_pair_plots.R \
-  --project_root /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria \
-  --modules_rds /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Modules.rds \
-  --stats_file /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/ME_Trait_Correlation_Stats_Bicor.tsv \
-  --sample_info /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx \
-  --set_dir /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/presentation_sets \
-  --p_thresh 0.05 \
-  --only_significant TRUE \
-  --cat_plot_style violin \
-  --top_n_pairs 50
-
-# #script 12a
-# pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/12a_annotate_modules.R \
+# #v3
+# pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/11_me_trait_pair_plots.R \
 #   --project_root /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria \
+#   --modules_rds /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Modules.rds \
+#   --stats_file /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/ME_Trait_Correlation_Stats_Bicor.tsv \
 #   --sample_info /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx \
-#   --modules_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds \
-#   --modules_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds \
-#   --modules_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Modules.rds \
-#   --genome hg38 \
-#   --annotation_mode auto
+#   --set_dir /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/presentation_sets \
+#   --p_thresh 0.05 \
+#   --only_significant TRUE \
+#   --cat_plot_style violin \
+#   --top_n_pairs 50
+
+#script 12a
+pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/12a_annotate_modules.R \
+  --project_root /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria \
+  --sample_info /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx \
+  --modules_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds \
+  --modules_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds \
+  --genome hg38 \
+  --annotation_mode auto
+
+  # --modules_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Modules.rds \
 
 #script 12b
 pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/12b_enrichment.R \
   --project_root /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria \
   --annotation_dir_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs \
   --annotation_dir_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs \
-  --annotation_dir_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only \
   --trait_list_file /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/presentation_sets \
   --stats_file_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/ME_Trait_Correlation_Stats_Bicor.tsv \
   --stats_file_v2 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/ME_Trait_Correlation_Stats_Bicor.tsv \
-  --stats_file_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/ME_Trait_Correlation_Stats_Bicor.tsv \
   --p_thresh 0.05 \
   --do_kegg false \
   --do_go false \
@@ -267,6 +272,9 @@ pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Vic
   --plot_p_col pvalue \
   --plot_top_n 8 \
   --plot_sig_cutoff 0.05
+
+#   --annotation_dir_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only \
+#   --stats_file_v3 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/ME_Trait_Correlation_Stats_Bicor.tsv \
 
 
 # # Script 13a

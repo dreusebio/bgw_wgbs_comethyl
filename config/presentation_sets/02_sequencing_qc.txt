@@ -1,0 +1,10 @@
+Percent_CpG_Methylated
+Percent_Duplicated_Reads
+Percent_Deduplicated_reads
+Percent_Duplicate_Reads
+Aligned_Uniquely
+Aligned_Ambiguously
+Aligned_Reads_Total
+Mapping_Efficiency
+Percent_Aligned_Total
+Total_Reads
