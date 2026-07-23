@@ -1,0 +1,143 @@
+[workspace]
+name = "growell-wgbs-dmrichr"
+version = "0.1.0"
+authors = ["George Eusebio Kuodza <gekuodza@health.ucdavis.edu>"]
+channels = ["conda-forge", "bioconda"]
+platforms = ["linux-64", "osx-64"]
+
+[tasks]
+check-pkgconfig = "pkg-config --modversion cairo freetype2 fontconfig expat"
+install-gdtools = "Rscript -e 'install.packages(\"gdtools\", repos=\"https://cloud.r-project.org\")'"
+test-gdtools    = "Rscript -e 'packageVersion(\"gdtools\")'"
+install-dmrichr = "Rscript install_dmrichr.R"
+test-r          = "Rscript -e 'sessionInfo()'"
+test-dmrichr    = "Rscript -e 'library(DMRichR); packageVersion(\"DMRichR\")'"
+install-lpa-pkgs = """Rscript -e '
+  cran_pkgs <- c("tidyLPA", "rcompanion", "FSA")
+  for (pkg in cran_pkgs) {
+    if (!requireNamespace(pkg, quietly = TRUE)) {
+      message("Installing: ", pkg)
+      install.packages(pkg, repos = "https://cloud.r-project.org")
+    } else {
+      message("Already installed: ", pkg)
+    }
+  }
+'"""
+check-lpa-pkgs = """Rscript -e '
+  pkgs <- c(
+    "tidyLPA", "here", "tidyverse", "writexl", "lubridate",
+    "ggpubr", "rstatix", "FSA", "patchwork", "car", "rcompanion",
+    "ggplot2", "readxl", "openxlsx", "magrittr"
+  )
+  missing  <- pkgs[!sapply(pkgs, requireNamespace, quietly = TRUE)]
+  ok       <- pkgs[sapply(pkgs, requireNamespace, quietly = TRUE)]
+  cat("OK:     ", paste(ok,      collapse = ", "), "\n")
+  cat("MISSING:", paste(missing, collapse = ", "), "\n")
+  if (length(missing) > 0) stop("Some packages are missing.")
+'"""
+
+[dependencies]
+# system tools
+git        = "*"
+curl       = "*"
+wget       = "*"
+pandoc     = "*"
+pkg-config = "*"
+make       = "*"
+gcc        = "*"
+gxx        = "*"
+
+# C/graphics libraries needed for R package compilation
+libpng     = "*"
+freetype   = "*"
+fontconfig = "*"
+cairo      = "*"
+expat      = "*"
+harfbuzz   = "*"   # <-- ADD: needed by systemfonts/textshaping
+libxml2    = "*"   # <-- ADD: needed by many R packages
+
+
+r-gdtools = "*"      # conda-forge has pre-built binary — no compilation needed
+r-systemfonts = "*"  # same
+r-textshaping = "*"  # often needed alongside
+
+# R base + package management
+r-base        = "4.2.*"
+r-biocmanager = "*"
+r-remotes     = "*"
+r-optparse    = "*"
+
+# tidyverse / CRAN
+r-tidyverse          = "*"
+r-openxlsx           = "*"
+r-readxl             = "*"
+r-readr              = "*"
+r-pheatmap           = "*"
+r-gplots             = "*"
+r-rcolorbrewer       = "*"
+"r-data.table"       = "*"
+r-hmisc              = "*"
+r-magrittr           = "*"
+r-rlang              = "*"
+r-tidyselect         = "*"
+r-glue               = "*"
+r-viridis            = "*"
+r-ggsci              = "*"
+r-gt                 = "*"
+r-broom              = "*"
+r-cmplot             = "*"
+r-boruta             = "*"
+r-enrichr            = "*"
+r-performanceanalytics = "*"
+r-lsmeans            = "*"
+r-r2html             = "*"
+r-wesanderson        = "*"
+
+# LPA analysis packages
+r-here               = "*"
+r-writexl            = "*"
+r-lubridate          = "*"
+r-ggpubr             = "*"
+r-rstatix            = "*"
+r-fsa                = "*"
+r-patchwork          = "*"
+r-car                = "*"
+r-rcompanion         = "*"
+
+# Bioconductor core
+bioconductor-pcatools          = "*"
+bioconductor-biocgenerics      = "*"
+bioconductor-biobase           = "*"
+bioconductor-iranges           = "*"
+bioconductor-s4vectors         = "*"
+bioconductor-genomeinfodb      = "*"
+bioconductor-genomicranges     = "*"
+bioconductor-rtracklayer       = "*"
+bioconductor-annotationhub     = "*"
+bioconductor-biocparallel      = "*"
+bioconductor-plyranges         = "*"
+bioconductor-ensembldb         = "*"
+bioconductor-genomicfeatures   = "*"
+bioconductor-delayedmatrixstats = "*"
+bioconductor-bsseq             = "*"
+bioconductor-dmrseq            = "*"
+bioconductor-minfi             = "*"
+bioconductor-chipseeker        = "*"
+bioconductor-glimma            = "*"
+bioconductor-lola              = "*"
+bioconductor-rgreat            = "*"
+bioconductor-rrvgo             = "*"
+bioconductor-sigfeature        = "*"
+bioconductor-gofuncr           = "*"
+
+# Annotation packages
+"bioconductor-org.hs.eg.db"                    = "*"
+"bioconductor-txdb.hsapiens.ucsc.hg38.knowngene" = "*"
+"bioconductor-txdb.hsapiens.ucsc.hg19.knowngene" = "*"
+"bioconductor-go.db"                           = "*"
+r-matrixstats = "1.1.0.*"
+
+[activation.env]
+PKG_CONFIG_PATH = "$CONDA_PREFIX/lib/pkgconfig:$CONDA_PREFIX/share/pkgconfig"
+INCLUDE_DIR     = "$CONDA_PREFIX/include"
+LIB_DIR         = "$CONDA_PREFIX/lib"

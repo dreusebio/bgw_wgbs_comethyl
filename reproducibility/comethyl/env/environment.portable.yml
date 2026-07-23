@@ -1,0 +1,29 @@
+name: comethyl
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  - python
+  - pip
+  - pandoc
+  - longshot
+
+  - r-base=4.3
+  - r-tidyverse
+  - r-essentials
+  - r-openxlsx
+  - r-cowplot
+  - r-patchwork
+  - r-magrittr
+  - r-stringr
+  - r-ggplot2
+
+  - bioconductor-biomart
+  - bioconductor-clusterprofiler
+  - bioconductor-dose
+  - bioconductor-enrichplot
+  - bioconductor-fgsea
+  - bioconductor-genomicranges
+  - bioconductor-rgreat
