@@ -6337,3 +6337,156 @@ JobId=19121054 JobName=Cometh_BGW
 Mon Jul 27 11:22:24 AM PDT 2026
 R version: R version 4.3.3 (2024-02-29) 
 comethyl OK
+Loaded sample_info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc.xlsx
+sample_info dimensions: 48 x 54
+No sample_id_col provided.
+[2026-07-27 11:25:34] Starting annotation for variant: v1_all_pcs 
+[2026-07-27 11:25:34] modules_path: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds 
+[2026-07-27 11:25:34] pipeline_root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output 
+[2026-07-27 11:25:34] step_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation 
+[2026-07-27 11:25:34] cpg_label: cov3_75pct 
+[2026-07-27 11:25:34] region_label: covMin4_methSD0p08 
+[2026-07-27 11:25:34] variant_name: v1_all_pcs 
+[2026-07-27 11:25:34] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs 
+[2026-07-27 11:25:34] genome: hg38 
+[2026-07-27 11:25:34] annotation_mode: offline 
+[2026-07-27 11:25:34] add_genomic_location: TRUE 
+[2026-07-27 11:25:34] txdb_pkg: (auto-resolved from genome=hg38) 
+[2026-07-27 11:25:34] cpg_island_file: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz 
+[2026-07-27 11:25:34] sample_info rows: 48; cols: 54 
+[2026-07-27 11:25:34] sample_id_col: (not provided) 
+[2026-07-27 11:25:36] Loaded regions: 461153 
+[2026-07-27 11:25:36] Unique modules: 62 
+[2026-07-27 11:27:03] Annotated regions rows: 461153 
+[2026-07-27 11:27:03] Regions with genomic_location: 461153 
+[2026-07-27 11:27:03] Regions with cpg_context: 461153 
+[2026-07-27 11:27:51] Wrote genic enrichment table + plot (427 module x category tests) 
+[2026-07-27 11:27:52] Wrote CpG enrichment table + plot (244 module x category tests) 
+[2026-07-27 11:27:53] Module gene list rows: 27300 
+[2026-07-27 11:27:53] Module summary rows: 62 
+[2026-07-27 11:27:53] Background genes: 22117 
+[2026-07-27 11:28:04] Wrote: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/session_info.txt 
+[2026-07-27 11:28:04] Finished annotation for variant: v1_all_pcs 
+[2026-07-27 11:28:05] Starting annotation for variant: v2_exclude_protected_pcs 
+[2026-07-27 11:28:05] modules_path: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds 
+[2026-07-27 11:28:05] pipeline_root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output 
+[2026-07-27 11:28:05] step_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation 
+[2026-07-27 11:28:05] cpg_label: cov3_75pct 
+[2026-07-27 11:28:05] region_label: covMin4_methSD0p08 
+[2026-07-27 11:28:05] variant_name: v2_exclude_protected_pcs 
+[2026-07-27 11:28:05] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs 
+[2026-07-27 11:28:05] genome: hg38 
+[2026-07-27 11:28:05] annotation_mode: offline 
+[2026-07-27 11:28:05] add_genomic_location: TRUE 
+[2026-07-27 11:28:05] txdb_pkg: (auto-resolved from genome=hg38) 
+[2026-07-27 11:28:05] cpg_island_file: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz 
+[2026-07-27 11:28:05] sample_info rows: 48; cols: 54 
+[2026-07-27 11:28:05] sample_id_col: (not provided) 
+[2026-07-27 11:28:06] Loaded regions: 461153 
+[2026-07-27 11:28:06] Unique modules: 43 
+[2026-07-27 11:28:34] Annotated regions rows: 461153 
+[2026-07-27 11:28:35] Regions with genomic_location: 461153 
+[2026-07-27 11:28:35] Regions with cpg_context: 461153 
+[2026-07-27 11:29:21] Wrote genic enrichment table + plot (294 module x category tests) 
+[2026-07-27 11:29:23] Wrote CpG enrichment table + plot (168 module x category tests) 
+[2026-07-27 11:29:25] Module gene list rows: 50339 
+[2026-07-27 11:29:25] Module summary rows: 43 
+[2026-07-27 11:29:25] Background genes: 22117 
+[2026-07-27 11:29:35] Wrote: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/session_info.txt 
+[2026-07-27 11:29:35] Finished annotation for variant: v2_exclude_protected_pcs 
+[2026-07-27 11:31:01] project_root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria 
+[2026-07-27 11:31:01] filtered_regions: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08/Filtered_Regions.txt 
+[2026-07-27 11:31:01] methylation_matrix (raw): /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/03_region_methylation/cov3_75pct/covMin4_methSD0p08/Region_Methylation.rds 
+[2026-07-27 11:31:01] methylation_matrix_v1: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Adjusted_Region_Methylation_allPCs.rds 
+[2026-07-27 11:31:01] methylation_matrix_v2: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds 
+[2026-07-27 11:31:01] modules_v1: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds 
+[2026-07-27 11:31:01] modules_v2: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds 
+[2026-07-27 11:31:01] genome: hg38 
+[2026-07-27 11:31:01] annotation_mode: offline 
+[2026-07-27 11:31:01] add_genomic_location: TRUE 
+[2026-07-27 11:31:01] txdb_pkg: (auto-resolved from genome=hg38) 
+[2026-07-27 11:31:01] cpg_island_file: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz 
+[2026-07-27 11:31:01] base_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12c_region_methylation_matrix_annotation/cov3_75pct/covMin4_methSD0p08 
+[2026-07-27 11:31:01] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12c_region_methylation_matrix_annotation/cov3_75pct/covMin4_methSD0p08/Region_Annotation 
+[2026-07-27 11:31:10] Loaded filtered_regions rows: 461153 
+[2026-07-27 11:31:14] OK [raw]: all RegionIDs found in filtered_regions 
+[2026-07-27 11:31:18] NOTE [v1_all_pcs]: matrix looks like samples-in-rows/regions-in-columns (461153 of 461153 column names match RegionIDs vs 0 of 48 row names). Transposing to regions-in-rows. 
+[2026-07-27 11:31:20] OK [v1_all_pcs]: all RegionIDs found in filtered_regions 
+[2026-07-27 11:31:24] NOTE [v2_exclude_protected_pcs]: matrix looks like samples-in-rows/regions-in-columns (461153 of 461153 column names match RegionIDs vs 0 of 48 row names). Transposing to regions-in-rows. 
+[2026-07-27 11:31:25] OK [v2_exclude_protected_pcs]: all RegionIDs found in filtered_regions 
+[2026-07-27 11:32:24] Annotated regions rows: 461153 
+[2026-07-27 11:32:24] Regions with a gene_symbol: 460861 
+[2026-07-27 11:32:24] Regions with genomic_location: 461153 
+[2026-07-27 11:32:24] Regions with cpg_context: 461153 
+[2026-07-27 11:32:47] Wrote: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12c_region_methylation_matrix_annotation/cov3_75pct/covMin4_methSD0p08/Region_Annotation/Region_Gene_Annotation.tsv 
+[2026-07-27 11:32:48] Wrote: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12c_region_methylation_matrix_annotation/cov3_75pct/covMin4_methSD0p08/Region_Annotation/Region_Gene_Annotation.xlsx 
+[2026-07-27 11:32:49] modules_v1: 461153 regions have a module assignment; 461153 of 461153 filtered_regions rows have a matching module (rest = NA, e.g. grey/unassigned or excluded during module detection) 
+[2026-07-27 11:32:51] modules_v2: 461153 regions have a module assignment; 461153 of 461153 filtered_regions rows have a matching module (rest = NA, e.g. grey/unassigned or excluded during module detection) 
+[2026-07-27 11:32:54] raw: regions matched to sample methylation values: 461153 of 461153 
+[2026-07-27 11:33:17] Wrote: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12c_region_methylation_matrix_annotation/cov3_75pct/covMin4_methSD0p08/Region_Annotation_with_Methylation.tsv 
+[2026-07-27 11:33:18] Skipped raw .xlsx (62 columns x 461153 rows -- large and slow as .xlsx). Use the .tsv, or pass --write_methylation_xlsx TRUE to force it. 
+[2026-07-27 11:33:18] v1_all_pcs: excluded 455036 grey-module regions (6117 of 461153 remain) 
+[2026-07-27 11:33:19] v1_all_pcs: regions matched to sample methylation values: 6117 of 6117 
+[2026-07-27 11:33:20] Wrote: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12c_region_methylation_matrix_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Region_Annotation_with_Methylation.tsv 
+[2026-07-27 11:33:21] Skipped v1_all_pcs .xlsx (63 columns x 6117 rows -- large and slow as .xlsx). Use the .tsv, or pass --write_methylation_xlsx TRUE to force it. 
+[2026-07-27 11:33:21] v2_exclude_protected_pcs: excluded 330899 grey-module regions (130254 of 461153 remain) 
+[2026-07-27 11:33:22] v2_exclude_protected_pcs: regions matched to sample methylation values: 130254 of 130254 
+[2026-07-27 11:33:30] Wrote: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12c_region_methylation_matrix_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Region_Annotation_with_Methylation.tsv 
+[2026-07-27 11:33:30] Skipped v2_exclude_protected_pcs .xlsx (63 columns x 130254 rows -- large and slow as .xlsx). Use the .tsv, or pass --write_methylation_xlsx TRUE to force it. 
+[2026-07-27 11:33:40] Wrote: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12c_region_methylation_matrix_annotation/cov3_75pct/covMin4_methSD0p08/Region_Annotation/session_info.txt 
+Run completed in 678 seconds
+Mon Jul 27 11:33:41 AM PDT 2026
+
+############### Job 19257490 summary from  ###############
+Name                : Cometh_BGW
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-5-50
+Cores               : 59
+GPUs                : 0
+State               : COMPLETED
+ExitCode            : 0:0
+Submit              : 2026-07-27T11:22:13
+Start               : 2026-07-27T11:22:23
+End                 : 2026-07-27T11:33:41
+Reserved walltime   : 3-00:00:00
+Used walltime       :   00:11:18
+Used CPU time       :   00:06:23
+% User (Computation): 95.81%
+% System (I/O)      :  4.19%
+Mem reserved        : 500G
+Max Mem used        : 5.16G (hive-dc-7-5-50)
+Max Disk Write      : 1.94G (hive-dc-7-5-50)
+Max Disk Read       : 2.40G (hive-dc-7-5-50)
+
+############### Job 19257490 info ###############
+JobId=19257490 JobName=Cometh_BGW
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8044 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:11:18 TimeLimit=3-00:00:00 TimeMin=N/A
+   SubmitTime=2026-07-27T11:22:13 EligibleTime=2026-07-27T11:22:13
+   AccrueTime=2026-07-27T11:22:13
+   StartTime=2026-07-27T11:22:23 EndTime=2026-07-27T11:33:41 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-07-27T11:22:23 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-8-30:2472952
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-5-50
+   BatchHost=hive-dc-7-5-50
+   NumNodes=1 NumCPUs=59 NumTasks=1 CPUs/Task=59 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=59,mem=500G,node=1,billing=59
+   AllocTRES=cpu=59,mem=500G,node=1,billing=59
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=59 MinMemoryNode=500G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria
+   StdErr=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=59
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT

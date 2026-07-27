@@ -8172,3 +8172,63 @@ Starting Script 12c: Annotate Region Matrix
 Script 12c complete: Region matrix annotation finished
 
 
+Starting Script 12a
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[genomic_location] Running ChIPseeker::annotatePeak(overlap = "all") with TxDb.Hsapiens.UCSC.hg38.knownGene
+[genomic_location] ChIPseeker returned 461153 unique region rows for 461153 input regions
+[genomic_location] 461153 of 461153 regions have a genomic_location after join
+[cpg] Loaded 32038 CpG islands from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+[cpg] Building CpG shores...
+[cpg] Building CpG shelves...
+[cpg] Building open sea (inter-CGI)...
+[cpg] islands=27949 shores=50647 shelves=42729 inter=20031
+[cpg] Island=1962 Shore=17726 Shelf=16955 OpenSea=429602
+[enrich] Genic enrichment: 61 modules x 7 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Genic_Enrichment.pdf
+[enrich] CpG enrichment: 61 modules x 4 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_CpG_Enrichment.pdf
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[genomic_location] Running ChIPseeker::annotatePeak(overlap = "all") with TxDb.Hsapiens.UCSC.hg38.knownGene
+[genomic_location] ChIPseeker returned 461153 unique region rows for 461153 input regions
+[genomic_location] 461153 of 461153 regions have a genomic_location after join
+[cpg] Loaded 32038 CpG islands from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+[cpg] Building CpG shores...
+[cpg] Building CpG shelves...
+[cpg] Building open sea (inter-CGI)...
+[cpg] islands=27949 shores=50647 shelves=42729 inter=20031
+[cpg] Island=1962 Shore=17726 Shelf=16955 OpenSea=429602
+[enrich] Genic enrichment: 42 modules x 7 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Genic_Enrichment.pdf
+[enrich] CpG enrichment: 42 modules x 4 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_CpG_Enrichment.pdf
+Script 12a complete: Annotate Modules finished
+Starting Script 12c: Annotate Region Matrix
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[genomic_location] Running ChIPseeker::annotatePeak(overlap = "all") with TxDb.Hsapiens.UCSC.hg38.knownGene
+[genomic_location] ChIPseeker returned 461153 unique region rows for 461153 input regions
+[genomic_location] 461153 of 461153 regions have a genomic_location after join
+[cpg] Loaded 32038 CpG islands from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+[cpg] Building CpG shores...
+[cpg] Building CpG shelves...
+[cpg] Building open sea (inter-CGI)...
+[cpg] islands=27949 shores=50647 shelves=42729 inter=20031
+[cpg] Island=1962 Shore=17726 Shelf=16955 OpenSea=429602
+Script 12c complete: Region matrix annotation finished

@@ -302,7 +302,10 @@ pixi run --manifest-path /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_come
   --genome hg38 \
   --annotation_mode offline \
   --helper_file /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/helper.R \
+  --exclude_grey_module TRUE \
   --cpg_island_file /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+
+
 # # Script 13a
 # pixi run Rscript /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/13A_core_regulatory_state_overlap.R \
 #   --project_root /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria \
