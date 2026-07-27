@@ -7787,3 +7787,388 @@ Running config [list: growth_dynamics6to12]
 Running config [list: zscores]
 ======================================================
 There were 50 or more warnings (use warnings() to see the first 50)
+
+
+Starting Script 12a
+Error: helper.R not found at: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/reproducibility/pixi/helper.R
+Pass --helper_file /path/to/helper.R if it lives elsewhere.
+Execution halted
+
+
+Starting Script 12a
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[cpg] Loaded 32038 CpG islands from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+[cpg] Building CpG shores...
+[cpg] Building CpG shelves...
+[cpg] Building open sea (inter-CGI)...
+[cpg] islands=27949 shores=50647 shelves=42729 inter=20031
+[cpg] Island=1962 Shore=17726 Shelf=16955 OpenSea=429602
+[enrich] Genic enrichment: 61 modules x 7 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Genic_Enrichment.pdf
+[enrich] CpG enrichment: 61 modules x 4 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_CpG_Enrichment.pdf
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[cpg] Loaded 32038 CpG islands from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+[cpg] Building CpG shores...
+[cpg] Building CpG shelves...
+[cpg] Building open sea (inter-CGI)...
+[cpg] islands=27949 shores=50647 shelves=42729 inter=20031
+[cpg] Island=1962 Shore=17726 Shelf=16955 OpenSea=429602
+[enrich] Genic enrichment: 42 modules x 7 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Genic_Enrichment.pdf
+[enrich] CpG enrichment: 42 modules x 4 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_CpG_Enrichment.pdf
+Script 12a complete: Annotate Modules finished
+Starting Script 12b
+
+======================================================
+Running config [list: 00_presentation_variables_categorized]
+======================================================
+
+--- Enriching module: thistle1 (30 genes) ---
+[thistle1] Enrichr...
+[foreground] input n=30 -> cleaned unique n=30
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: thistle1
+[Enrichr] Saved: thistle1_enrichr.xlsx
+[Enrichr] Plot saved: thistle1_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: thistle1_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: thistle1_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: thistle1_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: thistle1_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: thistle1_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: red (301 genes) ---
+[red] Enrichr...
+[foreground] input n=301 -> cleaned unique n=301
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: red
+[Enrichr] Saved: red_enrichr.xlsx
+[Enrichr] Plot saved: red_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: red_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: red_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: red_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: red_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: red_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: darkgreen (68 genes) ---
+[darkgreen] Enrichr...
+[foreground] input n=68 -> cleaned unique n=68
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkgreen
+[Enrichr] Saved: darkgreen_enrichr.xlsx
+[Enrichr] Plot saved: darkgreen_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: grey60 (15 genes) ---
+[grey60] Enrichr...
+[foreground] input n=15 -> cleaned unique n=15
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: grey60
+[Enrichr] Saved: grey60_enrichr.xlsx
+[Enrichr] Plot saved: grey60_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: grey60_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: grey60_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: grey60_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: blue (360 genes) ---
+[blue] Enrichr...
+[foreground] input n=360 -> cleaned unique n=360
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+[Enrichr] Plot saved: blue_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: blue_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: sienna3 (50 genes) ---
+[sienna3] Enrichr...
+[foreground] input n=50 -> cleaned unique n=50
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: sienna3
+[Enrichr] Saved: sienna3_enrichr.xlsx
+[Enrichr] Plot saved: sienna3_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: sienna3_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: sienna3_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: sienna3_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: sienna3_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: sienna3_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: lightcyan (85 genes) ---
+[lightcyan] Enrichr...
+[foreground] input n=85 -> cleaned unique n=85
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightcyan
+[Enrichr] Saved: lightcyan_enrichr.xlsx
+[Enrichr] Plot saved: lightcyan_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: lightcyan_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: lightcyan_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: lightcyan_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: lightcyan_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: lightcyan_enrichr_ClinVar_2025.pdf
+[2026-07-23T17:25:54.797] error: *** JOB 19117887 ON hive-dc-7-6-26 CANCELLED AT 2026-07-23T17:25:54 DUE to SIGNAL Terminated ***
+
+
+Starting Script 12a
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[cpg] Loaded 32038 CpG islands from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+[cpg] Building CpG shores...
+[cpg] Building CpG shelves...
+[cpg] Building open sea (inter-CGI)...
+[cpg] islands=27949 shores=50647 shelves=42729 inter=20031
+[cpg] Island=1962 Shore=17726 Shelf=16955 OpenSea=429602
+[enrich] Genic enrichment: 61 modules x 7 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Genic_Enrichment.pdf
+[enrich] CpG enrichment: 61 modules x 4 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_CpG_Enrichment.pdf
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[cpg] Loaded 32038 CpG islands from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+[cpg] Building CpG shores...
+[cpg] Building CpG shelves...
+[cpg] Building open sea (inter-CGI)...
+[cpg] islands=27949 shores=50647 shelves=42729 inter=20031
+[cpg] Island=1962 Shore=17726 Shelf=16955 OpenSea=429602
+[enrich] Genic enrichment: 42 modules x 7 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Genic_Enrichment.pdf
+[enrich] CpG enrichment: 42 modules x 4 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_CpG_Enrichment.pdf
+Script 12a complete: Annotate Modules finished
+Starting Script 12c: Annotate Region Matrix
+[2026-07-23T17:36:02.391] error: *** JOB 19118319 ON hive-dc-7-6-62 CANCELLED AT 2026-07-23T17:36:02 DUE to SIGNAL Terminated ***
+
+
+Starting Script 12a
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[cpg] Loaded 32038 CpG islands from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+[cpg] Building CpG shores...
+[cpg] Building CpG shelves...
+[cpg] Building open sea (inter-CGI)...
+[cpg] islands=27949 shores=50647 shelves=42729 inter=20031
+[cpg] Island=1962 Shore=17726 Shelf=16955 OpenSea=429602
+[enrich] Genic enrichment: 61 modules x 7 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Genic_Enrichment.pdf
+[enrich] CpG enrichment: 61 modules x 4 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_CpG_Enrichment.pdf
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[cpg] Loaded 32038 CpG islands from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+[cpg] Building CpG shores...
+[cpg] Building CpG shelves...
+[cpg] Building open sea (inter-CGI)...
+[cpg] islands=27949 shores=50647 shelves=42729 inter=20031
+[cpg] Island=1962 Shore=17726 Shelf=16955 OpenSea=429602
+[enrich] Genic enrichment: 42 modules x 7 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Genic_Enrichment.pdf
+[enrich] CpG enrichment: 42 modules x 4 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_CpG_Enrichment.pdf
+Script 12a complete: Annotate Modules finished
+Starting Script 12c: Annotate Region Matrix
+Error: helper.R not found at: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/reproducibility/pixi/helper.R
+Pass --helper_file /path/to/helper.R if it lives elsewhere.
+Execution halted
+
+
+Starting Script 12a
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[genomic_location] 0 of 461153 regions have a genomic_location after join
+[cpg] Loaded 32038 CpG islands from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+[cpg] Building CpG shores...
+[cpg] Building CpG shelves...
+[cpg] Building open sea (inter-CGI)...
+[cpg] islands=27949 shores=50647 shelves=42729 inter=20031
+[cpg] Island=1962 Shore=17726 Shelf=16955 OpenSea=429602
+[enrich] Genic enrichment: 61 modules x 7 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Genic_Enrichment.pdf
+[enrich] CpG enrichment: 61 modules x 4 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_CpG_Enrichment.pdf
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[genomic_location] 0 of 461153 regions have a genomic_location after join
+[cpg] Loaded 32038 CpG islands from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+[cpg] Building CpG shores...
+[cpg] Building CpG shelves...
+[cpg] Building open sea (inter-CGI)...
+[cpg] islands=27949 shores=50647 shelves=42729 inter=20031
+[cpg] Island=1962 Shore=17726 Shelf=16955 OpenSea=429602
+[enrich] Genic enrichment: 42 modules x 7 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Genic_Enrichment.pdf
+[enrich] CpG enrichment: 42 modules x 4 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_CpG_Enrichment.pdf
+Script 12a complete: Annotate Modules finished
+Starting Script 12c: Annotate Region Matrix
+Error: helper.R not found at: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/reproducibility/pixi/helper.R
+Pass --helper_file /path/to/helper.R if it lives elsewhere.
+Execution halted
+
+
+Starting Script 12a
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[genomic_location] SKIPPED -- ChIPseeker not installed/loadable in this environment. Install via: pixi run Rscript -e "BiocManager::install('ChIPseeker')"
+[genomic_location] 0 of 461153 regions have a genomic_location after join
+[cpg] Loaded 32038 CpG islands from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+[cpg] Building CpG shores...
+[cpg] Building CpG shelves...
+[cpg] Building open sea (inter-CGI)...
+[cpg] islands=27949 shores=50647 shelves=42729 inter=20031
+[cpg] Island=1962 Shore=17726 Shelf=16955 OpenSea=429602
+[enrich] Genic enrichment: 61 modules x 7 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Genic_Enrichment.pdf
+[enrich] CpG enrichment: 61 modules x 4 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_CpG_Enrichment.pdf
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[genomic_location] SKIPPED -- ChIPseeker not installed/loadable in this environment. Install via: pixi run Rscript -e "BiocManager::install('ChIPseeker')"
+[genomic_location] 0 of 461153 regions have a genomic_location after join
+[cpg] Loaded 32038 CpG islands from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+[cpg] Building CpG shores...
+[cpg] Building CpG shelves...
+[cpg] Building open sea (inter-CGI)...
+[cpg] islands=27949 shores=50647 shelves=42729 inter=20031
+[cpg] Island=1962 Shore=17726 Shelf=16955 OpenSea=429602
+[enrich] Genic enrichment: 42 modules x 7 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Genic_Enrichment.pdf
+[enrich] CpG enrichment: 42 modules x 4 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_CpG_Enrichment.pdf
+Script 12a complete: Annotate Modules finished
+Starting Script 12c: Annotate Region Matrix
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[genomic_location] SKIPPED -- ChIPseeker not installed/loadable in this environment. Install via: pixi run Rscript -e "BiocManager::install('ChIPseeker')"
+[genomic_location] 0 of 461153 regions have a genomic_location after join
+[cpg] Loaded 32038 CpG islands from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+[cpg] Building CpG shores...
+[cpg] Building CpG shelves...
+[cpg] Building open sea (inter-CGI)...
+[cpg] islands=27949 shores=50647 shelves=42729 inter=20031
+[cpg] Island=1962 Shore=17726 Shelf=16955 OpenSea=429602
+Script 12c complete: Region matrix annotation finished
+
+
+Starting Script 12a
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[genomic_location] SKIPPED -- ChIPseeker not installed/loadable in this environment. Install via: pixi run Rscript -e "BiocManager::install('ChIPseeker')"
+[genomic_location] 0 of 461153 regions have a genomic_location after join
+[cpg] Loaded 32038 CpG islands from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+[cpg] Building CpG shores...
+[cpg] Building CpG shelves...
+[cpg] Building open sea (inter-CGI)...
+[cpg] islands=27949 shores=50647 shelves=42729 inter=20031
+[cpg] Island=1962 Shore=17726 Shelf=16955 OpenSea=429602
+[enrich] Genic enrichment: 61 modules x 7 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_Genic_Enrichment.pdf
+[enrich] CpG enrichment: 61 modules x 4 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Module_CpG_Enrichment.pdf
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[genomic_location] SKIPPED -- ChIPseeker not installed/loadable in this environment. Install via: pixi run Rscript -e "BiocManager::install('ChIPseeker')"
+[genomic_location] 0 of 461153 regions have a genomic_location after join
+[cpg] Loaded 32038 CpG islands from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+[cpg] Building CpG shores...
+[cpg] Building CpG shelves...
+[cpg] Building open sea (inter-CGI)...
+[cpg] islands=27949 shores=50647 shelves=42729 inter=20031
+[cpg] Island=1962 Shore=17726 Shelf=16955 OpenSea=429602
+[enrich] Genic enrichment: 42 modules x 7 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_Genic_Enrichment.pdf
+[enrich] CpG enrichment: 42 modules x 4 categories
+[plot] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Module_CpG_Enrichment.pdf
+Script 12a complete: Annotate Modules finished
+Starting Script 12c: Annotate Region Matrix
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[genomic_location] SKIPPED -- ChIPseeker not installed/loadable in this environment. Install via: pixi run Rscript -e "BiocManager::install('ChIPseeker')"
+[genomic_location] 0 of 461153 regions have a genomic_location after join
+[cpg] Loaded 32038 CpG islands from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/cpgIslandExt.txt.gz
+[cpg] Building CpG shores...
+[cpg] Building CpG shelves...
+[cpg] Building open sea (inter-CGI)...
+[cpg] islands=27949 shores=50647 shelves=42729 inter=20031
+[cpg] Island=1962 Shore=17726 Shelf=16955 OpenSea=429602
+Script 12c complete: Region matrix annotation finished
+
+
