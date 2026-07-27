@@ -314,7 +314,7 @@ pixi run --manifest-path /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_come
 #   --modules turquoise \
 #   --source roadmap 
 
-  # --annotation_dir_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/covMin4_methSD0p08/v1_all_pcs \
+# --annotation_dir_v1 /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/12_annotation/covMin4_methSD0p08/v1_all_pcs \
 
 # Script 14
 end=$(date +%s)
