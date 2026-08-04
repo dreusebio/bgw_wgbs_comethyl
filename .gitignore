@@ -56,3 +56,4 @@ comethyl_output/
 *.pdf
 !manuscript_pdfs/*.pdf
 !results/*.pdf
+!tests/data

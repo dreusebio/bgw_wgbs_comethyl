@@ -1,0 +1,35 @@
+file	status	reason	runs_present	rows_written	duplicates_removed
+mqc_bismark_alignment_1.txt	merged		run1,run2	294	118
+mqc_bismark_strand_alignment_1.txt	merged		run1,run2	294	118
+mqc_cutadapt_filtered_reads_plot_1.txt	merged		run1,run2	588	276
+mqc_cutadapt_trimmed_sequences_plot_3_Counts.txt	skipped	"read_error:run1:Error tokenizing data. C error: Expected 146 fields in line 5, saw 149
+"	run1,run2	0	0
+mqc_cutadapt_trimmed_sequences_plot_3_Obs_Exp.txt	skipped	"read_error:run1:Error tokenizing data. C error: Expected 146 fields in line 5, saw 149
+"	run1,run2	0	0
+mqc_fastq_screen_bisulfite_plot_Human.txt	merged		run1,run2	587	259
+mqc_fastq_screen_bisulfite_plot_Lambda.txt	merged		run1,run2	587	259
+mqc_fastq_screen_bisulfite_plot_Mouse.txt	merged		run1,run2	587	259
+mqc_fastq_screen_bisulfite_plot_PhiX.txt	merged		run1,run2	68	29
+mqc_fastq_screen_bisulfite_plot_Rat.txt	merged		run1,run2	587	259
+mqc_fastq_screen_bisulfite_plot_Rhesus.txt	merged		run1,run2	587	259
+mqc_fastq_screen_plot_1.txt	merged		run1,run2	587	259
+mqc_fastqc_per_base_n_content_plot_1.txt	merged		run1,run2	1726	0
+mqc_fastqc_per_base_sequence_quality_plot_1.txt	merged		run1,run2	1726	0
+mqc_fastqc_per_sequence_gc_content_plot_Counts.txt	merged		run1,run2	588	276
+mqc_fastqc_per_sequence_gc_content_plot_Percentages.txt	merged		run1,run2	588	276
+mqc_fastqc_per_sequence_quality_scores_plot_1.txt	skipped	"read_error:run1:Error tokenizing data. C error: Expected 29 fields in line 3, saw 32
+"	run1,run2	0	0
+mqc_fastqc_sequence_counts_plot_1.txt	merged		run1,run2	588	276
+mqc_fastqc_sequence_duplication_levels_plot_1.txt	merged		run1,run2	588	276
+mqc_fastqc_sequence_length_distribution_plot_1.txt	merged		run1,run2	1726	0
+multiqc_bismark_alignment.txt	merged		run1,run2	294	118
+multiqc_bismark_dedup.txt	merged		run1,run2	26	5
+multiqc_bismark_methextract.txt	merged		run1,run2	26	5
+multiqc_citations.txt	skipped	not_tabular:run1	run1,run2	0	0
+multiqc_cutadapt.txt	merged		run1,run2	588	276
+multiqc_fastq_screen.txt	merged		run1,run2	587	259
+multiqc_fastqc.txt	merged		run1,run2	588	276
+multiqc_sources.txt	merged		run1,run2	2135	944
+picard_histogram.txt	skipped	not_tabular:run1	run1,run2	0	0
+picard_histogram_1.txt	skipped	not_tabular:run1	run1,run2	0	0
+picard_histogram_2.txt	skipped	not_tabular:run1	run1,run2	0	0

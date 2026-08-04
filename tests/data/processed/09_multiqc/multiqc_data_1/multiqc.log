@@ -1,0 +1,57 @@
+[2025-10-24 12:29:45,095] multiqc                                            [DEBUG  ]  This is MultiQC v1.14
+[2025-10-24 12:29:45,096] multiqc                                            [DEBUG  ]  Command used: /quobyte/lasallegrp/programs/.conda/epigenerator/bin/multiqc . --ignore raw_sequences --ignore 01_raw_sequences
+[2025-10-24 12:29:45,904] multiqc                                            [WARNING]  MultiQC Version v1.31 now available!
+[2025-10-24 12:29:45,905] multiqc                                            [DEBUG  ]  Working dir : /quobyte/lasallegrp/Victoria/Babies_alignments
+[2025-10-24 12:29:45,905] multiqc                                            [DEBUG  ]  Template    : default
+[2025-10-24 12:29:45,905] multiqc                                            [DEBUG  ]  Running Python 3.10.9 | packaged by conda-forge | (main, Feb  2 2023, 20:20:04) [GCC 11.3.0]
+[2025-10-24 12:29:45,905] multiqc                                            [DEBUG  ]  Ignoring files, directories and paths that match: raw_sequences, 01_raw_sequences
+[2025-10-24 12:29:45,905] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, ccs, ngsderive, purple, conpair, lima, peddy, somalier, methylQA, mosdepth, phantompeakqualtools, qualimap, preseq, hifiasm, quast, qorts, rna_seqc, rockhopper, rsem, rseqc, busco, bustools, goleft_indexcov, gffcompare, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, mirtop, sambamba, gopeaks, homer, hops, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, fgbio, dragen, dragen_fastqc, dedup, pbmarkdup, damageprofiler, biobambam2, jcvi, mtnucratio, picard, vep, sentieon, prokka, qc3C, nanostat, samblaster, samtools, sexdeterrmine, eigenstratdatabasetools, bamtools, jellyfish, vcftools, longranger, stacks, varscan2, snippy, umitools, bbmap, bismark, biscuit, diamond, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, cellranger, snpsplit, odgi, pangolin, nextclade, humid, kat, leehom, adapterRemoval, bbduk, clipandmerge, cutadapt, flexbar, kaiju, kraken, malt, motus, trimmomatic, sickle, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, filtlong, prinseqplusplus, pychopper, porechop, pycoqc, minionqc, anglerfish, multivcfanalyzer, clusterflow, checkqc, bcl2fastq, bclconvert, interop, ivar, flash, seqyclean, optitype, whatshap
+[2025-10-24 12:29:45,905] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmpobmtr_9a
+[2025-10-24 12:29:46,168] multiqc                                            [INFO   ]  Search path : /quobyte/lasallegrp/Victoria/Babies_alignments
+[2025-10-24 13:54:16,967] multiqc                                            [DEBUG  ]  Summary of files that were skipped by the search: [skipped_file_contents_search_errors: 3235702] // [skipped_module_specific_max_filesize: 74637] // [skipped_no_match: 22448] // [skipped_ignore_pattern: 1010] // [skipped_filesize_limit: 350] // [skipped_directory_fn_ignore_dirs: 7] // [skipped_not_a_file: 6]
+[2025-10-24 13:54:20,909] multiqc.plots.bargraph                             [DEBUG  ]  Using matplotlib version 3.7.0
+[2025-10-24 13:54:20,915] multiqc.plots.linegraph                            [DEBUG  ]  Using matplotlib version 3.7.0
+[2025-10-24 13:54:20,918] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2025-10-24 13:54:21,061] multiqc                                            [DEBUG  ]  No samples found: picard
+[2025-10-24 13:54:21,647] multiqc.modules.bismark.bismark                    [DEBUG  ]  Duplicate alignment sample log found! Overwriting: 060B_S11_L006_VKGK_Nova1322P_Keeton_L2_1_val_1
+[2025-10-24 13:54:21,672] multiqc.modules.bismark.bismark                    [DEBUG  ]  Duplicate alignment sample log found! Overwriting: 060B_S11_L006_VKGK_Nova1322P_Keeton_L2_1_val_1
+[2025-10-24 13:54:21,695] multiqc.modules.bismark.bismark                    [DEBUG  ]  Duplicate alignment sample log found! Overwriting: 060B_S11_L006_VKGK_Nova1322P_Keeton_L2_1_val_1
+[2025-10-24 13:54:21,713] multiqc.modules.bismark.bismark                    [DEBUG  ]  Duplicate alignment sample log found! Overwriting: 060B_S11_L006_VKGK_Nova1322P_Keeton_L2_1_val_1
+[2025-10-24 13:54:21,729] multiqc.modules.bismark.bismark                    [DEBUG  ]  Duplicate alignment sample log found! Overwriting: 060B_S11_L006_VKGK_Nova1322P_Keeton_L2_1_val_1
+[2025-10-24 13:54:21,748] multiqc.modules.bismark.bismark                    [DEBUG  ]  Duplicate alignment sample log found! Overwriting: 060B_S11_L006_VKGK_Nova1322P_Keeton_L2_1_val_1
+[2025-10-24 13:54:21,771] multiqc.modules.bismark.bismark                    [DEBUG  ]  Duplicate alignment sample log found! Overwriting: 060B_S11_L006_VKGK_Nova1322P_Keeton_L2_1_val_1
+[2025-10-24 13:54:22,072] multiqc.modules.bismark.bismark                    [WARNING]  Error calculating percentage for 079B_S13_L006_VKGK_Nova1322P_Keeton_L2_1_val_1.fq.gz.temp.1.gz_bismark_bt2_PE_report.txt - ignoring sample.
+[2025-10-24 13:54:22,130] multiqc.modules.bismark.bismark                    [WARNING]  Error calculating percentage for 079B_S13_L006_VKGK_Nova1322P_Keeton_L2_1_val_1.fq.gz.temp.2.gz_bismark_bt2_PE_report.txt - ignoring sample.
+[2025-10-24 13:54:22,149] multiqc.modules.bismark.bismark                    [WARNING]  Error calculating percentage for 079B_S13_L006_VKGK_Nova1322P_Keeton_L2_1_val_1.fq.gz.temp.3.gz_bismark_bt2_PE_report.txt - ignoring sample.
+[2025-10-24 13:54:22,204] multiqc.modules.bismark.bismark                    [WARNING]  Error calculating percentage for 079B_S13_L006_VKGK_Nova1322P_Keeton_L2_1_val_1.fq.gz.temp.4.gz_bismark_bt2_PE_report.txt - ignoring sample.
+[2025-10-24 13:54:22,219] multiqc.modules.bismark.bismark                    [WARNING]  Error calculating percentage for 079B_S13_L006_VKGK_Nova1322P_Keeton_L2_1_val_1.fq.gz.temp.5.gz_bismark_bt2_PE_report.txt - ignoring sample.
+[2025-10-24 13:54:22,241] multiqc.modules.bismark.bismark                    [WARNING]  Error calculating percentage for 079B_S13_L006_VKGK_Nova1322P_Keeton_L2_1_val_1.fq.gz.temp.6.gz_bismark_bt2_PE_report.txt - ignoring sample.
+[2025-10-24 13:54:22,260] multiqc.modules.bismark.bismark                    [WARNING]  Error calculating percentage for 079B_S13_L006_VKGK_Nova1322P_Keeton_L2_1_val_1.fq.gz.temp.7.gz_bismark_bt2_PE_report.txt - ignoring sample.
+[2025-10-24 13:54:22,293] multiqc.modules.bismark.bismark                    [WARNING]  Error calculating percentage for 079B_S13_L006_VKGK_Nova1322P_Keeton_L2_1_val_1.fq.gz.temp.8.gz_bismark_bt2_PE_report.txt - ignoring sample.
+[2025-10-24 13:54:22,728] multiqc.modules.bismark.bismark                    [DEBUG  ]  Duplicate alignment sample log found! Overwriting: 116_S26_L006_VKGK_Nova1322P_Keeton_L2_1_val_1
+[2025-10-24 13:54:22,771] multiqc.modules.bismark.bismark                    [DEBUG  ]  Duplicate alignment sample log found! Overwriting: 116_S26_L006_VKGK_Nova1322P_Keeton_L2_1_val_1
+[2025-10-24 13:54:22,802] multiqc.modules.bismark.bismark                    [DEBUG  ]  Duplicate alignment sample log found! Overwriting: 116_S26_L006_VKGK_Nova1322P_Keeton_L2_1_val_1
+[2025-10-24 13:54:22,820] multiqc.modules.bismark.bismark                    [DEBUG  ]  Duplicate alignment sample log found! Overwriting: 116_S26_L006_VKGK_Nova1322P_Keeton_L2_1_val_1
+[2025-10-24 13:54:22,841] multiqc.modules.bismark.bismark                    [WARNING]  Error calculating percentage for 116_S26_L006_VKGK_Nova1322P_Keeton_L2_1_val_1.fq.gz.temp.6.gz_bismark_bt2_PE_report.txt - ignoring sample.
+[2025-10-24 13:54:22,860] multiqc.modules.bismark.bismark                    [DEBUG  ]  Duplicate alignment sample log found! Overwriting: 116_S26_L006_VKGK_Nova1322P_Keeton_L2_1_val_1
+[2025-10-24 13:54:22,879] multiqc.modules.bismark.bismark                    [WARNING]  Error calculating percentage for 116_S26_L006_VKGK_Nova1322P_Keeton_L2_1_val_1.fq.gz.temp.8.gz_bismark_bt2_PE_report.txt - ignoring sample.
+[2025-10-24 13:54:24,376] multiqc.modules.bismark.bismark                    [WARNING]  Error calculating percentage for 44_S8_L006_VKGK_Nova1322P_Keeton_L2_1_val_1.fq.gz.temp.1.gz_bismark_bt2_PE_report.txt - ignoring sample.
+[2025-10-24 13:54:24,379] multiqc.modules.bismark.bismark                    [WARNING]  Error calculating percentage for 44_S8_L006_VKGK_Nova1322P_Keeton_L2_1_val_1.fq.gz.temp.2.gz_bismark_bt2_PE_report.txt - ignoring sample.
+[2025-10-24 13:54:24,404] multiqc.modules.bismark.bismark                    [WARNING]  Error calculating percentage for 44_S8_L006_VKGK_Nova1322P_Keeton_L2_1_val_1.fq.gz.temp.3.gz_bismark_bt2_PE_report.txt - ignoring sample.
+[2025-10-24 13:54:24,478] multiqc.modules.bismark.bismark                    [DEBUG  ]  Duplicate alignment sample log found! Overwriting: 44_S8_L006_VKGK_Nova1322P_Keeton_L2_1_val_1
+[2025-10-24 13:54:24,499] multiqc.modules.bismark.bismark                    [WARNING]  Error calculating percentage for 44_S8_L006_VKGK_Nova1322P_Keeton_L2_1_val_1.fq.gz.temp.6.gz_bismark_bt2_PE_report.txt - ignoring sample.
+[2025-10-24 13:54:24,522] multiqc.modules.bismark.bismark                    [WARNING]  Error calculating percentage for 44_S8_L006_VKGK_Nova1322P_Keeton_L2_1_val_1.fq.gz.temp.7.gz_bismark_bt2_PE_report.txt - ignoring sample.
+[2025-10-24 13:54:24,556] multiqc.modules.bismark.bismark                    [WARNING]  Error calculating percentage for 44_S8_L006_VKGK_Nova1322P_Keeton_L2_1_val_1.fq.gz.temp.8.gz_bismark_bt2_PE_report.txt - ignoring sample.
+[2025-10-24 13:54:27,015] multiqc.modules.bismark.bismark                    [INFO   ]  Found 118 alignment reports
+[2025-10-24 13:54:29,814] multiqc.modules.bismark.bismark                    [INFO   ]  Found 23 dedup reports
+[2025-10-24 13:54:31,781] multiqc.modules.bismark.bismark                    [INFO   ]  Found 23 methextract reports
+[2025-10-24 13:54:36,842] multiqc.modules.cutadapt.cutadapt                  [INFO   ]  Found 276 reports
+[2025-10-24 13:54:47,838] multiqc.modules.fastq_screen.fastq_screen          [INFO   ]  Found 259 reports
+[2025-10-24 13:56:05,493] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 276 reports
+[2025-10-24 13:56:15,096] multiqc.plots.table                                [DEBUG  ]  Plotting beeswarm instead of table, 575 samples
+[2025-10-24 13:56:15,098] multiqc                                            [INFO   ]  Compressing plot data
+[2025-10-24 13:56:15,505] multiqc                                            [INFO   ]  Report      : multiqc_report.html
+[2025-10-24 13:56:15,505] multiqc                                            [INFO   ]  Data        : multiqc_data
+[2025-10-24 13:56:15,506] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpobmtr_9a/multiqc_data' to '/quobyte/lasallegrp/Victoria/Babies_alignments/multiqc_data'
+[2025-10-24 13:56:16,373] multiqc                                            [INFO   ]  MultiQC complete
+[2025-10-24 13:56:16,373] multiqc                                            [WARNING]  13 flat-image plots used in the report due to large sample numbers
