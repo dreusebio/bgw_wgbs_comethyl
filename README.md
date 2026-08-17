@@ -175,10 +175,11 @@ cd bgw_wgbs_comethyl
 # Install pixi (macOS / Linux / WSL2)
 curl -fsSL https://pixi.sh/install.sh | bash
 ```
-On Mac
+
 ```bash
+#set the pixi home and cache directory e.g for Mac below
 export PIXI_HOME=/Users/$USER/.pixi
-export PIXI_CACHE_DIR=/scratch/$USER/pixi-cache
+export PIXI_CACHE_DIR=/Users/$USER/.pixi
 unset RATTLER_CACHE_DIR
 unset XDG_CACHE_HOME
 ```
