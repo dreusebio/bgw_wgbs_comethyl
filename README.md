@@ -171,7 +171,10 @@ cd bgw_wgbs_comethyl
 ---
 
 ### 2. Configure environment 
-
+```bash
+# Install pixi (macOS / Linux / WSL2)
+curl -fsSL https://pixi.sh/install.sh | bash
+```
 
 ```bash
 export PIXI_HOME=/path/to/your/pixi_home
