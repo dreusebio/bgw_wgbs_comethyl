@@ -197,7 +197,7 @@ unset XDG_CACHE_HOME
 
 ```bash
 cd reproducibility/pixi
-pixi install --concurrent-downloads 1 --concurrent-solves 1
+pixi install
 ```
 
 ---
