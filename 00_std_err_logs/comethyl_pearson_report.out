@@ -6489,4 +6489,535 @@ JobId=19257490 JobName=Cometh_BGW
    StdIn=/dev/null
    StdOut=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report.out
    TresPerTask=cpu=59
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUThive-dc-7-9-65
+Mon Aug 17 10:55:56 AM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+An object of type 'BSseq' with
+  29401795 methylation loci
+  23 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  25848696 methylation loci
+  23 samples
+has not been smoothed
+All assays are in-memory
+Allowing parallel execution with up to 4 working processes.
+[1] "019B" "026B" "043B" "060B" "076C" "079B"
+
+############### Job 20726136 summary from  ###############
+Name                : Cometh_BGW
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-9-65
+Cores               : 59
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-08-17T10:44:13
+Start               : 2026-08-17T10:55:56
+End                 : 2026-08-17T11:28:54
+Reserved walltime   : 3-00:00:00
+Used walltime       :   00:32:58
+Used CPU time       :   00:48:19
+% User (Computation): 91.00%
+% System (I/O)      :  9.00%
+Mem reserved        : 500G
+Max Mem used        : 43.68G (hive-dc-7-9-65)
+Max Disk Write      : 46.90G (hive-dc-7-9-65)
+Max Disk Read       : 14.61G (hive-dc-7-9-65)
+
+############### Job 20726136 info ###############
+JobId=20726136 JobName=Cometh_BGW
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=84019 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=00:32:58 TimeLimit=3-00:00:00 TimeMin=N/A
+   SubmitTime=2026-08-17T10:44:13 EligibleTime=2026-08-17T10:44:13
+   AccrueTime=2026-08-17T10:44:13
+   StartTime=2026-08-17T10:55:56 EndTime=2026-08-17T11:28:54 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-17T10:55:56 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-as-11-3-68:2233326
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-9-65
+   BatchHost=hive-dc-7-9-65
+   NumNodes=1 NumCPUs=59 NumTasks=1 CPUs/Task=59 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=59,mem=500G,node=1,billing=59
+   AllocTRES=cpu=59,mem=500G,node=1,billing=59
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=59 MinMemoryNode=500G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria
+   StdErr=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=59
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUThive-dc-7-9-63
+Mon Aug 17 12:50:25 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+
+############### Job 20727174 summary from  ###############
+Name                : Cometh_BGW
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-9-63
+Cores               : 59
+GPUs                : 0
+State               : FAILED
+ExitCode            : 127:0
+Submit              : 2026-08-17T11:43:30
+Start               : 2026-08-17T12:50:25
+End                 : 2026-08-17T12:51:28
+Reserved walltime   : 3-00:00:00
+Used walltime       :   00:01:03
+Used CPU time       :   00:00:29
+% User (Computation): 95.78%
+% System (I/O)      :  4.21%
+Mem reserved        : 500G
+Max Mem used        : 1.19G (hive-dc-7-9-63)
+Max Disk Write      : 61.44K (hive-dc-7-9-63)
+Max Disk Read       : 108.81M (hive-dc-7-9-63)
+
+############### Job 20727174 info ###############
+JobId=20727174 JobName=Cometh_BGW
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=84025 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=127:0
+   RunTime=00:01:03 TimeLimit=3-00:00:00 TimeMin=N/A
+   SubmitTime=2026-08-17T11:43:30 EligibleTime=2026-08-17T11:43:30
+   AccrueTime=2026-08-17T11:43:30
+   StartTime=2026-08-17T12:50:25 EndTime=2026-08-17T12:51:28 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-17T12:50:25 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-as-11-3-68:2233326
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-9-63
+   BatchHost=hive-dc-7-9-63
+   NumNodes=1 NumCPUs=59 NumTasks=1 CPUs/Task=59 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=59,mem=500G,node=1,billing=59
+   AllocTRES=cpu=59,mem=500G,node=1,billing=59
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=59 MinMemoryNode=500G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria
+   StdErr=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=59
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUThive-dc-7-5-54
+Mon Aug 17 01:32:39 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+Allowing parallel execution with up to 4 working processes.
+[1] "019B" "026B" "043B" "060B" "076C" "079B"
+Allowing parallel execution with up to 4 working processes.
+[1] "019B" "026B" "043B" "060B" "076C" "079B"
+Allowing parallel execution with up to 50 working processes.
+ pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq slope truncated.R.sq  mean.k. median.k. max.k.  Density
+1      1  0.06240 25.30          0.980 209000.0  209000.0 217000 0.501000
+2      2  0.02320  7.93          0.980 110000.0  110000.0 119000 0.265000
+3      3  0.00584  2.68          0.982  60800.0   60800.0  68400 0.146000
+4      4  0.00162 -1.09          0.983  34800.0   34800.0  40700 0.083700
+5      5  0.02760 -3.60          0.987  20700.0   20600.0  25100 0.049700
+6      6  0.06600 -4.68          0.987  12600.0   12600.0  16000 0.030400
+7      7  0.09540 -5.00          0.981   7930.0    7900.0  10500 0.019000
+8      8  0.17000 -6.13          0.974   5090.0    5070.0   7200 0.012200
+9      9  0.25800 -7.00          0.964   3340.0    3320.0   5050 0.008040
+10    10  0.33500 -7.23          0.947   2240.0    2220.0   3620 0.005380
+11    11  0.40900 -7.25          0.925   1530.0    1510.0   2650 0.003670
+12    12  0.48600 -7.22          0.905   1060.0    1050.0   1980 0.002540
+13    13  0.56100 -7.16          0.890    744.0     735.0   1500 0.001790
+14    14  0.63100 -7.04          0.878    530.0     523.0   1160 0.001270
+15    15  0.69500 -6.92          0.873    383.0     377.0    902 0.000920
+16    16  0.76100 -6.86          0.880    280.0     275.0    720 0.000672
+17    17  0.81800 -6.80          0.892    207.0     203.0    584 0.000497
+18    18  0.86400 -6.70          0.907    154.0     151.0    480 0.000371
+19    19  0.90200 -6.61          0.925    116.0     114.0    399 0.000279
+20    20  0.93100 -6.46          0.941     88.4      86.1    334 0.000212
+   Centralization Heterogeneity
+1        0.021200        0.0121
+2        0.022300        0.0232
+3        0.018300        0.0335
+4        0.014200        0.0432
+5        0.010800        0.0526
+6        0.008070        0.0617
+7        0.006270        0.0706
+8        0.005070        0.0794
+9        0.004100        0.0882
+10       0.003320        0.0969
+11       0.002710        0.1060
+12       0.002210        0.1140
+13       0.001820        0.1230
+14       0.001500        0.1320
+15       0.001250        0.1420
+16       0.001060        0.1510
+17       0.000908        0.1600
+18       0.000783        0.1700
+19       0.000678        0.1800
+20       0.000591        0.1900
+ pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq slope truncated.R.sq  mean.k. median.k. max.k.  Density
+1      1  0.01550  6.74          0.970 210000.0  210000.0 223000 0.504000
+2      2  0.00267 -1.51          0.974 111000.0  111000.0 126000 0.266000
+3      3  0.03090 -3.70          0.977  61100.0   61100.0  74100 0.147000
+4      4  0.07970 -4.82          0.980  35000.0   34900.0  45100 0.084100
+5      5  0.13400 -5.31          0.982  20700.0   20600.0  28300 0.049700
+6      6  0.19500 -5.63          0.984  12600.0   12500.0  18200 0.030300
+7      7  0.25100 -5.73          0.985   7870.0    7800.0  12000 0.018900
+8      8  0.30800 -5.86          0.986   5030.0    4970.0   8060 0.012100
+9      9  0.34600 -5.74          0.986   3290.0    3240.0   5520 0.007900
+10    10  0.37700 -5.60          0.986   2190.0    2150.0   3840 0.005260
+11    11  0.40600 -5.46          0.985   1480.0    1450.0   2720 0.003560
+12    12  0.41900 -5.13          0.984   1020.0     998.0   1950 0.002450
+13    13  0.42900 -4.71          0.985    713.0     695.0   1410 0.001710
+14    14  0.47500 -4.77          0.985    505.0     491.0   1060 0.001210
+15    15  0.55800 -5.23          0.984    362.0     351.0    819 0.000870
+16    16  0.64200 -5.66          0.979    263.0     254.0    649 0.000632
+17    17  0.71600 -5.92          0.971    193.0     186.0    524 0.000464
+18    18  0.77800 -6.09          0.965    143.0     137.0    428 0.000344
+19    19  0.82900 -6.19          0.963    107.0     103.0    354 0.000257
+20    20  0.87000 -6.22          0.963     80.9      77.2    296 0.000194
+   Centralization Heterogeneity
+1        0.033500        0.0200
+2        0.036600        0.0382
+3        0.031200        0.0551
+4        0.024300        0.0708
+5        0.018200        0.0857
+6        0.013500        0.0998
+7        0.009900        0.1130
+8        0.007280        0.1260
+9        0.005370        0.1390
+10       0.003980        0.1510
+11       0.002970        0.1630
+12       0.002220        0.1740
+13       0.001680        0.1860
+14       0.001320        0.1970
+15       0.001100        0.2080
+16       0.000928        0.2190
+17       0.000796        0.2310
+18       0.000685        0.2420
+19       0.000593        0.2530
+20       0.000516        0.2640
+Allowing parallel execution with up to 50 working processes.
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12    13 
+39683 38504 38263 36894 34847 34299 33826 31835 29443 28391 27232 23629 19298 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 50 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 1 genes from module 17 because their KME is too low.
+     ..removing 1 genes from module 20 because their KME is too low.
+     ..removing 1 genes from module 31 because their KME is too low.
+     ..removing 1 genes from module 295 because their KME is too low.
+     ..removing 1 genes from module 349 because their KME is too low.
+     ..removing 1 genes from module 352 because their KME is too low.
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 50 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 3 genes from module 1 because their KME is too low.
+     ..removing 1 genes from module 26 because their KME is too low.
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 50 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 1 genes from module 1 because their KME is too low.
+     ..removing 2 genes from module 2 because their KME is too low.
+     ..removing 1 genes from module 6 because their KME is too low.
+     ..removing 1 genes from module 17 because their KME is too low.
+     ..removing 1 genes from module 95 because their KME is too low.
+     ..removing 1 genes from module 112 because their KME is too low.
+     ..removing 1 genes from module 190 because their KME is too low.
+     ..removing 1 genes from module 212 because their KME is too low.
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 50 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 1 genes from module 1 because their KME is too low.
+     ..removing 3 genes from module 2 because their KME is too low.
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 50 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 4 genes from module 1 because their KME is too low.
+     ..removing 1 genes from module 2 because their KME is too low.
+     ..removing 1 genes from module 22 because their KME is too low.
+     ..removing 1 genes from module 112 because their KME is too low.
+     ..removing 1 genes from module 141 because their KME is too low.
+     ..removing 1 genes from module 497 because their KME is too low.
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 50 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 1 genes from module 1 because their KME is too low.
+     ..removing 1 genes from module 4 because their KME is too low.
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 50 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 2 genes from module 1 because their KME is too low.
+     ..removing 1 genes from module 2 because their KME is too low.
+     ..removing 1 genes from module 4 because their KME is too low.
+     ..removing 1 genes from module 50 because their KME is too low.
+     ..removing 1 genes from module 64 because their KME is too low.
+     ..removing 1 genes from module 93 because their KME is too low.
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 50 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 2 genes from module 1 because their KME is too low.
+     ..removing 2 genes from module 2 because their KME is too low.
+     ..removing 1 genes from module 320 because their KME is too low.
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 50 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 2 genes from module 1 because their KME is too low.
+     ..removing 1 genes from module 83 because their KME is too low.
+     ..removing 1 genes from module 89 because their KME is too low.
+     ..removing 1 genes from module 102 because their KME is too low.
+     ..removing 1 genes from module 116 because their KME is too low.
+     ..removing 1 genes from module 126 because their KME is too low.
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 50 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 1 genes from module 1 because their KME is too low.
+     ..removing 1 genes from module 2 because their KME is too low.
+     ..removing 1 genes from module 3 because their KME is too low.
+     ..removing 1 genes from module 8 because their KME is too low.
+     ..removing 2 genes from module 20 because their KME is too low.
+     ..removing 1 genes from module 37 because their KME is too low.
+     ..removing 1 genes from module 61 because their KME is too low.
+     ..removing 1 genes from module 99 because their KME is too low.
+     ..removing 1 genes from module 150 because their KME is too low.
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 50 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 1 genes from module 2 because their KME is too low.
+     ..removing 1 genes from module 16 because their KME is too low.
+     ..removing 1 genes from module 90 because their KME is too low.
+     ..removing 1 genes from module 157 because their KME is too low.
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 50 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 1 genes from module 2 because their KME is too low.
+     ..removing 1 genes from module 7 because their KME is too low.
+     ..removing 1 genes from module 19 because their KME is too low.
+     ..removing 1 genes from module 25 because their KME is too low.
+     ..removing 2 genes from module 29 because their KME is too low.
+     ..removing 1 genes from module 185 because their KME is too low.
+ ..Working on block 13 .
+    TOM calculation: adjacency..
+    ..will use 50 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 1 genes from module 5 because their KME is too low.
+     ..removing 1 genes from module 14 because their KME is too low.
+     ..removing 2 genes from module 44 because their KME is too low.
+     ..removing 1 genes from module 67 because their KME is too low.
+     ..removing 1 genes from module 71 because their KME is too low.
+  ..reassigning 1 genes from module 298 to modules with higher KME.
+  ..reassigning 1 genes from module 707 to modules with higher KME.
+  ..reassigning 1 genes from module 756 to modules with higher KME.
+  ..reassigning 1 genes from module 988 to modules with higher KME.
+  ..reassigning 1 genes from module 1262 to modules with higher KME.
+  ..reassigning 1 genes from module 1263 to modules with higher KME.
+  ..reassigning 1 genes from module 1357 to modules with higher KME.
+  ..reassigning 2 genes from module 1840 to modules with higher KME.
+  ..reassigning 1 genes from module 1917 to modules with higher KME.
+  ..reassigning 1 genes from module 2371 to modules with higher KME.
+  ..reassigning 1 genes from module 2387 to modules with higher KME.
+  ..reassigning 1 genes from module 2394 to modules with higher KME.
+  ..reassigning 1 genes from module 2414 to modules with higher KME.
+  ..reassigning 1 genes from module 2931 to modules with higher KME.
+  ..reassigning 1 genes from module 3447 to modules with higher KME.
+  ..reassigning 1 genes from module 3649 to modules with higher KME.
+  ..reassigning 1 genes from module 3950 to modules with higher KME.
+  ..reassigning 1 genes from module 4001 to modules with higher KME.
+  ..reassigning 1 genes from module 4038 to modules with higher KME.
+  ..reassigning 1 genes from module 5250 to modules with higher KME.
+  ..reassigning 1 genes from module 5387 to modules with higher KME.
+  ..reassigning 1 genes from module 5768 to modules with higher KME.
+  ..reassigning 1 genes from module 6027 to modules with higher KME.
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.2
+       Calculating new MEs...
+
+############### Job 20729473 summary from  ###############
+Name                : Cometh_BGW
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-5-54
+Cores               : 59
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-08-17T13:30:29
+Start               : 2026-08-17T13:32:39
+End                 : 2026-08-17T17:44:30
+Reserved walltime   : 3-00:00:00
+Used walltime       :   04:11:51
+Used CPU time       : 3-12:22:31
+% User (Computation): 66.21%
+% System (I/O)      : 33.79%
+Mem reserved        : 500G
+Max Mem used        : 350.63G (hive-dc-7-5-54)
+Max Disk Write      : 269.95M (hive-dc-7-5-54)
+Max Disk Read       : 1.22G (hive-dc-7-5-54)
+
+############### Job 20729473 info ###############
+JobId=20729473 JobName=Cometh_BGW
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=84018 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=04:11:51 TimeLimit=3-00:00:00 TimeMin=N/A
+   SubmitTime=2026-08-17T13:30:29 EligibleTime=2026-08-17T13:30:29
+   AccrueTime=2026-08-17T13:30:29
+   StartTime=2026-08-17T13:32:39 EndTime=2026-08-17T17:44:30 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-17T13:32:39 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-as-11-3-68:2233326
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-5-54
+   BatchHost=hive-dc-7-5-54
+   NumNodes=1 NumCPUs=59 NumTasks=1 CPUs/Task=59 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=59,mem=500G,node=1,billing=59
+   AllocTRES=cpu=59,mem=500G,node=1,billing=59
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=59 MinMemoryNode=500G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria
+   StdErr=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=59
    MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT
