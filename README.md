@@ -50,24 +50,7 @@ Higher prenatal exposure burden is associated with DNAm alterations in pathways 
 * Genome-wide DNAm
 * Region-level DNAm (energy balance / adiposity pathways)
 
-**Statistical framework:** Comethyl (WGCNA-based)
-
----
-
-## Project overview
-
-This project investigates whether DNA methylation signatures measured in newborn dried blood spots are associated with autism spectrum disorder (ASD), neurodevelopmental outcomes, parental traits, and grandparental exposures.
-
-The study combines newborn dried blood spot samples from two cohorts:
-
-* **CHARGE**: Childhood Autism Risks from Genetics and the Environment
-* **CHDS**: Child Health and Development Studies
-
-Raw WGBS preprocessing was performed upstream using the **epigenerator** pipeline. This included FASTQ processing, read alignment, methylation extraction, and generation of Bismark cytosine reports. The cytosine reports produced by `epigenerator` were used as the starting input for the Comethyl analysis in this repository.
-
-The central hypothesis is that early-life DNA methylation patterns may capture molecular signatures related to ASD risk and multigenerational environmental or familial exposures.
-
-The analysis uses **Comethyl**, a WGCNA-based framework, to identify groups of co-methylated genomic regions and test whether module eigengenes are associated with ASD diagnosis and related traits.
+**Statistical framework:** The analysis uses **Comethyl**, a WGCNA-based framework, to identify groups of co-methylated genomic regions and test whether module eigengenes are associated with outcomes and exposure traits. 
 
 ---
 
