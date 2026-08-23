@@ -1,0 +1,525 @@
+hive-dc-7-4-38
+Fri Aug 21 01:05:32 AM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+An object of type 'BSseq' with
+  29401795 methylation loci
+  23 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  29401795 methylation loci
+  25 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  25848696 methylation loci
+  23 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  29401795 methylation loci
+  25 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  25848696 methylation loci
+  25 samples
+has not been smoothed
+All assays are in-memory
+Allowing parallel execution with up to 59 working processes.
+[1] "019B" "026B" "043B" "060B" "076C" "079B"
+Allowing parallel execution with up to 59 working processes.
+[1] "016B" "032B" "038B" "104C" "111"  "112" 
+Allowing parallel execution with up to 59 working processes.
+ pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq slope truncated.R.sq  mean.k. median.k. max.k.  Density
+1      1  0.01510  6.64          0.970 208000.0  209000.0 222000 0.504000
+2      2  0.00268 -1.51          0.974 110000.0  110000.0 125000 0.266000
+3      3  0.03130 -3.72          0.977  60800.0   60800.0  73700 0.147000
+4      4  0.08030 -4.84          0.979  34800.0   34700.0  44900 0.084100
+5      5  0.13500 -5.31          0.982  20600.0   20500.0  28100 0.049700
+6      6  0.19600 -5.63          0.984  12500.0   12500.0  18100 0.030300
+7      7  0.25300 -5.74          0.985   7830.0    7760.0  11900 0.018900
+8      8  0.31000 -5.88          0.986   5010.0    4950.0   8020 0.012100
+9      9  0.34600 -5.72          0.986   3270.0    3220.0   5490 0.007900
+10    10  0.37800 -5.60          0.986   2180.0    2140.0   3830 0.005260
+11    11  0.40700 -5.47          0.985   1470.0    1450.0   2700 0.003560
+12    12  0.41900 -5.12          0.984   1010.0     992.0   1940 0.002450
+13    13  0.43000 -4.73          0.985    709.0     691.0   1410 0.001710
+14    14  0.47200 -4.74          0.985    502.0     488.0   1050 0.001210
+15    15  0.55500 -5.21          0.984    360.0     349.0    814 0.000870
+16    16  0.63800 -5.61          0.979    261.0     253.0    644 0.000632
+17    17  0.71200 -5.89          0.971    192.0     185.0    519 0.000464
+18    18  0.77500 -6.08          0.965    142.0     137.0    424 0.000344
+19    19  0.82600 -6.18          0.963    107.0     102.0    351 0.000257
+20    20  0.86800 -6.22          0.963     80.5      76.8    293 0.000194
+   Centralization Heterogeneity
+1        0.033500        0.0200
+2        0.036700        0.0382
+3        0.031200        0.0551
+4        0.024300        0.0709
+5        0.018200        0.0857
+6        0.013500        0.0998
+7        0.009910        0.1130
+8        0.007290        0.1260
+9        0.005380        0.1390
+10       0.003980        0.1510
+11       0.002970        0.1630
+12       0.002230        0.1740
+13       0.001680        0.1860
+14       0.001320        0.1970
+15       0.001090        0.2080
+16       0.000923        0.2190
+17       0.000791        0.2310
+18       0.000682        0.2420
+19       0.000590        0.2530
+20       0.000513        0.2640
+ pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq  slope truncated.R.sq  mean.k. median.k. max.k.  Density
+1      1  0.04390  1.800          0.666 208000.0  208000.0 222000 0.503000
+2      2  0.12700  3.390          0.818 110000.0  110000.0 124000 0.265000
+3      3  0.20700  4.400          0.854  60000.0   59900.0  72600 0.145000
+4      4  0.21400  4.670          0.732  34000.0   33900.0  43900 0.082100
+5      5  0.29300  5.300          0.642  19900.0   19800.0  27300 0.048000
+6      6  0.34900  5.400          0.518  11900.0   11800.0  17500 0.028800
+7      7  0.33900  5.390          0.374   7340.0    7280.0  11500 0.017700
+8      8  0.36900  5.080          0.281   4620.0    4570.0   7730 0.011200
+9      9  0.35100  4.890          0.188   2970.0    2930.0   5300 0.007170
+10    10  0.31500  4.660          0.122   1940.0    1910.0   3700 0.004700
+11    11  0.30900  3.890          0.142   1300.0    1270.0   2630 0.003130
+12    12  0.26700  3.500          0.167    877.0     858.0   1900 0.002120
+13    13  0.22300  3.210          0.172    602.0     587.0   1390 0.001450
+14    14  0.18800  2.950          0.169    419.0     408.0   1030 0.001010
+15    15  0.09440  1.510          0.438    296.0     286.0    774 0.000714
+16    16  0.05690  1.050          0.724    211.0     204.0    588 0.000510
+17    17  0.05100  0.900          0.856    152.0     146.0    452 0.000368
+18    18  0.00101  0.130          0.871    111.0     106.0    392 0.000268
+19    19  0.00754 -0.359          0.723     81.7      78.0    352 0.000197
+20    20  0.43000 -2.770          0.539     60.7      57.7    320 0.000147
+   Centralization Heterogeneity
+1        0.032700        0.0185
+2        0.035800        0.0353
+3        0.030500        0.0511
+4        0.023900        0.0662
+5        0.018100        0.0806
+6        0.013500        0.0944
+7        0.010100        0.1080
+8        0.007500        0.1210
+9        0.005620        0.1330
+10       0.004240        0.1460
+11       0.003220        0.1580
+12       0.002460        0.1700
+13       0.001900        0.1820
+14       0.001470        0.1940
+15       0.001150        0.2060
+16       0.000911        0.2180
+17       0.000724        0.2310
+18       0.000679        0.2440
+19       0.000652        0.2590
+20       0.000627        0.2750
+pdf 
+  2 
+
+############### Job 20949579 summary from  ###############
+Name                : Comethl_BGW_consensus_females
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-4-38
+Cores               : 45
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-08-21T01:05:31
+Start               : 2026-08-21T01:05:32
+End                 : 2026-08-21T04:10:55
+Reserved walltime   : 10-00:00:00
+Used walltime       :    03:05:23
+Used CPU time       :  2-07:00:55
+% User (Computation): 60.62%
+% System (I/O)      : 39.38%
+Mem reserved        : 500G
+Max Mem used        : 365.91G (hive-dc-7-4-38)
+Max Disk Write      : 148.40G (hive-dc-7-4-38)
+Max Disk Read       : 43.73G (hive-dc-7-4-38)
+
+############### Job 20949579 info ###############
+JobId=20949579 JobName=Comethl_BGW_consensus_females
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=84046 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=03:05:23 TimeLimit=10-00:00:00 TimeMin=N/A
+   SubmitTime=2026-08-21T01:05:31 EligibleTime=2026-08-21T01:05:31
+   AccrueTime=2026-08-21T01:05:31
+   StartTime=2026-08-21T01:05:32 EndTime=2026-08-21T04:10:55 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-21T01:05:32 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-8-42:3717568
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-4-38
+   BatchHost=hive-dc-7-4-38
+   NumNodes=1 NumCPUs=45 NumTasks=1 CPUs/Task=45 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=45,mem=500G,node=1,billing=45
+   AllocTRES=cpu=45,mem=500G,node=1,billing=45
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=45 MinMemoryNode=500G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/slurm/consensus/females.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/slurm/consensus/females.slurm
+   WorkDir=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria
+   StdErr=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report_consensus_females_BGW.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report_consensus_females_BGW.out
+   TresPerTask=cpu=45
+   MailUser=gekuodza@health.ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUThive-dc-7-6-30
+Fri Aug 21 12:19:01 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+An object of type 'BSseq' with
+  29401795 methylation loci
+  23 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  29401795 methylation loci
+  25 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  25848696 methylation loci
+  23 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  29401795 methylation loci
+  25 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  25848630 methylation loci
+  25 samples
+has not been smoothed
+All assays are in-memory
+Allowing parallel execution with up to 59 working processes.
+[1] "019B" "026B" "043B" "060B" "076C" "079B"
+Allowing parallel execution with up to 59 working processes.
+[1] "016B" "032B" "038B" "104C" "111"  "112" 
+Allowing parallel execution with up to 59 working processes.
+ pickSoftThreshold: calculating connectivity for given powers... 
+############### Job 21012981 summary from  ###############
+Name                : Comethl_BGW_consensus_females
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-6-30
+Cores               : 45
+GPUs                : 0
+State               : OUT_OF_MEMORY
+ExitCode            : 0:125
+Submit              : 2026-08-21T12:18:58
+Start               : 2026-08-21T12:19:01
+End                 : 2026-08-21T15:07:08
+Reserved walltime   : 10-00:00:00
+Used walltime       :    02:48:07
+Used CPU time       :    05:16:51
+% User (Computation): 85.40%
+% System (I/O)      : 14.60%
+Mem reserved        : 500G
+Max Mem used        : 500.00G (hive-dc-7-6-30)
+Max Disk Write      : 148.81G (hive-dc-7-6-30)
+Max Disk Read       : 43.85G (hive-dc-7-6-30)
+
+############### Job 21012981 info ###############
+JobId=21012981 JobName=Comethl_BGW_consensus_females
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=84056 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=OutOfMemory Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:125
+   RunTime=02:48:07 TimeLimit=10-00:00:00 TimeMin=N/A
+   SubmitTime=2026-08-21T12:18:58 EligibleTime=2026-08-21T12:18:58
+   AccrueTime=2026-08-21T12:18:58
+   StartTime=2026-08-21T12:19:01 EndTime=2026-08-21T15:07:08 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-21T12:19:01 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-8-42:3717568
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-6-30
+   BatchHost=hive-dc-7-6-30
+   NumNodes=1 NumCPUs=45 NumTasks=1 CPUs/Task=45 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=45,mem=500G,node=1,billing=45
+   AllocTRES=cpu=45,mem=500G,node=1,billing=45
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=45 MinMemoryNode=500G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/slurm/consensus/females.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/slurm/consensus/females.slurm
+   WorkDir=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria
+   StdErr=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report_consensus_females_BGW.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report_consensus_females_BGW.out
+   TresPerTask=cpu=45
+   MailUser=gekuodza@health.ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUThive-dc-7-5-34
+Fri Aug 21 03:07:56 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+An object of type 'BSseq' with
+  29401795 methylation loci
+  23 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  29401795 methylation loci
+  25 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  25848696 methylation loci
+  23 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  29401795 methylation loci
+  25 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  25539797 methylation loci
+  25 samples
+has not been smoothed
+All assays are in-memory
+Allowing parallel execution with up to 59 working processes.
+[1] "019B" "026B" "043B" "060B" "076C" "079B"
+Allowing parallel execution with up to 59 working processes.
+[1] "016B" "032B" "038B" "104C" "111"  "112" 
+Allowing parallel execution with up to 59 working processes.
+ pickSoftThreshold: calculating connectivity for given powers... 
+############### Job 21035967 summary from  ###############
+Name                : Comethl_BGW_consensus_females
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-5-34
+Cores               : 45
+GPUs                : 0
+State               : OUT_OF_MEMORY
+ExitCode            : 0:125
+Submit              : 2026-08-21T15:07:48
+Start               : 2026-08-21T15:07:56
+End                 : 2026-08-21T17:16:35
+Reserved walltime   : 10-00:00:00
+Used walltime       :    02:08:39
+Used CPU time       :    04:14:19
+% User (Computation): 74.94%
+% System (I/O)      : 25.05%
+Mem reserved        : 500G
+Max Mem used        : 500.00G (hive-dc-7-5-34)
+Max Disk Write      : 148.80G (hive-dc-7-5-34)
+Max Disk Read       : 43.84G (hive-dc-7-5-34)
+
+############### Job 21035967 info ###############
+JobId=21035967 JobName=Comethl_BGW_consensus_females
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=83900 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=OutOfMemory Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:125
+   RunTime=02:08:38 TimeLimit=10-00:00:00 TimeMin=N/A
+   SubmitTime=2026-08-21T15:07:48 EligibleTime=2026-08-21T15:07:48
+   AccrueTime=2026-08-21T15:07:48
+   StartTime=2026-08-21T15:07:56 EndTime=2026-08-21T17:16:34 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-21T15:07:56 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-8-42:3717568
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-5-34
+   BatchHost=hive-dc-7-5-34
+   NumNodes=1 NumCPUs=45 NumTasks=1 CPUs/Task=45 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=45,mem=500G,node=1,billing=45
+   AllocTRES=cpu=45,mem=500G,node=1,billing=45
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=45 MinMemoryNode=500G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/slurm/consensus/females.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/slurm/consensus/females.slurm
+   WorkDir=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria
+   StdErr=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report_consensus_females_BGW.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report_consensus_females_BGW.out
+   TresPerTask=cpu=45
+   MailUser=gekuodza@health.ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUThive-dc-7-4-46
+Fri Aug 21 06:42:24 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+An object of type 'BSseq' with
+  29401795 methylation loci
+  23 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  29401795 methylation loci
+  25 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  25848696 methylation loci
+  23 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  29401795 methylation loci
+  25 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  25539797 methylation loci
+  25 samples
+has not been smoothed
+All assays are in-memory
+Allowing parallel execution with up to 59 working processes.
+[1] "019B" "026B" "043B" "060B" "076C" "079B"
+Allowing parallel execution with up to 59 working processes.
+[1] "016B" "032B" "038B" "104C" "111"  "112" 
+Allowing parallel execution with up to 59 working processes.
+ pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq slope truncated.R.sq  mean.k. median.k. max.k.  Density
+1      1  0.02060  7.98          0.971 243000.0  243000.0 259000 0.503000
+2      2  0.00591 -2.26          0.973 128000.0  128000.0 146000 0.266000
+3      3  0.04550 -4.50          0.976  70800.0   70700.0  85700 0.147000
+4      4  0.10600 -5.53          0.978  40500.0   40400.0  52200 0.084000
+5      5  0.17600 -6.10          0.980  24000.0   23800.0  32700 0.049700
+6      6  0.23100 -6.11          0.981  14600.0   14500.0  21100 0.030200
+7      7  0.27700 -5.95          0.983   9110.0    9010.0  13900 0.018900
+8      8  0.32100 -5.83          0.983   5820.0    5750.0   9340 0.012100
+9      9  0.34900 -5.58          0.983   3800.0    3740.0   6410 0.007890
+10    10  0.36400 -5.24          0.982   2530.0    2480.0   4460 0.005250
+11    11  0.38100 -4.98          0.981   1720.0    1680.0   3160 0.003560
+12    12  0.39700 -4.77          0.979   1180.0    1150.0   2270 0.002450
+13    13  0.41600 -4.58          0.978    825.0     803.0   1650 0.001710
+14    14  0.43900 -4.47          0.977    584.0     567.0   1220 0.001210
+15    15  0.46400 -4.36          0.976    419.0     406.0    907 0.000869
+16    16  0.52000 -4.64          0.980    304.0     293.0    697 0.000631
+17    17  0.59200 -5.16          0.986    223.0     215.0    553 0.000463
+18    18  0.65200 -5.72          0.990    166.0     159.0    443 0.000343
+19    19  0.70600 -6.04          0.991    124.0     118.0    359 0.000257
+20    20  0.75200 -6.21          0.989     93.6      89.1    294 0.000194
+   Centralization Heterogeneity
+1        0.033100        0.0198
+2        0.036300        0.0379
+3        0.030900        0.0547
+4        0.024100        0.0705
+5        0.018200        0.0853
+6        0.013400        0.0995
+7        0.009910        0.1130
+8        0.007300        0.1260
+9        0.005390        0.1390
+10       0.004010        0.1510
+11       0.002990        0.1630
+12       0.002250        0.1740
+13       0.001710        0.1860
+14       0.001310        0.1970
+15       0.001010        0.2080
+16       0.000815        0.2190
+17       0.000683        0.2300
+18       0.000576        0.2410
+19       0.000487        0.2510
+20       0.000415        0.2620
+ pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq  slope truncated.R.sq  mean.k. median.k. max.k.  Density
+1      1 0.004590 0.4960         0.3680 242000.0  242000.0 250000 0.501000
+2      2 0.069200 2.2600         0.6440 127000.0  127000.0 135000 0.262000
+3      3 0.075300 2.5100         0.6150  69000.0   68900.0  76400 0.143000
+4      4 0.161000 3.8000         0.8000  39000.0   38900.0  44700 0.080800
+5      5 0.164000 3.9800         0.7410  22700.0   22600.0  27200 0.047000
+6      6 0.251000 4.9100         0.7800  13600.0   13500.0  17200 0.028200
+7      7 0.301000 5.2000         0.7090   8340.0    8290.0  11200 0.017300
+8      8 0.315000 5.4100         0.5580   5240.0    5200.0   7510 0.010900
+9      9 0.351000 5.3700         0.4450   3360.0    3330.0   5150 0.006960
+10    10 0.346000 5.3400         0.2980   2190.0    2170.0   3620 0.004550
+11    11 0.313000 5.1200         0.2030   1460.0    1440.0   2590 0.003020
+12    12 0.335000 4.7100         0.1460    984.0     971.0   1890 0.002040
+13    13 0.288000 4.4100         0.0909    675.0     664.0   1400 0.001400
+14    14 0.255000 3.5100         0.1760    469.0     461.0   1050 0.000972
+15    15 0.204000 3.0800         0.2240    330.0     324.0    800 0.000684
+16    16 0.165000 2.7800         0.2320    235.0     230.0    618 0.000488
+17    17 0.074900 1.4300         0.5090    169.0     165.0    483 0.000351
+18    18 0.050800 1.0700         0.6920    123.0     120.0    381 0.000256
+19    19 0.030300 0.7620         0.7950     90.6      87.9    304 0.000188
+20    20 0.000304 0.0776         0.7510     67.2      65.0    268 0.000139
+   Centralization Heterogeneity
+1        0.017000        0.0097
+2        0.018300        0.0187
+3        0.015300        0.0274
+4        0.011900        0.0360
+5        0.009310        0.0447
+6        0.007460        0.0534
+7        0.005940        0.0622
+8        0.004710        0.0711
+9        0.003730        0.0802
+10       0.002950        0.0893
+11       0.002340        0.0986
+12       0.001870        0.1080
+13       0.001500        0.1170
+14       0.001200        0.1270
+15       0.000975        0.1370
+16       0.000794        0.1470
+17       0.000650        0.1570
+18       0.000535        0.1680
+19       0.000444        0.1790
+20       0.000416        0.1910
+pdf 
+  2 
+
+############### Job 21042999 summary from  ###############
+Name                : Comethl_BGW_consensus_females
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-4-46
+Cores               : 45
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-08-21T18:40:08
+Start               : 2026-08-21T18:42:24
+End                 : 2026-08-21T22:09:23
+Reserved walltime   : 10-00:00:00
+Used walltime       :    03:26:59
+Used CPU time       :  2-23:56:16
+% User (Computation): 59.68%
+% System (I/O)      : 40.32%
+Mem reserved        : 700G
+Max Mem used        : 419.94G (hive-dc-7-4-46)
+Max Disk Write      : 148.44G (hive-dc-7-4-46)
+Max Disk Read       : 43.82G (hive-dc-7-4-46)
+
+############### Job 21042999 info ###############
+JobId=21042999 JobName=Comethl_BGW_consensus_females
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=83900 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=03:26:59 TimeLimit=10-00:00:00 TimeMin=N/A
+   SubmitTime=2026-08-21T18:40:08 EligibleTime=2026-08-21T18:40:08
+   AccrueTime=2026-08-21T18:40:08
+   StartTime=2026-08-21T18:42:24 EndTime=2026-08-21T22:09:23 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-21T18:42:24 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-8-42:3717568
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-4-46
+   BatchHost=hive-dc-7-4-46
+   NumNodes=1 NumCPUs=45 NumTasks=1 CPUs/Task=45 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=45,mem=700G,node=1,billing=45
+   AllocTRES=cpu=45,mem=700G,node=1,billing=45
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=45 MinMemoryNode=700G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/slurm/consensus/females.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/slurm/consensus/females.slurm
+   WorkDir=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria
+   StdErr=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report_consensus_females_BGW.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report_consensus_females_BGW.out
+   TresPerTask=cpu=45
+   MailUser=gekuodza@health.ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT

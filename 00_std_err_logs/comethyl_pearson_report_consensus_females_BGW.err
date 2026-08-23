@@ -1,0 +1,1227 @@
+
+
+Starting Script 00
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/females
+Detected 48 CpG report files
+Loaded metadata for 23 samples
+[getCpGs] Loading CpG-level data
+[read.bismark] Using 'loci' as candidate loci.
+[read.bismark] Collapsing strand of 'loci' ...
+Done in 21.3 secs
+[read.bismark] Parsing files and constructing 'M' and 'Cov' matrices ...
+Done in 148.6 secs
+[read.bismark] Constructing BSseq object ... 
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/females/Unfiltered_BSseq.rds
+Unfiltered BSseq object created successfully
+[getCpGtotals] Calculating CpG totals at specified cov and perSample cutoffs
+[getCpGtotals] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/females/CpG_Totals.txt
+[plotCpGtotals] Plotting CpG totals
+[plotCpGtotals] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/females/CpG_Totals.pdf
+Consensus Script 00 complete for dataset: females
+Starting Script 00
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/males
+Detected 48 CpG report files
+Loaded metadata for 25 samples
+[getCpGs] Loading CpG-level data
+[read.bismark] Using 'loci' as candidate loci.
+[read.bismark] Collapsing strand of 'loci' ...
+Done in 21.5 secs
+[read.bismark] Parsing files and constructing 'M' and 'Cov' matrices ...
+Done in 192 secs
+[read.bismark] Constructing BSseq object ... 
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/males/Unfiltered_BSseq.rds
+Unfiltered BSseq object created successfully
+[getCpGtotals] Calculating CpG totals at specified cov and perSample cutoffs
+[getCpGtotals] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/males/CpG_Totals.txt
+[plotCpGtotals] Plotting CpG totals
+[plotCpGtotals] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/males/CpG_Totals.pdf
+Consensus Script 00 complete for dataset: males
+Starting Script 01 
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct
+[getCpGs] Filtering CpG-level data for loci with at least 3 reads in at least 75% of samples
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Filtered_BSseq.rds
+Filtered CpGs retained: 25848696
+[getRegions] Calling regions when at least 3 CpGs are no more than 150 bases apart
+[getRegions] Calculating region statistics
+[getRegions] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Regions.txt
+Regions generated: 2418858
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Region_Plots.pdf
+[plotSDstats] Plotting methylation SD vs region statistics
+[plotSDstats] Limiting x-axis to values in bottom 99% for n, covMin, and covMean
+[plotSDstats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/SD_Plots.pdf
+Warning message:
+The dot-dot notation (`..count..`) was deprecated in ggplot2 3.4.0.
+ℹ Please use `after_stat(count)` instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+[getRegionTotals] Calculating region totals at specified covMin and methSD cutoffs
+[getRegionTotals] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Region_Totals.txt
+[plotRegionTotals] Plotting region totals
+[plotRegionTotals] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Region_Totals.pdf
+Consensus Script 01 complete for reference dataset: females
+Starting Script 02
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0p08
+Loaded unfiltered regions: 2418858
+[getRegions] Filtering regions for at least 4 reads in all samples and methylation SD of at least 8%
+[getRegions] Creating new Region IDs
+[getRegions] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0p08/Filtered_Regions.txt
+Filtered regions: 416144
+Saved filtered regions: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0p08/Filtered_Regions.txt
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0p08/RegionStats_UNFILTERED.pdf
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0p08/RegionStats_FILTERED.pdf
+Saved separate plots:
+ - /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0p08/RegionStats_UNFILTERED.pdf
+ - /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0p08/RegionStats_FILTERED.pdf
+[plotRegionStatsCompare2] Building combined QC plot
+[plotRegionStatsCompare2] Saving: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0p08/RegionStats_FilterEffect_COMBINED.pdf
+Warning message:
+In geom_vline(data = thr, aes(xintercept = x), linetype = "dashed",  :
+  Ignoring unknown parameters: `inherit.aes`
+Saved combined plot: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0p08/RegionStats_FilterEffect_COMBINED.pdf
+Consensus Script 02 complete: reference region filtering and QC plots complete
+Output folder: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0p08
+Regions after filtering: 416144
+Starting Script 03
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin4_methSD0p08
+Loaded filtered regions: 416144
+Loaded BSseq object successfully
+[getRegionMeth] Calculating region methylation from BSseq object
+[getRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin4_methSD0p08/Region_Methylation.rds
+Saved region methylation RDS: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin4_methSD0p08/Region_Methylation.rds
+Matrix dimensions: 416144 regions x 23 samples
+Consensus Script 03 complete: reference region methylation calculated
+Starting Script 04
+Reference filtered BSseq loaded
+Reference CpGs: 25848696
+
+====================================================
+Processing dataset: males
+====================================================
+[getCpGs] Loading CpG-level data
+[read.bismark] Using 'loci' as candidate loci.
+[read.bismark] Collapsing strand of 'loci' ...
+Done in 18.5 secs
+[read.bismark] Parsing files and constructing 'M' and 'Cov' matrices ...
+Done in 174.2 secs
+[read.bismark] Constructing BSseq object ... 
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/04_align_to_reference_cpgs/males/Unfiltered_BSseq.rds
+[getCpGs] Filtering CpG-level data for loci with at least 1 reads in at least 1% of samples
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/04_align_to_reference_cpgs/males/Filtered_BSseq.rds
+ Completed dataset: males
+  Unfiltered CpGs: 29401795
+  Aligned CpGs:    25848696
+  Filtered CpGs:   25848696
+Consensus Script 04 complete
+Starting Script 05
+Loaded reference filtered regions: 416144
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0p08
+
+====================================================
+Processing dataset: males
+====================================================
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/males/cov3_75pct/covMin4_methSD0p08
+[getRegionMeth] Calculating region methylation from BSseq object
+[getRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/males/cov3_75pct/covMin4_methSD0p08/Region_Methylation.rds
+✓ Completed dataset: males
+  Matrix dimensions: 416144 regions x 25 samples
+Consensus Script 05 complete
+Starting Script 05b
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0p08
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin4_methSD0p08
+Loading females: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin4_methSD0p08/Region_Methylation.rds
+  Loaded: 416144 regions x 23 samples
+Loading males: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/males/cov3_75pct/covMin4_methSD0p08/Region_Methylation.rds
+  Loaded: 416144 regions x 25 samples
+Finding regions shared across all 2 datasets...
+Regions per dataset (before filtering):
+  females: 416144
+  males: 416144
+Regions shared across all datasets: 416144
+Identifying complete regions (no NAs) in each dataset...
+  females: 416144 complete | 0 with NAs
+  males: 413979 complete | 2165 with NAs
+Regions complete across ALL datasets: 413979
+Subsetting matrices to shared complete regions...
+  females: 413979 regions x 23 samples
+  males: 413979 regions x 25 samples
+Saved shared complete region IDs: 413979
+Loading regions file to create shared filtered regions table...
+Saved shared filtered regions table: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin4_methSD0p08/shared_complete_regions_4col.tsv
+Saved filtered matrix for females: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin4_methSD0p08/females_Methylation_complete.rds
+Saved filtered matrix for males: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin4_methSD0p08/males_Methylation_complete.rds
+Consensus Script 05b complete: shared complete region filtering done
+Output folder: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin4_methSD0p08
+Shared complete regions retained: 413979
+
+Use the following filtered matrices as --input_meth in Script 06:
+  females: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin4_methSD0p08/females_Methylation_complete.rds
+  males: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin4_methSD0p08/males_Methylation_complete.rds
+Starting Script 06
+Derived labels:
+  dataset_label : females
+  cpg_label     : cov3_75pct
+  region_label  : covMin4_methSD0p08
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin4_methSD0p08
+Loaded methylation: 413979 regions x 23 samples
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc_females.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+After alignment: 413979 regions x 23 samples
+Numeric traits retained: 49
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+Protected traits in SVA model: soc_env_tot, env_tot, soc_tot, wflzd_0to6mo, wflzd_6to12mo
+[getPCs_generic] Determining number of PCs via sva::num.sv
+Saved: Variance_Explained_First20_PCs.pdf
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin4_methSD0p08/PC_Trait_Correlation_Stats_Pearson.tsv
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin4_methSD0p08/PC_Trait_Correlation_Stats_Bicor.tsv
+Saving publication heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin4_methSD0p08/PC_Trait_Bicor_Heatmap_PUBLICATION.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=6.00, height=5.00 (nX=2,nY=8)
+Saving top-cells heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin4_methSD0p08/PC_Trait_Bicor_Heatmap_Top50Cells.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotTraitDendrogramFromPC] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin4_methSD0p08/Trait_Dendrogram_From_PC_Associations.pdf
+Script 06 complete: PC diagnostics finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin4_methSD0p08
+  dataset : females
+  cpg     : cov3_75pct
+  region  : covMin4_methSD0p08
+  SVs selected by num.sv: 2 of 23 total PCs
+Starting Script 06
+Derived labels:
+  dataset_label : males
+  cpg_label     : cov3_75pct
+  region_label  : covMin4_methSD0p08
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin4_methSD0p08
+Loaded methylation: 413979 regions x 25 samples
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc_males.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+After alignment: 413979 regions x 25 samples
+Numeric traits retained: 50
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+Protected traits in SVA model: soc_env_tot, env_tot, soc_tot, wflzd_0to6mo, wflzd_6to12mo
+[getPCs_generic] Determining number of PCs via sva::num.sv
+Saved: Variance_Explained_First20_PCs.pdf
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin4_methSD0p08/PC_Trait_Correlation_Stats_Pearson.tsv
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin4_methSD0p08/PC_Trait_Correlation_Stats_Bicor.tsv
+Saving publication heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin4_methSD0p08/PC_Trait_Bicor_Heatmap_PUBLICATION.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=6.00, height=5.00 (nX=2,nY=8)
+Saving top-cells heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin4_methSD0p08/PC_Trait_Bicor_Heatmap_Top50Cells.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotTraitDendrogramFromPC] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin4_methSD0p08/Trait_Dendrogram_From_PC_Associations.pdf
+Script 06 complete: PC diagnostics finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin4_methSD0p08
+  dataset : males
+  cpg     : cov3_75pct
+  region  : covMin4_methSD0p08
+  SVs selected by num.sv: 2 of 25 total PCs
+Starting Script 07
+Derived labels:
+  dataset_label : females
+  cpg_label     : cov3_75pct
+  region_label  : covMin4_methSD0p08
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin4_methSD0p08
+After alignment: 413979 regions x 23 samples; 2 PCs
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/females_Adjusted_Region_Methylation_allPCs.rds
+v1 complete [females]: used all 2 PCs
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/females_Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
+v2 complete [females]: removed 0 PCs; used 2
+Skipping v3 (run_v3 = FALSE)
+Script 07 complete: methylation adjustment finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin4_methSD0p08
+Starting Script 07
+Derived labels:
+  dataset_label : males
+  cpg_label     : cov3_75pct
+  region_label  : covMin4_methSD0p08
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin4_methSD0p08
+After alignment: 413979 regions x 25 samples; 2 PCs
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/males_Adjusted_Region_Methylation_allPCs.rds
+v1 complete [males]: used all 2 PCs
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/males_Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
+v2 complete [males]: removed 1 PCs; used 1
+Skipping v3 (run_v3 = FALSE)
+Script 07 complete: methylation adjustment finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin4_methSD0p08
+Starting Script 8 ✓
+Derived labels:
+  cpg_label    : cov3_75pct
+  region_label : covMin4_methSD0p08
+Shared output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/08_soft_power/shared/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+
+============================== Dataset: females
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 19, fit = 0.826 and mean connectivity = 106.5
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/08_soft_power/females/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/SoftPower_pearson.rds
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/08_soft_power/females/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_Dendrogram_pearson.pdf
+Saved sample dendrogram: females
+Soft power done: females
+
+============================== Dataset: males
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0.43 and mean connectivity = 60.7
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/08_soft_power/males/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/SoftPower_pearson.rds
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/08_soft_power/males/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Sample_Dendrogram_pearson.pdf
+Saved sample dendrogram: males
+Soft power done: males
+Chosen consensus power: 19 (fallback: smallest power maximizing datasets meeting cutoff)
+Warning message:
+`aes_string()` was deprecated in ggplot2 3.0.0.
+ℹ Please use tidy evaluation idioms with `aes()`.
+ℹ See also `vignette("ggplot2-in-packages")` for more information. 
+Saved: Consensus_SoftPower_Combined.pdf
+ Script 08 complete: soft power analysis finished
+Shared output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/08_soft_power/shared/cov3_75pct/covMin4_methSD0p08/v1_all_pcs
+Starting Script 8 ✓
+Error: dataset1_meth not found: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Males_Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
+Execution halted
+
+
+Starting Script 00
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/females
+Detected 48 CpG report files
+Loaded metadata for 23 samples
+[getCpGs] Loading CpG-level data
+[read.bismark] Using 'loci' as candidate loci.
+[read.bismark] Collapsing strand of 'loci' ...
+Done in 21.6 secs
+[read.bismark] Parsing files and constructing 'M' and 'Cov' matrices ...
+Done in 181.2 secs
+[read.bismark] Constructing BSseq object ... 
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/females/Unfiltered_BSseq.rds
+Unfiltered BSseq object created successfully
+[getCpGtotals] Calculating CpG totals at specified cov and perSample cutoffs
+[getCpGtotals] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/females/CpG_Totals.txt
+[plotCpGtotals] Plotting CpG totals
+[plotCpGtotals] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/females/CpG_Totals.pdf
+Consensus Script 00 complete for dataset: females
+Starting Script 00
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/males
+Detected 48 CpG report files
+Loaded metadata for 25 samples
+[getCpGs] Loading CpG-level data
+[read.bismark] Using 'loci' as candidate loci.
+[read.bismark] Collapsing strand of 'loci' ...
+Done in 22.7 secs
+[read.bismark] Parsing files and constructing 'M' and 'Cov' matrices ...
+Done in 232.4 secs
+[read.bismark] Constructing BSseq object ... 
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/males/Unfiltered_BSseq.rds
+Unfiltered BSseq object created successfully
+[getCpGtotals] Calculating CpG totals at specified cov and perSample cutoffs
+[getCpGtotals] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/males/CpG_Totals.txt
+[plotCpGtotals] Plotting CpG totals
+[plotCpGtotals] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/males/CpG_Totals.pdf
+Consensus Script 00 complete for dataset: males
+Starting Script 01 
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct
+[getCpGs] Filtering CpG-level data for loci with at least 3 reads in at least 75% of samples
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Filtered_BSseq.rds
+Filtered CpGs retained: 25848696
+[getRegions] Calling regions when at least 3 CpGs are no more than 150 bases apart
+[getRegions] Calculating region statistics
+[getRegions] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Regions.txt
+Regions generated: 2418858
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Region_Plots.pdf
+[plotSDstats] Plotting methylation SD vs region statistics
+[plotSDstats] Limiting x-axis to values in bottom 99% for n, covMin, and covMean
+[plotSDstats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/SD_Plots.pdf
+Warning message:
+The dot-dot notation (`..count..`) was deprecated in ggplot2 3.4.0.
+ℹ Please use `after_stat(count)` instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+[getRegionTotals] Calculating region totals at specified covMin and methSD cutoffs
+[getRegionTotals] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Region_Totals.txt
+[plotRegionTotals] Plotting region totals
+[plotRegionTotals] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Region_Totals.pdf
+Consensus Script 01 complete for reference dataset: females
+Starting Script 02
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06
+Loaded unfiltered regions: 2418858
+[getRegions] Filtering regions for at least 14 reads in all samples and methylation SD of at least 6%
+[getRegions] Creating new Region IDs
+[getRegions] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06/Filtered_Regions.txt
+Filtered regions: 765740
+Saved filtered regions: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06/Filtered_Regions.txt
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06/RegionStats_UNFILTERED.pdf
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06/RegionStats_FILTERED.pdf
+Saved separate plots:
+ - /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06/RegionStats_UNFILTERED.pdf
+ - /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06/RegionStats_FILTERED.pdf
+[plotRegionStatsCompare2] Building combined QC plot
+[plotRegionStatsCompare2] Saving: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06/RegionStats_FilterEffect_COMBINED.pdf
+Warning message:
+In geom_vline(data = thr, aes(xintercept = x), linetype = "dashed",  :
+  Ignoring unknown parameters: `inherit.aes`
+Saved combined plot: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06/RegionStats_FilterEffect_COMBINED.pdf
+Consensus Script 02 complete: reference region filtering and QC plots complete
+Output folder: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06
+Regions after filtering: 765740
+Starting Script 03
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin14_methSD0p06
+Loaded filtered regions: 765740
+Loaded BSseq object successfully
+[getRegionMeth] Calculating region methylation from BSseq object
+[getRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin14_methSD0p06/Region_Methylation.rds
+Saved region methylation RDS: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin14_methSD0p06/Region_Methylation.rds
+Matrix dimensions: 765740 regions x 23 samples
+Consensus Script 03 complete: reference region methylation calculated
+Starting Script 04
+Reference filtered BSseq loaded
+Reference CpGs: 25848696
+
+====================================================
+Processing dataset: males
+====================================================
+[getCpGs] Loading CpG-level data
+[read.bismark] Using 'loci' as candidate loci.
+[read.bismark] Collapsing strand of 'loci' ...
+Done in 18.2 secs
+[read.bismark] Parsing files and constructing 'M' and 'Cov' matrices ...
+Done in 220.1 secs
+[read.bismark] Constructing BSseq object ... 
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/04_align_to_reference_cpgs/males/Unfiltered_BSseq.rds
+[getCpGs] Filtering CpG-level data for loci with at least 3 reads in at least 1% of samples
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/04_align_to_reference_cpgs/males/Filtered_BSseq.rds
+ Completed dataset: males
+  Unfiltered CpGs: 29401795
+  Aligned CpGs:    25848696
+  Filtered CpGs:   25848630
+Consensus Script 04 complete
+Starting Script 05
+Loaded reference filtered regions: 765740
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin14_methSD0p06
+
+====================================================
+Processing dataset: males
+====================================================
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/males/cov3_75pct/covMin14_methSD0p06
+[getRegionMeth] Calculating region methylation from BSseq object
+[getRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/males/cov3_75pct/covMin14_methSD0p06/Region_Methylation.rds
+✓ Completed dataset: males
+  Matrix dimensions: 765740 regions x 25 samples
+Consensus Script 05 complete
+Starting Script 05b
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin14_methSD0p06
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin14_methSD0p06
+Loading females: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin14_methSD0p06/Region_Methylation.rds
+  Loaded: 765740 regions x 23 samples
+Loading males: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/males/cov3_75pct/covMin14_methSD0p06/Region_Methylation.rds
+  Loaded: 765740 regions x 25 samples
+Finding regions shared across all 2 datasets...
+Regions per dataset (before filtering):
+  females: 765740
+  males: 765740
+Regions shared across all datasets: 765740
+Identifying complete regions (no NAs) in each dataset...
+  females: 765740 complete | 0 with NAs
+  males: 764934 complete | 806 with NAs
+Regions complete across ALL datasets: 764934
+Subsetting matrices to shared complete regions...
+  females: 764934 regions x 23 samples
+  males: 764934 regions x 25 samples
+Saved shared complete region IDs: 764934
+Loading regions file to create shared filtered regions table...
+Saved shared filtered regions table: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin14_methSD0p06/shared_complete_regions_4col.tsv
+Saved filtered matrix for females: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin14_methSD0p06/females_Methylation_complete.rds
+Saved filtered matrix for males: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin14_methSD0p06/males_Methylation_complete.rds
+Consensus Script 05b complete: shared complete region filtering done
+Output folder: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin14_methSD0p06
+Shared complete regions retained: 764934
+
+Use the following filtered matrices as --input_meth in Script 06:
+  females: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin14_methSD0p06/females_Methylation_complete.rds
+  males: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin14_methSD0p06/males_Methylation_complete.rds
+Starting Script 06
+Derived labels:
+  dataset_label : females
+  cpg_label     : cov3_75pct
+  region_label  : covMin14_methSD0p06
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin14_methSD0p06
+Loaded methylation: 764934 regions x 23 samples
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc_females.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+After alignment: 764934 regions x 23 samples
+Numeric traits retained: 49
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+Protected traits in SVA model: soc_env_tot, env_tot, soc_tot, wflzd_0to6mo, wflzd_6to12mo
+[getPCs_generic] Determining number of PCs via sva::num.sv
+Saved: Variance_Explained_First20_PCs.pdf
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin14_methSD0p06/PC_Trait_Correlation_Stats_Pearson.tsv
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin14_methSD0p06/PC_Trait_Correlation_Stats_Bicor.tsv
+Saving publication heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin14_methSD0p06/PC_Trait_Bicor_Heatmap_PUBLICATION.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=6.00, height=5.00 (nX=2,nY=8)
+Saving top-cells heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin14_methSD0p06/PC_Trait_Bicor_Heatmap_Top50Cells.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotTraitDendrogramFromPC] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin14_methSD0p06/Trait_Dendrogram_From_PC_Associations.pdf
+Script 06 complete: PC diagnostics finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin14_methSD0p06
+  dataset : females
+  cpg     : cov3_75pct
+  region  : covMin14_methSD0p06
+  SVs selected by num.sv: 2 of 23 total PCs
+Starting Script 06
+Derived labels:
+  dataset_label : males
+  cpg_label     : cov3_75pct
+  region_label  : covMin14_methSD0p06
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin14_methSD0p06
+Loaded methylation: 764934 regions x 25 samples
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc_males.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+After alignment: 764934 regions x 25 samples
+Numeric traits retained: 50
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+Protected traits in SVA model: soc_env_tot, env_tot, soc_tot, wflzd_0to6mo, wflzd_6to12mo
+[getPCs_generic] Determining number of PCs via sva::num.sv
+Saved: Variance_Explained_First20_PCs.pdf
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin14_methSD0p06/PC_Trait_Correlation_Stats_Pearson.tsv
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin14_methSD0p06/PC_Trait_Correlation_Stats_Bicor.tsv
+Saving publication heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin14_methSD0p06/PC_Trait_Bicor_Heatmap_PUBLICATION.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=6.00, height=5.00 (nX=3,nY=8)
+Saving top-cells heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin14_methSD0p06/PC_Trait_Bicor_Heatmap_Top50Cells.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotTraitDendrogramFromPC] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin14_methSD0p06/Trait_Dendrogram_From_PC_Associations.pdf
+Script 06 complete: PC diagnostics finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin14_methSD0p06
+  dataset : males
+  cpg     : cov3_75pct
+  region  : covMin14_methSD0p06
+  SVs selected by num.sv: 3 of 25 total PCs
+Starting Script 07
+Derived labels:
+  dataset_label : females
+  cpg_label     : cov3_75pct
+  region_label  : covMin14_methSD0p06
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin14_methSD0p06
+After alignment: 764934 regions x 23 samples; 2 PCs
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin14_methSD0p06/v1_all_pcs/females_Adjusted_Region_Methylation_allPCs.rds
+v1 complete [females]: used all 2 PCs
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin14_methSD0p06/v2_exclude_protected_pcs/females_Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
+v2 complete [females]: removed 0 PCs; used 2
+Skipping v3 (run_v3 = FALSE)
+Script 07 complete: methylation adjustment finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin14_methSD0p06
+Starting Script 07
+Derived labels:
+  dataset_label : males
+  cpg_label     : cov3_75pct
+  region_label  : covMin14_methSD0p06
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin14_methSD0p06
+After alignment: 764934 regions x 25 samples; 3 PCs
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin14_methSD0p06/v1_all_pcs/males_Adjusted_Region_Methylation_allPCs.rds
+v1 complete [males]: used all 3 PCs
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin14_methSD0p06/v2_exclude_protected_pcs/males_Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
+v2 complete [males]: removed 2 PCs; used 1
+Skipping v3 (run_v3 = FALSE)
+Script 07 complete: methylation adjustment finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin14_methSD0p06
+Starting Script 8 ✓
+Derived labels:
+  cpg_label    : cov3_75pct
+  region_label : covMin14_methSD0p06
+Shared output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/08_soft_power/shared/cov3_75pct/covMin14_methSD0p06/v1_all_pcs
+
+============================== Dataset: females
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+Error in datk[c(startG:endG), ] = foreach(t = actualThreads, .combine = rbind) %dopar%  : 
+  number of items to replace is not a multiple of replacement length
+Calls: getSoftPower -> pickSoftThreshold
+In addition: Warning message:
+In mclapply(argsList, FUN, mc.preschedule = preschedule, mc.set.seed = set.seed,  :
+  scheduled cores 13, 16, 19, 26, 27, 32, 40, 55, 56, 58 did not deliver results, all values of the jobs will be affected
+Execution halted
+[2026-08-21T15:07:08.422] error: Detected 10 oom_kill events in StepId=21012981.batch. Some of the step tasks have been OOM Killed.
+
+
+Starting Script 00
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/females
+Detected 48 CpG report files
+Loaded metadata for 23 samples
+[getCpGs] Loading CpG-level data
+[read.bismark] Using 'loci' as candidate loci.
+[read.bismark] Collapsing strand of 'loci' ...
+Done in 20.6 secs
+[read.bismark] Parsing files and constructing 'M' and 'Cov' matrices ...
+Done in 141.5 secs
+[read.bismark] Constructing BSseq object ... 
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/females/Unfiltered_BSseq.rds
+Unfiltered BSseq object created successfully
+[getCpGtotals] Calculating CpG totals at specified cov and perSample cutoffs
+[getCpGtotals] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/females/CpG_Totals.txt
+[plotCpGtotals] Plotting CpG totals
+[plotCpGtotals] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/females/CpG_Totals.pdf
+Consensus Script 00 complete for dataset: females
+Starting Script 00
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/males
+Detected 48 CpG report files
+Loaded metadata for 25 samples
+[getCpGs] Loading CpG-level data
+[read.bismark] Using 'loci' as candidate loci.
+[read.bismark] Collapsing strand of 'loci' ...
+Done in 20.9 secs
+[read.bismark] Parsing files and constructing 'M' and 'Cov' matrices ...
+Done in 180.6 secs
+[read.bismark] Constructing BSseq object ... 
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/males/Unfiltered_BSseq.rds
+Unfiltered BSseq object created successfully
+[getCpGtotals] Calculating CpG totals at specified cov and perSample cutoffs
+[getCpGtotals] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/males/CpG_Totals.txt
+[plotCpGtotals] Plotting CpG totals
+[plotCpGtotals] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/males/CpG_Totals.pdf
+Consensus Script 00 complete for dataset: males
+Starting Script 01 
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct
+[getCpGs] Filtering CpG-level data for loci with at least 3 reads in at least 75% of samples
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Filtered_BSseq.rds
+Filtered CpGs retained: 25848696
+[getRegions] Calling regions when at least 3 CpGs are no more than 150 bases apart
+[getRegions] Calculating region statistics
+[getRegions] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Regions.txt
+Regions generated: 2418858
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Region_Plots.pdf
+[plotSDstats] Plotting methylation SD vs region statistics
+[plotSDstats] Limiting x-axis to values in bottom 99% for n, covMin, and covMean
+[plotSDstats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/SD_Plots.pdf
+Warning message:
+The dot-dot notation (`..count..`) was deprecated in ggplot2 3.4.0.
+ℹ Please use `after_stat(count)` instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+[getRegionTotals] Calculating region totals at specified covMin and methSD cutoffs
+[getRegionTotals] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Region_Totals.txt
+[plotRegionTotals] Plotting region totals
+[plotRegionTotals] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Region_Totals.pdf
+Consensus Script 01 complete for reference dataset: females
+Starting Script 02
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06
+Loaded unfiltered regions: 2418858
+[getRegions] Filtering regions for at least 14 reads in all samples and methylation SD of at least 6%
+[getRegions] Creating new Region IDs
+[getRegions] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06/Filtered_Regions.txt
+Filtered regions: 765740
+Saved filtered regions: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06/Filtered_Regions.txt
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06/RegionStats_UNFILTERED.pdf
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06/RegionStats_FILTERED.pdf
+Saved separate plots:
+ - /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06/RegionStats_UNFILTERED.pdf
+ - /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06/RegionStats_FILTERED.pdf
+[plotRegionStatsCompare2] Building combined QC plot
+[plotRegionStatsCompare2] Saving: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06/RegionStats_FilterEffect_COMBINED.pdf
+Warning message:
+In geom_vline(data = thr, aes(xintercept = x), linetype = "dashed",  :
+  Ignoring unknown parameters: `inherit.aes`
+Saved combined plot: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06/RegionStats_FilterEffect_COMBINED.pdf
+Consensus Script 02 complete: reference region filtering and QC plots complete
+Output folder: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin14_methSD0p06
+Regions after filtering: 765740
+Starting Script 03
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin14_methSD0p06
+Loaded filtered regions: 765740
+Loaded BSseq object successfully
+[getRegionMeth] Calculating region methylation from BSseq object
+[getRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin14_methSD0p06/Region_Methylation.rds
+Saved region methylation RDS: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin14_methSD0p06/Region_Methylation.rds
+Matrix dimensions: 765740 regions x 23 samples
+Consensus Script 03 complete: reference region methylation calculated
+Starting Script 04
+Reference filtered BSseq loaded
+Reference CpGs: 25848696
+
+====================================================
+Processing dataset: males
+====================================================
+[getCpGs] Loading CpG-level data
+[read.bismark] Using 'loci' as candidate loci.
+[read.bismark] Collapsing strand of 'loci' ...
+Done in 18.1 secs
+[read.bismark] Parsing files and constructing 'M' and 'Cov' matrices ...
+Done in 166.5 secs
+[read.bismark] Constructing BSseq object ... 
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/04_align_to_reference_cpgs/males/Unfiltered_BSseq.rds
+[getCpGs] Filtering CpG-level data for loci with at least 3 reads in at least 75% of samples
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/04_align_to_reference_cpgs/males/Filtered_BSseq.rds
+ Completed dataset: males
+  Unfiltered CpGs: 29401795
+  Aligned CpGs:    25848696
+  Filtered CpGs:   25539797
+Consensus Script 04 complete
+Starting Script 05
+Loaded reference filtered regions: 765740
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin14_methSD0p06
+
+====================================================
+Processing dataset: males
+====================================================
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/males/cov3_75pct/covMin14_methSD0p06
+[getRegionMeth] Calculating region methylation from BSseq object
+[getRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/males/cov3_75pct/covMin14_methSD0p06/Region_Methylation.rds
+✓ Completed dataset: males
+  Matrix dimensions: 765740 regions x 25 samples
+Consensus Script 05 complete
+Starting Script 05b
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin14_methSD0p06
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin14_methSD0p06
+Loading females: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin14_methSD0p06/Region_Methylation.rds
+  Loaded: 765740 regions x 23 samples
+Loading males: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/males/cov3_75pct/covMin14_methSD0p06/Region_Methylation.rds
+  Loaded: 765740 regions x 25 samples
+Finding regions shared across all 2 datasets...
+Regions per dataset (before filtering):
+  females: 765740
+  males: 765740
+Regions shared across all datasets: 765740
+Identifying complete regions (no NAs) in each dataset...
+  females: 765740 complete | 0 with NAs
+  males: 764642 complete | 1098 with NAs
+Regions complete across ALL datasets: 764642
+Subsetting matrices to shared complete regions...
+  females: 764642 regions x 23 samples
+  males: 764642 regions x 25 samples
+Saved shared complete region IDs: 764642
+Loading regions file to create shared filtered regions table...
+Saved shared filtered regions table: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin14_methSD0p06/shared_complete_regions_4col.tsv
+Saved filtered matrix for females: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin14_methSD0p06/females_Methylation_complete.rds
+Saved filtered matrix for males: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin14_methSD0p06/males_Methylation_complete.rds
+Consensus Script 05b complete: shared complete region filtering done
+Output folder: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin14_methSD0p06
+Shared complete regions retained: 764642
+
+Use the following filtered matrices as --input_meth in Script 06:
+  females: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin14_methSD0p06/females_Methylation_complete.rds
+  males: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin14_methSD0p06/males_Methylation_complete.rds
+Starting Script 06
+Derived labels:
+  dataset_label : females
+  cpg_label     : cov3_75pct
+  region_label  : covMin14_methSD0p06
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin14_methSD0p06
+Loaded methylation: 764642 regions x 23 samples
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc_females.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+After alignment: 764642 regions x 23 samples
+Numeric traits retained: 49
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+Protected traits in SVA model: soc_env_tot, env_tot, soc_tot, wflzd_0to6mo, wflzd_6to12mo
+[getPCs_generic] Determining number of PCs via sva::num.sv
+Saved: Variance_Explained_First20_PCs.pdf
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin14_methSD0p06/PC_Trait_Correlation_Stats_Pearson.tsv
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin14_methSD0p06/PC_Trait_Correlation_Stats_Bicor.tsv
+Saving publication heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin14_methSD0p06/PC_Trait_Bicor_Heatmap_PUBLICATION.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=6.00, height=5.00 (nX=2,nY=8)
+Saving top-cells heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin14_methSD0p06/PC_Trait_Bicor_Heatmap_Top50Cells.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotTraitDendrogramFromPC] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin14_methSD0p06/Trait_Dendrogram_From_PC_Associations.pdf
+Script 06 complete: PC diagnostics finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin14_methSD0p06
+  dataset : females
+  cpg     : cov3_75pct
+  region  : covMin14_methSD0p06
+  SVs selected by num.sv: 2 of 23 total PCs
+Starting Script 06
+Derived labels:
+  dataset_label : males
+  cpg_label     : cov3_75pct
+  region_label  : covMin14_methSD0p06
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin14_methSD0p06
+Loaded methylation: 764642 regions x 25 samples
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc_males.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+After alignment: 764642 regions x 25 samples
+Numeric traits retained: 50
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+Protected traits in SVA model: soc_env_tot, env_tot, soc_tot, wflzd_0to6mo, wflzd_6to12mo
+[getPCs_generic] Determining number of PCs via sva::num.sv
+Saved: Variance_Explained_First20_PCs.pdf
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin14_methSD0p06/PC_Trait_Correlation_Stats_Pearson.tsv
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin14_methSD0p06/PC_Trait_Correlation_Stats_Bicor.tsv
+Saving publication heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin14_methSD0p06/PC_Trait_Bicor_Heatmap_PUBLICATION.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=6.00, height=5.00 (nX=3,nY=8)
+Saving top-cells heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin14_methSD0p06/PC_Trait_Bicor_Heatmap_Top50Cells.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotTraitDendrogramFromPC] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin14_methSD0p06/Trait_Dendrogram_From_PC_Associations.pdf
+Script 06 complete: PC diagnostics finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin14_methSD0p06
+  dataset : males
+  cpg     : cov3_75pct
+  region  : covMin14_methSD0p06
+  SVs selected by num.sv: 3 of 25 total PCs
+Starting Script 07
+Derived labels:
+  dataset_label : females
+  cpg_label     : cov3_75pct
+  region_label  : covMin14_methSD0p06
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin14_methSD0p06
+After alignment: 764642 regions x 23 samples; 2 PCs
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin14_methSD0p06/v1_all_pcs/females_Adjusted_Region_Methylation_allPCs.rds
+v1 complete [females]: used all 2 PCs
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin14_methSD0p06/v2_exclude_protected_pcs/females_Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
+v2 complete [females]: removed 0 PCs; used 2
+Skipping v3 (run_v3 = FALSE)
+Script 07 complete: methylation adjustment finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin14_methSD0p06
+Starting Script 07
+Derived labels:
+  dataset_label : males
+  cpg_label     : cov3_75pct
+  region_label  : covMin14_methSD0p06
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin14_methSD0p06
+After alignment: 764642 regions x 25 samples; 3 PCs
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin14_methSD0p06/v1_all_pcs/males_Adjusted_Region_Methylation_allPCs.rds
+v1 complete [males]: used all 3 PCs
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin14_methSD0p06/v2_exclude_protected_pcs/males_Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
+v2 complete [males]: removed 2 PCs; used 1
+Skipping v3 (run_v3 = FALSE)
+Script 07 complete: methylation adjustment finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin14_methSD0p06
+Starting Script 8 ✓
+Derived labels:
+  cpg_label    : cov3_75pct
+  region_label : covMin14_methSD0p06
+Shared output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/08_soft_power/shared/cov3_75pct/covMin14_methSD0p06/v1_all_pcs
+
+============================== Dataset: females
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+Error in datk[c(startG:endG), ] = foreach(t = actualThreads, .combine = rbind) %dopar%  : 
+  number of items to replace is not a multiple of replacement length
+Calls: getSoftPower -> pickSoftThreshold
+In addition: Warning message:
+In mclapply(argsList, FUN, mc.preschedule = preschedule, mc.set.seed = set.seed,  :
+  scheduled cores 1, 2, 4, 11, 13, 19, 23, 29, 41 did not deliver results, all values of the jobs will be affected
+Execution halted
+[2026-08-21T17:16:34.857] error: Detected 9 oom_kill events in StepId=21035967.batch. Some of the step tasks have been OOM Killed.
+
+
+Starting Script 00
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/females
+Detected 48 CpG report files
+Loaded metadata for 23 samples
+[getCpGs] Loading CpG-level data
+[read.bismark] Using 'loci' as candidate loci.
+[read.bismark] Collapsing strand of 'loci' ...
+Done in 20.6 secs
+[read.bismark] Parsing files and constructing 'M' and 'Cov' matrices ...
+Done in 142.1 secs
+[read.bismark] Constructing BSseq object ... 
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/females/Unfiltered_BSseq.rds
+Unfiltered BSseq object created successfully
+[getCpGtotals] Calculating CpG totals at specified cov and perSample cutoffs
+[getCpGtotals] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/females/CpG_Totals.txt
+[plotCpGtotals] Plotting CpG totals
+[plotCpGtotals] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/females/CpG_Totals.pdf
+Consensus Script 00 complete for dataset: females
+Starting Script 00
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/males
+Detected 48 CpG report files
+Loaded metadata for 25 samples
+[getCpGs] Loading CpG-level data
+[read.bismark] Using 'loci' as candidate loci.
+[read.bismark] Collapsing strand of 'loci' ...
+Done in 21.1 secs
+[read.bismark] Parsing files and constructing 'M' and 'Cov' matrices ...
+Done in 183.1 secs
+[read.bismark] Constructing BSseq object ... 
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/males/Unfiltered_BSseq.rds
+Unfiltered BSseq object created successfully
+[getCpGtotals] Calculating CpG totals at specified cov and perSample cutoffs
+[getCpGtotals] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/males/CpG_Totals.txt
+[plotCpGtotals] Plotting CpG totals
+[plotCpGtotals] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/00_cpg_extraction/males/CpG_Totals.pdf
+Consensus Script 00 complete for dataset: males
+Starting Script 01 
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct
+[getCpGs] Filtering CpG-level data for loci with at least 3 reads in at least 75% of samples
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Filtered_BSseq.rds
+Filtered CpGs retained: 25848696
+[getRegions] Calling regions when at least 3 CpGs are no more than 150 bases apart
+[getRegions] Calculating region statistics
+[getRegions] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Regions.txt
+Regions generated: 2418858
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Region_Plots.pdf
+[plotSDstats] Plotting methylation SD vs region statistics
+[plotSDstats] Limiting x-axis to values in bottom 99% for n, covMin, and covMean
+[plotSDstats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/SD_Plots.pdf
+Warning message:
+The dot-dot notation (`..count..`) was deprecated in ggplot2 3.4.0.
+ℹ Please use `after_stat(count)` instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+[getRegionTotals] Calculating region totals at specified covMin and methSD cutoffs
+[getRegionTotals] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Region_Totals.txt
+[plotRegionTotals] Plotting region totals
+[plotRegionTotals] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Region_Totals.pdf
+Consensus Script 01 complete for reference dataset: females
+Starting Script 02
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin18_methSD0p07
+Loaded unfiltered regions: 2418858
+[getRegions] Filtering regions for at least 18 reads in all samples and methylation SD of at least 7%
+[getRegions] Creating new Region IDs
+[getRegions] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin18_methSD0p07/Filtered_Regions.txt
+Filtered regions: 482730
+Saved filtered regions: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin18_methSD0p07/Filtered_Regions.txt
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin18_methSD0p07/RegionStats_UNFILTERED.pdf
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin18_methSD0p07/RegionStats_FILTERED.pdf
+Saved separate plots:
+ - /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin18_methSD0p07/RegionStats_UNFILTERED.pdf
+ - /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin18_methSD0p07/RegionStats_FILTERED.pdf
+[plotRegionStatsCompare2] Building combined QC plot
+[plotRegionStatsCompare2] Saving: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin18_methSD0p07/RegionStats_FilterEffect_COMBINED.pdf
+Warning message:
+In geom_vline(data = thr, aes(xintercept = x), linetype = "dashed",  :
+  Ignoring unknown parameters: `inherit.aes`
+Saved combined plot: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin18_methSD0p07/RegionStats_FilterEffect_COMBINED.pdf
+Consensus Script 02 complete: reference region filtering and QC plots complete
+Output folder: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin18_methSD0p07
+Regions after filtering: 482730
+Starting Script 03
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin18_methSD0p07
+Loaded filtered regions: 482730
+Loaded BSseq object successfully
+[getRegionMeth] Calculating region methylation from BSseq object
+[getRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin18_methSD0p07/Region_Methylation.rds
+Saved region methylation RDS: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin18_methSD0p07/Region_Methylation.rds
+Matrix dimensions: 482730 regions x 23 samples
+Consensus Script 03 complete: reference region methylation calculated
+Starting Script 04
+Reference filtered BSseq loaded
+Reference CpGs: 25848696
+
+====================================================
+Processing dataset: males
+====================================================
+[getCpGs] Loading CpG-level data
+[read.bismark] Using 'loci' as candidate loci.
+[read.bismark] Collapsing strand of 'loci' ...
+Done in 17.8 secs
+[read.bismark] Parsing files and constructing 'M' and 'Cov' matrices ...
+Done in 169.1 secs
+[read.bismark] Constructing BSseq object ... 
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/04_align_to_reference_cpgs/males/Unfiltered_BSseq.rds
+[getCpGs] Filtering CpG-level data for loci with at least 3 reads in at least 75% of samples
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/04_align_to_reference_cpgs/males/Filtered_BSseq.rds
+ Completed dataset: males
+  Unfiltered CpGs: 29401795
+  Aligned CpGs:    25848696
+  Filtered CpGs:   25539797
+Consensus Script 04 complete
+Starting Script 05
+Loaded reference filtered regions: 482730
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin18_methSD0p07
+
+====================================================
+Processing dataset: males
+====================================================
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/males/cov3_75pct/covMin18_methSD0p07
+[getRegionMeth] Calculating region methylation from BSseq object
+[getRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/males/cov3_75pct/covMin18_methSD0p07/Region_Methylation.rds
+✓ Completed dataset: males
+  Matrix dimensions: 482730 regions x 25 samples
+Consensus Script 05 complete
+Starting Script 05b
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin18_methSD0p07
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin18_methSD0p07
+Loading females: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin18_methSD0p07/Region_Methylation.rds
+  Loaded: 482730 regions x 23 samples
+Loading males: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/03_region_methylation/males/cov3_75pct/covMin18_methSD0p07/Region_Methylation.rds
+  Loaded: 482730 regions x 25 samples
+Finding regions shared across all 2 datasets...
+Regions per dataset (before filtering):
+  females: 482730
+  males: 482730
+Regions shared across all datasets: 482730
+Identifying complete regions (no NAs) in each dataset...
+  females: 482730 complete | 0 with NAs
+  males: 482219 complete | 511 with NAs
+Regions complete across ALL datasets: 482219
+Subsetting matrices to shared complete regions...
+  females: 482219 regions x 23 samples
+  males: 482219 regions x 25 samples
+Saved shared complete region IDs: 482219
+Loading regions file to create shared filtered regions table...
+Saved shared filtered regions table: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin18_methSD0p07/shared_complete_regions_4col.tsv
+Saved filtered matrix for females: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin18_methSD0p07/females_Methylation_complete.rds
+Saved filtered matrix for males: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin18_methSD0p07/males_Methylation_complete.rds
+Consensus Script 05b complete: shared complete region filtering done
+Output folder: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin18_methSD0p07
+Shared complete regions retained: 482219
+
+Use the following filtered matrices as --input_meth in Script 06:
+  females: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin18_methSD0p07/females_Methylation_complete.rds
+  males: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin18_methSD0p07/males_Methylation_complete.rds
+Starting Script 06
+Derived labels:
+  dataset_label : females
+  cpg_label     : cov3_75pct
+  region_label  : covMin18_methSD0p07
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin18_methSD0p07
+Loaded methylation: 482219 regions x 23 samples
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc_females.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+After alignment: 482219 regions x 23 samples
+Numeric traits retained: 49
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+Protected traits in SVA model: soc_env_tot, env_tot, soc_tot, wflzd_0to6mo, wflzd_6to12mo
+[getPCs_generic] Determining number of PCs via sva::num.sv
+Saved: Variance_Explained_First20_PCs.pdf
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin18_methSD0p07/PC_Trait_Correlation_Stats_Pearson.tsv
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin18_methSD0p07/PC_Trait_Correlation_Stats_Bicor.tsv
+Saving publication heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin18_methSD0p07/PC_Trait_Bicor_Heatmap_PUBLICATION.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=6.00, height=5.00 (nX=2,nY=8)
+Saving top-cells heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin18_methSD0p07/PC_Trait_Bicor_Heatmap_Top50Cells.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotTraitDendrogramFromPC] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin18_methSD0p07/Trait_Dendrogram_From_PC_Associations.pdf
+Script 06 complete: PC diagnostics finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin18_methSD0p07
+  dataset : females
+  cpg     : cov3_75pct
+  region  : covMin18_methSD0p07
+  SVs selected by num.sv: 2 of 23 total PCs
+Starting Script 06
+Derived labels:
+  dataset_label : males
+  cpg_label     : cov3_75pct
+  region_label  : covMin18_methSD0p07
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin18_methSD0p07
+Loaded methylation: 482219 regions x 25 samples
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata/merged_qc_males.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+After alignment: 482219 regions x 25 samples
+Numeric traits retained: 50
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+Protected traits in SVA model: soc_env_tot, env_tot, soc_tot, wflzd_0to6mo, wflzd_6to12mo
+[getPCs_generic] Determining number of PCs via sva::num.sv
+Saved: Variance_Explained_First20_PCs.pdf
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin18_methSD0p07/PC_Trait_Correlation_Stats_Pearson.tsv
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin18_methSD0p07/PC_Trait_Correlation_Stats_Bicor.tsv
+Saving publication heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin18_methSD0p07/PC_Trait_Bicor_Heatmap_PUBLICATION.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=6.00, height=5.00 (nX=2,nY=8)
+Saving top-cells heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin18_methSD0p07/PC_Trait_Bicor_Heatmap_Top50Cells.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotTraitDendrogramFromPC] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin18_methSD0p07/Trait_Dendrogram_From_PC_Associations.pdf
+Script 06 complete: PC diagnostics finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin18_methSD0p07
+  dataset : males
+  cpg     : cov3_75pct
+  region  : covMin18_methSD0p07
+  SVs selected by num.sv: 2 of 25 total PCs
+Starting Script 07
+Derived labels:
+  dataset_label : females
+  cpg_label     : cov3_75pct
+  region_label  : covMin18_methSD0p07
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin18_methSD0p07
+After alignment: 482219 regions x 23 samples; 2 PCs
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin18_methSD0p07/v1_all_pcs/females_Adjusted_Region_Methylation_allPCs.rds
+v1 complete [females]: used all 2 PCs
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin18_methSD0p07/v2_exclude_protected_pcs/females_Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
+v2 complete [females]: removed 0 PCs; used 2
+Skipping v3 (run_v3 = FALSE)
+Script 07 complete: methylation adjustment finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin18_methSD0p07
+Starting Script 07
+Derived labels:
+  dataset_label : males
+  cpg_label     : cov3_75pct
+  region_label  : covMin18_methSD0p07
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin18_methSD0p07
+After alignment: 482219 regions x 25 samples; 2 PCs
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin18_methSD0p07/v1_all_pcs/males_Adjusted_Region_Methylation_allPCs.rds
+v1 complete [males]: used all 2 PCs
+Warning message:
+Skipping v2: all PCs removed after protected-trait filtering. 
+Skipping v3 (run_v3 = FALSE)
+Script 07 complete: methylation adjustment finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin18_methSD0p07
+Starting Script 8 ✓
+Derived labels:
+  cpg_label    : cov3_75pct
+  region_label : covMin18_methSD0p07
+Shared output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/08_soft_power/shared/cov3_75pct/covMin18_methSD0p07/v1_all_pcs
+
+============================== Dataset: females
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0.752 and mean connectivity = 93.6
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/08_soft_power/females/cov3_75pct/covMin18_methSD0p07/v1_all_pcs/SoftPower_pearson.rds
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/08_soft_power/females/cov3_75pct/covMin18_methSD0p07/v1_all_pcs/Sample_Dendrogram_pearson.pdf
+Saved sample dendrogram: females
+Soft power done: females
+
+============================== Dataset: males
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0 and mean connectivity = 67.2
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/08_soft_power/males/cov3_75pct/covMin18_methSD0p07/v1_all_pcs/SoftPower_pearson.rds
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/08_soft_power/males/cov3_75pct/covMin18_methSD0p07/v1_all_pcs/Sample_Dendrogram_pearson.pdf
+Saved sample dendrogram: males
+Soft power done: males
+Chosen consensus power: 1 (fallback: smallest power maximizing datasets meeting cutoff)
+Warning message:
+`aes_string()` was deprecated in ggplot2 3.0.0.
+ℹ Please use tidy evaluation idioms with `aes()`.
+ℹ See also `vignette("ggplot2-in-packages")` for more information. 
+Saved: Consensus_SoftPower_Combined.pdf
+ Script 08 complete: soft power analysis finished
+Shared output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/08_soft_power/shared/cov3_75pct/covMin18_methSD0p07/v1_all_pcs
+Starting Script 8 ✓
+Error: dataset2_meth not found: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin18_methSD0p07/v2_exclude_protected_pcs/males_Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
+Execution halted

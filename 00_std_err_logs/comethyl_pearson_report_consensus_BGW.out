@@ -1,0 +1,2225 @@
+hive-dc-7-4-38
+Thu Aug 20 03:55:42 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+An object of type 'BSseq' with
+  29401795 methylation loci
+  25 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  29401795 methylation loci
+  23 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  25854133 methylation loci
+  25 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  29401795 methylation loci
+  23 samples
+has not been smoothed
+All assays are in-memory
+An object of type 'BSseq' with
+  25853851 methylation loci
+  23 samples
+has not been smoothed
+All assays are in-memory
+Allowing parallel execution with up to 59 working processes.
+[1] "016B" "032B" "038B" "104C" "111"  "112" 
+Allowing parallel execution with up to 59 working processes.
+[1] "019B" "026B" "043B" "060B" "076C" "079B"
+Allowing parallel execution with up to 59 working processes.
+ pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq  slope truncated.R.sq  mean.k. median.k. max.k.  Density
+1      1  0.00592   8.72          0.979 240000.0  240000.0 248000 0.501000
+2      2  0.00153   2.21          0.977 126000.0  126000.0 135000 0.263000
+3      3  0.00348  -2.30          0.967  68900.0   68800.0  76400 0.144000
+4      4  0.02600  -4.70          0.954  39100.0   39000.0  45100 0.081700
+5      5  0.11500  -8.07          0.952  22900.0   22800.0  27800 0.047800
+6      6  0.23200  -9.66          0.947  13800.0   13700.0  17700 0.028800
+7      7  0.35100 -10.50          0.942   8540.0    8490.0  11600 0.017800
+8      8  0.45800 -10.70          0.936   5400.0    5360.0   7860 0.011300
+9      9  0.48800  -9.81          0.920   3490.0    3460.0   5450 0.007300
+10    10  0.49900  -8.85          0.900   2300.0    2280.0   3870 0.004810
+11    11  0.51100  -8.10          0.883   1550.0    1520.0   2810 0.003230
+12    12  0.53800  -7.55          0.872   1050.0    1040.0   2080 0.002200
+13    13  0.57700  -7.18          0.868    729.0     716.0   1560 0.001520
+14    14  0.62800  -6.95          0.872    512.0     501.0   1200 0.001070
+15    15  0.68300  -6.78          0.883    364.0     355.0    931 0.000760
+16    16  0.74100  -6.65          0.899    262.0     255.0    734 0.000547
+17    17  0.79400  -6.51          0.915    190.0     185.0    586 0.000398
+18    18  0.84200  -6.38          0.932    140.0     135.0    473 0.000292
+19    19  0.88400  -6.24          0.949    104.0     100.0    386 0.000217
+20    20  0.91500  -6.10          0.964     77.9      74.6    319 0.000163
+   Centralization Heterogeneity
+1        0.017300       0.00985
+2        0.018100       0.01900
+3        0.015800       0.02790
+4        0.012600       0.03680
+5        0.010200       0.04570
+6        0.008110       0.05470
+7        0.006460       0.06400
+8        0.005140       0.07360
+9        0.004100       0.08340
+10       0.003280       0.09360
+11       0.002640       0.10400
+12       0.002140       0.11500
+13       0.001750       0.12600
+14       0.001430       0.13800
+15       0.001190       0.15000
+16       0.000986       0.16300
+17       0.000826       0.17600
+18       0.000696       0.19000
+19       0.000590       0.20500
+20       0.000503       0.22100
+ pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq slope truncated.R.sq  mean.k. median.k. max.k.  Density
+1      1    0.071  2.32          0.645 241000.0  241000.0 257000 0.504000
+2      2    0.165  3.90          0.803 127000.0  127000.0 145000 0.266000
+3      3    0.257  4.96          0.848  70300.0   70300.0  85000 0.147000
+4      4    0.257  5.15          0.741  40200.0   40100.0  51600 0.084100
+5      5    0.345  5.82          0.676  23800.0   23700.0  32300 0.049700
+6      6    0.412  5.95          0.593  14500.0   14400.0  20700 0.030200
+7      7    0.409  6.00          0.474   9030.0    8960.0  13600 0.018900
+8      8    0.391  5.92          0.394   5770.0    5710.0   9140 0.012100
+9      9    0.455  5.68          0.347   3760.0    3720.0   6250 0.007860
+10    10    0.434  5.58          0.293   2500.0    2470.0   4340 0.005230
+11    11    0.412  5.46          0.253   1690.0    1660.0   3060 0.003540
+12    12    0.440  4.84          0.288   1160.0    1140.0   2190 0.002430
+13    13    0.429  4.60          0.310    813.0     795.0   1580 0.001700
+14    14    0.404  4.44          0.309    575.0     561.0   1160 0.001200
+15    15    0.380  4.30          0.306    412.0     401.0    859 0.000860
+16    16    0.355  4.17          0.299    298.0     290.0    645 0.000624
+17    17    0.333  4.04          0.292    219.0     212.0    490 0.000457
+18    18    0.286  2.84          0.455    162.0     156.0    375 0.000338
+19    19    0.205  2.14          0.734    121.0     117.0    296 0.000253
+20    20    0.111  1.56          0.877     91.2      87.7    239 0.000191
+   Centralization Heterogeneity
+1        0.034400        0.0201
+2        0.036500        0.0384
+3        0.030800        0.0552
+4        0.023800        0.0709
+5        0.017800        0.0856
+6        0.013100        0.0994
+7        0.009620        0.1120
+8        0.007050        0.1250
+9        0.005190        0.1370
+10       0.003840        0.1480
+11       0.002850        0.1590
+12       0.002140        0.1700
+13       0.001610        0.1800
+14       0.001220        0.1900
+15       0.000934        0.2000
+16       0.000725        0.2090
+17       0.000566        0.2180
+18       0.000445        0.2270
+19       0.000366        0.2360
+20       0.000309        0.2440
+pdf 
+  2 
+Allowing parallel execution with up to 59 working processes.
+ pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq  slope truncated.R.sq mean.k. median.k. max.k. Density
+1      1   0.5230  6.940          0.865  255000    257000 296000 0.53200
+2      2   0.0206  0.566          0.761  145000    143000 201000 0.30200
+3      3   0.0307 -0.540          0.659   86500     82300 145000 0.18100
+4      4   0.2160 -1.210          0.670   54200     48700 110000 0.11300
+5      5   0.4760 -1.760          0.740   35300     29500  86800 0.07370
+6      6   0.6110 -2.060          0.781   23800     18300  70200 0.04960
+7      7   0.6650 -2.190          0.802   16500     11800  57900 0.03440
+8      8   0.6810 -2.240          0.812   11700      7780  48500 0.02450
+9      9   0.6870 -2.260          0.823    8550      5240  41200 0.01790
+10    10   0.6850 -2.270          0.830    6350      3580  35300 0.01330
+11    11   0.6860 -2.270          0.842    4810      2480  30600 0.01000
+12    12   0.6910 -2.250          0.857    3700      1730  26600 0.00773
+13    13   0.6970 -2.230          0.871    2880      1230  23300 0.00602
+14    14   0.6980 -2.220          0.882    2280       877  20600 0.00476
+15    15   0.6960 -2.220          0.890    1820       633  18200 0.00380
+16    16   0.6990 -2.210          0.900    1460       462  16200 0.00306
+17    17   0.7040 -2.190          0.911    1190       340  14400 0.00249
+18    18   0.7050 -2.190          0.918     977       252  12900 0.00204
+19    19   0.7030 -2.190          0.922     807       188  11600 0.00169
+20    20   0.7070 -2.190          0.930     670       142  10500 0.00140
+   Centralization Heterogeneity
+1          0.0865        0.0859
+2          0.1180        0.1710
+3          0.1220        0.2610
+4          0.1170        0.3560
+5          0.1080        0.4550
+6          0.0970        0.5560
+7          0.0866        0.6580
+8          0.0769        0.7590
+9          0.0682        0.8590
+10         0.0606        0.9560
+11         0.0538        1.0500
+12         0.0479        1.1400
+13         0.0428        1.2300
+14         0.0382        1.3100
+15         0.0343        1.3900
+16         0.0308        1.4700
+17         0.0277        1.5500
+18         0.0250        1.6200
+19         0.0226        1.6900
+20         0.0204        1.7600
+ pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq slope truncated.R.sq  mean.k. median.k. max.k.  Density
+1      1    0.071  2.32          0.645 241000.0  241000.0 257000 0.504000
+2      2    0.165  3.90          0.803 127000.0  127000.0 145000 0.266000
+3      3    0.257  4.96          0.848  70300.0   70300.0  85000 0.147000
+4      4    0.257  5.15          0.741  40200.0   40100.0  51600 0.084100
+5      5    0.345  5.82          0.676  23800.0   23700.0  32300 0.049700
+6      6    0.412  5.95          0.593  14500.0   14400.0  20700 0.030200
+7      7    0.409  6.00          0.474   9030.0    8960.0  13600 0.018900
+8      8    0.391  5.92          0.394   5770.0    5710.0   9140 0.012100
+9      9    0.455  5.68          0.347   3760.0    3720.0   6250 0.007860
+10    10    0.434  5.58          0.293   2500.0    2470.0   4340 0.005230
+11    11    0.412  5.46          0.253   1690.0    1660.0   3060 0.003540
+12    12    0.440  4.84          0.288   1160.0    1140.0   2190 0.002430
+13    13    0.429  4.60          0.310    813.0     795.0   1580 0.001700
+14    14    0.404  4.44          0.309    575.0     561.0   1160 0.001200
+15    15    0.380  4.30          0.306    412.0     401.0    859 0.000860
+16    16    0.355  4.17          0.299    298.0     290.0    645 0.000624
+17    17    0.333  4.04          0.292    219.0     212.0    490 0.000457
+18    18    0.286  2.84          0.455    162.0     156.0    375 0.000338
+19    19    0.205  2.14          0.734    121.0     117.0    296 0.000253
+20    20    0.111  1.56          0.877     91.2      87.7    239 0.000191
+   Centralization Heterogeneity
+1        0.034400        0.0201
+2        0.036500        0.0384
+3        0.030800        0.0552
+4        0.023800        0.0709
+5        0.017800        0.0856
+6        0.013100        0.0994
+7        0.009620        0.1120
+8        0.007050        0.1250
+9        0.005190        0.1370
+10       0.003840        0.1480
+11       0.002850        0.1590
+12       0.002140        0.1700
+13       0.001610        0.1800
+14       0.001220        0.1900
+15       0.000934        0.2000
+16       0.000725        0.2090
+17       0.000566        0.2180
+18       0.000445        0.2270
+19       0.000366        0.2360
+20       0.000309        0.2440
+pdf 
+  2 
+Allowing parallel execution with up to 20 working processes.
+NULL
+[1] "Region_1" "Region_2" "Region_3" "Region_4" "Region_5" "Region_6"
+NULL
+  RegionID  chr  start    end width n covMin covMean     covSD  methMean
+1 Region_1 chr1  14653  14775   122 8     14   59.24 36.467200 0.8622830
+2 Region_2 chr1  16139  16243   104 3      7   32.92 17.177796 0.8254433
+3 Region_3 chr1  19248  19283    35 4      6   20.80 11.045361 0.8926282
+4 Region_4 chr1 102707 103111   404 7     39  118.56 47.941875 0.3963628
+5 Region_5 chr1 103803 104047   244 5      7   33.92 18.046052 0.7645607
+6 Region_6 chr1 122737 122885   148 3      7   16.36  5.837237 0.6717850
+      methSD
+1 0.08422400
+2 0.09152253
+3 0.09155085
+4 0.11259400
+5 0.15129186
+6 0.11593845
+[1] 479960     11
+ Calculating consensus modules and module eigengenes block-wise from all genes
+ Calculating topological overlaps block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Consensus projective K-means:
+   ..using 1196 centers.
+   ..imputing missing data..
+mtd.apply: working on set 1
+Cluster size 478545 broken into 229837 248708 
+Cluster size 229837 broken into 113327 116510 
+Cluster size 113327 broken into 54111 59216 
+Cluster size 54111 broken into 27607 26504 
+Cluster size 27607 broken into 13433 14174 
+Cluster size 13433 broken into 6361 7072 
+Cluster size 6361 broken into 2982 3379 
+Cluster size 2982 broken into 1485 1497 
+Done cluster 1485 
+Done cluster 1497 
+Done cluster 2982 
+Cluster size 3379 broken into 1586 1793 
+Cluster size 1586 broken into 798 788 
+Done cluster 798 
+Done cluster 788 
+Done cluster 1586 
+Cluster size 1793 broken into 880 913 
+Done cluster 880 
+Done cluster 913 
+Done cluster 1793 
+Done cluster 3379 
+Done cluster 6361 
+Cluster size 7072 broken into 3516 3556 
+Cluster size 3516 broken into 1819 1697 
+Cluster size 1819 broken into 847 972 
+Done cluster 847 
+Done cluster 972 
+Done cluster 1819 
+Cluster size 1697 broken into 803 894 
+Done cluster 803 
+Done cluster 894 
+Done cluster 1697 
+Done cluster 3516 
+Cluster size 3556 broken into 1877 1679 
+Cluster size 1877 broken into 864 1013 
+Done cluster 864 
+Done cluster 1013 
+Done cluster 1877 
+Cluster size 1679 broken into 782 897 
+Done cluster 782 
+Done cluster 897 
+Done cluster 1679 
+Done cluster 3556 
+Done cluster 7072 
+Done cluster 13433 
+Cluster size 14174 broken into 7103 7071 
+Cluster size 7103 broken into 3823 3280 
+Cluster size 3823 broken into 2079 1744 
+Cluster size 2079 broken into 871 1208 
+Done cluster 871 
+Done cluster 1208 
+Done cluster 2079 
+Cluster size 1744 broken into 838 906 
+Done cluster 838 
+Done cluster 906 
+Done cluster 1744 
+Done cluster 3823 
+Cluster size 3280 broken into 1655 1625 
+Cluster size 1655 broken into 969 686 
+Done cluster 969 
+Done cluster 686 
+Done cluster 1655 
+Cluster size 1625 broken into 912 713 
+Done cluster 912 
+Done cluster 713 
+Done cluster 1625 
+Done cluster 3280 
+Done cluster 7103 
+Cluster size 7071 broken into 3338 3733 
+Cluster size 3338 broken into 1682 1656 
+Cluster size 1682 broken into 865 817 
+Done cluster 865 
+Done cluster 817 
+Done cluster 1682 
+Cluster size 1656 broken into 881 775 
+Done cluster 881 
+Done cluster 775 
+Done cluster 1656 
+Done cluster 3338 
+Cluster size 3733 broken into 1839 1894 
+Cluster size 1839 broken into 1018 821 
+Done cluster 1018 
+Done cluster 821 
+Done cluster 1839 
+Cluster size 1894 broken into 880 1014 
+Done cluster 880 
+Done cluster 1014 
+Done cluster 1894 
+Done cluster 3733 
+Done cluster 7071 
+Done cluster 14174 
+Done cluster 27607 
+Cluster size 26504 broken into 13599 12905 
+Cluster size 13599 broken into 6273 7326 
+Cluster size 6273 broken into 3240 3033 
+Cluster size 3240 broken into 1597 1643 
+Cluster size 1597 broken into 865 732 
+Done cluster 865 
+Done cluster 732 
+Done cluster 1597 
+Cluster size 1643 broken into 804 839 
+Done cluster 804 
+Done cluster 839 
+Done cluster 1643 
+Done cluster 3240 
+Cluster size 3033 broken into 1471 1562 
+Done cluster 1471 
+Cluster size 1562 broken into 883 679 
+Done cluster 883 
+Done cluster 679 
+Done cluster 1562 
+Done cluster 3033 
+Done cluster 6273 
+Cluster size 7326 broken into 3468 3858 
+Cluster size 3468 broken into 1739 1729 
+Cluster size 1739 broken into 791 948 
+Done cluster 791 
+Done cluster 948 
+Done cluster 1739 
+Cluster size 1729 broken into 860 869 
+Done cluster 860 
+Done cluster 869 
+Done cluster 1729 
+Done cluster 3468 
+Cluster size 3858 broken into 1929 1929 
+Cluster size 1929 broken into 852 1077 
+Done cluster 852 
+Done cluster 1077 
+Done cluster 1929 
+Cluster size 1929 broken into 866 1063 
+Done cluster 866 
+Done cluster 1063 
+Done cluster 1929 
+Done cluster 3858 
+Done cluster 7326 
+Done cluster 13599 
+Cluster size 12905 broken into 6244 6661 
+Cluster size 6244 broken into 3135 3109 
+Cluster size 3135 broken into 1570 1565 
+Cluster size 1570 broken into 808 762 
+Done cluster 808 
+Done cluster 762 
+Done cluster 1570 
+Cluster size 1565 broken into 760 805 
+Done cluster 760 
+Done cluster 805 
+Done cluster 1565 
+Done cluster 3135 
+Cluster size 3109 broken into 1411 1698 
+Done cluster 1411 
+Cluster size 1698 broken into 807 891 
+Done cluster 807 
+Done cluster 891 
+Done cluster 1698 
+Done cluster 3109 
+Done cluster 6244 
+Cluster size 6661 broken into 3494 3167 
+Cluster size 3494 broken into 1934 1560 
+Cluster size 1934 broken into 955 979 
+Done cluster 955 
+Done cluster 979 
+Done cluster 1934 
+Cluster size 1560 broken into 815 745 
+Done cluster 815 
+Done cluster 745 
+Done cluster 1560 
+Done cluster 3494 
+Cluster size 3167 broken into 1612 1555 
+Cluster size 1612 broken into 779 833 
+Done cluster 779 
+Done cluster 833 
+Done cluster 1612 
+Cluster size 1555 broken into 745 810 
+Done cluster 745 
+Done cluster 810 
+Done cluster 1555 
+Done cluster 3167 
+Done cluster 6661 
+Done cluster 12905 
+Done cluster 26504 
+Done cluster 54111 
+Cluster size 59216 broken into 30644 28572 
+Cluster size 30644 broken into 16204 14440 
+Cluster size 16204 broken into 7747 8457 
+Cluster size 7747 broken into 4142 3605 
+Cluster size 4142 broken into 1892 2250 
+Cluster size 1892 broken into 909 983 
+Done cluster 909 
+Done cluster 983 
+Done cluster 1892 
+Cluster size 2250 broken into 1139 1111 
+Done cluster 1139 
+Done cluster 1111 
+Done cluster 2250 
+Done cluster 4142 
+Cluster size 3605 broken into 1932 1673 
+Cluster size 1932 broken into 947 985 
+Done cluster 947 
+Done cluster 985 
+Done cluster 1932 
+Cluster size 1673 broken into 852 821 
+Done cluster 852 
+Done cluster 821 
+Done cluster 1673 
+Done cluster 3605 
+Done cluster 7747 
+Cluster size 8457 broken into 4292 4165 
+Cluster size 4292 broken into 2314 1978 
+Cluster size 2314 broken into 1123 1191 
+Done cluster 1123 
+Done cluster 1191 
+Done cluster 2314 
+Cluster size 1978 broken into 968 1010 
+Done cluster 968 
+Done cluster 1010 
+Done cluster 1978 
+Done cluster 4292 
+Cluster size 4165 broken into 2174 1991 
+Cluster size 2174 broken into 1188 986 
+Done cluster 1188 
+Done cluster 986 
+Done cluster 2174 
+Cluster size 1991 broken into 1060 931 
+Done cluster 1060 
+Done cluster 931 
+Done cluster 1991 
+Done cluster 4165 
+Done cluster 8457 
+Done cluster 16204 
+Cluster size 14440 broken into 7608 6832 
+Cluster size 7608 broken into 3894 3714 
+Cluster size 3894 broken into 1980 1914 
+Cluster size 1980 broken into 964 1016 
+Done cluster 964 
+Done cluster 1016 
+Done cluster 1980 
+Cluster size 1914 broken into 886 1028 
+Done cluster 886 
+Done cluster 1028 
+Done cluster 1914 
+Done cluster 3894 
+Cluster size 3714 broken into 1703 2011 
+Cluster size 1703 broken into 885 818 
+Done cluster 885 
+Done cluster 818 
+Done cluster 1703 
+Cluster size 2011 broken into 1020 991 
+Done cluster 1020 
+Done cluster 991 
+Done cluster 2011 
+Done cluster 3714 
+Done cluster 7608 
+Cluster size 6832 broken into 3597 3235 
+Cluster size 3597 broken into 1881 1716 
+Cluster size 1881 broken into 1003 878 
+Done cluster 1003 
+Done cluster 878 
+Done cluster 1881 
+Cluster size 1716 broken into 857 859 
+Done cluster 857 
+Done cluster 859 
+Done cluster 1716 
+Done cluster 3597 
+Cluster size 3235 broken into 1567 1668 
+Cluster size 1567 broken into 811 756 
+Done cluster 811 
+Done cluster 756 
+Done cluster 1567 
+Cluster size 1668 broken into 858 810 
+Done cluster 858 
+Done cluster 810 
+Done cluster 1668 
+Done cluster 3235 
+Done cluster 6832 
+Done cluster 14440 
+Done cluster 30644 
+Cluster size 28572 broken into 14176 14396 
+Cluster size 14176 broken into 7207 6969 
+Cluster size 7207 broken into 3589 3618 
+Cluster size 3589 broken into 2004 1585 
+Cluster size 2004 broken into 926 1078 
+Done cluster 926 
+Done cluster 1078 
+Done cluster 2004 
+Cluster size 1585 broken into 802 783 
+Done cluster 802 
+Done cluster 783 
+Done cluster 1585 
+Done cluster 3589 
+Cluster size 3618 broken into 1828 1790 
+Cluster size 1828 broken into 888 940 
+Done cluster 888 
+Done cluster 940 
+Done cluster 1828 
+Cluster size 1790 broken into 905 885 
+Done cluster 905 
+Done cluster 885 
+Done cluster 1790 
+Done cluster 3618 
+Done cluster 7207 
+Cluster size 6969 broken into 3705 3264 
+Cluster size 3705 broken into 1922 1783 
+Cluster size 1922 broken into 1010 912 
+Done cluster 1010 
+Done cluster 912 
+Done cluster 1922 
+Cluster size 1783 broken into 997 786 
+Done cluster 997 
+Done cluster 786 
+Done cluster 1783 
+Done cluster 3705 
+Cluster size 3264 broken into 1732 1532 
+Cluster size 1732 broken into 789 943 
+Done cluster 789 
+Done cluster 943 
+Done cluster 1732 
+Cluster size 1532 broken into 745 787 
+Done cluster 745 
+Done cluster 787 
+Done cluster 1532 
+Done cluster 3264 
+Done cluster 6969 
+Done cluster 14176 
+Cluster size 14396 broken into 7409 6987 
+Cluster size 7409 broken into 3836 3573 
+Cluster size 3836 broken into 1624 2212 
+Cluster size 1624 broken into 804 820 
+Done cluster 804 
+Done cluster 820 
+Done cluster 1624 
+Cluster size 2212 broken into 1092 1120 
+Done cluster 1092 
+Done cluster 1120 
+Done cluster 2212 
+Done cluster 3836 
+Cluster size 3573 broken into 1949 1624 
+Cluster size 1949 broken into 1003 946 
+Done cluster 1003 
+Done cluster 946 
+Done cluster 1949 
+Cluster size 1624 broken into 761 863 
+Done cluster 761 
+Done cluster 863 
+Done cluster 1624 
+Done cluster 3573 
+Done cluster 7409 
+Cluster size 6987 broken into 3648 3339 
+Cluster size 3648 broken into 1810 1838 
+Cluster size 1810 broken into 982 828 
+Done cluster 982 
+Done cluster 828 
+Done cluster 1810 
+Cluster size 1838 broken into 939 899 
+Done cluster 939 
+Done cluster 899 
+Done cluster 1838 
+Done cluster 3648 
+Cluster size 3339 broken into 1777 1562 
+Cluster size 1777 broken into 908 869 
+Done cluster 908 
+Done cluster 869 
+Done cluster 1777 
+Cluster size 1562 broken into 755 807 
+Done cluster 755 
+Done cluster 807 
+Done cluster 1562 
+Done cluster 3339 
+Done cluster 6987 
+Done cluster 14396 
+Done cluster 28572 
+Done cluster 59216 
+Done cluster 113327 
+Cluster size 116510 broken into 58249 58261 
+Cluster size 58249 broken into 31596 26653 
+Cluster size 31596 broken into 15533 16063 
+Cluster size 15533 broken into 8471 7062 
+Cluster size 8471 broken into 3697 4774 
+Cluster size 3697 broken into 1882 1815 
+Cluster size 1882 broken into 933 949 
+Done cluster 933 
+Done cluster 949 
+Done cluster 1882 
+Cluster size 1815 broken into 938 877 
+Done cluster 938 
+Done cluster 877 
+Done cluster 1815 
+Done cluster 3697 
+Cluster size 4774 broken into 2366 2408 
+Cluster size 2366 broken into 1138 1228 
+Done cluster 1138 
+Done cluster 1228 
+Done cluster 2366 
+Cluster size 2408 broken into 1189 1219 
+Done cluster 1189 
+Done cluster 1219 
+Done cluster 2408 
+Done cluster 4774 
+Done cluster 8471 
+Cluster size 7062 broken into 3600 3462 
+Cluster size 3600 broken into 1735 1865 
+Cluster size 1735 broken into 796 939 
+Done cluster 796 
+Done cluster 939 
+Done cluster 1735 
+Cluster size 1865 broken into 993 872 
+Done cluster 993 
+Done cluster 872 
+Done cluster 1865 
+Done cluster 3600 
+Cluster size 3462 broken into 1747 1715 
+Cluster size 1747 broken into 877 870 
+Done cluster 877 
+Done cluster 870 
+Done cluster 1747 
+Cluster size 1715 broken into 879 836 
+Done cluster 879 
+Done cluster 836 
+Done cluster 1715 
+Done cluster 3462 
+Done cluster 7062 
+Done cluster 15533 
+Cluster size 16063 broken into 8055 8008 
+Cluster size 8055 broken into 4116 3939 
+Cluster size 4116 broken into 2069 2047 
+Cluster size 2069 broken into 1049 1020 
+Done cluster 1049 
+Done cluster 1020 
+Done cluster 2069 
+Cluster size 2047 broken into 1002 1045 
+Done cluster 1002 
+Done cluster 1045 
+Done cluster 2047 
+Done cluster 4116 
+Cluster size 3939 broken into 2062 1877 
+Cluster size 2062 broken into 955 1107 
+Done cluster 955 
+Done cluster 1107 
+Done cluster 2062 
+Cluster size 1877 broken into 808 1069 
+Done cluster 808 
+Done cluster 1069 
+Done cluster 1877 
+Done cluster 3939 
+Done cluster 8055 
+Cluster size 8008 broken into 3974 4034 
+Cluster size 3974 broken into 2102 1872 
+Cluster size 2102 broken into 956 1146 
+Done cluster 956 
+Done cluster 1146 
+Done cluster 2102 
+Cluster size 1872 broken into 980 892 
+Done cluster 980 
+Done cluster 892 
+Done cluster 1872 
+Done cluster 3974 
+Cluster size 4034 broken into 2032 2002 
+Cluster size 2032 broken into 1004 1028 
+Done cluster 1004 
+Done cluster 1028 
+Done cluster 2032 
+Cluster size 2002 broken into 995 1007 
+Done cluster 995 
+Done cluster 1007 
+Done cluster 2002 
+Done cluster 4034 
+Done cluster 8008 
+Done cluster 16063 
+Done cluster 31596 
+Cluster size 26653 broken into 13689 12964 
+Cluster size 13689 broken into 6968 6721 
+Cluster size 6968 broken into 3703 3265 
+Cluster size 3703 broken into 1736 1967 
+Cluster size 1736 broken into 889 847 
+Done cluster 889 
+Done cluster 847 
+Done cluster 1736 
+Cluster size 1967 broken into 1003 964 
+Done cluster 1003 
+Done cluster 964 
+Done cluster 1967 
+Done cluster 3703 
+Cluster size 3265 broken into 1690 1575 
+Cluster size 1690 broken into 927 763 
+Done cluster 927 
+Done cluster 763 
+Done cluster 1690 
+Cluster size 1575 broken into 700 875 
+Done cluster 700 
+Done cluster 875 
+Done cluster 1575 
+Done cluster 3265 
+Done cluster 6968 
+Cluster size 6721 broken into 3443 3278 
+Cluster size 3443 broken into 1787 1656 
+Cluster size 1787 broken into 829 958 
+Done cluster 829 
+Done cluster 958 
+Done cluster 1787 
+Cluster size 1656 broken into 679 977 
+Done cluster 679 
+Done cluster 977 
+Done cluster 1656 
+Done cluster 3443 
+Cluster size 3278 broken into 1545 1733 
+Cluster size 1545 broken into 822 723 
+Done cluster 822 
+Done cluster 723 
+Done cluster 1545 
+Cluster size 1733 broken into 826 907 
+Done cluster 826 
+Done cluster 907 
+Done cluster 1733 
+Done cluster 3278 
+Done cluster 6721 
+Done cluster 13689 
+Cluster size 12964 broken into 6591 6373 
+Cluster size 6591 broken into 3306 3285 
+Cluster size 3306 broken into 1568 1738 
+Cluster size 1568 broken into 774 794 
+Done cluster 774 
+Done cluster 794 
+Done cluster 1568 
+Cluster size 1738 broken into 852 886 
+Done cluster 852 
+Done cluster 886 
+Done cluster 1738 
+Done cluster 3306 
+Cluster size 3285 broken into 1708 1577 
+Cluster size 1708 broken into 906 802 
+Done cluster 906 
+Done cluster 802 
+Done cluster 1708 
+Cluster size 1577 broken into 875 702 
+Done cluster 875 
+Done cluster 702 
+Done cluster 1577 
+Done cluster 3285 
+Done cluster 6591 
+Cluster size 6373 broken into 3187 3186 
+Cluster size 3187 broken into 1576 1611 
+Cluster size 1576 broken into 916 660 
+Done cluster 916 
+Done cluster 660 
+Done cluster 1576 
+Cluster size 1611 broken into 752 859 
+Done cluster 752 
+Done cluster 859 
+Done cluster 1611 
+Done cluster 3187 
+Cluster size 3186 broken into 1726 1460 
+Cluster size 1726 broken into 909 817 
+Done cluster 909 
+Done cluster 817 
+Done cluster 1726 
+Done cluster 1460 
+Done cluster 3186 
+Done cluster 6373 
+Done cluster 12964 
+Done cluster 26653 
+Done cluster 58249 
+Cluster size 58261 broken into 29419 28842 
+Cluster size 29419 broken into 14142 15277 
+Cluster size 14142 broken into 7018 7124 
+Cluster size 7018 broken into 3865 3153 
+Cluster size 3865 broken into 1939 1926 
+Cluster size 1939 broken into 1077 862 
+Done cluster 1077 
+Done cluster 862 
+Done cluster 1939 
+Cluster size 1926 broken into 952 974 
+Done cluster 952 
+Done cluster 974 
+Done cluster 1926 
+Done cluster 3865 
+Cluster size 3153 broken into 1600 1553 
+Cluster size 1600 broken into 828 772 
+Done cluster 828 
+Done cluster 772 
+Done cluster 1600 
+Cluster size 1553 broken into 724 829 
+Done cluster 724 
+Done cluster 829 
+Done cluster 1553 
+Done cluster 3153 
+Done cluster 7018 
+Cluster size 7124 broken into 3426 3698 
+Cluster size 3426 broken into 1628 1798 
+Cluster size 1628 broken into 755 873 
+Done cluster 755 
+Done cluster 873 
+Done cluster 1628 
+Cluster size 1798 broken into 780 1018 
+Done cluster 780 
+Done cluster 1018 
+Done cluster 1798 
+Done cluster 3426 
+Cluster size 3698 broken into 1694 2004 
+Cluster size 1694 broken into 794 900 
+Done cluster 794 
+Done cluster 900 
+Done cluster 1694 
+Cluster size 2004 broken into 988 1016 
+Done cluster 988 
+Done cluster 1016 
+Done cluster 2004 
+Done cluster 3698 
+Done cluster 7124 
+Done cluster 14142 
+Cluster size 15277 broken into 7182 8095 
+Cluster size 7182 broken into 3538 3644 
+Cluster size 3538 broken into 1792 1746 
+Cluster size 1792 broken into 953 839 
+Done cluster 953 
+Done cluster 839 
+Done cluster 1792 
+Cluster size 1746 broken into 776 970 
+Done cluster 776 
+Done cluster 970 
+Done cluster 1746 
+Done cluster 3538 
+Cluster size 3644 broken into 1718 1926 
+Cluster size 1718 broken into 980 738 
+Done cluster 980 
+Done cluster 738 
+Done cluster 1718 
+Cluster size 1926 broken into 920 1006 
+Done cluster 920 
+Done cluster 1006 
+Done cluster 1926 
+Done cluster 3644 
+Done cluster 7182 
+Cluster size 8095 broken into 3783 4312 
+Cluster size 3783 broken into 1993 1790 
+Cluster size 1993 broken into 1120 873 
+Done cluster 1120 
+Done cluster 873 
+Done cluster 1993 
+Cluster size 1790 broken into 870 920 
+Done cluster 870 
+Done cluster 920 
+Done cluster 1790 
+Done cluster 3783 
+Cluster size 4312 broken into 1962 2350 
+Cluster size 1962 broken into 994 968 
+Done cluster 994 
+Done cluster 968 
+Done cluster 1962 
+Cluster size 2350 broken into 1094 1256 
+Done cluster 1094 
+Done cluster 1256 
+Done cluster 2350 
+Done cluster 4312 
+Done cluster 8095 
+Done cluster 15277 
+Done cluster 29419 
+Cluster size 28842 broken into 14157 14685 
+Cluster size 14157 broken into 7269 6888 
+Cluster size 7269 broken into 3736 3533 
+Cluster size 3736 broken into 1908 1828 
+Cluster size 1908 broken into 831 1077 
+Done cluster 831 
+Done cluster 1077 
+Done cluster 1908 
+Cluster size 1828 broken into 908 920 
+Done cluster 908 
+Done cluster 920 
+Done cluster 1828 
+Done cluster 3736 
+Cluster size 3533 broken into 1796 1737 
+Cluster size 1796 broken into 806 990 
+Done cluster 806 
+Done cluster 990 
+Done cluster 1796 
+Cluster size 1737 broken into 891 846 
+Done cluster 891 
+Done cluster 846 
+Done cluster 1737 
+Done cluster 3533 
+Done cluster 7269 
+Cluster size 6888 broken into 3628 3260 
+Cluster size 3628 broken into 1979 1649 
+Cluster size 1979 broken into 951 1028 
+Done cluster 951 
+Done cluster 1028 
+Done cluster 1979 
+Cluster size 1649 broken into 785 864 
+Done cluster 785 
+Done cluster 864 
+Done cluster 1649 
+Done cluster 3628 
+Cluster size 3260 broken into 1839 1421 
+Cluster size 1839 broken into 868 971 
+Done cluster 868 
+Done cluster 971 
+Done cluster 1839 
+Done cluster 1421 
+Done cluster 3260 
+Done cluster 6888 
+Done cluster 14157 
+Cluster size 14685 broken into 7115 7570 
+Cluster size 7115 broken into 3724 3391 
+Cluster size 3724 broken into 1772 1952 
+Cluster size 1772 broken into 895 877 
+Done cluster 895 
+Done cluster 877 
+Done cluster 1772 
+Cluster size 1952 broken into 923 1029 
+Done cluster 923 
+Done cluster 1029 
+Done cluster 1952 
+Done cluster 3724 
+Cluster size 3391 broken into 1843 1548 
+Cluster size 1843 broken into 859 984 
+Done cluster 859 
+Done cluster 984 
+Done cluster 1843 
+Cluster size 1548 broken into 842 706 
+Done cluster 842 
+Done cluster 706 
+Done cluster 1548 
+Done cluster 3391 
+Done cluster 7115 
+Cluster size 7570 broken into 3815 3755 
+Cluster size 3815 broken into 1870 1945 
+Cluster size 1870 broken into 1048 822 
+Done cluster 1048 
+Done cluster 822 
+Done cluster 1870 
+Cluster size 1945 broken into 1014 931 
+Done cluster 1014 
+Done cluster 931 
+Done cluster 1945 
+Done cluster 3815 
+Cluster size 3755 broken into 1816 1939 
+Cluster size 1816 broken into 988 828 
+Done cluster 988 
+Done cluster 828 
+Done cluster 1816 
+Cluster size 1939 broken into 940 999 
+Done cluster 940 
+Done cluster 999 
+Done cluster 1939 
+Done cluster 3755 
+Done cluster 7570 
+Done cluster 14685 
+Done cluster 28842 
+Done cluster 58261 
+Done cluster 116510 
+Done cluster 229837 
+Cluster size 248708 broken into 125038 123670 
+Cluster size 125038 broken into 63353 61685 
+Cluster size 63353 broken into 32342 31011 
+Cluster size 32342 broken into 16004 16338 
+Cluster size 16004 broken into 7774 8230 
+Cluster size 7774 broken into 3795 3979 
+Cluster size 3795 broken into 2049 1746 
+Cluster size 2049 broken into 1059 990 
+Done cluster 1059 
+Done cluster 990 
+Done cluster 2049 
+Cluster size 1746 broken into 842 904 
+Done cluster 842 
+Done cluster 904 
+Done cluster 1746 
+Done cluster 3795 
+Cluster size 3979 broken into 2028 1951 
+Cluster size 2028 broken into 1116 912 
+Done cluster 1116 
+Done cluster 912 
+Done cluster 2028 
+Cluster size 1951 broken into 899 1052 
+Done cluster 899 
+Done cluster 1052 
+Done cluster 1951 
+Done cluster 3979 
+Done cluster 7774 
+Cluster size 8230 broken into 4249 3981 
+Cluster size 4249 broken into 2135 2114 
+Cluster size 2135 broken into 1051 1084 
+Done cluster 1051 
+Done cluster 1084 
+Done cluster 2135 
+Cluster size 2114 broken into 1007 1107 
+Done cluster 1007 
+Done cluster 1107 
+Done cluster 2114 
+Done cluster 4249 
+Cluster size 3981 broken into 2086 1895 
+Cluster size 2086 broken into 1009 1077 
+Done cluster 1009 
+Done cluster 1077 
+Done cluster 2086 
+Cluster size 1895 broken into 1031 864 
+Done cluster 1031 
+Done cluster 864 
+Done cluster 1895 
+Done cluster 3981 
+Done cluster 8230 
+Done cluster 16004 
+Cluster size 16338 broken into 7831 8507 
+Cluster size 7831 broken into 3767 4064 
+Cluster size 3767 broken into 1828 1939 
+Cluster size 1828 broken into 841 987 
+Done cluster 841 
+Done cluster 987 
+Done cluster 1828 
+Cluster size 1939 broken into 990 949 
+Done cluster 990 
+Done cluster 949 
+Done cluster 1939 
+Done cluster 3767 
+Cluster size 4064 broken into 2007 2057 
+Cluster size 2007 broken into 1083 924 
+Done cluster 1083 
+Done cluster 924 
+Done cluster 2007 
+Cluster size 2057 broken into 1097 960 
+Done cluster 1097 
+Done cluster 960 
+Done cluster 2057 
+Done cluster 4064 
+Done cluster 7831 
+Cluster size 8507 broken into 4459 4048 
+Cluster size 4459 broken into 2146 2313 
+Cluster size 2146 broken into 1057 1089 
+Done cluster 1057 
+Done cluster 1089 
+Done cluster 2146 
+Cluster size 2313 broken into 1192 1121 
+Done cluster 1192 
+Done cluster 1121 
+Done cluster 2313 
+Done cluster 4459 
+Cluster size 4048 broken into 2006 2042 
+Cluster size 2006 broken into 939 1067 
+Done cluster 939 
+Done cluster 1067 
+Done cluster 2006 
+Cluster size 2042 broken into 1038 1004 
+Done cluster 1038 
+Done cluster 1004 
+Done cluster 2042 
+Done cluster 4048 
+Done cluster 8507 
+Done cluster 16338 
+Done cluster 32342 
+Cluster size 31011 broken into 14510 16501 
+Cluster size 14510 broken into 7165 7345 
+Cluster size 7165 broken into 3432 3733 
+Cluster size 3432 broken into 1638 1794 
+Cluster size 1638 broken into 905 733 
+Done cluster 905 
+Done cluster 733 
+Done cluster 1638 
+Cluster size 1794 broken into 779 1015 
+Done cluster 779 
+Done cluster 1015 
+Done cluster 1794 
+Done cluster 3432 
+Cluster size 3733 broken into 2022 1711 
+Cluster size 2022 broken into 913 1109 
+Done cluster 913 
+Done cluster 1109 
+Done cluster 2022 
+Cluster size 1711 broken into 926 785 
+Done cluster 926 
+Done cluster 785 
+Done cluster 1711 
+Done cluster 3733 
+Done cluster 7165 
+Cluster size 7345 broken into 3853 3492 
+Cluster size 3853 broken into 1880 1973 
+Cluster size 1880 broken into 885 995 
+Done cluster 885 
+Done cluster 995 
+Done cluster 1880 
+Cluster size 1973 broken into 926 1047 
+Done cluster 926 
+Done cluster 1047 
+Done cluster 1973 
+Done cluster 3853 
+Cluster size 3492 broken into 1590 1902 
+Cluster size 1590 broken into 765 825 
+Done cluster 765 
+Done cluster 825 
+Done cluster 1590 
+Cluster size 1902 broken into 945 957 
+Done cluster 945 
+Done cluster 957 
+Done cluster 1902 
+Done cluster 3492 
+Done cluster 7345 
+Done cluster 14510 
+Cluster size 16501 broken into 7975 8526 
+Cluster size 7975 broken into 4009 3966 
+Cluster size 4009 broken into 1929 2080 
+Cluster size 1929 broken into 1061 868 
+Done cluster 1061 
+Done cluster 868 
+Done cluster 1929 
+Cluster size 2080 broken into 965 1115 
+Done cluster 965 
+Done cluster 1115 
+Done cluster 2080 
+Done cluster 4009 
+Cluster size 3966 broken into 1888 2078 
+Cluster size 1888 broken into 842 1046 
+Done cluster 842 
+Done cluster 1046 
+Done cluster 1888 
+Cluster size 2078 broken into 973 1105 
+Done cluster 973 
+Done cluster 1105 
+Done cluster 2078 
+Done cluster 3966 
+Done cluster 7975 
+Cluster size 8526 broken into 4224 4302 
+Cluster size 4224 broken into 1994 2230 
+Cluster size 1994 broken into 884 1110 
+Done cluster 884 
+Done cluster 1110 
+Done cluster 1994 
+Cluster size 2230 broken into 1169 1061 
+Done cluster 1169 
+Done cluster 1061 
+Done cluster 2230 
+Done cluster 4224 
+Cluster size 4302 broken into 2135 2167 
+Cluster size 2135 broken into 949 1186 
+Done cluster 949 
+Done cluster 1186 
+Done cluster 2135 
+Cluster size 2167 broken into 979 1188 
+Done cluster 979 
+Done cluster 1188 
+Done cluster 2167 
+Done cluster 4302 
+Done cluster 8526 
+Done cluster 16501 
+Done cluster 31011 
+Done cluster 63353 
+Cluster size 61685 broken into 30482 31203 
+Cluster size 30482 broken into 15176 15306 
+Cluster size 15176 broken into 8036 7140 
+Cluster size 8036 broken into 4061 3975 
+Cluster size 4061 broken into 1793 2268 
+Cluster size 1793 broken into 890 903 
+Done cluster 890 
+Done cluster 903 
+Done cluster 1793 
+Cluster size 2268 broken into 1130 1138 
+Done cluster 1130 
+Done cluster 1138 
+Done cluster 2268 
+Done cluster 4061 
+Cluster size 3975 broken into 2082 1893 
+Cluster size 2082 broken into 1001 1081 
+Done cluster 1001 
+Done cluster 1081 
+Done cluster 2082 
+Cluster size 1893 broken into 910 983 
+Done cluster 910 
+Done cluster 983 
+Done cluster 1893 
+Done cluster 3975 
+Done cluster 8036 
+Cluster size 7140 broken into 3656 3484 
+Cluster size 3656 broken into 1727 1929 
+Cluster size 1727 broken into 886 841 
+Done cluster 886 
+Done cluster 841 
+Done cluster 1727 
+Cluster size 1929 broken into 955 974 
+Done cluster 955 
+Done cluster 974 
+Done cluster 1929 
+Done cluster 3656 
+Cluster size 3484 broken into 1612 1872 
+Cluster size 1612 broken into 792 820 
+Done cluster 792 
+Done cluster 820 
+Done cluster 1612 
+Cluster size 1872 broken into 903 969 
+Done cluster 903 
+Done cluster 969 
+Done cluster 1872 
+Done cluster 3484 
+Done cluster 7140 
+Done cluster 15176 
+Cluster size 15306 broken into 6863 8443 
+Cluster size 6863 broken into 3534 3329 
+Cluster size 3534 broken into 1870 1664 
+Cluster size 1870 broken into 948 922 
+Done cluster 948 
+Done cluster 922 
+Done cluster 1870 
+Cluster size 1664 broken into 856 808 
+Done cluster 856 
+Done cluster 808 
+Done cluster 1664 
+Done cluster 3534 
+Cluster size 3329 broken into 1721 1608 
+Cluster size 1721 broken into 781 940 
+Done cluster 781 
+Done cluster 940 
+Done cluster 1721 
+Cluster size 1608 broken into 848 760 
+Done cluster 848 
+Done cluster 760 
+Done cluster 1608 
+Done cluster 3329 
+Done cluster 6863 
+Cluster size 8443 broken into 3827 4616 
+Cluster size 3827 broken into 2131 1696 
+Cluster size 2131 broken into 1014 1117 
+Done cluster 1014 
+Done cluster 1117 
+Done cluster 2131 
+Cluster size 1696 broken into 758 938 
+Done cluster 758 
+Done cluster 938 
+Done cluster 1696 
+Done cluster 3827 
+Cluster size 4616 broken into 2102 2514 
+Cluster size 2102 broken into 1108 994 
+Done cluster 1108 
+Done cluster 994 
+Done cluster 2102 
+Cluster size 2514 broken into 1402 1112 
+Done cluster 1402 
+Done cluster 1112 
+Done cluster 2514 
+Done cluster 4616 
+Done cluster 8443 
+Done cluster 15306 
+Done cluster 30482 
+Cluster size 31203 broken into 14704 16499 
+Cluster size 14704 broken into 7455 7249 
+Cluster size 7455 broken into 3623 3832 
+Cluster size 3623 broken into 1752 1871 
+Cluster size 1752 broken into 806 946 
+Done cluster 806 
+Done cluster 946 
+Done cluster 1752 
+Cluster size 1871 broken into 946 925 
+Done cluster 946 
+Done cluster 925 
+Done cluster 1871 
+Done cluster 3623 
+Cluster size 3832 broken into 1862 1970 
+Cluster size 1862 broken into 1015 847 
+Done cluster 1015 
+Done cluster 847 
+Done cluster 1862 
+Cluster size 1970 broken into 1036 934 
+Done cluster 1036 
+Done cluster 934 
+Done cluster 1970 
+Done cluster 3832 
+Done cluster 7455 
+Cluster size 7249 broken into 3722 3527 
+Cluster size 3722 broken into 1920 1802 
+Cluster size 1920 broken into 995 925 
+Done cluster 995 
+Done cluster 925 
+Done cluster 1920 
+Cluster size 1802 broken into 902 900 
+Done cluster 902 
+Done cluster 900 
+Done cluster 1802 
+Done cluster 3722 
+Cluster size 3527 broken into 1770 1757 
+Cluster size 1770 broken into 959 811 
+Done cluster 959 
+Done cluster 811 
+Done cluster 1770 
+Cluster size 1757 broken into 865 892 
+Done cluster 865 
+Done cluster 892 
+Done cluster 1757 
+Done cluster 3527 
+Done cluster 7249 
+Done cluster 14704 
+Cluster size 16499 broken into 7625 8874 
+Cluster size 7625 broken into 4086 3539 
+Cluster size 4086 broken into 2047 2039 
+Cluster size 2047 broken into 960 1087 
+Done cluster 960 
+Done cluster 1087 
+Done cluster 2047 
+Cluster size 2039 broken into 1059 980 
+Done cluster 1059 
+Done cluster 980 
+Done cluster 2039 
+Done cluster 4086 
+Cluster size 3539 broken into 1728 1811 
+Cluster size 1728 broken into 828 900 
+Done cluster 828 
+Done cluster 900 
+Done cluster 1728 
+Cluster size 1811 broken into 847 964 
+Done cluster 847 
+Done cluster 964 
+Done cluster 1811 
+Done cluster 3539 
+Done cluster 7625 
+Cluster size 8874 broken into 4630 4244 
+Cluster size 4630 broken into 2172 2458 
+Cluster size 2172 broken into 1109 1063 
+Done cluster 1109 
+Done cluster 1063 
+Done cluster 2172 
+Cluster size 2458 broken into 1088 1370 
+Done cluster 1088 
+Done cluster 1370 
+Done cluster 2458 
+Done cluster 4630 
+Cluster size 4244 broken into 2251 1993 
+Cluster size 2251 broken into 1083 1168 
+Done cluster 1083 
+Done cluster 1168 
+Done cluster 2251 
+Cluster size 1993 broken into 912 1081 
+Done cluster 912 
+Done cluster 1081 
+Done cluster 1993 
+Done cluster 4244 
+Done cluster 8874 
+Done cluster 16499 
+Done cluster 31203 
+Done cluster 61685 
+Done cluster 125038 
+Cluster size 123670 broken into 62575 61095 
+Cluster size 62575 broken into 31156 31419 
+Cluster size 31156 broken into 16627 14529 
+Cluster size 16627 broken into 8301 8326 
+Cluster size 8301 broken into 4502 3799 
+Cluster size 4502 broken into 2297 2205 
+Cluster size 2297 broken into 1364 933 
+Done cluster 1364 
+Done cluster 933 
+Done cluster 2297 
+Cluster size 2205 broken into 1071 1134 
+Done cluster 1071 
+Done cluster 1134 
+Done cluster 2205 
+Done cluster 4502 
+Cluster size 3799 broken into 1778 2021 
+Cluster size 1778 broken into 917 861 
+Done cluster 917 
+Done cluster 861 
+Done cluster 1778 
+Cluster size 2021 broken into 966 1055 
+Done cluster 966 
+Done cluster 1055 
+Done cluster 2021 
+Done cluster 3799 
+Done cluster 8301 
+Cluster size 8326 broken into 4275 4051 
+Cluster size 4275 broken into 1860 2415 
+Cluster size 1860 broken into 941 919 
+Done cluster 941 
+Done cluster 919 
+Done cluster 1860 
+Cluster size 2415 broken into 1150 1265 
+Done cluster 1150 
+Done cluster 1265 
+Done cluster 2415 
+Done cluster 4275 
+Cluster size 4051 broken into 2048 2003 
+Cluster size 2048 broken into 1061 987 
+Done cluster 1061 
+Done cluster 987 
+Done cluster 2048 
+Cluster size 2003 broken into 1048 955 
+Done cluster 1048 
+Done cluster 955 
+Done cluster 2003 
+Done cluster 4051 
+Done cluster 8326 
+Done cluster 16627 
+Cluster size 14529 broken into 7722 6807 
+Cluster size 7722 broken into 3880 3842 
+Cluster size 3880 broken into 2199 1681 
+Cluster size 2199 broken into 1133 1066 
+Done cluster 1133 
+Done cluster 1066 
+Done cluster 2199 
+Cluster size 1681 broken into 804 877 
+Done cluster 804 
+Done cluster 877 
+Done cluster 1681 
+Done cluster 3880 
+Cluster size 3842 broken into 1789 2053 
+Cluster size 1789 broken into 929 860 
+Done cluster 929 
+Done cluster 860 
+Done cluster 1789 
+Cluster size 2053 broken into 987 1066 
+Done cluster 987 
+Done cluster 1066 
+Done cluster 2053 
+Done cluster 3842 
+Done cluster 7722 
+Cluster size 6807 broken into 3172 3635 
+Cluster size 3172 broken into 1618 1554 
+Cluster size 1618 broken into 834 784 
+Done cluster 834 
+Done cluster 784 
+Done cluster 1618 
+Cluster size 1554 broken into 709 845 
+Done cluster 709 
+Done cluster 845 
+Done cluster 1554 
+Done cluster 3172 
+Cluster size 3635 broken into 1968 1667 
+Cluster size 1968 broken into 1073 895 
+Done cluster 1073 
+Done cluster 895 
+Done cluster 1968 
+Cluster size 1667 broken into 785 882 
+Done cluster 785 
+Done cluster 882 
+Done cluster 1667 
+Done cluster 3635 
+Done cluster 6807 
+Done cluster 14529 
+Done cluster 31156 
+Cluster size 31419 broken into 15975 15444 
+Cluster size 15975 broken into 7870 8105 
+Cluster size 7870 broken into 4045 3825 
+Cluster size 4045 broken into 1965 2080 
+Cluster size 1965 broken into 860 1105 
+Done cluster 860 
+Done cluster 1105 
+Done cluster 1965 
+Cluster size 2080 broken into 1054 1026 
+Done cluster 1054 
+Done cluster 1026 
+Done cluster 2080 
+Done cluster 4045 
+Cluster size 3825 broken into 1894 1931 
+Cluster size 1894 broken into 941 953 
+Done cluster 941 
+Done cluster 953 
+Done cluster 1894 
+Cluster size 1931 broken into 1000 931 
+Done cluster 1000 
+Done cluster 931 
+Done cluster 1931 
+Done cluster 3825 
+Done cluster 7870 
+Cluster size 8105 broken into 3840 4265 
+Cluster size 3840 broken into 1932 1908 
+Cluster size 1932 broken into 1026 906 
+Done cluster 1026 
+Done cluster 906 
+Done cluster 1932 
+Cluster size 1908 broken into 953 955 
+Done cluster 953 
+Done cluster 955 
+Done cluster 1908 
+Done cluster 3840 
+Cluster size 4265 broken into 2197 2068 
+Cluster size 2197 broken into 1049 1148 
+Done cluster 1049 
+Done cluster 1148 
+Done cluster 2197 
+Cluster size 2068 broken into 989 1079 
+Done cluster 989 
+Done cluster 1079 
+Done cluster 2068 
+Done cluster 4265 
+Done cluster 8105 
+Done cluster 15975 
+Cluster size 15444 broken into 8070 7374 
+Cluster size 8070 broken into 4022 4048 
+Cluster size 4022 broken into 2183 1839 
+Cluster size 2183 broken into 1075 1108 
+Done cluster 1075 
+Done cluster 1108 
+Done cluster 2183 
+Cluster size 1839 broken into 978 861 
+Done cluster 978 
+Done cluster 861 
+Done cluster 1839 
+Done cluster 4022 
+Cluster size 4048 broken into 2006 2042 
+Cluster size 2006 broken into 990 1016 
+Done cluster 990 
+Done cluster 1016 
+Done cluster 2006 
+Cluster size 2042 broken into 966 1076 
+Done cluster 966 
+Done cluster 1076 
+Done cluster 2042 
+Done cluster 4048 
+Done cluster 8070 
+Cluster size 7374 broken into 3752 3622 
+Cluster size 3752 broken into 1912 1840 
+Cluster size 1912 broken into 939 973 
+Done cluster 939 
+Done cluster 973 
+Done cluster 1912 
+Cluster size 1840 broken into 829 1011 
+Done cluster 829 
+Done cluster 1011 
+Done cluster 1840 
+Done cluster 3752 
+Cluster size 3622 broken into 1657 1965 
+Cluster size 1657 broken into 783 874 
+Done cluster 783 
+Done cluster 874 
+Done cluster 1657 
+Cluster size 1965 broken into 1082 883 
+Done cluster 1082 
+Done cluster 883 
+Done cluster 1965 
+Done cluster 3622 
+Done cluster 7374 
+Done cluster 15444 
+Done cluster 31419 
+Done cluster 62575 
+Cluster size 61095 broken into 29470 31625 
+Cluster size 29470 broken into 15058 14412 
+Cluster size 15058 broken into 7160 7898 
+Cluster size 7160 broken into 3603 3557 
+Cluster size 3603 broken into 1894 1709 
+Cluster size 1894 broken into 1053 841 
+Done cluster 1053 
+Done cluster 841 
+Done cluster 1894 
+Cluster size 1709 broken into 758 951 
+Done cluster 758 
+Done cluster 951 
+Done cluster 1709 
+Done cluster 3603 
+Cluster size 3557 broken into 1677 1880 
+Cluster size 1677 broken into 715 962 
+Done cluster 715 
+Done cluster 962 
+Done cluster 1677 
+Cluster size 1880 broken into 956 924 
+Done cluster 956 
+Done cluster 924 
+Done cluster 1880 
+Done cluster 3557 
+Done cluster 7160 
+Cluster size 7898 broken into 3959 3939 
+Cluster size 3959 broken into 1796 2163 
+Cluster size 1796 broken into 934 862 
+Done cluster 934 
+Done cluster 862 
+Done cluster 1796 
+Cluster size 2163 broken into 1096 1067 
+Done cluster 1096 
+Done cluster 1067 
+Done cluster 2163 
+Done cluster 3959 
+Cluster size 3939 broken into 1874 2065 
+Cluster size 1874 broken into 813 1061 
+Done cluster 813 
+Done cluster 1061 
+Done cluster 1874 
+Cluster size 2065 broken into 1106 959 
+Done cluster 1106 
+Done cluster 959 
+Done cluster 2065 
+Done cluster 3939 
+Done cluster 7898 
+Done cluster 15058 
+Cluster size 14412 broken into 7266 7146 
+Cluster size 7266 broken into 3513 3753 
+Cluster size 3513 broken into 1589 1924 
+Cluster size 1589 broken into 770 819 
+Done cluster 770 
+Done cluster 819 
+Done cluster 1589 
+Cluster size 1924 broken into 1030 894 
+Done cluster 1030 
+Done cluster 894 
+Done cluster 1924 
+Done cluster 3513 
+Cluster size 3753 broken into 1697 2056 
+Cluster size 1697 broken into 842 855 
+Done cluster 842 
+Done cluster 855 
+Done cluster 1697 
+Cluster size 2056 broken into 869 1187 
+Done cluster 869 
+Done cluster 1187 
+Done cluster 2056 
+Done cluster 3753 
+Done cluster 7266 
+Cluster size 7146 broken into 3683 3463 
+Cluster size 3683 broken into 1822 1861 
+Cluster size 1822 broken into 794 1028 
+Done cluster 794 
+Done cluster 1028 
+Done cluster 1822 
+Cluster size 1861 broken into 966 895 
+Done cluster 966 
+Done cluster 895 
+Done cluster 1861 
+Done cluster 3683 
+Cluster size 3463 broken into 1793 1670 
+Cluster size 1793 broken into 915 878 
+Done cluster 915 
+Done cluster 878 
+Done cluster 1793 
+Cluster size 1670 broken into 669 1001 
+Done cluster 669 
+Done cluster 1001 
+Done cluster 1670 
+Done cluster 3463 
+Done cluster 7146 
+Done cluster 14412 
+Done cluster 29470 
+Cluster size 31625 broken into 16673 14952 
+Cluster size 16673 broken into 8147 8526 
+Cluster size 8147 broken into 4168 3979 
+Cluster size 4168 broken into 1769 2399 
+Cluster size 1769 broken into 1004 765 
+Done cluster 1004 
+Done cluster 765 
+Done cluster 1769 
+Cluster size 2399 broken into 1235 1164 
+Done cluster 1235 
+Done cluster 1164 
+Done cluster 2399 
+Done cluster 4168 
+Cluster size 3979 broken into 1821 2158 
+Cluster size 1821 broken into 919 902 
+Done cluster 919 
+Done cluster 902 
+Done cluster 1821 
+Cluster size 2158 broken into 1240 918 
+Done cluster 1240 
+Done cluster 918 
+Done cluster 2158 
+Done cluster 3979 
+Done cluster 8147 
+Cluster size 8526 broken into 3876 4650 
+Cluster size 3876 broken into 1971 1905 
+Cluster size 1971 broken into 914 1057 
+Done cluster 914 
+Done cluster 1057 
+Done cluster 1971 
+Cluster size 1905 broken into 951 954 
+Done cluster 951 
+Done cluster 954 
+Done cluster 1905 
+Done cluster 3876 
+Cluster size 4650 broken into 2388 2262 
+Cluster size 2388 broken into 1194 1194 
+Done cluster 1194 
+Done cluster 1194 
+Done cluster 2388 
+Cluster size 2262 broken into 1127 1135 
+Done cluster 1127 
+Done cluster 1135 
+Done cluster 2262 
+Done cluster 4650 
+Done cluster 8526 
+Done cluster 16673 
+Cluster size 14952 broken into 6916 8036 
+Cluster size 6916 broken into 3206 3710 
+Cluster size 3206 broken into 1792 1414 
+Cluster size 1792 broken into 779 1013 
+Done cluster 779 
+Done cluster 1013 
+Done cluster 1792 
+Done cluster 1414 
+Done cluster 3206 
+Cluster size 3710 broken into 2003 1707 
+Cluster size 2003 broken into 950 1053 
+Done cluster 950 
+Done cluster 1053 
+Done cluster 2003 
+Cluster size 1707 broken into 892 815 
+Done cluster 892 
+Done cluster 815 
+Done cluster 1707 
+Done cluster 3710 
+Done cluster 6916 
+Cluster size 8036 broken into 4298 3738 
+Cluster size 4298 broken into 2061 2237 
+Cluster size 2061 broken into 948 1113 
+Done cluster 948 
+Done cluster 1113 
+Done cluster 2061 
+Cluster size 2237 broken into 1150 1087 
+Done cluster 1150 
+Done cluster 1087 
+Done cluster 2237 
+Done cluster 4298 
+Cluster size 3738 broken into 1838 1900 
+Cluster size 1838 broken into 926 912 
+Done cluster 926 
+Done cluster 912 
+Done cluster 1838 
+Cluster size 1900 broken into 1067 833 
+Done cluster 1067 
+Done cluster 833 
+Done cluster 1900 
+Done cluster 3738 
+Done cluster 8036 
+Done cluster 14952 
+Done cluster 31625 
+Done cluster 61095 
+Done cluster 123670 
+Done cluster 248708 
+   ..consensus k-means clustering..
+    ..iteration 1
+      ..proposing to move 476888 genes..move accepted.
+    ..iteration 2
+      ..proposing to move 230703 genes..move accepted.
+    ..iteration 3
+      ..proposing to move 124913 genes..move accepted.
+    ..iteration 4
+      ..proposing to move 92203 genes..move accepted.
+    ..iteration 5
+      ..proposing to move 78841 genes..move accepted.
+    ..iteration 6
+      ..proposing to move 69482 genes..move accepted.
+    ..iteration 7
+      ..proposing to move 63291 genes..move accepted.
+    ..iteration 8
+      ..proposing to move 58035 genes..move accepted.
+    ..iteration 9
+      ..proposing to move 53816 genes..move accepted.
+    ..iteration 10
+      ..proposing to move 50261 genes..move accepted.
+    ..iteration 11
+      ..proposing to move 47061 genes..move accepted.
+    ..iteration 12
+      ..proposing to move 44363 genes..move accepted.
+    ..iteration 13
+      ..proposing to move 42190 genes..move accepted.
+    ..iteration 14
+      ..proposing to move 40261 genes..move accepted.
+    ..iteration 15
+      ..proposing to move 38841 genes..move accepted.
+    ..iteration 16
+      ..proposing to move 37181 genes..move accepted.
+    ..iteration 17
+      ..proposing to move 35595 genes..move accepted.
+    ..iteration 18
+      ..proposing to move 34640 genes..move accepted.
+    ..iteration 19
+      ..proposing to move 33334 genes..move accepted.
+    ..iteration 20
+      ..proposing to move 32088 genes..move accepted.
+    ..iteration 21
+      ..proposing to move 31179 genes..move accepted.
+    ..iteration 22
+      ..proposing to move 30565 genes..move accepted.
+    ..iteration 23
+      ..proposing to move 29607 genes..move accepted.
+    ..iteration 24
+      ..proposing to move 28707 genes..move accepted.
+    ..iteration 25
+      ..proposing to move 28326 genes..move accepted.
+    ..iteration 26
+      ..proposing to move 27823 genes..move accepted.
+    ..iteration 27
+      ..proposing to move 27038 genes..move accepted.
+    ..iteration 28
+      ..proposing to move 26359 genes..move accepted.
+    ..iteration 29
+      ..proposing to move 25583 genes..move accepted.
+    ..iteration 30
+      ..proposing to move 25214 genes..move accepted.
+    ..iteration 31
+      ..proposing to move 24693 genes..move accepted.
+    ..iteration 32
+      ..proposing to move 24277 genes..move accepted.
+    ..iteration 33
+      ..proposing to move 23864 genes..move accepted.
+    ..iteration 34
+      ..proposing to move 23151 genes..move accepted.
+    ..iteration 35
+      ..proposing to move 23034 genes..move accepted.
+    ..iteration 36
+      ..proposing to move 22845 genes..move accepted.
+    ..iteration 37
+      ..proposing to move 22559 genes..move accepted.
+    ..iteration 38
+      ..proposing to move 22211 genes..move accepted.
+    ..iteration 39
+      ..proposing to move 22221 genes..move accepted.
+    ..iteration 40
+      ..proposing to move 21606 genes..move accepted.
+    ..iteration 41
+      ..proposing to move 21042 genes..move accepted.
+    ..iteration 42
+      ..proposing to move 20741 genes..move accepted.
+    ..iteration 43
+      ..proposing to move 20569 genes..move accepted.
+    ..iteration 44
+      ..proposing to move 20259 genes..move accepted.
+    ..iteration 45
+      ..proposing to move 19763 genes..move accepted.
+    ..iteration 46
+      ..proposing to move 19654 genes..move accepted.
+    ..iteration 47
+      ..proposing to move 19473 genes..move accepted.
+    ..iteration 48
+      ..proposing to move 19463 genes..move accepted.
+    ..iteration 49
+      ..proposing to move 19384 genes..move accepted.
+    ..iteration 50
+      ..proposing to move 19212 genes..move accepted.
+    ..iteration 51
+      ..proposing to move 18843 genes..move accepted.
+    ..iteration 52
+      ..proposing to move 19027 genes..move accepted.
+    ..iteration 53
+      ..proposing to move 18981 genes..move accepted.
+    ..iteration 54
+      ..proposing to move 18687 genes..move accepted.
+    ..iteration 55
+      ..proposing to move 18321 genes..move accepted.
+    ..iteration 56
+      ..proposing to move 18200 genes..move accepted.
+    ..iteration 57
+      ..proposing to move 17834 genes..move accepted.
+    ..iteration 58
+      ..proposing to move 17576 genes..move accepted.
+    ..iteration 59
+      ..proposing to move 17415 genes..move accepted.
+    ..iteration 60
+      ..proposing to move 17422 genes..move accepted.
+    ..iteration 61
+      ..proposing to move 17174 genes..move accepted.
+    ..iteration 62
+      ..proposing to move 16991 genes..move accepted.
+    ..iteration 63
+      ..proposing to move 16847 genes..move accepted.
+    ..iteration 64
+      ..proposing to move 16787 genes..move accepted.
+    ..iteration 65
+      ..proposing to move 16432 genes..move accepted.
+    ..iteration 66
+      ..proposing to move 16399 genes..move accepted.
+    ..iteration 67
+      ..proposing to move 16420 genes..move accepted.
+    ..iteration 68
+      ..proposing to move 16357 genes..move accepted.
+    ..iteration 69
+      ..proposing to move 16172 genes..move accepted.
+    ..iteration 70
+      ..proposing to move 15803 genes..move accepted.
+    ..iteration 71
+      ..proposing to move 15930 genes..move accepted.
+    ..iteration 72
+      ..proposing to move 15728 genes..move accepted.
+    ..iteration 73
+      ..proposing to move 15627 genes..move accepted.
+    ..iteration 74
+      ..proposing to move 15355 genes..move accepted.
+    ..iteration 75
+      ..proposing to move 15214 genes..move accepted.
+    ..iteration 76
+      ..proposing to move 15069 genes..move accepted.
+    ..iteration 77
+      ..proposing to move 15107 genes..move accepted.
+    ..iteration 78
+      ..proposing to move 14958 genes..move accepted.
+    ..iteration 79
+      ..proposing to move 14587 genes..move accepted.
+    ..iteration 80
+      ..proposing to move 14331 genes..move accepted.
+    ..iteration 81
+      ..proposing to move 14358 genes..move accepted.
+    ..iteration 82
+      ..proposing to move 14362 genes..move accepted.
+    ..iteration 83
+      ..proposing to move 14394 genes..move accepted.
+    ..iteration 84
+      ..proposing to move 14452 genes..move accepted.
+    ..iteration 85
+      ..proposing to move 14658 genes..move accepted.
+    ..iteration 86
+      ..proposing to move 14568 genes..move accepted.
+    ..iteration 87
+      ..proposing to move 14443 genes..move accepted.
+    ..iteration 88
+      ..proposing to move 14337 genes..move accepted.
+    ..iteration 89
+      ..proposing to move 14414 genes..move accepted.
+    ..iteration 90
+      ..proposing to move 14204 genes..move accepted.
+    ..iteration 91
+      ..proposing to move 14026 genes..move accepted.
+    ..iteration 92
+      ..proposing to move 13809 genes..move accepted.
+    ..iteration 93
+      ..proposing to move 13877 genes..move accepted.
+    ..iteration 94
+      ..proposing to move 13751 genes..move accepted.
+    ..iteration 95
+      ..proposing to move 13607 genes..move accepted.
+    ..iteration 96
+      ..proposing to move 13474 genes..move accepted.
+    ..iteration 97
+      ..proposing to move 13339 genes..move accepted.
+    ..iteration 98
+      ..proposing to move 13501 genes..move accepted.
+    ..iteration 99
+      ..proposing to move 13411 genes..move accepted.
+    ..iteration 100
+      ..proposing to move 13141 genes..move accepted.
+    ..iteration 101
+      ..proposing to move 13353 genes..move accepted.
+    ..iteration 102
+      ..proposing to move 13299 genes..move accepted.
+    ..iteration 103
+      ..proposing to move 13234 genes..move accepted.
+    ..iteration 104
+      ..proposing to move 13116 genes..move accepted.
+    ..iteration 105
+      ..proposing to move 13086 genes..move accepted.
+    ..iteration 106
+      ..proposing to move 12989 genes..move accepted.
+    ..iteration 107
+      ..proposing to move 12963 genes..move accepted.
+    ..iteration 108
+      ..proposing to move 12829 genes..move accepted.
+    ..iteration 109
+      ..proposing to move 12654 genes..move accepted.
+    ..iteration 110
+      ..proposing to move 12796 genes..move accepted.
+    ..iteration 111
+      ..proposing to move 12679 genes..move accepted.
+    ..iteration 112
+      ..proposing to move 12780 genes..move accepted.
+    ..iteration 113
+      ..proposing to move 12698 genes..move accepted.
+    ..iteration 114
+      ..proposing to move 12471 genes..move accepted.
+    ..iteration 115
+      ..proposing to move 12644 genes..move accepted.
+    ..iteration 116
+      ..proposing to move 12438 genes..move accepted.
+    ..iteration 117
+      ..proposing to move 12464 genes..move accepted.
+    ..iteration 118
+      ..proposing to move 12631 genes..move accepted.
+    ..iteration 119
+      ..proposing to move 12506 genes..move accepted.
+    ..iteration 120
+      ..proposing to move 12295 genes..move accepted.
+    ..iteration 121
+      ..proposing to move 12348 genes..move accepted.
+    ..iteration 122
+      ..proposing to move 12162 genes..move accepted.
+    ..iteration 123
+      ..proposing to move 12198 genes..move accepted.
+    ..iteration 124
+      ..proposing to move 12122 genes..move accepted.
+    ..iteration 125
+      ..proposing to move 11876 genes..move accepted.
+    ..iteration 126
+      ..proposing to move 11808 genes..move accepted.
+    ..iteration 127
+      ..proposing to move 11820 genes..move accepted.
+    ..iteration 128
+      ..proposing to move 11685 genes..move accepted.
+    ..iteration 129
+      ..proposing to move 11748 genes..move accepted.
+    ..iteration 130
+      ..proposing to move 11828 genes..move accepted.
+    ..iteration 131
+      ..proposing to move 11958 genes..move accepted.
+    ..iteration 132
+      ..proposing to move 11875 genes..move accepted.
+    ..iteration 133
+      ..proposing to move 11820 genes..move accepted.
+    ..iteration 134
+      ..proposing to move 11833 genes..move accepted.
+    ..iteration 135
+      ..proposing to move 11840 genes..move accepted.
+    ..iteration 136
+      ..proposing to move 11891 genes..move accepted.
+    ..iteration 137
+      ..proposing to move 11757 genes..move accepted.
+    ..iteration 138
+      ..proposing to move 11792 genes..move accepted.
+    ..iteration 139
+      ..proposing to move 11815 genes..move accepted.
+    ..iteration 140
+      ..proposing to move 11757 genes..move accepted.
+    ..iteration 141
+      ..proposing to move 11743 genes..move accepted.
+    ..iteration 142
+      ..proposing to move 11793 genes..move accepted.
+    ..iteration 143
+      ..proposing to move 11815 genes..move accepted.
+    ..iteration 144
+      ..proposing to move 11644 genes..move accepted.
+    ..iteration 145
+      ..proposing to move 11690 genes..move accepted.
+    ..iteration 146
+      ..proposing to move 11659 genes..move accepted.
+    ..iteration 147
+      ..proposing to move 11550 genes..move accepted.
+    ..iteration 148
+      ..proposing to move 11487 genes..move accepted.
+    ..iteration 149
+      ..proposing to move 11705 genes..move accepted.
+    ..iteration 150
+      ..proposing to move 11564 genes..move accepted.
+    ..iteration 151
+      ..proposing to move 11476 genes..move accepted.
+    ..iteration 152
+      ..proposing to move 11365 genes..move accepted.
+    ..iteration 153
+      ..proposing to move 11201 genes..move accepted.
+    ..iteration 154
+      ..proposing to move 11173 genes..move accepted.
+    ..iteration 155
+      ..proposing to move 10965 genes..move accepted.
+    ..iteration 156
+      ..proposing to move 11013 genes..move accepted.
+    ..iteration 157
+      ..proposing to move 11075 genes..move accepted.
+    ..iteration 158
+      ..proposing to move 11009 genes..move accepted.
+    ..iteration 159
+      ..proposing to move 10874 genes..move accepted.
+    ..iteration 160
+      ..proposing to move 10917 genes..move accepted.
+    ..iteration 161
+      ..proposing to move 10855 genes..move accepted.
+    ..iteration 162
+      ..proposing to move 10874 genes..move accepted.
+    ..iteration 163
+      ..proposing to move 11129 genes..move accepted.
+    ..iteration 164
+      ..proposing to move 11085 genes..move accepted.
+    ..iteration 165
+      ..proposing to move 11063 genes..move accepted.
+    ..iteration 166
+      ..proposing to move 10916 genes..move accepted.
+    ..iteration 167
+      ..proposing to move 10828 genes..move accepted.
+    ..iteration 168
+      ..proposing to move 10773 genes..move accepted.
+    ..iteration 169
+      ..proposing to move 10809 genes..move accepted.
+    ..iteration 170
+      ..proposing to move 10536 genes..move accepted.
+    ..iteration 171
+      ..proposing to move 10793 genes..move accepted.
+    ..iteration 172
+      ..proposing to move 10737 genes..move accepted.
+    ..iteration 173
+      ..proposing to move 10609 genes..move accepted.
+    ..iteration 174
+      ..proposing to move 10596 genes..move accepted.
+    ..iteration 175
+      ..proposing to move 10827 genes..move accepted.
+    ..iteration 176
+      ..proposing to move 10914 genes..move accepted.
+    ..iteration 177
+      ..proposing to move 10783 genes..move accepted.
+    ..iteration 178
+      ..proposing to move 10919 genes..move accepted.
+    ..iteration 179
+      ..proposing to move 10845 genes..move accepted.
+    ..iteration 180
+      ..proposing to move 10816 genes..move accepted.
+    ..iteration 181
+      ..proposing to move 10898 genes..move accepted.
+    ..iteration 182
+      ..proposing to move 10974 genes..move accepted.
+    ..iteration 183
+      ..proposing to move 10781 genes..move accepted.
+    ..iteration 184
+      ..proposing to move 10660 genes..move accepted.
+    ..iteration 185
+      ..proposing to move 10488 genes..move accepted.
+    ..iteration 186
+      ..proposing to move 10662 genes..move accepted.
+    ..iteration 187
+      ..proposing to move 10505 genes..move accepted.
+    ..iteration 188
+      ..proposing to move 10688 genes..move accepted.
+    ..iteration 189
+      ..proposing to move 10492 genes..move accepted.
+    ..iteration 190
+      ..proposing to move 10462 genes..move accepted.
+    ..iteration 191
+      ..proposing to move 10430 genes..move accepted.
+    ..iteration 192
+      ..proposing to move 10502 genes..move accepted.
+    ..iteration 193
+      ..proposing to move 10539 genes..move accepted.
+    ..iteration 194
+      ..proposing to move 10470 genes..move accepted.
+    ..iteration 195
+      ..proposing to move 10457 genes..move accepted.
+    ..iteration 196
+      ..proposing to move 10300 genes..move accepted.
+    ..iteration 197
+      ..proposing to move 10354 genes..move accepted.
+    ..iteration 198
+      ..proposing to move 10408 genes..move accepted.
+    ..iteration 199
+      ..proposing to move 10386 genes..move accepted.
+    ..iteration 200
+      ..proposing to move 10240 genes..move accepted.
+    ..iteration 201
+      ..proposing to move 10149 genes..move accepted.
+    ..iteration 202
+      ..proposing to move 10011 genes..move accepted.
+    ..iteration 203
+      ..proposing to move 10253 genes..move accepted.
+    ..iteration 204
+      ..proposing to move 10177 genes..move accepted.
+    ..iteration 205
+      ..proposing to move 10124 genes..move accepted.
+    ..iteration 206
+      ..proposing to move 10102 genes..move accepted.
+    ..iteration 207
+      ..proposing to move 10323 genes..move accepted.
+    ..iteration 208
+      ..proposing to move 9907 genes..move accepted.
+    ..iteration 209
+      ..proposing to move 9981 genes..move accepted.
+    ..iteration 210
+      ..proposing to move 9899 genes..move accepted.
+    ..iteration 211
+
+############### Job 20940570 summary from  ###############
+Name                : Comethl_BGW_consensus
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-4-38
+Cores               : 45
+GPUs                : 0
+State               : CANCELLED by 2224567,CANCELLED
+ExitCode            : 0:0
+Submit              : 2026-08-20T15:55:40
+Start               : 2026-08-20T15:55:41
+End                 : 2026-08-21T01:05:16
+Reserved walltime   : 10-00:00:00
+Used walltime       :    09:09:35
+Used CPU time       :  6-08:34:07
+% User (Computation): 59.75%
+% System (I/O)      : 40.25%
+Mem reserved        : 500G
+Max Mem used        : 395.43G (hive-dc-7-4-38)
+Max Disk Write      : 144.77G (hive-dc-7-4-38)
+Max Disk Read       : 43.57G (hive-dc-7-4-38)
+
+############### Job 20940570 info ###############
+JobId=20940570 JobName=Comethl_BGW_consensus
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=84046 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:15
+   RunTime=09:09:33 TimeLimit=10-00:00:00 TimeMin=N/A
+   SubmitTime=2026-08-20T15:55:40 EligibleTime=2026-08-20T15:55:40
+   AccrueTime=2026-08-20T15:55:40
+   StartTime=2026-08-20T15:55:41 EndTime=2026-08-21T01:05:14 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-20T15:55:41 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-8-42:2134244
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-4-38
+   BatchHost=hive-dc-7-4-38
+   NumNodes=1 NumCPUs=45 NumTasks=1 CPUs/Task=45 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=45,mem=500G,node=1,billing=45
+   AllocTRES=cpu=45,mem=500G,node=1,billing=45
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=45 MinMemoryNode=500G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/slurm/consensus/run_pixi_consensus_males_as_reference.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/slurm/consensus/run_pixi_consensus_males_as_reference.slurm
+   WorkDir=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria
+   StdErr=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report_consensus_BGW.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/00_std_err_logs/comethyl_pearson_report_consensus_BGW.out
+   TresPerTask=cpu=45
+   MailUser=gekuodza@health.ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT
