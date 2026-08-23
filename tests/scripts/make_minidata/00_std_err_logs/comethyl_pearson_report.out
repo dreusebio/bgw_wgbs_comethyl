@@ -1,0 +1,57 @@
+hive-dc-7-4-58
+Sun Aug 23 01:39:33 PM PDT 2026
+
+############### Job 21164753 summary from  ###############
+Name                : Make_mini
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-4-58
+Cores               : 40
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-08-23T13:39:30
+Start               : 2026-08-23T13:39:33
+End                 : 2026-08-23T13:39:39
+Reserved walltime   : 23:00:00
+Used walltime       : 00:00:06
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 400G
+Max Mem used        : 81.64M (hive-dc-7-4-58)
+Max Disk Write      : 0.00  (hive-dc-7-4-58)
+Max Disk Read       : 0.00  (hive-dc-7-4-58)
+
+############### Job 21164753 info ###############
+JobId=21164753 JobName=Make_mini
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=83790 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=00:00:06 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-08-23T13:39:30 EligibleTime=2026-08-23T13:39:30
+   AccrueTime=2026-08-23T13:39:30
+   StartTime=2026-08-23T13:39:33 EndTime=2026-08-23T13:39:39 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-23T13:39:33 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-as-11-2-49:66999
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-4-58
+   BatchHost=hive-dc-7-4-58
+   NumNodes=1 NumCPUs=40 NumTasks=1 CPUs/Task=40 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=40,mem=400G,node=1,billing=40
+   AllocTRES=cpu=40,mem=400G,node=1,billing=40
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=40 MinMemoryNode=400G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/scripts/make_minidata/make_mini_data.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/scripts/make_minidata/make_mini_data.slurm
+   WorkDir=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/scripts/make_minidata
+   StdErr=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/scripts/make_minidata/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/scripts/make_minidata/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=40
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUThive-dc-7-4-58
+Sun Aug 23 01:45:00 PM PDT 2026

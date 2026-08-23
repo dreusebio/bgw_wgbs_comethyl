@@ -33,8 +33,8 @@
 #   --adjustment_version : label for this run (e.g. v1_all_pcs) [default = unadjusted]
 #   --softpower_cor      : bicor or pearson [default = pearson]
 #   --power_min           : minimum soft power to test [default = 1]
-#   --power_max           : maximum soft power to test [default = 30]
-#   --subsample_size      : number of regions to sample per seed [default = 30000]
+#   --power_max           : maximum soft power to test [default = 20]
+#   --subsample_size      : number of regions to sample per seed [default = 20000]
 #   --n_seeds             : number of random subsamples to run [default = 5]
 #   --seed_start           : first random seed used [default = 1001]
 #                             (seeds used are seed_start .. seed_start + n_seeds - 1)
@@ -119,8 +119,8 @@ option_list <- list(
   make_option("--adjustment_version", type = "character", default = "unadjusted"),
   make_option("--softpower_cor",      type = "character", default = "pearson"),
   make_option("--power_min",          type = "integer",   default = 1),
-  make_option("--power_max",          type = "integer",   default = 30),
-  make_option("--subsample_size",     type = "integer",   default = 30000),
+  make_option("--power_max",          type = "integer",   default = 20),
+  make_option("--subsample_size",     type = "integer",   default = 20000),
   make_option("--n_seeds",            type = "integer",   default = 5),
   make_option("--seed_start",         type = "integer",   default = 1001),
   make_option("--block_size",         type = "integer",   default = 5000),
@@ -168,7 +168,6 @@ get_sft_columns <- function(sft_table) {
   list(
     power  = get_col(c("power")),
     fit    = get_col(c("sft.r.sq", "sft.rsq")),
-    slope  = get_col(c("slope")),
     mean   = get_col(c("mean.k.", "mean.k")),
     median = get_col(c("median.k.", "median.k")),
     max    = get_col(c("max.k.", "max.k"))
@@ -180,7 +179,7 @@ choose_consensus_power <- function(summary_df, cutoff = 0.8) {
     dplyr::group_by(Power) %>%
     dplyr::summarise(
       n_datasets      = dplyr::n_distinct(Dataset),
-      n_meet_cutoff   = dplyr::n_distinct(Dataset[which(Valid_Topology %in% TRUE)]),
+      n_meet_cutoff   = dplyr::n_distinct(Dataset[Mean_SFT_R2 >= cutoff]),
       min_SFT_R2      = min(Mean_SFT_R2, na.rm = TRUE),
       median_SFT_R2   = median(Mean_SFT_R2, na.rm = TRUE),
       .groups = "drop"
@@ -192,9 +191,9 @@ choose_consensus_power <- function(summary_df, cutoff = 0.8) {
     return(list(power = all_ok$Power[1],
                 reason = "smallest power where all datasets meet scale-free cutoff (seed-averaged)"))
   }
-  list(power  = NA_integer_,
-       reason = paste0("no common power had mean R2 >= ", cutoff,
-                       " and negative mean slope in every dataset"))
+  fallback <- dplyr::arrange(power_summary, dplyr::desc(n_meet_cutoff), Power)
+  list(power  = fallback$Power[1],
+       reason = "fallback: smallest power maximizing datasets meeting cutoff (seed-averaged)")
 }
 
 # ----------------------------------------------------------------
@@ -224,9 +223,6 @@ softpower_cor <- tolower(opt$softpower_cor)
 if (!softpower_cor %in% c("bicor", "pearson")) stop("--softpower_cor must be bicor or pearson")
 if (opt$subsample_size < 500) stop("--subsample_size should be at least 500 for a meaningful fit estimate")
 if (opt$n_seeds < 1) stop("--n_seeds must be >= 1")
-if (opt$power_min < 1 || opt$power_max < opt$power_min)
-  stop("Require 1 <= --power_min <= --power_max")
-if (opt$threads < 1) stop("--threads must be >= 1")
 
 powerVector <- seq(opt$power_min, opt$power_max)
 seeds <- seq(opt$seed_start, opt$seed_start + opt$n_seeds - 1)
@@ -285,12 +281,6 @@ message("(Sample counts per dataset: ",
 if (length(common_regions) == 0) {
   stop("No regions are shared across the provided datasets -- check that inputs come from the same region_label.")
 }
-
-# Preserve dataset 1's column order. Every dataset is subset with this same
-# ordered vector below, so seed-specific benchmarks compare identical regions.
-common_regions <- colnames(meth_list[[1]])[
-  colnames(meth_list[[1]]) %in% common_regions
-]
 if (length(common_regions) < opt$subsample_size) {
   warning("--subsample_size (", opt$subsample_size,
           ") exceeds the number of common regions (", length(common_regions),
@@ -335,8 +325,7 @@ for (current_seed in seeds) {
       Dataset           = ds_label,
       Seed              = current_seed,
       Power             = sft_table[[cols$power]],
-      SFT_R2            = sft_table[[cols$fit]],
-      Slope             = sft_table[[cols$slope]],
+      SFT_R2            = abs(sft_table[[cols$fit]]),
       Mean_Connectivity = sft_table[[cols$mean]]
     )
 
@@ -363,13 +352,8 @@ summary_df <- combined %>%
     n_seeds              = dplyr::n(),
     Mean_SFT_R2          = mean(SFT_R2, na.rm = TRUE),
     SD_SFT_R2            = stats::sd(SFT_R2, na.rm = TRUE),
-    Mean_Slope           = mean(Slope, na.rm = TRUE),
-    SD_Slope             = stats::sd(Slope, na.rm = TRUE),
     Mean_Connectivity    = mean(Mean_Connectivity, na.rm = TRUE),
     .groups = "drop"
-  ) %>%
-  dplyr::mutate(
-    Valid_Topology = Mean_SFT_R2 >= opt$scale_free_cutoff & Mean_Slope < 0
   ) %>%
   dplyr::arrange(Dataset, Power)
 
@@ -394,12 +378,7 @@ writeLines(
   ),
   con = file.path(shared_dir, "chosen_power_estimate.txt")
 )
-if (is.na(power_result$power)) {
-  warning("No valid consensus power was found: ", power_result$reason)
-} else {
-  message("Estimated consensus power (subsampled): ", power_result$power,
-          " (", power_result$reason, ")")
-}
+message("Estimated consensus power (subsampled): ", power_result$power, " (", power_result$reason, ")")
 
 # ----------------------------------------------------------------
 # 9. Plot: fit and connectivity vs power, ribbon = spread across seeds
@@ -411,24 +390,13 @@ p1 <- ggplot(summary_df, aes(x = Power, y = Mean_SFT_R2, color = Dataset, fill =
               alpha = 0.15, color = NA) +
   geom_line() + geom_point() +
   geom_hline(yintercept = opt$scale_free_cutoff, linetype = "dashed") +
+  geom_vline(xintercept = power_result$power, linetype = "dotted") +
   scale_x_continuous(breaks = powerVector) +
   theme_bw(base_size = 12) +
   theme(panel.grid = element_blank()) +
   labs(x = "Soft Threshold (Power)", y = "Scale-Free R^2 (mean +/- SD across seeds)",
        title = paste0(region_label, " | subsample = ", opt$subsample_size,
                        " | seeds = ", opt$n_seeds))
-
-if (!is.na(power_result$power)) {
-  p1 <- p1 + geom_vline(xintercept = power_result$power, linetype = "dotted")
-}
-
-p_slope <- ggplot(summary_df, aes(x = Power, y = Mean_Slope, color = Dataset)) +
-  geom_hline(yintercept = 0, linetype = "dashed") +
-  geom_line() + geom_point() +
-  scale_x_continuous(breaks = powerVector) +
-  theme_bw(base_size = 12) +
-  theme(panel.grid = element_blank()) +
-  labs(x = "Soft Threshold (Power)", y = "Mean scale-free slope")
 
 p2 <- ggplot(summary_df, aes(x = Power, y = Mean_Connectivity, color = Dataset)) +
   geom_line() + geom_point() +
@@ -438,7 +406,6 @@ p2 <- ggplot(summary_df, aes(x = Power, y = Mean_Connectivity, color = Dataset))
   labs(x = "Soft Threshold (Power)", y = "Mean Connectivity (mean across seeds)")
 
 print(p1)
-print(p_slope)
 print(p2)
 dev.off()
 

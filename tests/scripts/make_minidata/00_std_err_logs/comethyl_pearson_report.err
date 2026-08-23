@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/scripts/make_minidata/00_make_comethyl_minidata.py", line 411, in <module>
+    main()
+  File "/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/scripts/make_minidata/00_make_comethyl_minidata.py", line 302, in main
+    samples = read_sample_list(sample_list_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/scripts/make_minidata/00_make_comethyl_minidata.py", line 125, in read_sample_list
+    with open(sample_list_path, "r", encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/processed/sample_ids.txt'

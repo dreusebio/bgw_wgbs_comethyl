@@ -1,16 +1,16 @@
 #!/bin/bash
-#SBATCH --job-name=Comethl_BGW_consensus_females
+#SBATCH --job-name=Test_Comethl_BGW_consensus_females
 #SBATCH --mail-user=gekuodza@health.ucdavis.edu
-#SBATCH --time=10-00:00:00
+#SBATCH --time=5-00:00:00
 #SBATCH --partition=high
 #SBATCH --ntasks=1
 #SBATCH --output=00_std_err_logs/comethyl_pearson_report_consensus_females_BGW.out
 #SBATCH --error=00_std_err_logs/comethyl_pearson_report_consensus_females_BGW.err
 #SBATCH --cpus-per-task=30
 #SBATCH --account=lasallegrp #genome-center-grp
-#SBATCH --mem=700G
+#SBATCH --mem=250G
 #SBATCH --mail-type=ALL
-#SBATCH --chdir=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria
+#SBATCH --chdir=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests
 
 ###################
 # Run Information #
@@ -68,11 +68,11 @@ pixi run Rscript --vanilla -e 'cat("R version:", R.version.string, "\n"); librar
 # ================================================================
 # Convenience variables
 # ================================================================
-PROJECT=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria
-SCRIPTS=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/scripts/comethyl_scripts/consensus
-DATA=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/data/metadata
-CONFIG=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/config
-OUT=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethyl_output/consensus
+PROJECT=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests
+SCRIPTS=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/scripts/comethyl_scripts/consensus
+DATA=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/metadata
+CONFIG=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config
+OUT=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus
 
 # ----------------------------------------------------------------
 # REGION SELECTION -- joint-SD redesign (Candidate A)
@@ -88,18 +88,18 @@ OUT=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/comethy
 # and rerun from Script 05b onward -- Scripts 00-05 stay untouched.
 # ----------------------------------------------------------------
 CPG_LABEL=cov3_75pct                 # from Script 01 (cov=3, per_sample=0.75) -- unchanged
-REF_COV_MIN=10                     # Script 02 coverage prefilter (Candidate A; use 14 for Candidate B)
+REF_COV_MIN=4                     # Script 02 coverage prefilter (Candidate A; use 14 for Candidate B)
 REF_METH_SD=0                        # Script 02 SD is deliberately permissive now
 REF_REGION_LABEL=covMin${REF_COV_MIN}_methSD${REF_METH_SD}   # Script 02's own output label, e.g. covMin10_methSD0
-JOINT_SD=0.06                        # Script 05b's joint SD threshold, decided across both sexes
-JOINT_SD_LABEL=0p06                  # must match Script 05b's number_label() formatting of JOINT_SD
-EFFECTIVE_REGION_LABEL=${REF_REGION_LABEL}_jointSDall${JOINT_SD_LABEL}   # e.g. covMin10_methSD0_jointSDall0p06
+JOINT_SD=0.05                      # Script 05b's joint SD threshold, decided across both sexes
+JOINT_SD_LABEL=0p05                  # must match Script 05b's number_label() formatting of JOINT_SD
+EFFECTIVE_REGION_LABEL=${REF_REGION_LABEL}_jointSDall${JOINT_SD_LABEL}   # e.g. covMin10_methSD0_jointSDall0p05
                                       # -- this is the region_label every script from 06 onward will derive
 
-# # # ================================================================
-# # # SCRIPT 00: Import CpG reports (one per dataset)
-# # # UNCHANGED
-# # # ================================================================
+# # # # ================================================================
+# # # # SCRIPT 00: Import CpG reports (one per dataset)
+# # # # UNCHANGED
+# # # # ================================================================
 
 pixi run Rscript $SCRIPTS/00_import_cpg_reports_consensus.R \
   --project_root $PROJECT \
@@ -216,7 +216,7 @@ pixi run Rscript $SCRIPTS/05b_filter_shared_complete_regions_consensus.R \
   --regions_file $OUT/02_reference_region_filter/females/$CPG_LABEL/$REF_REGION_LABEL/Filtered_Regions.txt \
   --selection_mode joint_sd_all \
   --joint_meth_sd $JOINT_SD \
-  --min_regions 250000 \
+  --min_regions 1000 \
   --write_sd_table TRUE
 
 # # ================================================================
@@ -304,7 +304,7 @@ pixi run Rscript $SCRIPTS/08_softpower_consensus.R \
   --power_min 1 \
   --power_max 20 \
   --threads 59 \
-  --scale_free_cutoff 0.8
+  --scale_free_cutoff 0.7
 
 # v2
 pixi run Rscript $SCRIPTS/08_softpower_consensus.R \
@@ -318,7 +318,7 @@ pixi run Rscript $SCRIPTS/08_softpower_consensus.R \
   --power_min 1 \
   --power_max 20 \
   --threads 59 \
-  --scale_free_cutoff 0.8
+  --scale_free_cutoff 0.7
 
 
 # ================================================================
@@ -339,10 +339,10 @@ pixi run Rscript $SCRIPTS/08b_softpower_benchmark_consensus.R \
   --softpower_cor pearson \
   --power_min 1 \
   --power_max 20 \
-  --subsample_size 20000 \
+  --subsample_size 600 \
   --n_seeds 5 \
   --threads 8 \
-  --scale_free_cutoff 0.8
+  --scale_free_cutoff 0.7
 
 # v2
 pixi run Rscript $SCRIPTS/08b_softpower_benchmark_consensus.R \
@@ -355,10 +355,10 @@ pixi run Rscript $SCRIPTS/08b_softpower_benchmark_consensus.R \
   --softpower_cor pearson \
   --power_min 1 \
   --power_max 20 \
-  --subsample_size 20000 \
+  --subsample_size 600 \
   --n_seeds 5 \
   --threads 8 \
-  --scale_free_cutoff 0.8
+  --scale_free_cutoff 0.7
 
 
 # ================================================================
@@ -374,19 +374,19 @@ pixi run Rscript $SCRIPTS/08c_softpower_benchmark_compare_consensus.R \
   --project_root $PROJECT \
   --cpg_label $CPG_LABEL \
   --reference_dataset_label females \
-  --scale_free_cutoff 0.8
+  --scale_free_cutoff 0.7
 
-# ================================================================
-# SCRIPT 09: Consensus module detection (one run per adjustment version)
-#
-# CHANGED: --regions_file now points at Script 05b's
-# joint_eligible_regions_4col.tsv, NOT Script 02's Filtered_Regions.txt.
-# Script 02's table is deliberately permissive now (SD=0) and still
-# contains regions Script 05b's joint SD filter removed -- passing it
-# here would silently reintroduce those regions.
-# --dataset*_meth and --chosen_power_file updated to $EFFECTIVE_REGION_LABEL.
-# Output: $OUT/09_consensus_modules/shared/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/<adjustment_version>/
-# ================================================================
+# # ================================================================
+# # SCRIPT 09: Consensus module detection (one run per adjustment version)
+# #
+# # CHANGED: --regions_file now points at Script 05b's
+# # joint_eligible_regions_4col.tsv, NOT Script 02's Filtered_Regions.txt.
+# # Script 02's table is deliberately permissive now (SD=0) and still
+# # contains regions Script 05b's joint SD filter removed -- passing it
+# # here would silently reintroduce those regions.
+# # --dataset*_meth and --chosen_power_file updated to $EFFECTIVE_REGION_LABEL.
+# # Output: $OUT/09_consensus_modules/shared/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/<adjustment_version>/
+# # ================================================================
 
 # v1
 pixi run Rscript $SCRIPTS/09_modules_consensus.R \
