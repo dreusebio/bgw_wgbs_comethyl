@@ -96,192 +96,192 @@ JOINT_SD_LABEL=0p06                  # must match Script 05b's number_label() fo
 EFFECTIVE_REGION_LABEL=${REF_REGION_LABEL}_jointSDall${JOINT_SD_LABEL}   # e.g. covMin10_methSD0_jointSDall0p06
                                       # -- this is the region_label every script from 06 onward will derive
 
+# # # # ================================================================
+# # # # SCRIPT 00: Import CpG reports (one per dataset)
+# # # # UNCHANGED
+# # # # ================================================================
+
+# pixi run Rscript $SCRIPTS/00_import_cpg_reports_consensus.R \
+#   --project_root $PROJECT \
+#   --dataset_label females \
+#   --meta_file $DATA/merged_qc_females.xlsx \
+#   --cyto_dir $PROJECT/data/processed/cytosine_reports \
+#   --workers 8
+
+# pixi run Rscript $SCRIPTS/00_import_cpg_reports_consensus.R \
+#   --project_root $PROJECT \
+#   --dataset_label males \
+#   --meta_file $DATA/merged_qc_males.xlsx \
+#   --cyto_dir $PROJECT/data/processed/cytosine_reports \
+#   --workers 8
+
+
 # # # ================================================================
-# # # SCRIPT 00: Import CpG reports (one per dataset)
+# # # SCRIPT 01: Filter CpGs and call reference regions (females only)
 # # # UNCHANGED
+# # # Output: $OUT/01_reference_filter_regions/females/$CPG_LABEL/
 # # # ================================================================
 
-pixi run Rscript $SCRIPTS/00_import_cpg_reports_consensus.R \
-  --project_root $PROJECT \
-  --dataset_label females \
-  --meta_file $DATA/merged_qc_females.xlsx \
-  --cyto_dir $PROJECT/data/processed/cytosine_reports \
-  --workers 8
-
-pixi run Rscript $SCRIPTS/00_import_cpg_reports_consensus.R \
-  --project_root $PROJECT \
-  --dataset_label males \
-  --meta_file $DATA/merged_qc_males.xlsx \
-  --cyto_dir $PROJECT/data/processed/cytosine_reports \
-  --workers 8
-
-
-# # ================================================================
-# # SCRIPT 01: Filter CpGs and call reference regions (females only)
-# # UNCHANGED
-# # Output: $OUT/01_reference_filter_regions/females/$CPG_LABEL/
-# # ================================================================
-
-pixi run Rscript $SCRIPTS/01_filter_cpgs_call_regions_consensus.R \
-  --project_root $PROJECT \
-  --dataset_label females \
-  --input_rds $OUT/00_cpg_extraction/females/Unfiltered_BSseq.rds \
-  --cov 3 \
-  --per_sample 0.75
-
-# # ================================================================
-# # SCRIPT 02: Filter reference regions
-# #
-# # CHANGED: coverage prefilter only. --meth_sd is now 0 (permissive) --
-# # the decisive SD filter has moved to Script 05b so a female-only SD
-# # cut can't remove regions that turn out to be dynamic in males.
-# # Output: $OUT/02_reference_region_filter/females/$CPG_LABEL/$REF_REGION_LABEL/
-# # ================================================================
-
-pixi run Rscript $SCRIPTS/02_filter_reference_regions_consensus.R \
-  --project_root $PROJECT \
-  --dataset_label females \
-  --input_regions $OUT/01_reference_filter_regions/females/$CPG_LABEL/Regions.txt \
-  --cov_min $REF_COV_MIN \
-  --meth_sd $REF_METH_SD
-
-# # ================================================================
-# # SCRIPT 03: Build reference region methylation (females only)
-# #
-# # CHANGED: --input_regions now points at the permissive-SD region
-# # set from the updated Script 02 call above.
-# # Output: $OUT/03_region_methylation/females/$CPG_LABEL/$REF_REGION_LABEL/
-# # ================================================================
-
-pixi run Rscript $SCRIPTS/03_build_reference_region_methylation_consensus.R \
-  --project_root $PROJECT \
-  --dataset_label females \
-  --input_bs $OUT/01_reference_filter_regions/females/$CPG_LABEL/Filtered_BSseq.rds \
-  --input_regions $OUT/02_reference_region_filter/females/$CPG_LABEL/$REF_REGION_LABEL/Filtered_Regions.rds
-
-# # ================================================================
-# # SCRIPT 04: Align other datasets to reference CpGs
-# # UNCHANGED -- depends on Script 01's CpG-level filtering, not
-# # Script 02's region-level covMin/methSD, so it does not need to
-# # rerun when only the region-selection candidate changes.
-# # Output: $OUT/04_align_to_reference_cpgs/<dataset_label>/
-# # ================================================================
-
-pixi run Rscript $SCRIPTS/04_align_other_datasets_to_reference_cpgs_consensus.R \
-  --project_root $PROJECT \
-  --reference_bs $OUT/01_reference_filter_regions/females/$CPG_LABEL/Filtered_BSseq.rds \
-  --dataset1_label males \
-  --dataset1_meta $DATA/merged_qc_males.xlsx \
-  --dataset1_cyto_dir $PROJECT/data/processed/cytosine_reports \
-  --cov 3 \
-  --per_sample 0.75 \
-  --workers 8
-
-# # ================================================================
-# # SCRIPT 05: Build other dataset region methylation
-# #
-# # CHANGED: --reference_regions now points at the permissive-SD
-# # region set from the updated Script 02 call. --dataset1_bs is
-# # unchanged (Script 04 output, not candidate-specific).
-# # Output: $OUT/03_region_methylation/males/$CPG_LABEL/$REF_REGION_LABEL/
-# # ================================================================
-
-pixi run Rscript $SCRIPTS/05_build_other_dataset_region_methylation_consensus.R \
-  --project_root $PROJECT \
-  --reference_regions $OUT/02_reference_region_filter/females/$CPG_LABEL/$REF_REGION_LABEL/Filtered_Regions.rds \
-  --dataset1_label males \
-  --dataset1_bs $OUT/04_align_to_reference_cpgs/males/Filtered_BSseq.rds
-
-# # ================================================================
-# # SCRIPT 05b: Filter shared, complete, jointly-variable regions
-# #
-# # CHANGED: this is now where the decisive SD filter happens.
-# # --selection_mode joint_sd_all keeps only regions that are complete
-# # AND have SD >= $JOINT_SD in BOTH females and males, so a female-only
-# # cut can't discard regions that are actually dynamic in males (or
-# # vice versa). Output filenames also changed:
-# #   <dataset>_Methylation_complete.rds -> <dataset>_Methylation_jointEligible.rds
-# # Output: $OUT/05b_shared_complete_regions/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/
-# #   females_Methylation_jointEligible.rds
-# #   males_Methylation_jointEligible.rds
-# #   joint_eligible_regions_4col.tsv   <- new --regions_file for Scripts 09-14
-# # ================================================================
-
-pixi run Rscript $SCRIPTS/05b_filter_shared_complete_regions_consensus.R \
-  --project_root $PROJECT \
-  --dataset1_label females \
-  --dataset1_meth $OUT/03_region_methylation/females/$CPG_LABEL/$REF_REGION_LABEL/Region_Methylation.rds \
-  --dataset2_label males \
-  --dataset2_meth $OUT/03_region_methylation/males/$CPG_LABEL/$REF_REGION_LABEL/Region_Methylation.rds \
-  --regions_file $OUT/02_reference_region_filter/females/$CPG_LABEL/$REF_REGION_LABEL/Filtered_Regions.txt \
-  --selection_mode joint_sd_all \
-  --joint_meth_sd $JOINT_SD \
-  --min_regions 250000 \
-  --write_sd_table TRUE
-
-# # ================================================================
-# # SCRIPT 06: PC diagnostics (run separately per dataset)
-# #
-# # CHANGED: --input_meth now points at Script 05b's joint-eligible
-# # matrices. Script 06 auto-detects the "05b_shared_complete_regions"
-# # path and the "_Methylation_jointEligible.rds" filename to derive
-# # dataset_label/cpg_label/region_label -- no other flags change.
-# # Output: $OUT/06_pc_diagnostics/<dataset>/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/
-# # ================================================================
-
-pixi run Rscript $SCRIPTS/06_pc_diagnostics_consensus.R \
-  --project_root $PROJECT \
-  --input_meth $OUT/05b_shared_complete_regions/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/females_Methylation_jointEligible.rds \
-  --sample_info $DATA/merged_qc_females.xlsx \
-  --protected_traits_file $CONFIG/protected_traits.txt \
-  --technical_traits_file $CONFIG/technical_traits.txt \
-  --selected_trait_mode protected_and_technical \
-  --threads 59
-
-pixi run Rscript $SCRIPTS/06_pc_diagnostics_consensus.R \
-  --project_root $PROJECT \
-  --input_meth $OUT/05b_shared_complete_regions/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/males_Methylation_jointEligible.rds \
-  --sample_info $DATA/merged_qc_males.xlsx \
-  --protected_traits_file $CONFIG/protected_traits.txt \
-  --technical_traits_file $CONFIG/technical_traits.txt \
-  --selected_trait_mode protected_and_technical \
-  --threads 59
-
+# pixi run Rscript $SCRIPTS/01_filter_cpgs_call_regions_consensus.R \
+#   --project_root $PROJECT \
+#   --dataset_label females \
+#   --input_rds $OUT/00_cpg_extraction/females/Unfiltered_BSseq.rds \
+#   --cov 3 \
+#   --per_sample 0.75
 
 # # # ================================================================
-# # # SCRIPT 07: Methylation adjustment (run separately per dataset)
+# # # SCRIPT 02: Filter reference regions
 # # #
-# # # CHANGED: --input_meth points at Script 05b's joint-eligible
-# # # matrices (same auto-detection as Script 06). --input_pcs and
-# # # --pc_trait_stats point at Script 06's new output directory.
-# # # Output: $OUT/07_methylation_adjustment/<dataset>/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/<variant>/
+# # # CHANGED: coverage prefilter only. --meth_sd is now 0 (permissive) --
+# # # the decisive SD filter has moved to Script 05b so a female-only SD
+# # # cut can't remove regions that turn out to be dynamic in males.
+# # # Output: $OUT/02_reference_region_filter/females/$CPG_LABEL/$REF_REGION_LABEL/
 # # # ================================================================
 
-pixi run Rscript $SCRIPTS/07_methylation_adjustment_consensus.R \
-  --project_root $PROJECT \
-  --input_meth $OUT/05b_shared_complete_regions/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/females_Methylation_jointEligible.rds \
-  --input_pcs $OUT/06_pc_diagnostics/females/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/PCs.rds \
-  --pc_trait_stats $OUT/06_pc_diagnostics/females/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/PC_Trait_Correlation_Stats_Bicor.tsv \
-  --protected_traits_file $CONFIG/protected_traits.txt \
-  --technical_traits_file $CONFIG/technical_traits.txt \
-  --run_v1 TRUE \
-  --run_v2 TRUE \
-  --run_v3 FALSE \
-  --v2_cor_method bicor \
-  --v2_p_thresh 0.05
+# pixi run Rscript $SCRIPTS/02_filter_reference_regions_consensus.R \
+#   --project_root $PROJECT \
+#   --dataset_label females \
+#   --input_regions $OUT/01_reference_filter_regions/females/$CPG_LABEL/Regions.txt \
+#   --cov_min $REF_COV_MIN \
+#   --meth_sd $REF_METH_SD
 
-pixi run Rscript $SCRIPTS/07_methylation_adjustment_consensus.R \
-  --project_root $PROJECT \
-  --input_meth $OUT/05b_shared_complete_regions/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/males_Methylation_jointEligible.rds \
-  --input_pcs $OUT/06_pc_diagnostics/males/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/PCs.rds \
-  --pc_trait_stats $OUT/06_pc_diagnostics/males/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/PC_Trait_Correlation_Stats_Bicor.tsv \
-  --protected_traits_file $CONFIG/protected_traits.txt \
-  --technical_traits_file $CONFIG/technical_traits.txt \
-  --run_v1 TRUE \
-  --run_v2 TRUE \
-  --run_v3 FALSE \
-  --v2_cor_method bicor \
-  --v2_p_thresh 0.05
+# # # ================================================================
+# # # SCRIPT 03: Build reference region methylation (females only)
+# # #
+# # # CHANGED: --input_regions now points at the permissive-SD region
+# # # set from the updated Script 02 call above.
+# # # Output: $OUT/03_region_methylation/females/$CPG_LABEL/$REF_REGION_LABEL/
+# # # ================================================================
+
+# pixi run Rscript $SCRIPTS/03_build_reference_region_methylation_consensus.R \
+#   --project_root $PROJECT \
+#   --dataset_label females \
+#   --input_bs $OUT/01_reference_filter_regions/females/$CPG_LABEL/Filtered_BSseq.rds \
+#   --input_regions $OUT/02_reference_region_filter/females/$CPG_LABEL/$REF_REGION_LABEL/Filtered_Regions.rds
+
+# # # ================================================================
+# # # SCRIPT 04: Align other datasets to reference CpGs
+# # # UNCHANGED -- depends on Script 01's CpG-level filtering, not
+# # # Script 02's region-level covMin/methSD, so it does not need to
+# # # rerun when only the region-selection candidate changes.
+# # # Output: $OUT/04_align_to_reference_cpgs/<dataset_label>/
+# # # ================================================================
+
+# pixi run Rscript $SCRIPTS/04_align_other_datasets_to_reference_cpgs_consensus.R \
+#   --project_root $PROJECT \
+#   --reference_bs $OUT/01_reference_filter_regions/females/$CPG_LABEL/Filtered_BSseq.rds \
+#   --dataset1_label males \
+#   --dataset1_meta $DATA/merged_qc_males.xlsx \
+#   --dataset1_cyto_dir $PROJECT/data/processed/cytosine_reports \
+#   --cov 3 \
+#   --per_sample 0.75 \
+#   --workers 8
+
+# # # ================================================================
+# # # SCRIPT 05: Build other dataset region methylation
+# # #
+# # # CHANGED: --reference_regions now points at the permissive-SD
+# # # region set from the updated Script 02 call. --dataset1_bs is
+# # # unchanged (Script 04 output, not candidate-specific).
+# # # Output: $OUT/03_region_methylation/males/$CPG_LABEL/$REF_REGION_LABEL/
+# # # ================================================================
+
+# pixi run Rscript $SCRIPTS/05_build_other_dataset_region_methylation_consensus.R \
+#   --project_root $PROJECT \
+#   --reference_regions $OUT/02_reference_region_filter/females/$CPG_LABEL/$REF_REGION_LABEL/Filtered_Regions.rds \
+#   --dataset1_label males \
+#   --dataset1_bs $OUT/04_align_to_reference_cpgs/males/Filtered_BSseq.rds
+
+# # # ================================================================
+# # # SCRIPT 05b: Filter shared, complete, jointly-variable regions
+# # #
+# # # CHANGED: this is now where the decisive SD filter happens.
+# # # --selection_mode joint_sd_all keeps only regions that are complete
+# # # AND have SD >= $JOINT_SD in BOTH females and males, so a female-only
+# # # cut can't discard regions that are actually dynamic in males (or
+# # # vice versa). Output filenames also changed:
+# # #   <dataset>_Methylation_complete.rds -> <dataset>_Methylation_jointEligible.rds
+# # # Output: $OUT/05b_shared_complete_regions/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/
+# # #   females_Methylation_jointEligible.rds
+# # #   males_Methylation_jointEligible.rds
+# # #   joint_eligible_regions_4col.tsv   <- new --regions_file for Scripts 09-14
+# # # ================================================================
+
+# pixi run Rscript $SCRIPTS/05b_filter_shared_complete_regions_consensus.R \
+#   --project_root $PROJECT \
+#   --dataset1_label females \
+#   --dataset1_meth $OUT/03_region_methylation/females/$CPG_LABEL/$REF_REGION_LABEL/Region_Methylation.rds \
+#   --dataset2_label males \
+#   --dataset2_meth $OUT/03_region_methylation/males/$CPG_LABEL/$REF_REGION_LABEL/Region_Methylation.rds \
+#   --regions_file $OUT/02_reference_region_filter/females/$CPG_LABEL/$REF_REGION_LABEL/Filtered_Regions.txt \
+#   --selection_mode joint_sd_all \
+#   --joint_meth_sd $JOINT_SD \
+#   --min_regions 250000 \
+#   --write_sd_table TRUE
+
+# # # ================================================================
+# # # SCRIPT 06: PC diagnostics (run separately per dataset)
+# # #
+# # # CHANGED: --input_meth now points at Script 05b's joint-eligible
+# # # matrices. Script 06 auto-detects the "05b_shared_complete_regions"
+# # # path and the "_Methylation_jointEligible.rds" filename to derive
+# # # dataset_label/cpg_label/region_label -- no other flags change.
+# # # Output: $OUT/06_pc_diagnostics/<dataset>/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/
+# # # ================================================================
+
+# pixi run Rscript $SCRIPTS/06_pc_diagnostics_consensus.R \
+#   --project_root $PROJECT \
+#   --input_meth $OUT/05b_shared_complete_regions/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/females_Methylation_jointEligible.rds \
+#   --sample_info $DATA/merged_qc_females.xlsx \
+#   --protected_traits_file $CONFIG/protected_traits.txt \
+#   --technical_traits_file $CONFIG/technical_traits.txt \
+#   --selected_trait_mode protected_and_technical \
+#   --threads 59
+
+# pixi run Rscript $SCRIPTS/06_pc_diagnostics_consensus.R \
+#   --project_root $PROJECT \
+#   --input_meth $OUT/05b_shared_complete_regions/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/males_Methylation_jointEligible.rds \
+#   --sample_info $DATA/merged_qc_males.xlsx \
+#   --protected_traits_file $CONFIG/protected_traits.txt \
+#   --technical_traits_file $CONFIG/technical_traits.txt \
+#   --selected_trait_mode protected_and_technical \
+#   --threads 59
+
+
+# # # # ================================================================
+# # # # SCRIPT 07: Methylation adjustment (run separately per dataset)
+# # # #
+# # # # CHANGED: --input_meth points at Script 05b's joint-eligible
+# # # # matrices (same auto-detection as Script 06). --input_pcs and
+# # # # --pc_trait_stats point at Script 06's new output directory.
+# # # # Output: $OUT/07_methylation_adjustment/<dataset>/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/<variant>/
+# # # # ================================================================
+
+# pixi run Rscript $SCRIPTS/07_methylation_adjustment_consensus.R \
+#   --project_root $PROJECT \
+#   --input_meth $OUT/05b_shared_complete_regions/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/females_Methylation_jointEligible.rds \
+#   --input_pcs $OUT/06_pc_diagnostics/females/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/PCs.rds \
+#   --pc_trait_stats $OUT/06_pc_diagnostics/females/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/PC_Trait_Correlation_Stats_Bicor.tsv \
+#   --protected_traits_file $CONFIG/protected_traits.txt \
+#   --technical_traits_file $CONFIG/technical_traits.txt \
+#   --run_v1 TRUE \
+#   --run_v2 TRUE \
+#   --run_v3 FALSE \
+#   --v2_cor_method bicor \
+#   --v2_p_thresh 0.05
+
+# pixi run Rscript $SCRIPTS/07_methylation_adjustment_consensus.R \
+#   --project_root $PROJECT \
+#   --input_meth $OUT/05b_shared_complete_regions/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/males_Methylation_jointEligible.rds \
+#   --input_pcs $OUT/06_pc_diagnostics/males/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/PCs.rds \
+#   --pc_trait_stats $OUT/06_pc_diagnostics/males/$CPG_LABEL/$EFFECTIVE_REGION_LABEL/PC_Trait_Correlation_Stats_Bicor.tsv \
+#   --protected_traits_file $CONFIG/protected_traits.txt \
+#   --technical_traits_file $CONFIG/technical_traits.txt \
+#   --run_v1 TRUE \
+#   --run_v2 TRUE \
+#   --run_v3 FALSE \
+#   --v2_cor_method bicor \
+#   --v2_p_thresh 0.05
 
 
 # ================================================================
@@ -304,7 +304,7 @@ pixi run Rscript $SCRIPTS/08_softpower_consensus.R \
   --power_min 1 \
   --power_max 20 \
   --threads 59 \
-  --scale_free_cutoff 0.8
+  --scale_free_cutoff 0.7
 
 # v2
 pixi run Rscript $SCRIPTS/08_softpower_consensus.R \
@@ -318,7 +318,7 @@ pixi run Rscript $SCRIPTS/08_softpower_consensus.R \
   --power_min 1 \
   --power_max 20 \
   --threads 59 \
-  --scale_free_cutoff 0.8
+  --scale_free_cutoff 0.7
 
 
 # ================================================================

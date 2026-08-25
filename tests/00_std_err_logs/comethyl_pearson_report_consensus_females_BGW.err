@@ -4186,3 +4186,2087 @@ Error in names(x) <- value :
   'names' attribute [2] must be the same length as the vector [1]
 Calls: colnames<-
 Execution halted
+
+
+Starting Script 00
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/00_cpg_extraction/females
+Detected 49 CpG report files
+Loaded metadata for 23 samples
+[getCpGs] Loading CpG-level data
+[read.bismark] Using 'loci' as candidate loci.
+[read.bismark] Collapsing strand of 'loci' ...
+Done in 1 secs
+[read.bismark] Parsing files and constructing 'M' and 'Cov' matrices ...
+Done in 7 secs
+[read.bismark] Constructing BSseq object ... 
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/00_cpg_extraction/females/Unfiltered_BSseq.rds
+Unfiltered BSseq object created successfully
+[getCpGtotals] Calculating CpG totals at specified cov and perSample cutoffs
+[getCpGtotals] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/00_cpg_extraction/females/CpG_Totals.txt
+[plotCpGtotals] Plotting CpG totals
+[plotCpGtotals] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/00_cpg_extraction/females/CpG_Totals.pdf
+Consensus Script 00 complete for dataset: females
+Starting Script 00
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/00_cpg_extraction/males
+Detected 49 CpG report files
+Loaded metadata for 25 samples
+[getCpGs] Loading CpG-level data
+[read.bismark] Using 'loci' as candidate loci.
+[read.bismark] Collapsing strand of 'loci' ...
+Done in 1 secs
+[read.bismark] Parsing files and constructing 'M' and 'Cov' matrices ...
+Done in 7.7 secs
+[read.bismark] Constructing BSseq object ... 
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/00_cpg_extraction/males/Unfiltered_BSseq.rds
+Unfiltered BSseq object created successfully
+[getCpGtotals] Calculating CpG totals at specified cov and perSample cutoffs
+[getCpGtotals] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/00_cpg_extraction/males/CpG_Totals.txt
+[plotCpGtotals] Plotting CpG totals
+[plotCpGtotals] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/00_cpg_extraction/males/CpG_Totals.pdf
+Consensus Script 00 complete for dataset: males
+Starting Script 01 
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct
+[getCpGs] Filtering CpG-level data for loci with at least 3 reads in at least 75% of samples
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Filtered_BSseq.rds
+Filtered CpGs retained: 524437
+[getRegions] Calling regions when at least 3 CpGs are no more than 150 bases apart
+[getRegions] Calculating region statistics
+[getRegions] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Regions.txt
+Regions generated: 36504
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Region_Plots.pdf
+[plotSDstats] Plotting methylation SD vs region statistics
+[plotSDstats] Limiting x-axis to values in bottom 99% for n, covMin, and covMean
+[plotSDstats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/SD_Plots.pdf
+Warning message:
+The dot-dot notation (`..count..`) was deprecated in ggplot2 3.4.0.
+ℹ Please use `after_stat(count)` instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+[getRegionTotals] Calculating region totals at specified covMin and methSD cutoffs
+[getRegionTotals] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Region_Totals.txt
+[plotRegionTotals] Plotting region totals
+[plotRegionTotals] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/01_reference_filter_regions/females/cov3_75pct/Region_Totals.pdf
+Consensus Script 01 complete for reference dataset: females
+Starting Script 02
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0
+Loaded unfiltered regions: 36504
+[getRegions] Filtering regions for at least 4 reads in all samples and methylation SD of at least 0%
+[getRegions] Creating new Region IDs
+[getRegions] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0/Filtered_Regions.txt
+Filtered regions: 35913
+Saved filtered regions: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0/Filtered_Regions.txt
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0/RegionStats_UNFILTERED.pdf
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0/RegionStats_FILTERED.pdf
+Saved separate plots:
+ - /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0/RegionStats_UNFILTERED.pdf
+ - /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0/RegionStats_FILTERED.pdf
+[plotRegionStatsCompare2] Building combined QC plot
+[plotRegionStatsCompare2] Saving: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0/RegionStats_FilterEffect_COMBINED.pdf
+Warning message:
+In geom_vline(data = thr, aes(xintercept = x), linetype = "dashed",  :
+  Ignoring unknown parameters: `inherit.aes`
+Saved combined plot: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0/RegionStats_FilterEffect_COMBINED.pdf
+Consensus Script 02 complete: reference region filtering and QC plots complete
+Output folder: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin4_methSD0
+Regions after filtering: 35913
+Starting Script 03
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin4_methSD0
+Loaded filtered regions: 35913
+Loaded BSseq object successfully
+[getRegionMeth] Calculating region methylation from BSseq object
+[getRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin4_methSD0/Region_Methylation.rds
+Saved region methylation RDS: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin4_methSD0/Region_Methylation.rds
+Matrix dimensions: 35913 regions x 23 samples
+Consensus Script 03 complete: reference region methylation calculated
+Starting Script 04
+Reference filtered BSseq loaded
+Reference CpGs: 524437
+
+====================================================
+Processing dataset: males
+====================================================
+[getCpGs] Loading CpG-level data
+[read.bismark] Using 'loci' as candidate loci.
+[read.bismark] Collapsing strand of 'loci' ...
+Done in 0.3 secs
+[read.bismark] Parsing files and constructing 'M' and 'Cov' matrices ...
+Done in 6.6 secs
+[read.bismark] Constructing BSseq object ... 
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/04_align_to_reference_cpgs/males/Unfiltered_BSseq.rds
+[getCpGs] Filtering CpG-level data for loci with at least 3 reads in at least 75% of samples
+[getCpGs] Final BSseq Object:
+[getCpGs] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/04_align_to_reference_cpgs/males/Filtered_BSseq.rds
+ Completed dataset: males
+  Unfiltered CpGs: 634646
+  Aligned CpGs:    524437
+  Filtered CpGs:   516666
+Consensus Script 04 complete
+Starting Script 05
+Loaded reference filtered regions: 35913
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0
+
+====================================================
+Processing dataset: males
+====================================================
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/03_region_methylation/males/cov3_75pct/covMin4_methSD0
+[getRegionMeth] Calculating region methylation from BSseq object
+[getRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/03_region_methylation/males/cov3_75pct/covMin4_methSD0/Region_Methylation.rds
+✓ Completed dataset: males
+  Matrix dimensions: 35913 regions x 25 samples
+Consensus Script 05 complete
+Starting Script 05b
+Derived cpg_label             : cov3_75pct
+Reference region label        : covMin4_methSD0
+Effective downstream label    : covMin4_methSD0_jointSDall0p05
+Selection mode                : joint_sd_all
+Output directory              : /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin4_methSD0_jointSDall0p05
+Loading females: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/03_region_methylation/females/cov3_75pct/covMin4_methSD0/Region_Methylation.rds
+  Loaded: 35913 regions x 23 samples
+Loading males: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/03_region_methylation/males/cov3_75pct/covMin4_methSD0/Region_Methylation.rds
+  Loaded: 35913 regions x 25 samples
+Regions present in every dataset: 35913
+Regions complete in every dataset: 35753
+Final regions retained: 14876
+Saved matrix for females: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin4_methSD0_jointSDall0p05/females_Methylation_jointEligible.rds
+Saved matrix for males: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin4_methSD0_jointSDall0p05/males_Methylation_jointEligible.rds
+
+Script 05b complete
+Use these files in Script 06:
+  females: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin4_methSD0_jointSDall0p05/females_Methylation_jointEligible.rds
+  males: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin4_methSD0_jointSDall0p05/males_Methylation_jointEligible.rds
+Use this region table in Scripts 09-11:
+  /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin4_methSD0_jointSDall0p05/joint_eligible_regions_4col.tsv
+Starting Script 06
+Derived labels:
+  dataset_label : females
+  cpg_label     : cov3_75pct
+  region_label  : covMin4_methSD0_jointSDall0p05
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05
+Loaded methylation: 14876 regions x 23 samples
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/metadata/merged_qc_females.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+After alignment: 14876 regions x 23 samples
+Numeric traits retained: 49
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+Protected traits in SVA model: soc_env_tot, env_tot, soc_tot, wflzd_0to6mo, wflzd_6to12mo
+[getPCs_generic] Determining number of PCs via sva::num.sv
+Saved: Variance_Explained_First20_PCs.pdf
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/PC_Trait_Correlation_Stats_Pearson.tsv
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/PC_Trait_Correlation_Stats_Bicor.tsv
+Saving publication heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/PC_Trait_Bicor_Heatmap_PUBLICATION.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=6.00, height=5.00 (nX=1,nY=8)
+Saving top-cells heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/PC_Trait_Bicor_Heatmap_Top50Cells.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotTraitDendrogramFromPC] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/Trait_Dendrogram_From_PC_Associations.pdf
+Script 06 complete: PC diagnostics finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05
+  dataset : females
+  cpg     : cov3_75pct
+  region  : covMin4_methSD0_jointSDall0p05
+  SVs selected by num.sv: 1 of 23 total PCs
+Starting Script 06
+Derived labels:
+  dataset_label : males
+  cpg_label     : cov3_75pct
+  region_label  : covMin4_methSD0_jointSDall0p05
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05
+Loaded methylation: 14876 regions x 25 samples
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/metadata/merged_qc_males.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+After alignment: 14876 regions x 25 samples
+Numeric traits retained: 50
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+Protected traits in SVA model: soc_env_tot, env_tot, soc_tot, wflzd_0to6mo, wflzd_6to12mo
+[getPCs_generic] Determining number of PCs via sva::num.sv
+Saved: Variance_Explained_First20_PCs.pdf
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/PC_Trait_Correlation_Stats_Pearson.tsv
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/PC_Trait_Correlation_Stats_Bicor.tsv
+Saving publication heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/PC_Trait_Bicor_Heatmap_PUBLICATION.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=6.00, height=5.00 (nX=3,nY=8)
+Saving top-cells heatmap: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/PC_Trait_Bicor_Heatmap_Top50Cells.pdf
+[plotMEtraitCor_pub] corType = bicor
+[plotTraitDendrogramFromPC] Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/Trait_Dendrogram_From_PC_Associations.pdf
+Script 06 complete: PC diagnostics finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/06_pc_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05
+  dataset : males
+  cpg     : cov3_75pct
+  region  : covMin4_methSD0_jointSDall0p05
+  SVs selected by num.sv: 3 of 25 total PCs
+Starting Script 07
+Derived labels:
+  dataset_label : females
+  cpg_label     : cov3_75pct
+  region_label  : covMin4_methSD0_jointSDall0p05
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin4_methSD0_jointSDall0p05
+After alignment: 14876 regions x 23 samples; 1 PCs
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/females_Adjusted_Region_Methylation_allPCs.rds
+v1 complete [females]: used all 1 PCs
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/females_Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
+v2 complete [females]: removed 0 PCs; used 1
+Skipping v3 (run_v3 = FALSE)
+Script 07 complete: methylation adjustment finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin4_methSD0_jointSDall0p05
+Starting Script 07
+Derived labels:
+  dataset_label : males
+  cpg_label     : cov3_75pct
+  region_label  : covMin4_methSD0_jointSDall0p05
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin4_methSD0_jointSDall0p05
+After alignment: 14876 regions x 25 samples; 3 PCs
+[readTraitFile] Loaded 7 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 7, found = 5, missing = 2
+[resolveTraits] technical_traits: requested = 3, found = 3, missing = 0
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/males_Adjusted_Region_Methylation_allPCs.rds
+v1 complete [males]: used all 3 PCs
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/males_Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
+v2 complete [males]: removed 2 PCs; used 1
+Skipping v3 (run_v3 = FALSE)
+Script 07 complete: methylation adjustment finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin4_methSD0_jointSDall0p05
+Starting Script 8 ✓
+Derived labels:
+  cpg_label    : cov3_75pct
+  region_label : covMin4_methSD0_jointSDall0p05
+Shared output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08_soft_power/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs
+
+============================== Dataset: females
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0.73 and mean connectivity = 2.8
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08_soft_power/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/SoftPower_pearson.rds
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08_soft_power/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/Sample_Dendrogram_pearson.pdf
+Saved sample dendrogram: females
+Soft power done: females
+
+============================== Dataset: males
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 19, fit = 0.806 and mean connectivity = 3.2
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08_soft_power/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/SoftPower_pearson.rds
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08_soft_power/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/Sample_Dendrogram_pearson.pdf
+Saved sample dendrogram: males
+Soft power done: males
+Chosen consensus power: 20 (smallest power where all datasets meet scale-free cutoff)
+Warning message:
+`aes_string()` was deprecated in ggplot2 3.0.0.
+ℹ Please use tidy evaluation idioms with `aes()`.
+ℹ See also `vignette("ggplot2-in-packages")` for more information. 
+Saved: Consensus_SoftPower_Combined.pdf
+ Script 08 complete: soft power analysis finished
+Shared output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08_soft_power/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs
+Starting Script 8 ✓
+Derived labels:
+  cpg_label    : cov3_75pct
+  region_label : covMin4_methSD0_jointSDall0p05
+Shared output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08_soft_power/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs
+
+============================== Dataset: females
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0.73 and mean connectivity = 2.8
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08_soft_power/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/SoftPower_pearson.rds
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08_soft_power/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/Sample_Dendrogram_pearson.pdf
+Saved sample dendrogram: females
+Soft power done: females
+
+============================== Dataset: males
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 8, fit = 0.8 and mean connectivity = 324.5
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08_soft_power/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/SoftPower_pearson.rds
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08_soft_power/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/Sample_Dendrogram_pearson.pdf
+Saved sample dendrogram: males
+Soft power done: males
+Chosen consensus power: 20 (smallest power where all datasets meet scale-free cutoff)
+Warning message:
+`aes_string()` was deprecated in ggplot2 3.0.0.
+ℹ Please use tidy evaluation idioms with `aes()`.
+ℹ See also `vignette("ggplot2-in-packages")` for more information. 
+Saved: Consensus_SoftPower_Combined.pdf
+ Script 08 complete: soft power analysis finished
+Shared output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08_soft_power/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs
+Starting Script 08b
+Derived labels:
+  cpg_label    : cov3_75pct
+  region_label : covMin4_methSD0_jointSDall0p05
+Shared output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/subsample600
+Regions common to all provided datasets: 14876
+(Sample counts per dataset: females=23, males=25)
+
+============================== Seed: 1001
+  females subsample: 23 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 19, fit = 0.653 and mean connectivity = 0.1
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/subsample600/SoftPower_seed1001.rds
+  Done: females (seed 1001)
+  males subsample: 25 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0.59 and mean connectivity = 0.1
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/subsample600/SoftPower_seed1001.rds
+  Done: males (seed 1001)
+
+============================== Seed: 1002
+  females subsample: 23 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0.811 and mean connectivity = 0.1
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/subsample600/SoftPower_seed1002.rds
+  Done: females (seed 1002)
+  males subsample: 25 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 18, fit = 0.716 and mean connectivity = 0.2
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/subsample600/SoftPower_seed1002.rds
+  Done: males (seed 1002)
+
+============================== Seed: 1003
+  females subsample: 23 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0.591 and mean connectivity = 0.1
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/subsample600/SoftPower_seed1003.rds
+  Done: females (seed 1003)
+  males subsample: 25 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0.572 and mean connectivity = 0.1
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/subsample600/SoftPower_seed1003.rds
+  Done: males (seed 1003)
+
+============================== Seed: 1004
+  females subsample: 23 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0.698 and mean connectivity = 0.1
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/subsample600/SoftPower_seed1004.rds
+  Done: females (seed 1004)
+  males subsample: 25 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0.762 and mean connectivity = 0.1
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/subsample600/SoftPower_seed1004.rds
+  Done: males (seed 1004)
+
+============================== Seed: 1005
+  females subsample: 23 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 14, fit = 0.457 and mean connectivity = 0.7
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/subsample600/SoftPower_seed1005.rds
+  Done: females (seed 1005)
+  males subsample: 25 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 14, fit = 0.581 and mean connectivity = 0.6
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/subsample600/SoftPower_seed1005.rds
+  Done: males (seed 1005)
+Warning message:
+No valid consensus power was found: no common power had mean R2 >= 0.7 and negative mean slope in every dataset 
+Saved: SoftPower_Benchmark_Combined.pdf
+
+Script 08b complete: subsampled soft power benchmark finished
+Shared output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/subsample600
+This is a screening estimate. Confirm with a full Script 08 run before finalizing power for Script 09.
+Starting Script 08b
+Derived labels:
+  cpg_label    : cov3_75pct
+  region_label : covMin4_methSD0_jointSDall0p05
+Shared output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/subsample600
+Regions common to all provided datasets: 14876
+(Sample counts per dataset: females=23, males=25)
+
+============================== Seed: 1001
+  females subsample: 23 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 19, fit = 0.653 and mean connectivity = 0.1
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/subsample600/SoftPower_seed1001.rds
+  Done: females (seed 1001)
+  males subsample: 25 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 6, fit = 0.836 and mean connectivity = 28.7
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/subsample600/SoftPower_seed1001.rds
+  Done: males (seed 1001)
+
+============================== Seed: 1002
+  females subsample: 23 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0.811 and mean connectivity = 0.1
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/subsample600/SoftPower_seed1002.rds
+  Done: females (seed 1002)
+  males subsample: 25 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 9, fit = 0.826 and mean connectivity = 7.9
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/subsample600/SoftPower_seed1002.rds
+  Done: males (seed 1002)
+
+============================== Seed: 1003
+  females subsample: 23 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0.591 and mean connectivity = 0.1
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/subsample600/SoftPower_seed1003.rds
+  Done: females (seed 1003)
+  males subsample: 25 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 8, fit = 0.839 and mean connectivity = 13.7
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/subsample600/SoftPower_seed1003.rds
+  Done: males (seed 1003)
+
+============================== Seed: 1004
+  females subsample: 23 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 20, fit = 0.698 and mean connectivity = 0.1
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/subsample600/SoftPower_seed1004.rds
+  Done: females (seed 1004)
+  males subsample: 25 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 9, fit = 0.865 and mean connectivity = 9.1
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/subsample600/SoftPower_seed1004.rds
+  Done: males (seed 1004)
+
+============================== Seed: 1005
+  females subsample: 23 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 14, fit = 0.457 and mean connectivity = 0.7
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/subsample600/SoftPower_seed1005.rds
+  Done: females (seed 1005)
+  males subsample: 25 samples x 600 regions
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 8, fit = 0.845 and mean connectivity = 12.2
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/subsample600/SoftPower_seed1005.rds
+  Done: males (seed 1005)
+Warning message:
+No valid consensus power was found: no common power had mean R2 >= 0.7 and negative mean slope in every dataset 
+Saved: SoftPower_Benchmark_Combined.pdf
+
+Script 08b complete: subsampled soft power benchmark finished
+Shared output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/subsample600
+This is a screening estimate. Confirm with a full Script 08 run before finalizing power for Script 09.
+Starting Script 08c
+Found 15 benchmark summary file(s)
+Comparing 15 region_label x adjustment_version combo(s)
+Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08c_softpower_benchmark_compare/cov3_75pct/region_filter_comparison.tsv
+Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08c_softpower_benchmark_compare/cov3_75pct/region_filter_plot_key.tsv
+
+Ranked combos (best first):
+Saved: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08c_softpower_benchmark_compare/cov3_75pct/Region_Filter_Comparison.pdf
+
+Script 08c complete: region filter comparison finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08c_softpower_benchmark_compare/cov3_75pct
+Starting Script 9 ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Error in names(x) <- value : 
+  'names' attribute [2] must be the same length as the vector [1]
+Calls: colnames<-
+Execution halted
+
+
+Starting Script 9 ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+ Script 09 complete: consensus modules built
+Starting Script 9 ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Error in names(x) <- value : 
+  'names' attribute [2] must be the same length as the vector [1]
+Calls: colnames<-
+Execution halted
+
+
+Starting Script 9 ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+ Script 09 complete: consensus modules built
+Starting Script 9 ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+ Script 09 complete: consensus modules built
+Starting Script 10 ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics
+Non-grey consensus modules detected: 11
+Saved: Consensus_Eigengene_Networks.pdf
+Processing dataset: females
+females: MEgrey removed before plotting (11 real MEs remaining)
+[getDendro] Transposing data
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/females_Consensus_ME_Sample_Dendrogram.pdf
+females: Saved sample dendrogram
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/females_Consensus_ME_Module_Dendrogram.pdf
+females: Saved module dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/females_Consensus_ME_Correlation_Heatmap.pdf
+females: Saved ME correlation heatmap
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/females_Consensus_Sample_Correlation_Heatmap.pdf
+females: Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/females_Consensus_Sample_ME_Heatmap.pdf
+females: Saved sample x module eigengene heatmap
+females: Saved module correlation stats
+Processing dataset: males
+males: MEgrey removed before plotting (11 real MEs remaining)
+[getDendro] Transposing data
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/males_Consensus_ME_Sample_Dendrogram.pdf
+males: Saved sample dendrogram
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/males_Consensus_ME_Module_Dendrogram.pdf
+males: Saved module dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/males_Consensus_ME_Correlation_Heatmap.pdf
+males: Saved ME correlation heatmap
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/males_Consensus_Sample_Correlation_Heatmap.pdf
+males: Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/males_Consensus_Sample_ME_Heatmap.pdf
+males: Saved sample x module eigengene heatmap
+males: Saved module correlation stats
+Script 10 complete: consensus diagnostics finished
+Starting Script 10 ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics
+Non-grey consensus modules detected: 9
+Saved: Consensus_Eigengene_Networks.pdf
+Warning messages:
+1: In plotEigengeneNetworks(consensusMEs, setLabels = names(consensusMods$multiMEs),  :
+  plotEigengeneNetworks: Correlation preservation data out of zlim range.
+2: In numbers2colors(data, signed, colors = colors, lim = zlim, naColor = naColor) :
+  Some values of 'x' are below given minimum and will be truncated to the minimum.
+Processing dataset: females
+females: MEgrey removed before plotting (9 real MEs remaining)
+[getDendro] Transposing data
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/females_Consensus_ME_Sample_Dendrogram.pdf
+females: Saved sample dendrogram
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/females_Consensus_ME_Module_Dendrogram.pdf
+females: Saved module dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/females_Consensus_ME_Correlation_Heatmap.pdf
+females: Saved ME correlation heatmap
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/females_Consensus_Sample_Correlation_Heatmap.pdf
+females: Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/females_Consensus_Sample_ME_Heatmap.pdf
+females: Saved sample x module eigengene heatmap
+females: Saved module correlation stats
+Processing dataset: males
+males: MEgrey removed before plotting (9 real MEs remaining)
+[getDendro] Transposing data
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/males_Consensus_ME_Sample_Dendrogram.pdf
+males: Saved sample dendrogram
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/males_Consensus_ME_Module_Dendrogram.pdf
+males: Saved module dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/males_Consensus_ME_Correlation_Heatmap.pdf
+males: Saved ME correlation heatmap
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/males_Consensus_Sample_Correlation_Heatmap.pdf
+males: Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/males_Consensus_Sample_ME_Heatmap.pdf
+males: Saved sample x module eigengene heatmap
+males: Saved module correlation stats
+Script 10 complete: consensus diagnostics finished
+Starting Script 11
+Non-grey consensus modules detected: 11 (red, yellow, black, green, purple, magenta, blue, pink, greenyellow, brown, turquoise)
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/11_consensus_membership
+Processing dataset: females
+females: 23 samples x 14876 regions
+females: MEgrey removed (11 real MEs used for membership)
+females: aligned to 23 shared samples
+females: Saved membership table (14876 regions, 11 modules)
+Processing dataset: males
+males: 25 samples x 14876 regions
+males: MEgrey removed (11 real MEs used for membership)
+males: aligned to 25 shared samples
+males: Saved membership table (14876 regions, 11 modules)
+Error in file(con, "w") : cannot open the connection
+Calls: writeLines -> file
+In addition: Warning message:
+In file(con, "w") :
+  cannot open file '/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/11_consensus_membership/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/sessionInfo.txt': No such file or directory
+Execution halted
+
+
+Starting Script 10 ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics
+Non-grey consensus modules detected: 11
+Saved: Consensus_Eigengene_Networks.pdf
+Processing dataset: females
+females: MEgrey removed before plotting (11 real MEs remaining)
+[getDendro] Transposing data
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/females_Consensus_ME_Sample_Dendrogram.pdf
+females: Saved sample dendrogram
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/females_Consensus_ME_Module_Dendrogram.pdf
+females: Saved module dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/females_Consensus_ME_Correlation_Heatmap.pdf
+females: Saved ME correlation heatmap
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/females_Consensus_Sample_Correlation_Heatmap.pdf
+females: Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/females_Consensus_Sample_ME_Heatmap.pdf
+females: Saved sample x module eigengene heatmap
+females: Saved module correlation stats
+Processing dataset: males
+males: MEgrey removed before plotting (11 real MEs remaining)
+[getDendro] Transposing data
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/males_Consensus_ME_Sample_Dendrogram.pdf
+males: Saved sample dendrogram
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/males_Consensus_ME_Module_Dendrogram.pdf
+males: Saved module dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/males_Consensus_ME_Correlation_Heatmap.pdf
+males: Saved ME correlation heatmap
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/males_Consensus_Sample_Correlation_Heatmap.pdf
+males: Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/males_Consensus_Sample_ME_Heatmap.pdf
+males: Saved sample x module eigengene heatmap
+males: Saved module correlation stats
+Script 10 complete: consensus diagnostics finished
+Starting Script 10 ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics
+Non-grey consensus modules detected: 9
+Saved: Consensus_Eigengene_Networks.pdf
+Warning messages:
+1: In plotEigengeneNetworks(consensusMEs, setLabels = names(consensusMods$multiMEs),  :
+  plotEigengeneNetworks: Correlation preservation data out of zlim range.
+2: In numbers2colors(data, signed, colors = colors, lim = zlim, naColor = naColor) :
+  Some values of 'x' are below given minimum and will be truncated to the minimum.
+Processing dataset: females
+females: MEgrey removed before plotting (9 real MEs remaining)
+[getDendro] Transposing data
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/females_Consensus_ME_Sample_Dendrogram.pdf
+females: Saved sample dendrogram
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/females_Consensus_ME_Module_Dendrogram.pdf
+females: Saved module dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/females_Consensus_ME_Correlation_Heatmap.pdf
+females: Saved ME correlation heatmap
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/females_Consensus_Sample_Correlation_Heatmap.pdf
+females: Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/females_Consensus_Sample_ME_Heatmap.pdf
+females: Saved sample x module eigengene heatmap
+females: Saved module correlation stats
+Processing dataset: males
+males: MEgrey removed before plotting (9 real MEs remaining)
+[getDendro] Transposing data
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/males_Consensus_ME_Sample_Dendrogram.pdf
+males: Saved sample dendrogram
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/males_Consensus_ME_Module_Dendrogram.pdf
+males: Saved module dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/males_Consensus_ME_Correlation_Heatmap.pdf
+males: Saved ME correlation heatmap
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/males_Consensus_Sample_Correlation_Heatmap.pdf
+males: Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/10_consensus_diagnostics/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/males_Consensus_Sample_ME_Heatmap.pdf
+males: Saved sample x module eigengene heatmap
+males: Saved module correlation stats
+Script 10 complete: consensus diagnostics finished
+Starting Script 11
+Non-grey consensus modules detected: 11 (red, yellow, black, green, purple, magenta, blue, pink, greenyellow, brown, turquoise)
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/11_consensus_membership
+Processing dataset: females
+females: 23 samples x 14876 regions
+females: MEgrey removed (11 real MEs used for membership)
+females: aligned to 23 shared samples
+females: Saved membership table (14876 regions, 11 modules)
+Processing dataset: males
+males: 25 samples x 14876 regions
+males: MEgrey removed (11 real MEs used for membership)
+males: aligned to 25 shared samples
+males: Saved membership table (14876 regions, 11 modules)
+Saved session information: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/11_consensus_membership/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/sessionInfo.txt
+Script 11 complete: consensus membership finished
+Starting Script 11
+Non-grey consensus modules detected: 9 (black, turquoise, pink, red, brown, green, yellow, blue, magenta)
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/11_consensus_membership
+Processing dataset: females
+females: 23 samples x 14876 regions
+females: MEgrey removed (9 real MEs used for membership)
+females: aligned to 23 shared samples
+females: Saved membership table (14876 regions, 9 modules)
+Processing dataset: males
+males: 25 samples x 14876 regions
+males: MEgrey removed (9 real MEs used for membership)
+males: aligned to 25 shared samples
+males: Saved membership table (14876 regions, 9 modules)
+Saved session information: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/11_consensus_membership/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/sessionInfo.txt
+Script 11 complete: consensus membership finished
+Starting Script 12a ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Output root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12a_me_trait_analysis
+Non-grey consensus modules: 11 (red, yellow, black, green, purple, magenta, blue, pink, greenyellow, brown, turquoise)
+
+==============================
+Dataset: females
+==============================
+females: 23 samples x 11 modules
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/metadata/merged_qc_females.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+females: 23 overlapping samples
+females: 49 numeric traits retained
+[getDendro] Clustering with bicor correlation as the distance
+females: Running Bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as ME_Trait_Correlation_Stats.txt
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12a_me_trait_analysis/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12a_me_trait_analysis/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+females: Saved Bicor outputs
+✓ Finished dataset: females
+
+==============================
+Dataset: males
+==============================
+males: 25 samples x 11 modules
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/metadata/merged_qc_males.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+males: 25 overlapping samples
+males: 50 numeric traits retained
+[getDendro] Clustering with bicor correlation as the distance
+males: Running Bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as ME_Trait_Correlation_Stats.txt
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12a_me_trait_analysis/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12a_me_trait_analysis/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+males: Saved Bicor outputs
+✓ Finished dataset: males
+ Script 12A complete: consensus ME-trait analysis finished
+Outputs saved under: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12a_me_trait_analysis
+Starting Script 12a ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Output root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12a_me_trait_analysis
+Non-grey consensus modules: 9 (black, turquoise, pink, red, brown, green, yellow, blue, magenta)
+
+==============================
+Dataset: females
+==============================
+females: 23 samples x 9 modules
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/metadata/merged_qc_females.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+females: 23 overlapping samples
+females: 49 numeric traits retained
+[getDendro] Clustering with bicor correlation as the distance
+females: Running Bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as ME_Trait_Correlation_Stats.txt
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12a_me_trait_analysis/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12a_me_trait_analysis/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+females: Saved Bicor outputs
+✓ Finished dataset: females
+
+==============================
+Dataset: males
+==============================
+males: 25 samples x 9 modules
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/metadata/merged_qc_males.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+males: 25 overlapping samples
+males: 50 numeric traits retained
+[getDendro] Clustering with bicor correlation as the distance
+males: Running Bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as ME_Trait_Correlation_Stats.txt
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12a_me_trait_analysis/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12a_me_trait_analysis/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+males: Saved Bicor outputs
+✓ Finished dataset: males
+ Script 12A complete: consensus ME-trait analysis finished
+Outputs saved under: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12a_me_trait_analysis
+Starting Script 12b ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Output root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation
+[getDendro] Clustering with bicor correlation as the distance
+Module ordering derived from consensus MEs using dataset: females
+Loaded stats for: females (539 rows, 11 modules, 49 traits)
+Loaded stats for: males (550 rows, 11 modules, 50 traits)
+
+--- Trait set: anthropometry_raw ---
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/anthropometry_raw/females_anthropometry_raw_ME_Trait_Heatmap_FULL.pdf
+females/anthropometry_raw: saved FULL heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/anthropometry_raw/females_anthropometry_raw_ME_Trait_Heatmap_TOP.pdf
+females/anthropometry_raw: saved TOP heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/anthropometry_raw/males_anthropometry_raw_ME_Trait_Heatmap_FULL.pdf
+males/anthropometry_raw: saved FULL heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/anthropometry_raw/males_anthropometry_raw_ME_Trait_Heatmap_TOP.pdf
+males/anthropometry_raw: saved TOP heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/anthropometry_raw/anthropometry_raw_Comparison_females_FULL.pdf
+Cross/anthropometry_raw/females: saved FULL
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/anthropometry_raw/anthropometry_raw_Comparison_females_TOP.pdf
+Cross/anthropometry_raw/females: saved TOP
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/anthropometry_raw/anthropometry_raw_Comparison_males_FULL.pdf
+Cross/anthropometry_raw/males: saved FULL
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/anthropometry_raw/anthropometry_raw_Comparison_males_TOP.pdf
+Cross/anthropometry_raw/males: saved TOP
+
+--- Trait set: covariates ---
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/covariates/females_covariates_ME_Trait_Heatmap_FULL.pdf
+females/covariates: saved FULL heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/covariates/females_covariates_ME_Trait_Heatmap_TOP.pdf
+females/covariates: saved TOP heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/covariates/males_covariates_ME_Trait_Heatmap_FULL.pdf
+males/covariates: saved FULL heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/covariates/males_covariates_ME_Trait_Heatmap_TOP.pdf
+males/covariates: saved TOP heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/covariates/covariates_Comparison_females_FULL.pdf
+Cross/covariates/females: saved FULL
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/covariates/covariates_Comparison_females_TOP.pdf
+Cross/covariates/females: saved TOP
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/covariates/covariates_Comparison_males_FULL.pdf
+Cross/covariates/males: saved FULL
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/covariates/covariates_Comparison_males_TOP.pdf
+Cross/covariates/males: saved TOP
+
+--- Trait set: exposures_n_mat_fac ---
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/exposures_n_mat_fac/females_exposures_n_mat_fac_ME_Trait_Heatmap_FULL.pdf
+females/exposures_n_mat_fac: saved FULL heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/exposures_n_mat_fac/females_exposures_n_mat_fac_ME_Trait_Heatmap_TOP.pdf
+females/exposures_n_mat_fac: saved TOP heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/exposures_n_mat_fac/males_exposures_n_mat_fac_ME_Trait_Heatmap_FULL.pdf
+males/exposures_n_mat_fac: saved FULL heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/exposures_n_mat_fac/males_exposures_n_mat_fac_ME_Trait_Heatmap_TOP.pdf
+males/exposures_n_mat_fac: saved TOP heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/exposures_n_mat_fac/exposures_n_mat_fac_Comparison_females_FULL.pdf
+Cross/exposures_n_mat_fac/females: saved FULL
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/exposures_n_mat_fac/exposures_n_mat_fac_Comparison_females_TOP.pdf
+Cross/exposures_n_mat_fac/females: saved TOP
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/exposures_n_mat_fac/exposures_n_mat_fac_Comparison_males_FULL.pdf
+Cross/exposures_n_mat_fac/males: saved FULL
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/exposures_n_mat_fac/exposures_n_mat_fac_Comparison_males_TOP.pdf
+Cross/exposures_n_mat_fac/males: saved TOP
+
+--- Trait set: growth_dynamics ---
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/growth_dynamics/females_growth_dynamics_ME_Trait_Heatmap_FULL.pdf
+females/growth_dynamics: saved FULL heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/growth_dynamics/females_growth_dynamics_ME_Trait_Heatmap_TOP.pdf
+females/growth_dynamics: saved TOP heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/growth_dynamics/males_growth_dynamics_ME_Trait_Heatmap_FULL.pdf
+males/growth_dynamics: saved FULL heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/growth_dynamics/males_growth_dynamics_ME_Trait_Heatmap_TOP.pdf
+males/growth_dynamics: saved TOP heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/growth_dynamics/growth_dynamics_Comparison_females_FULL.pdf
+Cross/growth_dynamics/females: saved FULL
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/growth_dynamics/growth_dynamics_Comparison_females_TOP.pdf
+Cross/growth_dynamics/females: saved TOP
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/growth_dynamics/growth_dynamics_Comparison_males_FULL.pdf
+Cross/growth_dynamics/males: saved FULL
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/growth_dynamics/growth_dynamics_Comparison_males_TOP.pdf
+Cross/growth_dynamics/males: saved TOP
+
+--- Trait set: zscores ---
+females/zscores: no traits found — skipping
+males/zscores: no traits found — skipping
+Cross/zscores/females: no traits found — skipping
+Cross/zscores/males: no traits found — skipping
+
+✓ Script 12B complete: consensus ME-trait presentation heatmaps finished
+Outputs saved under: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation
+Starting Script 12b ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Output root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation
+[getDendro] Clustering with bicor correlation as the distance
+Module ordering derived from consensus MEs using dataset: females
+Loaded stats for: females (441 rows, 9 modules, 49 traits)
+Loaded stats for: males (450 rows, 9 modules, 50 traits)
+
+--- Trait set: anthropometry_raw ---
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/anthropometry_raw/females_anthropometry_raw_ME_Trait_Heatmap_FULL.pdf
+females/anthropometry_raw: saved FULL heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/anthropometry_raw/females_anthropometry_raw_ME_Trait_Heatmap_TOP.pdf
+females/anthropometry_raw: saved TOP heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/anthropometry_raw/males_anthropometry_raw_ME_Trait_Heatmap_FULL.pdf
+males/anthropometry_raw: saved FULL heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/anthropometry_raw/males_anthropometry_raw_ME_Trait_Heatmap_TOP.pdf
+males/anthropometry_raw: saved TOP heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/anthropometry_raw/anthropometry_raw_Comparison_females_FULL.pdf
+Cross/anthropometry_raw/females: saved FULL
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/anthropometry_raw/anthropometry_raw_Comparison_females_TOP.pdf
+Cross/anthropometry_raw/females: saved TOP
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/anthropometry_raw/anthropometry_raw_Comparison_males_FULL.pdf
+Cross/anthropometry_raw/males: saved FULL
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/anthropometry_raw/anthropometry_raw_Comparison_males_TOP.pdf
+Cross/anthropometry_raw/males: saved TOP
+
+--- Trait set: covariates ---
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/covariates/females_covariates_ME_Trait_Heatmap_FULL.pdf
+females/covariates: saved FULL heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/covariates/females_covariates_ME_Trait_Heatmap_TOP.pdf
+females/covariates: saved TOP heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/covariates/males_covariates_ME_Trait_Heatmap_FULL.pdf
+males/covariates: saved FULL heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/covariates/males_covariates_ME_Trait_Heatmap_TOP.pdf
+males/covariates: saved TOP heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/covariates/covariates_Comparison_females_FULL.pdf
+Cross/covariates/females: saved FULL
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/covariates/covariates_Comparison_females_TOP.pdf
+Cross/covariates/females: saved TOP
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/covariates/covariates_Comparison_males_FULL.pdf
+Cross/covariates/males: saved FULL
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/covariates/covariates_Comparison_males_TOP.pdf
+Cross/covariates/males: saved TOP
+
+--- Trait set: exposures_n_mat_fac ---
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/exposures_n_mat_fac/females_exposures_n_mat_fac_ME_Trait_Heatmap_FULL.pdf
+females/exposures_n_mat_fac: saved FULL heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/exposures_n_mat_fac/females_exposures_n_mat_fac_ME_Trait_Heatmap_TOP.pdf
+females/exposures_n_mat_fac: saved TOP heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/exposures_n_mat_fac/males_exposures_n_mat_fac_ME_Trait_Heatmap_FULL.pdf
+males/exposures_n_mat_fac: saved FULL heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/exposures_n_mat_fac/males_exposures_n_mat_fac_ME_Trait_Heatmap_TOP.pdf
+males/exposures_n_mat_fac: saved TOP heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/exposures_n_mat_fac/exposures_n_mat_fac_Comparison_females_FULL.pdf
+Cross/exposures_n_mat_fac/females: saved FULL
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/exposures_n_mat_fac/exposures_n_mat_fac_Comparison_females_TOP.pdf
+Cross/exposures_n_mat_fac/females: saved TOP
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/exposures_n_mat_fac/exposures_n_mat_fac_Comparison_males_FULL.pdf
+Cross/exposures_n_mat_fac/males: saved FULL
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/exposures_n_mat_fac/exposures_n_mat_fac_Comparison_males_TOP.pdf
+Cross/exposures_n_mat_fac/males: saved TOP
+
+--- Trait set: growth_dynamics ---
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/growth_dynamics/females_growth_dynamics_ME_Trait_Heatmap_FULL.pdf
+females/growth_dynamics: saved FULL heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/growth_dynamics/females_growth_dynamics_ME_Trait_Heatmap_TOP.pdf
+females/growth_dynamics: saved TOP heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/growth_dynamics/males_growth_dynamics_ME_Trait_Heatmap_FULL.pdf
+males/growth_dynamics: saved FULL heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/growth_dynamics/males_growth_dynamics_ME_Trait_Heatmap_TOP.pdf
+males/growth_dynamics: saved TOP heatmap
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/growth_dynamics/growth_dynamics_Comparison_females_FULL.pdf
+Cross/growth_dynamics/females: saved FULL
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/growth_dynamics/growth_dynamics_Comparison_females_TOP.pdf
+Cross/growth_dynamics/females: saved TOP
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/growth_dynamics/growth_dynamics_Comparison_males_FULL.pdf
+Cross/growth_dynamics/males: saved FULL
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation/cross_dataset/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/growth_dynamics/growth_dynamics_Comparison_males_TOP.pdf
+Cross/growth_dynamics/males: saved TOP
+
+--- Trait set: zscores ---
+females/zscores: no traits found — skipping
+males/zscores: no traits found — skipping
+Cross/zscores/females: no traits found — skipping
+Cross/zscores/males: no traits found — skipping
+
+✓ Script 12B complete: consensus ME-trait presentation heatmaps finished
+Outputs saved under: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12b_me_trait_presentation
+Starting Script 13 ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/13_circos_and_module_summaries/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs
+Non-grey consensus modules: 11 (black, blue, brown, green, greenyellow, magenta, pink, purple, red, turquoise, yellow)
+Regions loaded: 14876 total, 65 non-grey
+Saved: Module_Color_Counts.csv
+Copied: Consensus_Region_Assignments.tsv
+Warning messages:
+1: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"chr"` instead of `.data$chr` 
+2: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"start"` instead of `.data$start` 
+3: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"end"` instead of `.data$end` 
+4: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"module"` instead of `.data$module` 
+Saved: Circos_ALLModules.pdf
+Saved: Circos_Module_black.pdf
+Saved: Circos_Module_blue.pdf
+Saved: Circos_Module_brown.pdf
+Saved: Circos_Module_green.pdf
+Saved: Circos_Module_greenyellow.pdf
+Saved: Circos_Module_magenta.pdf
+Saved: Circos_Module_pink.pdf
+Saved: Circos_Module_purple.pdf
+Saved: Circos_Module_red.pdf
+Saved: Circos_Module_turquoise.pdf
+Saved: Circos_Module_yellow.pdf
+Saved: Module_Region_Counts.pdf
+Script 13 complete: consensus circos plots and module summaries finished
+Outputs saved under: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/13_circos_and_module_summaries/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs
+Starting Script 13 ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/13_circos_and_module_summaries/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs
+Non-grey consensus modules: 9 (black, blue, brown, green, magenta, pink, red, turquoise, yellow)
+Regions loaded: 14876 total, 48 non-grey
+Saved: Module_Color_Counts.csv
+Copied: Consensus_Region_Assignments.tsv
+Warning messages:
+1: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"chr"` instead of `.data$chr` 
+2: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"start"` instead of `.data$start` 
+3: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"end"` instead of `.data$end` 
+4: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"module"` instead of `.data$module` 
+Saved: Circos_ALLModules.pdf
+Saved: Circos_Module_black.pdf
+Saved: Circos_Module_blue.pdf
+Saved: Circos_Module_brown.pdf
+Saved: Circos_Module_green.pdf
+Saved: Circos_Module_magenta.pdf
+Saved: Circos_Module_pink.pdf
+Saved: Circos_Module_red.pdf
+Saved: Circos_Module_turquoise.pdf
+Saved: Circos_Module_yellow.pdf
+Saved: Module_Region_Counts.pdf
+Script 13 complete: consensus circos plots and module summaries finished
+Outputs saved under: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/13_circos_and_module_summaries/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs
+Starting Script 14 ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Output root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/14_me_trait_pair_plots
+Non-grey consensus modules: 11
+
+==============================
+Dataset: females
+==============================
+females: 23 samples x 11 modules
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/metadata/merged_qc_females.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+females: 23 overlapping samples
+females/anthropometry_raw: no pairs after filtering — skipping plots
+females/covariates: no pairs after filtering — skipping plots
+females/exposures_n_mat_fac: plotting 7 pairs
+✓ females/exposures_n_mat_fac: done
+females/growth_dynamics: plotting 3 pairs
+✓ females/growth_dynamics: done
+females/zscores: no traits found — skipping
+
+==============================
+Dataset: males
+==============================
+males: 25 samples x 11 modules
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/metadata/merged_qc_males.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+males: 25 overlapping samples
+males/anthropometry_raw: plotting 1 pairs
+✓ males/anthropometry_raw: done
+males/covariates: plotting 2 pairs
+✓ males/covariates: done
+males/exposures_n_mat_fac: plotting 1 pairs
+✓ males/exposures_n_mat_fac: done
+males/growth_dynamics: plotting 13 pairs
+✓ males/growth_dynamics: done
+males/zscores: no traits found — skipping
+There were 28 warnings (use warnings() to see them)
+
+✓ Script 14 complete: consensus ME-trait pair plots finished
+Outputs saved under: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/14_me_trait_pair_plots
+Starting Script 14 ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Output root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/14_me_trait_pair_plots
+Non-grey consensus modules: 9
+
+==============================
+Dataset: females
+==============================
+females: 23 samples x 9 modules
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/metadata/merged_qc_females.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+females: 23 overlapping samples
+females/anthropometry_raw: plotting 1 pairs
+✓ females/anthropometry_raw: done
+females/covariates: plotting 2 pairs
+✓ females/covariates: done
+females/exposures_n_mat_fac: plotting 3 pairs
+✓ females/exposures_n_mat_fac: done
+females/growth_dynamics: plotting 2 pairs
+✓ females/growth_dynamics: done
+females/zscores: no traits found — skipping
+
+==============================
+Dataset: males
+==============================
+males: 25 samples x 9 modules
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/metadata/merged_qc_males.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+males: 25 overlapping samples
+males/anthropometry_raw: plotting 9 pairs
+✓ males/anthropometry_raw: done
+males/covariates: plotting 2 pairs
+✓ males/covariates: done
+males/exposures_n_mat_fac: plotting 1 pairs
+✓ males/exposures_n_mat_fac: done
+males/growth_dynamics: plotting 14 pairs
+✓ males/growth_dynamics: done
+males/zscores: no traits found — skipping
+There were 42 warnings (use warnings() to see them)
+
+✓ Script 14 complete: consensus ME-trait pair plots finished
+Outputs saved under: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/14_me_trait_pair_plots
+Starting Script 15 ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs
+[2026-08-23 22:00:20] Loading consensus region assignments: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/09_consensus_modules/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/Consensus_Region_Assignments.tsv
+[2026-08-23 22:00:20] Regions loaded: 14876
+[2026-08-23 22:00:20] Unique modules: 12
+[2026-08-23 22:00:20] Non-grey regions: 65
+Non-grey modules: 11 (black, blue, brown, green, greenyellow, magenta, pink, purple, red, turquoise, yellow)
+[2026-08-23 22:00:20] Running annotation (mode = auto)
+[annotate] Trying comethyl::annotateModule()
+[annotateModule] Excluding regions in grey (unassigned) module
+[annotateModule] Using the hg38 genome assembly for annotations
+[annotateModule] Adding genes to regions using GREAT v4.0.4 with the basalPlusExt rule
+[annotate] GREAT failed: error in evaluating the argument 'y' in selecting a method for function 'merge': error in evaluating the argument 'x' in selecting a method for function 'as.data.frame': unused argument (type = 1)
+[annotate] Falling back to offline nearest-gene annotation.
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[2026-08-23 22:00:31] Annotated regions: 14876
+Saved: Annotated_Regions.tsv / .xlsx
+Saved: Module_Gene_List.tsv
+Saved: Module_Gene_Summary.tsv / .xlsx
+Saved: Background_Genes.txt / .tsv (528 genes)
+[2026-08-23 22:00:32] Module gene list rows: 545
+[2026-08-23 22:00:32] Module summary rows: 12
+[2026-08-23 22:00:32] Background genes: 528
+[2026-08-23 22:00:33] Script 15 complete
+Script 15 complete: consensus module annotation finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs
+Starting Script 15 ✓
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+Output directory: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs
+[2026-08-23 22:01:18] Loading consensus region assignments: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/09_consensus_modules/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/Consensus_Region_Assignments.tsv
+[2026-08-23 22:01:18] Regions loaded: 14876
+[2026-08-23 22:01:18] Unique modules: 10
+[2026-08-23 22:01:18] Non-grey regions: 48
+Non-grey modules: 9 (black, blue, brown, green, magenta, pink, red, turquoise, yellow)
+[2026-08-23 22:01:18] Running annotation (mode = auto)
+[annotate] Trying comethyl::annotateModule()
+[annotateModule] Excluding regions in grey (unassigned) module
+[annotateModule] Using the hg38 genome assembly for annotations
+[annotateModule] Adding genes to regions using GREAT v4.0.4 with the basalPlusExt rule
+[annotate] GREAT failed: error in evaluating the argument 'y' in selecting a method for function 'merge': error in evaluating the argument 'x' in selecting a method for function 'as.data.frame': unused argument (type = 1)
+[annotate] Falling back to offline nearest-gene annotation.
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[2026-08-23 22:01:27] Annotated regions: 14876
+Saved: Annotated_Regions.tsv / .xlsx
+Saved: Module_Gene_List.tsv
+Saved: Module_Gene_Summary.tsv / .xlsx
+Saved: Background_Genes.txt / .tsv (528 genes)
+[2026-08-23 22:01:28] Module gene list rows: 567
+[2026-08-23 22:01:28] Module summary rows: 10
+[2026-08-23 22:01:28] Background genes: 528
+[2026-08-23 22:01:30] Script 15 complete
+Script 15 complete: consensus module annotation finished
+Output: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs
+Starting Script 16 
+Warning message:
+In value[[3L]](cond) :
+  Could not validate Enrichr DBs: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+
+======================================================
+Running config [list: anthropometry_raw]
+======================================================
+[2026-08-23 22:01:57] Starting enrichment [list: anthropometry_raw]
+[2026-08-23 22:01:57] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs
+[2026-08-23 22:01:57] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/anthropometry_raw
+[2026-08-23 22:01:57] Trait list: wt_4mo, wt_6mo, wt_9mo, wt_12mo, wt_18mo, wt_24mo, bmi_calc_24m
+[2026-08-23 22:01:57] females: 0 modules selected (p <= 0.05)
+[2026-08-23 22:01:57] males: 1 modules selected (p <= 0.05)
+[2026-08-23 22:01:57] Final selected modules (1): turquoise
+[2026-08-23 22:01:57] Module turquoise: 2 genes
+
+--- Module: turquoise (2 genes) ---
+[KEGG] input n=2 -> cleaned unique n=2
+[KEGG] invalid-format count=0
+[2026-08-23 22:01:58] KEGG failed [turquoise]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Failed attempt 1: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: turquoise
+[Enrichr] Failed attempt 2: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: turquoise
+[Enrichr] Failed attempt 3: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: turquoise
+[Enrichr] Failed attempt 4: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: turquoise
+
+--- Summary plots ---
+[2026-08-23 22:02:06] Finished config [list: anthropometry_raw]
+
+======================================================
+Running config [list: covariates]
+======================================================
+[2026-08-23 22:02:06] Starting enrichment [list: covariates]
+[2026-08-23 22:02:06] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs
+[2026-08-23 22:02:06] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/covariates
+[2026-08-23 22:02:06] Trait list: mom_gw_age, age_c_months, gender_c, gestage, brthwt
+[2026-08-23 22:02:06] females: 0 modules selected (p <= 0.05)
+[2026-08-23 22:02:06] males: 1 modules selected (p <= 0.05)
+[2026-08-23 22:02:06] Final selected modules (1): green
+[2026-08-23 22:02:06] Module green: 1 genes
+
+--- Module: green (1 genes) ---
+[KEGG] input n=1 -> cleaned unique n=1
+[KEGG] invalid-format count=0
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: green
+[Enrichr] Failed attempt 1: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: green
+[Enrichr] Failed attempt 2: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: green
+[Enrichr] Failed attempt 3: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: green
+[Enrichr] Failed attempt 4: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: green
+
+--- Summary plots ---
+[2026-08-23 22:02:20] Finished config [list: covariates]
+
+======================================================
+Running config [list: exposures_n_mat_fac]
+======================================================
+[2026-08-23 22:02:20] Starting enrichment [list: exposures_n_mat_fac]
+[2026-08-23 22:02:20] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs
+[2026-08-23 22:02:20] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/exposures_n_mat_fac
+[2026-08-23 22:02:20] Trait list: aces_tot, soc_env_tot, env_tot, soc_tot, airpollut, toxic, emissions, poverty, gwg, egwg, ppwr, ppwr_e
+[2026-08-23 22:02:20] females: 4 modules selected (p <= 0.05)
+[2026-08-23 22:02:20] males: 1 modules selected (p <= 0.05)
+[2026-08-23 22:02:20] Final selected modules (5): black, brown, green, purple, turquoise
+[2026-08-23 22:02:20] Module green: 1 genes
+
+--- Module: green (1 genes) ---
+[KEGG] input n=1 -> cleaned unique n=1
+[KEGG] invalid-format count=0
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: green
+[Enrichr] Failed attempt 1: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: green
+[Enrichr] Failed attempt 2: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: green
+[Enrichr] Failed attempt 3: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: green
+[Enrichr] Failed attempt 4: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: green
+[2026-08-23 22:02:33] Module purple: 2 genes
+
+--- Module: purple (2 genes) ---
+[KEGG] input n=2 -> cleaned unique n=2
+[KEGG] invalid-format count=0
+[2026-08-23 22:02:33] KEGG failed [purple]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: purple
+[Enrichr] Saved: purple_enrichr.xlsx
+[Enrichr] Plot saved: purple_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: purple_enrichr_GO_Cellular_Component_2025.pdf
+[2026-08-23 22:02:38] Module black: 2 genes
+
+--- Module: black (2 genes) ---
+[KEGG] input n=2 -> cleaned unique n=2
+[KEGG] invalid-format count=0
+[2026-08-23 22:02:38] KEGG failed [black]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: black
+[2026-08-23 22:02:42] Module brown: 2 genes
+
+--- Module: brown (2 genes) ---
+[KEGG] input n=2 -> cleaned unique n=2
+[KEGG] invalid-format count=0
+[2026-08-23 22:02:43] KEGG failed [brown]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Saved: brown_enrichr.xlsx
+[Enrichr] Plot saved: brown_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:02:47] Module turquoise: 2 genes
+
+--- Module: turquoise (2 genes) ---
+[KEGG] input n=2 -> cleaned unique n=2
+[KEGG] invalid-format count=0
+[2026-08-23 22:02:48] KEGG failed [turquoise]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Saved: turquoise_enrichr.xlsx
+[Enrichr] Plot saved: turquoise_enrichr_GO_Cellular_Component_2025.pdf
+
+--- Summary plots ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top10_pvalue0.05.pdf
+[2026-08-23 22:02:53] Finished config [list: exposures_n_mat_fac]
+
+======================================================
+Running config [list: growth_dynamics]
+======================================================
+[2026-08-23 22:02:53] Starting enrichment [list: growth_dynamics]
+[2026-08-23 22:02:53] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs
+[2026-08-23 22:02:53] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/growth_dynamics
+[2026-08-23 22:02:53] Trait list: wzd_0to6mo, wzd_6to12mo, wflzd_0to6mo, wflzd_6to12mo, rwg_wei_0to6mo, rwg_wei_6to12mo, rwg_wfl_0to6mo, rwg_wfl_6to12mo
+[2026-08-23 22:02:53] females: 2 modules selected (p <= 0.05)
+[2026-08-23 22:02:53] males: 5 modules selected (p <= 0.05)
+[2026-08-23 22:02:53] Final selected modules (7): blue, brown, magenta, pink, red, turquoise, yellow
+[2026-08-23 22:02:53] Module blue: 1 genes
+
+--- Module: blue (1 genes) ---
+[KEGG] input n=1 -> cleaned unique n=1
+[KEGG] invalid-format count=0
+  [KEGG] Done: 1 pathways
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+[Enrichr] Plot saved: blue_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:02:59] Module red: 2 genes
+
+--- Module: red (2 genes) ---
+[KEGG] input n=2 -> cleaned unique n=2
+[KEGG] invalid-format count=0
+[2026-08-23 22:02:59] KEGG failed [red]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: red
+[Enrichr] Saved: red_enrichr.xlsx
+[Enrichr] Plot saved: red_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:03:04] Module magenta: 1 genes
+
+--- Module: magenta (1 genes) ---
+[KEGG] input n=1 -> cleaned unique n=1
+[KEGG] invalid-format count=0
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+[Enrichr] Plot saved: magenta_enrichr_GO_Biological_Process_2025.pdf
+[2026-08-23 22:03:09] Module yellow: 2 genes
+
+--- Module: yellow (2 genes) ---
+[KEGG] input n=2 -> cleaned unique n=2
+[KEGG] invalid-format count=0
+[2026-08-23 22:03:09] KEGG failed [yellow]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow
+[Enrichr] Saved: yellow_enrichr.xlsx
+[Enrichr] Plot saved: yellow_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: yellow_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: yellow_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:03:14] Module pink: 1 genes
+
+--- Module: pink (1 genes) ---
+[KEGG] input n=1 -> cleaned unique n=1
+[KEGG] invalid-format count=0
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: pink
+[2026-08-23 22:03:19] Module turquoise: 2 genes
+
+--- Module: turquoise (2 genes) ---
+[KEGG] input n=2 -> cleaned unique n=2
+[KEGG] invalid-format count=0
+[2026-08-23 22:03:19] KEGG failed [turquoise]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Saved: turquoise_enrichr.xlsx
+[Enrichr] Plot saved: turquoise_enrichr_GO_Cellular_Component_2025.pdf
+[2026-08-23 22:03:24] Module brown: 2 genes
+
+--- Module: brown (2 genes) ---
+[KEGG] input n=2 -> cleaned unique n=2
+[KEGG] invalid-format count=0
+[2026-08-23 22:03:24] KEGG failed [brown]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Saved: brown_enrichr.xlsx
+[Enrichr] Plot saved: brown_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_GO_Molecular_Function_2025.pdf
+
+--- Summary plots ---
+[plot] Saved: Summary_KEGG_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top10_pvalue0.05.pdf
+[2026-08-23 22:03:29] Finished config [list: growth_dynamics]
+
+======================================================
+Running config [list: zscores]
+======================================================
+[2026-08-23 22:03:29] Starting enrichment [list: zscores]
+[2026-08-23 22:03:29] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs
+[2026-08-23 22:03:29] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/zscores
+[2026-08-23 22:03:29] Trait list: zwei_0wk, zwei_4mo, zwei_6mo, zwei_9mo, zwei_12mo, zwei_18mo, zwei_24mo, zwfl_0wk, zwfl_4mo, zwfl_6mo, zwfl_9mo, zwfl_12mo, zwfl_18mo, zwfl_24mo, zbmi_24mo
+[2026-08-23 22:03:29] females: 0 modules selected (p <= 0.05)
+[2026-08-23 22:03:29] males: 0 modules selected (p <= 0.05)
+[2026-08-23 22:03:29] Final selected modules (0): 
+[2026-08-23 22:03:29] No modules selected — skipping enrichment.
+There were 50 or more warnings (use warnings() to see the first 50)
+Script 16 complete: consensus module enrichment finished
+Starting Script 16 
+Derived cpg_label    : cov3_75pct
+Derived region_label : covMin4_methSD0_jointSDall0p05
+
+======================================================
+Running config [list: anthropometry_raw]
+======================================================
+[2026-08-23 22:03:56] Starting enrichment [list: anthropometry_raw]
+[2026-08-23 22:03:56] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs
+[2026-08-23 22:03:56] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/anthropometry_raw
+[2026-08-23 22:03:56] Trait list: wt_4mo, wt_6mo, wt_9mo, wt_12mo, wt_18mo, wt_24mo, bmi_calc_24m
+[2026-08-23 22:03:56] females: 1 modules selected (p <= 0.05)
+[2026-08-23 22:03:56] males: 6 modules selected (p <= 0.05)
+[2026-08-23 22:03:56] Final selected modules (7): black, blue, brown, magenta, pink, red, turquoise
+[2026-08-23 22:03:56] Module magenta: 1 genes
+
+--- Module: magenta (1 genes) ---
+[KEGG] input n=1 -> cleaned unique n=1
+[KEGG] invalid-format count=0
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+[Enrichr] Plot saved: magenta_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_GO_Cellular_Component_2025.pdf
+[2026-08-23 22:04:06] Module red: 5 genes
+
+--- Module: red (5 genes) ---
+[KEGG] input n=5 -> cleaned unique n=5
+[KEGG] invalid-format count=0
+[2026-08-23 22:04:06] KEGG failed [red]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: red
+[Enrichr] Saved: red_enrichr.xlsx
+[Enrichr] Plot saved: red_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: red_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: red_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:04:11] Module brown: 5 genes
+
+--- Module: brown (5 genes) ---
+[KEGG] input n=5 -> cleaned unique n=5
+[KEGG] invalid-format count=0
+[2026-08-23 22:04:11] KEGG failed [brown]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Saved: brown_enrichr.xlsx
+[Enrichr] Plot saved: brown_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:04:16] Module pink: 5 genes
+
+--- Module: pink (5 genes) ---
+[KEGG] input n=5 -> cleaned unique n=5
+[KEGG] invalid-format count=0
+[2026-08-23 22:04:16] KEGG failed [pink]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: pink
+[Enrichr] Saved: pink_enrichr.xlsx
+[Enrichr] Plot saved: pink_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: pink_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: pink_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:04:21] Module black: 5 genes
+
+--- Module: black (5 genes) ---
+[KEGG] input n=5 -> cleaned unique n=5
+[KEGG] invalid-format count=0
+[2026-08-23 22:04:21] KEGG failed [black]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: black
+[Enrichr] Saved: black_enrichr.xlsx
+[Enrichr] Plot saved: black_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: black_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: black_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:04:26] Module blue: 6 genes
+
+--- Module: blue (6 genes) ---
+[KEGG] input n=6 -> cleaned unique n=6
+[KEGG] invalid-format count=0
+[2026-08-23 22:04:26] KEGG failed [blue]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=6 -> cleaned unique n=6
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+[Enrichr] Plot saved: blue_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:04:31] Module turquoise: 6 genes
+
+--- Module: turquoise (6 genes) ---
+[KEGG] input n=6 -> cleaned unique n=6
+[KEGG] invalid-format count=0
+[2026-08-23 22:04:31] KEGG failed [turquoise]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=6 -> cleaned unique n=6
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Saved: turquoise_enrichr.xlsx
+[Enrichr] Plot saved: turquoise_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: turquoise_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: turquoise_enrichr_GO_Molecular_Function_2025.pdf
+
+--- Summary plots ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top10_pvalue0.05.pdf
+[2026-08-23 22:04:37] Finished config [list: anthropometry_raw]
+
+======================================================
+Running config [list: covariates]
+======================================================
+[2026-08-23 22:04:37] Starting enrichment [list: covariates]
+[2026-08-23 22:04:37] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs
+[2026-08-23 22:04:38] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/covariates
+[2026-08-23 22:04:38] Trait list: mom_gw_age, age_c_months, gender_c, gestage, brthwt
+[2026-08-23 22:04:38] females: 2 modules selected (p <= 0.05)
+[2026-08-23 22:04:38] males: 2 modules selected (p <= 0.05)
+[2026-08-23 22:04:38] Final selected modules (4): blue, brown, magenta, pink
+[2026-08-23 22:04:38] Module magenta: 1 genes
+
+--- Module: magenta (1 genes) ---
+[KEGG] input n=1 -> cleaned unique n=1
+[KEGG] invalid-format count=0
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+[Enrichr] Plot saved: magenta_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_GO_Cellular_Component_2025.pdf
+[2026-08-23 22:04:43] Module blue: 6 genes
+
+--- Module: blue (6 genes) ---
+[KEGG] input n=6 -> cleaned unique n=6
+[KEGG] invalid-format count=0
+[2026-08-23 22:04:43] KEGG failed [blue]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=6 -> cleaned unique n=6
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+[Enrichr] Plot saved: blue_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:04:48] Module brown: 5 genes
+
+--- Module: brown (5 genes) ---
+[KEGG] input n=5 -> cleaned unique n=5
+[KEGG] invalid-format count=0
+[2026-08-23 22:04:48] KEGG failed [brown]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Saved: brown_enrichr.xlsx
+[Enrichr] Plot saved: brown_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:04:53] Module pink: 5 genes
+
+--- Module: pink (5 genes) ---
+[KEGG] input n=5 -> cleaned unique n=5
+[KEGG] invalid-format count=0
+[2026-08-23 22:04:53] KEGG failed [pink]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: pink
+[Enrichr] Saved: pink_enrichr.xlsx
+[Enrichr] Plot saved: pink_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: pink_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: pink_enrichr_GO_Molecular_Function_2025.pdf
+
+--- Summary plots ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top10_pvalue0.05.pdf
+[2026-08-23 22:04:58] Finished config [list: covariates]
+
+======================================================
+Running config [list: exposures_n_mat_fac]
+======================================================
+[2026-08-23 22:04:58] Starting enrichment [list: exposures_n_mat_fac]
+[2026-08-23 22:04:58] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs
+[2026-08-23 22:04:58] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/exposures_n_mat_fac
+[2026-08-23 22:04:58] Trait list: aces_tot, soc_env_tot, env_tot, soc_tot, airpollut, toxic, emissions, poverty, gwg, egwg, ppwr, ppwr_e
+[2026-08-23 22:04:58] females: 3 modules selected (p <= 0.05)
+[2026-08-23 22:04:59] males: 1 modules selected (p <= 0.05)
+[2026-08-23 22:04:59] Final selected modules (3): blue, magenta, red
+[2026-08-23 22:04:59] Module magenta: 1 genes
+
+--- Module: magenta (1 genes) ---
+[KEGG] input n=1 -> cleaned unique n=1
+[KEGG] invalid-format count=0
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+[Enrichr] Plot saved: magenta_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_GO_Cellular_Component_2025.pdf
+[2026-08-23 22:05:04] Module red: 5 genes
+
+--- Module: red (5 genes) ---
+[KEGG] input n=5 -> cleaned unique n=5
+[KEGG] invalid-format count=0
+[2026-08-23 22:05:04] KEGG failed [red]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: red
+[Enrichr] Saved: red_enrichr.xlsx
+[Enrichr] Plot saved: red_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: red_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: red_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:05:09] Module blue: 6 genes
+
+--- Module: blue (6 genes) ---
+[KEGG] input n=6 -> cleaned unique n=6
+[KEGG] invalid-format count=0
+[2026-08-23 22:05:09] KEGG failed [blue]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=6 -> cleaned unique n=6
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+[Enrichr] Plot saved: blue_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_GO_Molecular_Function_2025.pdf
+
+--- Summary plots ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top10_pvalue0.05.pdf
+[2026-08-23 22:05:14] Finished config [list: exposures_n_mat_fac]
+
+======================================================
+Running config [list: growth_dynamics]
+======================================================
+[2026-08-23 22:05:14] Starting enrichment [list: growth_dynamics]
+[2026-08-23 22:05:14] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs
+[2026-08-23 22:05:14] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/growth_dynamics
+[2026-08-23 22:05:14] Trait list: wzd_0to6mo, wzd_6to12mo, wflzd_0to6mo, wflzd_6to12mo, rwg_wei_0to6mo, rwg_wei_6to12mo, rwg_wfl_0to6mo, rwg_wfl_6to12mo
+[2026-08-23 22:05:14] females: 1 modules selected (p <= 0.05)
+[2026-08-23 22:05:14] males: 7 modules selected (p <= 0.05)
+[2026-08-23 22:05:14] Final selected modules (7): black, blue, brown, pink, red, turquoise, yellow
+[2026-08-23 22:05:14] Module brown: 5 genes
+
+--- Module: brown (5 genes) ---
+[KEGG] input n=5 -> cleaned unique n=5
+[KEGG] invalid-format count=0
+[2026-08-23 22:05:14] KEGG failed [brown]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Saved: brown_enrichr.xlsx
+[Enrichr] Plot saved: brown_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:05:19] Module red: 5 genes
+
+--- Module: red (5 genes) ---
+[KEGG] input n=5 -> cleaned unique n=5
+[KEGG] invalid-format count=0
+[2026-08-23 22:05:19] KEGG failed [red]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: red
+[Enrichr] Saved: red_enrichr.xlsx
+[Enrichr] Plot saved: red_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: red_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: red_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:05:24] Module pink: 5 genes
+
+--- Module: pink (5 genes) ---
+[KEGG] input n=5 -> cleaned unique n=5
+[KEGG] invalid-format count=0
+[2026-08-23 22:05:24] KEGG failed [pink]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: pink
+[Enrichr] Saved: pink_enrichr.xlsx
+[Enrichr] Plot saved: pink_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: pink_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: pink_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:05:29] Module black: 5 genes
+
+--- Module: black (5 genes) ---
+[KEGG] input n=5 -> cleaned unique n=5
+[KEGG] invalid-format count=0
+[2026-08-23 22:05:30] KEGG failed [black]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: black
+[Enrichr] Saved: black_enrichr.xlsx
+[Enrichr] Plot saved: black_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: black_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: black_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:05:34] Module blue: 6 genes
+
+--- Module: blue (6 genes) ---
+[KEGG] input n=6 -> cleaned unique n=6
+[KEGG] invalid-format count=0
+[2026-08-23 22:05:35] KEGG failed [blue]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=6 -> cleaned unique n=6
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+[Enrichr] Plot saved: blue_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:05:39] Module yellow: 5 genes
+
+--- Module: yellow (5 genes) ---
+[KEGG] input n=5 -> cleaned unique n=5
+[KEGG] invalid-format count=0
+[2026-08-23 22:05:40] KEGG failed [yellow]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow
+[Enrichr] Saved: yellow_enrichr.xlsx
+[Enrichr] Plot saved: yellow_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: yellow_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: yellow_enrichr_GO_Molecular_Function_2025.pdf
+[2026-08-23 22:05:44] Module turquoise: 6 genes
+
+--- Module: turquoise (6 genes) ---
+[KEGG] input n=6 -> cleaned unique n=6
+[KEGG] invalid-format count=0
+[2026-08-23 22:05:45] KEGG failed [turquoise]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments.
+[foreground] input n=6 -> cleaned unique n=6
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Saved: turquoise_enrichr.xlsx
+[Enrichr] Plot saved: turquoise_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: turquoise_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: turquoise_enrichr_GO_Molecular_Function_2025.pdf
+
+--- Summary plots ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top10_pvalue0.05.pdf
+[2026-08-23 22:05:51] Finished config [list: growth_dynamics]
+
+======================================================
+Running config [list: zscores]
+======================================================
+[2026-08-23 22:05:51] Starting enrichment [list: zscores]
+[2026-08-23 22:05:51] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs
+[2026-08-23 22:05:51] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/zscores
+[2026-08-23 22:05:51] Trait list: zwei_0wk, zwei_4mo, zwei_6mo, zwei_9mo, zwei_12mo, zwei_18mo, zwei_24mo, zwfl_0wk, zwfl_4mo, zwfl_6mo, zwfl_9mo, zwfl_12mo, zwfl_18mo, zwfl_24mo, zbmi_24mo
+[2026-08-23 22:05:51] females: 0 modules selected (p <= 0.05)
+[2026-08-23 22:05:51] males: 0 modules selected (p <= 0.05)
+[2026-08-23 22:05:51] Final selected modules (0): 
+[2026-08-23 22:05:51] No modules selected — skipping enrichment.
+There were 50 or more warnings (use warnings() to see the first 50)
+Script 16 complete: consensus module enrichment finished

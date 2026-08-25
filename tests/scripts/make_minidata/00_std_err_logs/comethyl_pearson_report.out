@@ -55,3 +55,109 @@ JobId=21164753 JobName=Make_mini
    TresPerTask=cpu=40
    MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUThive-dc-7-4-58
 Sun Aug 23 01:45:00 PM PDT 2026
+WARNING: The following sample IDs were not matched to files:
+  - 97
+[016B] wrote 016B_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[019B] wrote 019B_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[026B] wrote 026B_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[032B] wrote 032B_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[038B] wrote 038B_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[043B] wrote 043B_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[060B] wrote 060B_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[076C] wrote 076C_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[079B] wrote 079B_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[100] wrote 100_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[102] wrote 102_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[104C] wrote 104C_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[105B] wrote 105B_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[111] wrote 111_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[112] wrote 112_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[114] wrote 114_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[116] wrote 116_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[118] wrote 118_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[119] wrote 119_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[120] wrote 120_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[121B] wrote 121B_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[132] wrote 132_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[133] wrote 133_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[139B] wrote 139B_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[142B] wrote 142B_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[153] wrote 153_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[155] wrote 155_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[156] wrote 156_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[157] wrote 157_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[158] wrote 158_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[161] wrote 161_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[162] wrote 162_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[166] wrote 166_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[170] wrote 170_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[174] wrote 174_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[177] wrote 177_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[180] wrote 180_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[213B] wrote 213B_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[222] wrote 222_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[227] wrote 227_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[28] wrote 28_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[44] wrote 44_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[46] wrote 46_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[48] wrote 48_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[80] wrote 80_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[88] wrote 88_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[90] wrote 90_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+[98] wrote 98_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz
+Wrote README: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/processed/cytosine_reports/README_minidata.md
+Wrote manifest: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/processed/cytosine_reports/manifest.csv
+
+############### Job 21164960 summary from  ###############
+Name                : Make_mini
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-4-58
+Cores               : 40
+GPUs                : 0
+State               : COMPLETED
+ExitCode            : 0:0
+Submit              : 2026-08-23T13:44:59
+Start               : 2026-08-23T13:45:00
+End                 : 2026-08-23T14:07:52
+Reserved walltime   : 23:00:00
+Used walltime       : 00:22:52
+Used CPU time       : 00:22:06
+% User (Computation): 99.41%
+% System (I/O)      :  0.59%
+Mem reserved        : 400G
+Max Mem used        : 13.67G (hive-dc-7-4-58)
+Max Disk Write      : 270.13M (hive-dc-7-4-58)
+Max Disk Read       : 13.16G (hive-dc-7-4-58)
+
+############### Job 21164960 info ###############
+JobId=21164960 JobName=Make_mini
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=83790 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:22:52 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-08-23T13:44:59 EligibleTime=2026-08-23T13:44:59
+   AccrueTime=2026-08-23T13:44:59
+   StartTime=2026-08-23T13:45:00 EndTime=2026-08-23T14:07:52 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-23T13:45:00 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-as-11-2-49:66999
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-4-58
+   BatchHost=hive-dc-7-4-58
+   NumNodes=1 NumCPUs=40 NumTasks=1 CPUs/Task=40 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=40,mem=400G,node=1,billing=40
+   AllocTRES=cpu=40,mem=400G,node=1,billing=40
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=40 MinMemoryNode=400G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/scripts/make_minidata/make_mini_data.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/scripts/make_minidata/make_mini_data.slurm
+   WorkDir=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/scripts/make_minidata
+   StdErr=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/scripts/make_minidata/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/scripts/make_minidata/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=40
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT

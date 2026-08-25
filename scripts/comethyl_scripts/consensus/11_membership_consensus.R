@@ -452,7 +452,36 @@ for (ds in dataset_inputs) {
 # ------------------------------------------------------------
 # Session info
 # ------------------------------------------------------------
-writeLines(capture.output(sessionInfo()), con = file.path(
-  step_dir, "shared", cpg_label, region_label, opt$adjustment_version, "sessionInfo.txt"))
 
+# Build the shared output directory used for information that applies
+# to the complete consensus analysis rather than one individual dataset.
+shared_dir <- file.path(
+  step_dir,
+  "shared",
+  cpg_label,
+  region_label,
+  opt$adjustment_version
+)
+
+# file() and writeLines() cannot create missing parent directories.
+# Therefore, create the complete directory tree before writing.
+dir.create(
+  shared_dir,
+  recursive = TRUE,
+  showWarnings = FALSE
+)
+
+# Confirm that directory creation succeeded.
+if (!dir.exists(shared_dir)) {
+  stop("Could not create shared output directory: ", shared_dir)
+}
+
+session_file <- file.path(shared_dir, "sessionInfo.txt")
+
+writeLines(
+  capture.output(sessionInfo()),
+  con = session_file
+)
+
+message("Saved session information: ", session_file)
 message("Script 11 complete: consensus membership finished")
