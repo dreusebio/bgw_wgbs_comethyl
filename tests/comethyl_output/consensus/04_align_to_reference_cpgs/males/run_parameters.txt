@@ -1,0 +1,10 @@
+dataset_label: males
+meta_file: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/metadata/merged_qc_males.xlsx
+cyto_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/processed/cytosine_reports
+cov: 3
+per_sample: 0.75
+n_unfiltered_cpgs: 634646
+n_aligned_to_reference_cpgs: 524437
+n_filtered_cpgs: 516666
+output_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/04_align_to_reference_cpgs/males
+date: 2026-08-23 14:31:27.186414

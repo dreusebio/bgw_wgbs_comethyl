@@ -1,0 +1,21 @@
+[2026-08-23 22:03:56] Starting enrichment [list: anthropometry_raw] 
+[2026-08-23 22:03:56] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs 
+[2026-08-23 22:03:56] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/anthropometry_raw 
+[2026-08-23 22:03:56] Trait list: wt_4mo, wt_6mo, wt_9mo, wt_12mo, wt_18mo, wt_24mo, bmi_calc_24m 
+[2026-08-23 22:03:56] females: 1 modules selected (p <= 0.05) 
+[2026-08-23 22:03:56] males: 6 modules selected (p <= 0.05) 
+[2026-08-23 22:03:56] Final selected modules (7): black, blue, brown, magenta, pink, red, turquoise 
+[2026-08-23 22:03:56] Module magenta: 1 genes 
+[2026-08-23 22:04:06] Module red: 5 genes 
+[2026-08-23 22:04:06] KEGG failed [red]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:04:11] Module brown: 5 genes 
+[2026-08-23 22:04:11] KEGG failed [brown]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:04:16] Module pink: 5 genes 
+[2026-08-23 22:04:16] KEGG failed [pink]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:04:21] Module black: 5 genes 
+[2026-08-23 22:04:21] KEGG failed [black]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:04:26] Module blue: 6 genes 
+[2026-08-23 22:04:26] KEGG failed [blue]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:04:31] Module turquoise: 6 genes 
+[2026-08-23 22:04:31] KEGG failed [turquoise]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:04:37] Finished config [list: anthropometry_raw] 

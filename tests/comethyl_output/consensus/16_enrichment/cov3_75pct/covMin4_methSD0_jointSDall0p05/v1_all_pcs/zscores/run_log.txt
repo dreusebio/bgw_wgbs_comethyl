@@ -1,0 +1,8 @@
+[2026-08-23 22:03:29] Starting enrichment [list: zscores] 
+[2026-08-23 22:03:29] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs 
+[2026-08-23 22:03:29] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/zscores 
+[2026-08-23 22:03:29] Trait list: zwei_0wk, zwei_4mo, zwei_6mo, zwei_9mo, zwei_12mo, zwei_18mo, zwei_24mo, zwfl_0wk, zwfl_4mo, zwfl_6mo, zwfl_9mo, zwfl_12mo, zwfl_18mo, zwfl_24mo, zbmi_24mo 
+[2026-08-23 22:03:29] females: 0 modules selected (p <= 0.05) 
+[2026-08-23 22:03:29] males: 0 modules selected (p <= 0.05) 
+[2026-08-23 22:03:29] Final selected modules (0):  
+[2026-08-23 22:03:29] No modules selected — skipping enrichment. 

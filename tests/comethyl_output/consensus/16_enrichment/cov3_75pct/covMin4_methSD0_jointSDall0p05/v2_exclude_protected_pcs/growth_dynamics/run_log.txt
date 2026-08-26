@@ -1,0 +1,22 @@
+[2026-08-23 22:05:14] Starting enrichment [list: growth_dynamics] 
+[2026-08-23 22:05:14] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs 
+[2026-08-23 22:05:14] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/growth_dynamics 
+[2026-08-23 22:05:14] Trait list: wzd_0to6mo, wzd_6to12mo, wflzd_0to6mo, wflzd_6to12mo, rwg_wei_0to6mo, rwg_wei_6to12mo, rwg_wfl_0to6mo, rwg_wfl_6to12mo 
+[2026-08-23 22:05:14] females: 1 modules selected (p <= 0.05) 
+[2026-08-23 22:05:14] males: 7 modules selected (p <= 0.05) 
+[2026-08-23 22:05:14] Final selected modules (7): black, blue, brown, pink, red, turquoise, yellow 
+[2026-08-23 22:05:14] Module brown: 5 genes 
+[2026-08-23 22:05:14] KEGG failed [brown]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:05:19] Module red: 5 genes 
+[2026-08-23 22:05:19] KEGG failed [red]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:05:24] Module pink: 5 genes 
+[2026-08-23 22:05:24] KEGG failed [pink]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:05:29] Module black: 5 genes 
+[2026-08-23 22:05:30] KEGG failed [black]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:05:34] Module blue: 6 genes 
+[2026-08-23 22:05:35] KEGG failed [blue]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:05:39] Module yellow: 5 genes 
+[2026-08-23 22:05:40] KEGG failed [yellow]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:05:44] Module turquoise: 6 genes 
+[2026-08-23 22:05:45] KEGG failed [turquoise]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:05:51] Finished config [list: growth_dynamics] 

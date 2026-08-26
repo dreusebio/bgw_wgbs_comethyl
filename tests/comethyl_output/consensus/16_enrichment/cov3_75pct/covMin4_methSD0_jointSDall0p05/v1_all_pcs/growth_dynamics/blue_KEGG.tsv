@@ -1,0 +1,2 @@
+category	subcategory	ID	Description	GeneRatio	BgRatio	pvalue	p.adjust	qvalue	geneID	Count
+Metabolism	Glycan biosynthesis and metabolism	hsa00515	Mannose type O-glycan biosynthesis	1/1	23/9423	0.00244083625172453	0.00244083625172453	NA	9215	1

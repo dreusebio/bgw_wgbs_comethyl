@@ -1,0 +1,14 @@
+timestamp	2026-08-23 22:00:32
+project_root	/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests
+consensus_regions_tsv	/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/09_consensus_modules/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/Consensus_Region_Assignments.tsv
+adjustment_version	v1_all_pcs
+cpg_label	cov3_75pct
+region_label	covMin4_methSD0_jointSDall0p05
+genome	hg38
+annotation_mode	auto
+n_regions_total	14876
+n_regions_non_grey	65
+n_modules_real	11
+n_annotated_rows	14876
+n_background_genes	528
+output_dir	/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs

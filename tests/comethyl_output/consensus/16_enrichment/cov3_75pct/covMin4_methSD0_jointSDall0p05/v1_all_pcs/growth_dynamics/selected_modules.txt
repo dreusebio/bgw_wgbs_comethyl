@@ -1,0 +1,7 @@
+blue
+red
+magenta
+yellow
+pink
+turquoise
+brown

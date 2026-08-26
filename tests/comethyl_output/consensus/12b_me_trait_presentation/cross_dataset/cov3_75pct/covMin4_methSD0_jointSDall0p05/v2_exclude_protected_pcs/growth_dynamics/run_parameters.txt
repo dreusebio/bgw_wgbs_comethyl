@@ -1,0 +1,8 @@
+set_name: growth_dynamics
+set_file: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config/presentation_sets/growth_dynamics.txt
+datasets: females, males
+n_traits_requested: 8
+n_datasets_saved: 2
+p_thresh: 0.05
+top_n: 50
+date: 2026-08-23 21:55:52.331161

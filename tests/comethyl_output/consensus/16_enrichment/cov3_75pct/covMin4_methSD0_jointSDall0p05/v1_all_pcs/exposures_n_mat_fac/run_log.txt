@@ -1,0 +1,17 @@
+[2026-08-23 22:02:20] Starting enrichment [list: exposures_n_mat_fac] 
+[2026-08-23 22:02:20] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs 
+[2026-08-23 22:02:20] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/exposures_n_mat_fac 
+[2026-08-23 22:02:20] Trait list: aces_tot, soc_env_tot, env_tot, soc_tot, airpollut, toxic, emissions, poverty, gwg, egwg, ppwr, ppwr_e 
+[2026-08-23 22:02:20] females: 4 modules selected (p <= 0.05) 
+[2026-08-23 22:02:20] males: 1 modules selected (p <= 0.05) 
+[2026-08-23 22:02:20] Final selected modules (5): black, brown, green, purple, turquoise 
+[2026-08-23 22:02:20] Module green: 1 genes 
+[2026-08-23 22:02:33] Module purple: 2 genes 
+[2026-08-23 22:02:33] KEGG failed [purple]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:02:38] Module black: 2 genes 
+[2026-08-23 22:02:38] KEGG failed [black]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:02:42] Module brown: 2 genes 
+[2026-08-23 22:02:43] KEGG failed [brown]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:02:47] Module turquoise: 2 genes 
+[2026-08-23 22:02:48] KEGG failed [turquoise]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:02:53] Finished config [list: exposures_n_mat_fac] 

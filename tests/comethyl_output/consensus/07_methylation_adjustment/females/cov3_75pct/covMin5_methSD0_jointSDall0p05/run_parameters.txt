@@ -1,0 +1,22 @@
+project_root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests
+input_meth: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin5_methSD0_jointSDall0p05/females_Methylation_jointEligible.rds
+input_pcs: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin5_methSD0_jointSDall0p05/PCs.rds
+pc_trait_stats: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/06_pc_diagnostics/females/cov3_75pct/covMin5_methSD0_jointSDall0p05/PC_Trait_Correlation_Stats_Bicor.tsv
+protected_traits_file: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config/protected_traits.txt
+technical_traits_file: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config/technical_traits.txt
+dataset_label: females
+cpg_label: cov3_75pct
+region_label: covMin5_methSD0_jointSDall0p05
+run_v1: TRUE
+run_v2: TRUE
+run_v3: FALSE
+v2_cor_method: bicor
+v2_p_thresh: 0.05
+v3_p_thresh: 0.05
+n_samples: 23
+n_regions: 14770
+n_total_pcs: 1
+n_protected_found: 5
+n_technical_found: 3
+output_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin5_methSD0_jointSDall0p05
+date: 2026-08-23 02:18:22.028675

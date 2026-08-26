@@ -1,0 +1,8 @@
+mode: v1_all_pcs
+status: completed
+dataset_label: males
+n_samples: 25
+n_regions: 6570
+n_pcs_used: 2
+pcs_used: PC_1, PC_2
+output_file: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/07_methylation_adjustment/males/cov3_75pct/covMin10_methSD0_jointSDall0p07/v1_all_pcs/males_Adjusted_Region_Methylation_allPCs.rds

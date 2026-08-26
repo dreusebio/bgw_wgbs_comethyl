@@ -1,0 +1,10 @@
+[2026-08-23 22:01:57] Starting enrichment [list: anthropometry_raw] 
+[2026-08-23 22:01:57] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs 
+[2026-08-23 22:01:57] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/anthropometry_raw 
+[2026-08-23 22:01:57] Trait list: wt_4mo, wt_6mo, wt_9mo, wt_12mo, wt_18mo, wt_24mo, bmi_calc_24m 
+[2026-08-23 22:01:57] females: 0 modules selected (p <= 0.05) 
+[2026-08-23 22:01:57] males: 1 modules selected (p <= 0.05) 
+[2026-08-23 22:01:57] Final selected modules (1): turquoise 
+[2026-08-23 22:01:57] Module turquoise: 2 genes 
+[2026-08-23 22:01:58] KEGG failed [turquoise]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:02:06] Finished config [list: anthropometry_raw] 

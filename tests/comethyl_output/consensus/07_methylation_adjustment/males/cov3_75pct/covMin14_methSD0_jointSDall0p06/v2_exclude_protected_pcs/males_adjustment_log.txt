@@ -1,0 +1,5 @@
+mode: v2_exclude_protected_pcs
+status: skipped
+dataset_label: males
+reason: all PCs removed
+n_pcs_removed: 2

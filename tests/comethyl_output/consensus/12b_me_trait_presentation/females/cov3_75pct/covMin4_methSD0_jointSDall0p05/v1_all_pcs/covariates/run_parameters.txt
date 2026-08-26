@@ -1,0 +1,12 @@
+dataset_label: females
+set_name: covariates
+set_file: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config/presentation_sets/covariates.txt
+stats_file: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12a_me_trait_analysis/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/ME_Trait_Correlation_Stats_Bicor.tsv
+p_thresh: 0.05
+top_n: 50
+n_traits_requested: 5
+n_traits_found: 3
+n_traits_missing: 2
+n_rows_subset: 33
+n_rows_significant: 0
+date: 2026-08-23 21:54:48.043051

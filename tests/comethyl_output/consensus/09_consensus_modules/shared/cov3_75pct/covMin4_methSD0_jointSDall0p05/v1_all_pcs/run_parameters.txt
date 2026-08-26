@@ -1,0 +1,16 @@
+project_root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests
+regions_file: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin4_methSD0_jointSDall0p05/joint_eligible_regions_4col.tsv
+adjustment_version: v1_all_pcs
+datasets: females, males
+consensus_cor: pearson
+power: 20
+network_type: signed
+tom_type: signed
+deep_split: 1
+min_module_size: 5
+merge_cut_height: 0.2
+max_block_size: 9500
+network_calibration: single quantile
+save_consensus_toms: TRUE
+threads: 20
+date: 2026-08-23 17:41:36.480109

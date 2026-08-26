@@ -1,0 +1,12 @@
+project_root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests
+consensus_modules_rds: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/09_consensus_modules/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/Consensus_Modules.rds
+dataset_label: females
+dataset_meth: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/07_methylation_adjustment/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/females_Adjusted_Region_Methylation_allPCs.rds
+adjustment_version: v1_all_pcs
+membership_cor: bicor
+max_p_outliers: 0.1
+n_real_modules: 11
+module_colors: red, yellow, black, green, purple, magenta, blue, pink, greenyellow, brown, turquoise
+n_regions: 14876
+n_samples_used: 23
+date: 2026-08-23 21:51:51.665536

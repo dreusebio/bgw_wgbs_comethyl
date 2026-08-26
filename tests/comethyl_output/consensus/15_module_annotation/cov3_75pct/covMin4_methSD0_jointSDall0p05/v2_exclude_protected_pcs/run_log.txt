@@ -1,0 +1,10 @@
+[2026-08-23 22:01:18] Loading consensus region assignments: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/09_consensus_modules/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/Consensus_Region_Assignments.tsv 
+[2026-08-23 22:01:18] Regions loaded: 14876 
+[2026-08-23 22:01:18] Unique modules: 10 
+[2026-08-23 22:01:18] Non-grey regions: 48 
+[2026-08-23 22:01:18] Running annotation (mode = auto) 
+[2026-08-23 22:01:27] Annotated regions: 14876 
+[2026-08-23 22:01:28] Module gene list rows: 567 
+[2026-08-23 22:01:28] Module summary rows: 10 
+[2026-08-23 22:01:28] Background genes: 528 
+[2026-08-23 22:01:30] Script 15 complete 

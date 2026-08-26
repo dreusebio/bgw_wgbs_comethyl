@@ -1,0 +1,15 @@
+project_root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests
+regions_file: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/02_reference_region_filter/females/cov3_75pct/covMin5_methSD0/Filtered_Regions.txt
+cpg_label: cov3_75pct
+reference_region_label: covMin5_methSD0
+effective_region_label: covMin5_methSD0_jointSDall0p07
+selection_mode: joint_sd_all
+joint_meth_sd: 0.07
+min_datasets_sd: 2
+n_datasets: 2
+datasets: females, males
+n_shared_ids: 35776
+n_complete_ids: 35645
+n_final_ids: 7164
+output_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/05b_shared_complete_regions/cov3_75pct/covMin5_methSD0_jointSDall0p07
+date: 2026-08-22 23:51:30.131511

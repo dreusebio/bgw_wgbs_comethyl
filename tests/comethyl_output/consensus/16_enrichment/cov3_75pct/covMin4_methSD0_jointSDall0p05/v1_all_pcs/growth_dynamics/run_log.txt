@@ -1,0 +1,19 @@
+[2026-08-23 22:02:53] Starting enrichment [list: growth_dynamics] 
+[2026-08-23 22:02:53] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs 
+[2026-08-23 22:02:53] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/growth_dynamics 
+[2026-08-23 22:02:53] Trait list: wzd_0to6mo, wzd_6to12mo, wflzd_0to6mo, wflzd_6to12mo, rwg_wei_0to6mo, rwg_wei_6to12mo, rwg_wfl_0to6mo, rwg_wfl_6to12mo 
+[2026-08-23 22:02:53] females: 2 modules selected (p <= 0.05) 
+[2026-08-23 22:02:53] males: 5 modules selected (p <= 0.05) 
+[2026-08-23 22:02:53] Final selected modules (7): blue, brown, magenta, pink, red, turquoise, yellow 
+[2026-08-23 22:02:53] Module blue: 1 genes 
+[2026-08-23 22:02:59] Module red: 2 genes 
+[2026-08-23 22:02:59] KEGG failed [red]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:03:04] Module magenta: 1 genes 
+[2026-08-23 22:03:09] Module yellow: 2 genes 
+[2026-08-23 22:03:09] KEGG failed [yellow]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:03:14] Module pink: 1 genes 
+[2026-08-23 22:03:19] Module turquoise: 2 genes 
+[2026-08-23 22:03:19] KEGG failed [turquoise]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:03:24] Module brown: 2 genes 
+[2026-08-23 22:03:24] KEGG failed [brown]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:03:29] Finished config [list: growth_dynamics] 

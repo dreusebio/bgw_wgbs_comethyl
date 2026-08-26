@@ -1,0 +1,17 @@
+project_root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests
+adjustment_version: v2_exclude_protected_pcs
+cpg_label: cov3_75pct
+region_label: covMin4_methSD0_jointSDall0p05
+datasets: females, males
+softpower_cor: pearson
+power_min: 1
+power_max: 20
+scale_free_cutoff: 0.7
+block_size: 20000
+gc_interval: 19999
+threads: 59
+plot_sample_dendro: TRUE
+chosen_power: 20
+chosen_reason: smallest power where all datasets meet scale-free cutoff
+shared_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08_soft_power/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs
+date: 2026-08-23 14:38:19.145945

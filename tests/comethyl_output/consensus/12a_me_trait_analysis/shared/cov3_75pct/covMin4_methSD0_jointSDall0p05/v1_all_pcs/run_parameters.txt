@@ -1,0 +1,12 @@
+project_root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests
+consensus_modules_rds: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/09_consensus_modules/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/Consensus_Modules.rds
+adjustment_version: v1_all_pcs
+datasets: females, males
+run_pearson: FALSE
+run_bicor: TRUE
+p_thresh: 0.05
+top_n: 50
+module_dendro_distance: bicor
+n_real_modules: 11
+module_colors: red, yellow, black, green, purple, magenta, blue, pink, greenyellow, brown, turquoise
+date: 2026-08-23 21:53:04.431713

@@ -1,0 +1,12 @@
+# SCREENING ESTIMATE ONLY -- subsampled data, not the full region set.
+# Confirm with a full Script 08 run before using for Script 09.
+chosen_power: NA
+reason: no common power had mean R2 >= 0.7 and negative mean slope in every dataset
+scale_free_cutoff: 0.7
+subsample_size: 600
+n_seeds: 5
+adjustment_version: v1_all_pcs
+cpg_label: cov3_75pct
+region_label: covMin4_methSD0_jointSDall0p05
+datasets: females, males
+date: 2026-08-23 14:39:26.63722

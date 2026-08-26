@@ -1,0 +1,8 @@
+chosen_power: NA
+reason: no common power had R2 >= 0.8 with negative slope in every dataset
+scale_free_cutoff: 0.8
+adjustment_version: v1_all_pcs
+cpg_label: cov3_75pct
+region_label: covMin10_methSD0_jointSDall0p07
+datasets: females, males
+date: 2026-08-22 22:38:53.295904

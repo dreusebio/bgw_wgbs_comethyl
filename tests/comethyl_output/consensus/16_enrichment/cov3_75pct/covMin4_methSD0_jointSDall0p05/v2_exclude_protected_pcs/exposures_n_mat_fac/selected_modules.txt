@@ -1,0 +1,3 @@
+magenta
+red
+blue

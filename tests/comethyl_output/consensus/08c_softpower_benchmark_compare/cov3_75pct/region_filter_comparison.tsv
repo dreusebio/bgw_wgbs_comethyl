@@ -1,0 +1,16 @@
+combo_id	plot_id	region_label	adjustment_version	subsample_tag	cutoff_reached	power_at_cutoff	min_R2_at_cutoff	n_regions_full
+covMin14_methSD0_jointSDall0p06 | v1_all_pcs | subsample2000	C06	covMin14_methSD0_jointSDall0p06	v1_all_pcs	subsample2000	FALSE	20	0.6193272126139164	8946
+covMin14_methSD0_jointSDall0p08 | v1_all_pcs | subsample2000	C07	covMin14_methSD0_jointSDall0p08	v1_all_pcs	subsample2000	FALSE	20	0.5828905265266207	4082
+covMin4_methSD0_jointSDall0p05 | v2_exclude_protected_pcs | subsample600	C11	covMin4_methSD0_jointSDall0p05	v2_exclude_protected_pcs	subsample600	FALSE	19	0.5785923046447748	14876
+covMin5_methSD0_jointSDall0p06 | v1_all_pcs | subsample2000	C12	covMin5_methSD0_jointSDall0p06	v1_all_pcs	subsample2000	FALSE	20	0.5517011489900275	10345
+covMin5_methSD0_jointSDall0p06 | v2_exclude_protected_pcs | subsample2000	C13	covMin5_methSD0_jointSDall0p06	v2_exclude_protected_pcs	subsample2000	FALSE	20	0.5517011489900275	10345
+covMin4_methSD0_jointSDall0p05 | v1_all_pcs | subsample600	C10	covMin4_methSD0_jointSDall0p05	v1_all_pcs	subsample600	FALSE	20	0.5382382527432239	14876
+covMin20_methSD0_jointSDall0p06 | v1_all_pcs | subsample2000	C08	covMin20_methSD0_jointSDall0p06	v1_all_pcs	subsample2000	FALSE	19	0.5238468695463253	7574
+covMin5_methSD0_jointSDall0p08 | v1_all_pcs | subsample2000	C15	covMin5_methSD0_jointSDall0p08	v1_all_pcs	subsample2000	FALSE	20	0.5014406146338459	5051
+covMin20_methSD0_jointSDall0p08 | v1_all_pcs | subsample2000	C09	covMin20_methSD0_jointSDall0p08	v1_all_pcs	subsample2000	FALSE	20	0.49180311422032974	3329
+covMin10_methSD0_jointSDall0p06 | v1_all_pcs | subsample2000	C01	covMin10_methSD0_jointSDall0p06	v1_all_pcs	subsample2000	FALSE	20	0.47937030335759606	9676
+covMin10_methSD0_jointSDall0p06 | v2_exclude_protected_pcs | subsample2000	C02	covMin10_methSD0_jointSDall0p06	v2_exclude_protected_pcs	subsample2000	FALSE	20	0.47937030335759606	9676
+covMin5_methSD0_jointSDall0p07 | v1_all_pcs | subsample2000	C14	covMin5_methSD0_jointSDall0p07	v1_all_pcs	subsample2000	FALSE	20	0.47399460598332255	7164
+covMin10_methSD0_jointSDall0p08 | v1_all_pcs | subsample2000	C05	covMin10_methSD0_jointSDall0p08	v1_all_pcs	subsample2000	FALSE	20	0.44661296043711457	4537
+covMin10_methSD0_jointSDall0p07 | v1_all_pcs | subsample20000	C03	covMin10_methSD0_jointSDall0p07	v1_all_pcs	subsample20000	FALSE	20	0.44456058093465367	6570
+covMin10_methSD0_jointSDall0p07 | v2_exclude_protected_pcs | subsample20000	C04	covMin10_methSD0_jointSDall0p07	v2_exclude_protected_pcs	subsample20000	FALSE	20	0.44456058093465367	6570

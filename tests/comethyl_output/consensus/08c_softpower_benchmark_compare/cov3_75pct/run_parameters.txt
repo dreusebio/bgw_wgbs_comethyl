@@ -1,0 +1,10 @@
+project_root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests
+cpg_label: cov3_75pct
+adjustment_version_filter: ALL
+subsample_tag_filter: ALL
+region_label_regex: ALL
+scale_free_cutoff: 0.7
+reference_dataset_label: females
+n_combos_compared: 15
+out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08c_softpower_benchmark_compare/cov3_75pct
+date: 2026-08-23 14:40:43.554442

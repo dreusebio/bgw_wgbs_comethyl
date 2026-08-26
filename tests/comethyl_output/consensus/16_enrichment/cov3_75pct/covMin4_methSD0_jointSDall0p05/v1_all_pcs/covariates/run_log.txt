@@ -1,0 +1,9 @@
+[2026-08-23 22:02:06] Starting enrichment [list: covariates] 
+[2026-08-23 22:02:06] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs 
+[2026-08-23 22:02:06] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/covariates 
+[2026-08-23 22:02:06] Trait list: mom_gw_age, age_c_months, gender_c, gestage, brthwt 
+[2026-08-23 22:02:06] females: 0 modules selected (p <= 0.05) 
+[2026-08-23 22:02:06] males: 1 modules selected (p <= 0.05) 
+[2026-08-23 22:02:06] Final selected modules (1): green 
+[2026-08-23 22:02:06] Module green: 1 genes 
+[2026-08-23 22:02:20] Finished config [list: covariates] 

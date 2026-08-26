@@ -1,0 +1,15 @@
+dataset_label: males
+set_name: covariates
+set_file: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config/presentation_sets/covariates.txt
+consensus_modules: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/09_consensus_modules/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/Consensus_Modules.rds
+stats_file: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12a_me_trait_analysis/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/ME_Trait_Correlation_Stats_Bicor.tsv
+sample_info: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/data/metadata/merged_qc_males.xlsx
+only_significant: TRUE
+p_thresh: 0.05
+top_n_pairs: NULL
+cat_plot_style: violin
+n_traits_requested: 5
+n_traits_found: 4
+n_traits_missing: 1
+n_pairs_plotted: 2
+date: 2026-08-23 21:59:30.814764

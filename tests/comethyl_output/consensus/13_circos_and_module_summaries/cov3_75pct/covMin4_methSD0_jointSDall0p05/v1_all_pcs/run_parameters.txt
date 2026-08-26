@@ -1,0 +1,17 @@
+project_root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests
+consensus_modules_rds: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/09_consensus_modules/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/Consensus_Modules.rds
+consensus_regions_tsv: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/09_consensus_modules/shared/cov3_75pct/covMin4_methSD0_jointSDall0p05/v1_all_pcs/Consensus_Region_Assignments.tsv
+adjustment_version: v1_all_pcs
+genome: hg38
+single_module_color: red
+n_real_modules: 11
+module_colors: black, blue, brown, green, greenyellow, magenta, pink, purple, red, turquoise, yellow
+n_regions_total: 14876
+n_regions_non_grey: 65
+all_modules_width: 4
+all_modules_height: 4
+single_module_width: 5.5
+single_module_height: 5.5
+counts_width: 7
+counts_height: 6
+date: 2026-08-23 21:56:48.022655

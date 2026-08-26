@@ -1,0 +1,19 @@
+project_root: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests
+adjustment_version: v1_all_pcs
+cpg_label: cov3_75pct
+region_label: covMin10_methSD0_jointSDall0p06
+datasets: females, males
+softpower_cor: pearson
+power_min: 1
+power_max: 20
+subsample_size: 2000
+n_seeds: 5
+seeds: 1001, 1002, 1003, 1004, 1005
+scale_free_cutoff: 0.8
+block_size: 5000
+gc_interval: 4999
+threads: 8
+estimated_power: NA
+estimate_reason: no common power had mean R2 >= 0.8 and negative mean slope in every dataset
+shared_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/08b_softpower_benchmark/shared/cov3_75pct/covMin10_methSD0_jointSDall0p06/v1_all_pcs/subsample2000
+date: 2026-08-22 23:14:41.878512

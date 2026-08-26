@@ -1,0 +1,36 @@
+timestamp	2026-08-23 22:04:37
+project_root	/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests
+annotation_dir	/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs
+adjustment_version	v2_exclude_protected_pcs
+cpg_label	cov3_75pct
+region_label	covMin4_methSD0_jointSDall0p05
+list_stem	anthropometry_raw
+selection_mode	stats_based_union_across_datasets
+module_list_file	
+trait_list_file	/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config/presentation_sets
+dataset1_label	females
+dataset1_stats_file	/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12a_me_trait_analysis/females/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/ME_Trait_Correlation_Stats_Bicor.tsv
+dataset2_label	males
+dataset2_stats_file	/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/12a_me_trait_analysis/males/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/ME_Trait_Correlation_Stats_Bicor.tsv
+dataset3_label	
+dataset3_stats_file	
+p_thresh	0.05
+do_kegg	TRUE
+do_go	FALSE
+do_reactome	FALSE
+do_enrichr	TRUE
+organism	hsa
+enrichr_dbs	GO_Biological_Process_2025,GO_Cellular_Component_2025,GO_Molecular_Function_2025
+use_enrichr_background	FALSE
+background_ok	FALSE
+min_bg_genes	200
+enrichr_retries	5
+enrichr_sleep	2
+plot_p_col	pvalue
+plot_top_n	10
+plot_sig_cutoff	0.05
+plot_width	14
+plot_height	10
+n_selected_modules	7
+selected_modules	black, blue, brown, magenta, pink, red, turquoise
+out_dir	/quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/anthropometry_raw

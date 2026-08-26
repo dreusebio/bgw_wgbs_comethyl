@@ -1,0 +1,4 @@
+dataset_label	males
+n_unfiltered_cpgs	634646
+n_aligned_to_reference_cpgs	524437
+n_filtered_cpgs	516666

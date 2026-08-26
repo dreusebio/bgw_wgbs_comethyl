@@ -1,0 +1,15 @@
+[2026-08-23 22:04:37] Starting enrichment [list: covariates] 
+[2026-08-23 22:04:37] annotation_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/15_module_annotation/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs 
+[2026-08-23 22:04:38] out_dir: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/comethyl_output/consensus/16_enrichment/cov3_75pct/covMin4_methSD0_jointSDall0p05/v2_exclude_protected_pcs/covariates 
+[2026-08-23 22:04:38] Trait list: mom_gw_age, age_c_months, gender_c, gestage, brthwt 
+[2026-08-23 22:04:38] females: 2 modules selected (p <= 0.05) 
+[2026-08-23 22:04:38] males: 2 modules selected (p <= 0.05) 
+[2026-08-23 22:04:38] Final selected modules (4): blue, brown, magenta, pink 
+[2026-08-23 22:04:38] Module magenta: 1 genes 
+[2026-08-23 22:04:43] Module blue: 6 genes 
+[2026-08-23 22:04:43] KEGG failed [blue]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:04:48] Module brown: 5 genes 
+[2026-08-23 22:04:48] KEGG failed [brown]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:04:53] Module pink: 5 genes 
+[2026-08-23 22:04:53] KEGG failed [pink]: None of the keys entered are valid keys for 'SYMBOL'. Please use the keys method to see a listing of valid arguments. 
+[2026-08-23 22:04:58] Finished config [list: covariates] 

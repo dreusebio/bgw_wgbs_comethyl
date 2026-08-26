@@ -1,0 +1,8 @@
+set_name: covariates
+set_file: /quobyte/lasallegrp/projects/GROWELL/WGBS/2025_bgw_comethyl_Victoria/tests/config/presentation_sets/covariates.txt
+datasets: females, males
+n_traits_requested: 5
+n_datasets_saved: 2
+p_thresh: 0.05
+top_n: 50
+date: 2026-08-23 21:54:49.530413
